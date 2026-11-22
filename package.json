@@ -1,0 +1,15 @@
+{
+  "name": "osu-karates-kelias",
+  "version": "0.3.0",
+  "description": "OSU! Karatės kelias – pilno kontakto (knockdown) karatė kovos žaidimas telefonams ir planšetėms",
+  "license": "BUSL-1.1",
+  "author": "Paulius Sladkevičius",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "bundle": "node tools/bundle.mjs",
+    "serve": "python3 -m http.server 8080",
+    "e2e": "node tools/e2e.mjs"
+  }
+}

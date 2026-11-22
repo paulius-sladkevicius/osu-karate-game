@@ -1,0 +1,24 @@
+{
+  "_license": "SPDX-License-Identifier: BUSL-1.1",
+  "_doc": "Ritmo mini zaidimas. steps: technikos id; '*' priekyje = pries judesi apsisukama. Formos supaprastintos zaidimui (20 skaiciavimu).",
+  "kata": [
+    { "id": "taikyoku_sono_ichi", "name": "Taikyoku sono ichi", "belt": "white", "beatMs": 1250,
+      "steps": ["*gedan_barai", "seiken_oi_tsuki", "*gedan_barai", "seiken_oi_tsuki",
+                "*gedan_barai", "seiken_oi_tsuki", "seiken_oi_tsuki", "seiken_oi_tsuki",
+                "*gedan_barai", "seiken_oi_tsuki", "*gedan_barai", "seiken_oi_tsuki",
+                "*gedan_barai", "seiken_oi_tsuki", "seiken_oi_tsuki", "seiken_oi_tsuki",
+                "*gedan_barai", "seiken_oi_tsuki", "*gedan_barai", "seiken_oi_tsuki"] },
+    { "id": "taikyoku_sono_ni", "name": "Taikyoku sono ni", "belt": "white", "beatMs": 1200,
+      "steps": ["*gedan_barai", "seiken_jodan_tsuki", "*gedan_barai", "seiken_jodan_tsuki",
+                "*gedan_barai", "seiken_jodan_tsuki", "seiken_jodan_tsuki", "seiken_jodan_tsuki",
+                "*gedan_barai", "seiken_jodan_tsuki", "*gedan_barai", "seiken_jodan_tsuki",
+                "*gedan_barai", "seiken_jodan_tsuki", "seiken_jodan_tsuki", "seiken_jodan_tsuki",
+                "*gedan_barai", "seiken_jodan_tsuki", "*gedan_barai", "seiken_jodan_tsuki"] },
+    { "id": "taikyoku_sono_san", "name": "Taikyoku sono san", "belt": "orange", "beatMs": 1150,
+      "steps": ["*chudan_uchi_uke", "seiken_oi_tsuki", "*chudan_uchi_uke", "seiken_oi_tsuki",
+                "*gedan_barai", "seiken_jodan_tsuki", "seiken_jodan_tsuki", "seiken_jodan_tsuki",
+                "*chudan_uchi_uke", "seiken_oi_tsuki", "*chudan_uchi_uke", "seiken_oi_tsuki",
+                "*gedan_barai", "seiken_jodan_tsuki", "seiken_jodan_tsuki", "seiken_jodan_tsuki",
+                "*chudan_uchi_uke", "seiken_oi_tsuki", "*chudan_uchi_uke", "seiken_oi_tsuki"] }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "_license": "SPDX-License-Identifier: BUSL-1.1",
+  "_doc": "sequence: techniku id grandine (renzoku). '@block' = sekminga gynyba. bonus raktai: damageMult, legDamageMult, balanceBonus, unblockable (MVP); wazaAriIfLegDamageOver, autoWazaAri, guaranteedWazaAri (4 etapas).",
+  "combos": [
+    { "id": "sanbon_tsuki", "name": "Sanbon tsuki", "nameLt": "Trys smūgiai iš eilės", "nameEn": "Triple punch", "belt": "white",
+      "sequence": ["seiken_gyaku_tsuki", "seiken_gyaku_tsuki", "seiken_gyaku_tsuki"], "bonus": { "damageMult": 1.15, "balanceBonus": 10 } },
+    { "id": "mae_gyaku", "name": "Mae geri – gyaku tsuki", "nameLt": "Spyris ir kumštis", "nameEn": "Front kick – reverse punch", "belt": "white",
+      "sequence": ["mae_geri_chudan", "seiken_gyaku_tsuki"], "bonus": { "damageMult": 1.15 } },
+    { "id": "shita_gedan", "name": "Shita tsuki – gedan mawashi", "nameLt": "Smūgis iš apačios ir žemas spyris", "nameEn": "Uppercut – low kick", "belt": "orange",
+      "sequence": ["seiken_shita_tsuki", "gedan_mawashi_geri"], "bonus": { "damageMult": 1.2, "legDamageMult": 1.5 } },
+    { "id": "kagi_kagi_gedan", "name": "Kagi tsuki – kagi tsuki – gedan", "nameLt": "Du kabliukai ir žemas spyris", "nameEn": "Double hook – low kick", "belt": "orange",
+      "sequence": ["seiken_kagi_tsuki", "seiken_kagi_tsuki", "gedan_mawashi_geri"], "bonus": { "damageMult": 1.2 } },
+    { "id": "gyaku_shita_chudan", "name": "Gyaku tsuki – shita tsuki – chudan mawashi", "nameLt": "Du kumščiai ir šoninis spyris", "nameEn": "Two punches – middle roundhouse", "belt": "blue",
+      "sequence": ["seiken_gyaku_tsuki", "seiken_shita_tsuki", "chudan_mawashi_geri"], "bonus": { "damageMult": 1.25 } },
+    { "id": "uke_hiza", "name": "Uke – hiza geri", "nameLt": "Gynyba ir kelio kontrataka", "nameEn": "Block – knee counter", "belt": "blue",
+      "sequence": ["@block", "hiza_geri"], "bonus": { "unblockable": true }, "lesson": { "partner": "seiken_gyaku_tsuki" } },
+    { "id": "gedan_jodan", "name": "Gedan – jodan mawashi", "nameLt": "Žemas ir aukštas spyris ta pačia koja", "nameEn": "Low – high kick, same leg", "belt": "yellow",
+      "sequence": ["gedan_mawashi_geri", "jodan_mawashi_geri"], "bonus": { "wazaAriIfLegDamageOver": 50 } },
+    { "id": "mae_ushiro", "name": "Mae geri – ushiro geri", "nameLt": "Tiesus ir atgalinis spyris", "nameEn": "Front kick – back kick", "belt": "yellow",
+      "sequence": ["mae_geri_chudan", "ushiro_geri"], "bonus": { "damageMult": 1.25 } },
+    { "id": "sanbon_kakato", "name": "Sanbon tsuki – kakato otoshi", "nameLt": "Trys smūgiai ir kirvio spyris", "nameEn": "Triple punch – axe kick", "belt": "green",
+      "sequence": ["seiken_gyaku_tsuki", "seiken_gyaku_tsuki", "seiken_gyaku_tsuki", "kakato_otoshi"], "bonus": { "unblockable": true } },
+    { "id": "gedan_ushiro_mawashi", "name": "Gedan – ushiro mawashi", "nameLt": "Žemas ir sukamasis spyris", "nameEn": "Low kick – spinning hook kick", "belt": "green",
+      "sequence": ["gedan_mawashi_geri", "ushiro_mawashi_geri"], "bonus": { "damageMult": 1.3 } },
+    { "id": "ashi_gedan_tsuki", "name": "Ashi barai – gedan tsuki", "nameLt": "Pakirtimas ir smūgis", "nameEn": "Sweep – follow-up punch", "belt": "brown",
+      "sequence": ["ashi_barai", "gedan_tsuki_followup"], "bonus": { "autoWazaAri": true } },
+    { "id": "nidan_gyaku", "name": "Tobi nidan – gyaku tsuki", "nameLt": "Dvigubas šuolinis spyris ir kumštis", "nameEn": "Jumping double kick – reverse punch", "belt": "brown",
+      "sequence": ["tobi_nidan_geri", "seiken_gyaku_tsuki"], "bonus": { "damageMult": 1.35 } },
+    { "id": "osu_no_seishin", "name": "Osu no seishin", "nameLt": "Signatūrinė kombinacija", "nameEn": "Signature combination", "belt": "black",
+      "sequence": ["seiken_gyaku_tsuki", "seiken_shita_tsuki", "gedan_mawashi_geri", "chudan_mawashi_geri", "jodan_mawashi_geri"], "bonus": { "guaranteedWazaAri": true } }
+  ]
+}

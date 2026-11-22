@@ -1,0 +1,6 @@
+{
+  "_license": "SPDX-License-Identifier: BUSL-1.1",
+  "hud.you": "TU", "hud.player": "Žaidėjas", "hud.locked": "neatrakinta", "hud.perfect": "Tobulas blokas!",
+  "ui.rotate": "Pasukite įrenginį horizontaliai", "ui.paused": "Pauzė", "ui.resume": "Tęsti", "ui.quit": "Išeiti",
+  "result.ippon": "Ippon", "result.awasete": "Awasete ippon", "result.hantei": "Hantei", "result.shikkaku": "Shikkaku"
+}

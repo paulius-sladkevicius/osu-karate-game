@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: BUSL-1.1 -->
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<title>OSU! Karatės kelias</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="description" content="Pilno kontakto (knockdown) karatė kovos žaidimas telefonams ir planšetėms.">
+<meta name="theme-color" content="#14161f">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="OSU!">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+<div id="touch"></div>
+<div id="ui"></div>
+<div id="pause"></div>
+<div id="rotate">Pasukite įrenginį</div>
+<script>
+// Per http(s) kraunami ES moduliai; atidarius failą tiesiai iš disko (file://) naršyklės modulių ir JSON
+// neleidžia, todėl kraunamas iš tų pačių šaltinių sugeneruotas rinkinys (node tools/bundle.mjs).
+(function () {
+  var s = document.createElement('script');
+  if (location.protocol === 'file:') s.src = 'dist/game.bundle.js';
+  else { s.type = 'module'; s.src = 'src/main.js'; }
+  document.body.appendChild(s);
+})();
+</script>
+</body>
+</html>
