@@ -159,6 +159,33 @@ test('tai sabaki: ←← atsitraukimas su i-frames; →→ įsiveržimas', () =>
   assert.ok(m.a.x > x + 60);
 });
 
+test('įvesties buferis: →→A iš įsiveržimo ir šiek tiek per anksti paspausta grandinės technika neprarandamos', () => {
+  const m = make({ immortal: true });
+  m.b.x = 900;
+  m.step({ dash: 'F' });
+  assert.equal(m.a.state, 'dash');
+  m.step({ tech: db.tech.hiji_chudan_uchi });
+  assert.equal(m.a.tech && m.a.tech.def.id, 'hiji_chudan_uchi', 'technika pradedama iš įsiveržimo');
+  m.idle(m.a);
+  for (let i = 0; i < 30; i++) m.step();
+  // Paspausta ~80 ms prieš grandinės langą – įvykdoma langui atsivėrus, kaip grandinė.
+  m.step({ tech: db.tech.seiken_gyaku_tsuki });
+  const T = m.a.tech;
+  const open = (T.dur.s + T.dur.a + T.dur.r) * (1 - C.chainWindow);
+  while (T.phase !== 'recovery' || T.dur.s + T.dur.a + T.t < open - 80) m.step();
+  m.step({ tech: db.tech.seiken_shita_tsuki });
+  for (let i = 0; i < 12; i++) m.step();
+  assert.equal(m.a.tech && m.a.tech.def.id, 'seiken_shita_tsuki');
+  assert.equal(m.a.tech.chain, 1);
+  // Gerokai per anksti paspausta – nebeįvykdoma.
+  m.idle(m.a);
+  for (let i = 0; i < 30; i++) m.step();
+  m.step({ tech: db.tech.mae_geri_chudan });
+  m.step({ tech: db.tech.seiken_gyaku_tsuki });
+  m.idle(m.a);
+  assert.equal(m.events.filter((e) => e.type === 'techStart').at(-1).def.id, 'mae_geri_chudan');
+});
+
 test('knockdown: zonos žala 100; pataikymas esant pusiausvyrai 0; galvos slenkstis', () => {
   let m = make();
   m.b.dmg.legs = 99;

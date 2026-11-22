@@ -22,7 +22,7 @@ export function createFighter(db, cfg) {
     dmgMult: cfg.dmgMult ?? 1,
     x: 0, px: 0, facing: 1,
     state: 'idle', st: 0,
-    tech: null, guard: null, down: null, pose: null, dash: null,
+    tech: null, guard: null, down: null, pose: null, dash: null, buf: null, req: null,
     crouch: false, moving: 0,
     dmg: { legs: cfg.carry?.legs || 0, body: cfg.carry?.body || 0, head: cfg.carry?.head || 0 },
     balance: 100, stamina: 100, ki: cfg.ki || 0, kiaiT: 0,

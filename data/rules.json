@@ -28,6 +28,7 @@
   "combat": {
     "ranges": { "close": 105, "mid": 150, "midfar": 172, "far": 195 },
     "minSeparation": 86,
+    "inputBufferMs": 120,
     "damageScale": 0.45,
     "zoneAfterGetUp": 62,
     "headAfterGetUp": 60,

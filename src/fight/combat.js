@@ -76,6 +76,9 @@ export class Fight {
     f.suneT = Math.max(0, f.suneT - dt);
     if (f.kiaiT > 0) f.kiaiT -= dt;
     f.moving = 0;
+    // Trumpas įvesties buferis: per anksti paspausta technika įvykdoma, kai tik kovotojas gali veikti.
+    if (it.tech) f.buf = { tech: it.tech, t: this.time };
+    f.req = f.buf && this.time - f.buf.t <= C.inputBufferMs ? f.buf.tech : null;
     const live = this.phase === 'live';
     const halt = this.phase === 'halt';
 
@@ -110,6 +113,13 @@ export class Fight {
       case 'stagger': if (f.st >= C.staggerMs) { f.balance = 40; setState(f, 'idle'); } return;
       case 'pose': if (f.st >= f.pose.dur) { f.pose = null; setState(f, 'idle'); } return;
       case 'dash': {
+        // Iš įsiveržimo (→→) galima iškart pulti, pvz., →→A = Hiji chudan uchi.
+        if (f.req && f.dash.fwd && f.open <= 0 && (live || halt)) {
+          f.dash = null;
+          if (this.startTech(f, o, f.req, it, false)) return;
+          setState(f, 'idle');
+          return;
+        }
         f.x += f.dash.v * dt;
         if (f.st >= f.dash.dur) { f.dash = null; setState(f, 'idle'); }
         return;
@@ -124,7 +134,7 @@ export class Fight {
     if (!live && !halt) { f.guard = null; if (f.state !== 'idle') setState(f, 'idle'); return; }
 
     if (it.kiai && live) this.tryKiai(f);
-    if (it.tech && f.open <= 0 && this.startTech(f, o, it.tech, it, false)) return;
+    if (f.req && f.open <= 0 && this.startTech(f, o, f.req, it, false)) return;
     if (!live) { f.guard = null; if (f.state !== 'idle') setState(f, 'idle'); return; }
 
     if (it.guard && f.open <= 0) {
@@ -206,6 +216,8 @@ export class Fight {
 
   startTech(f, o, def, it, chained) {
     const C = this.C;
+    f.buf = null;
+    f.req = null;
     if (def.type === 'mode') return this.tryKiai(f);
     if (def.type !== 'strike') return false;
     const link = chained || (f.chainT <= C.chainGraceMs && f.chainList.length > 0) || f.counterT > 0;
@@ -278,8 +290,8 @@ export class Fight {
     // recovery: paskutiniame animacijos lange galima susieti kitą techniką (renzoku).
     const total = T.dur.s + T.dur.a + T.dur.r;
     const frac = (T.dur.s + T.dur.a + T.t) / total;
-    if (it.tech && f.open <= 0 && frac >= 1 - C.chainWindow && (this.phase === 'live' || this.phase === 'halt')) {
-      if (this.startTech(f, o, it.tech, it, true)) return;
+    if (f.req && f.open <= 0 && frac >= 1 - C.chainWindow && (this.phase === 'live' || this.phase === 'halt')) {
+      if (this.startTech(f, o, f.req, it, true)) return;
     }
     if (T.t >= T.dur.r + T.extraRec) {
       f.tech = null;
