@@ -2,7 +2,7 @@
 // Service worker: visi resursai talpykloje – po pirmo įkėlimo žaidimas veikia be interneto.
 // Keičiant failus – padidinti VERSION (testas tikrina, kad ASSETS sąrašas atitiktų diską).
 
-const VERSION = 'osu-v0.3.0';
+const VERSION = 'osu-v0.3.1';
 const ASSETS = [
   './',
   'index.html',

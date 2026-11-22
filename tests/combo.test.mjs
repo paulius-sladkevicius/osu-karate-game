@@ -139,3 +139,32 @@ test('dirFromVector: 8 kryptys ir mirtina zona', () => {
   assert.equal(dirFromVector(0.7, 0.7), 'DF');
   assert.equal(dirFromVector(-0.7, -0.7), 'UB');
 });
+
+test('grąžinant džoistiką nuo → prie ↓ judesys nelaikomas nauju ketvirčiu (Kagi – kagi – gedan)', () => {
+  const orange = techsUpTo(db, 'orange');
+  const go = (seq, btn, set = orange) => {
+    const rec = new ComboRecognizer(db.techniques, cfg);
+    let t = 1000;
+    for (const d of seq) { rec.pushDir(d, t); t += 60; }
+    return rec.press(btn, t, set);
+  };
+  // Po ↓→A: džoistikas grįžta prie ↓ (tvarkingai, sustojus įstrižai arba peršokant) ir spaudžiamas K = Gedan mawashi geri.
+  for (const seq of [['D', 'DF', 'F', 'DF', 'D'], ['D', 'DF', 'F', 'DF'], ['D', 'DF', 'F', 'D'], ['D', 'F', 'D'], ['D', 'DF', 'F', 'N', 'D']]) {
+    const r = go(seq, 'K');
+    assert.equal(r.matched, 'gedan_mawashi_geri', seq.join(' '));
+    assert.equal(r.locked, false);
+  }
+  // Antras ↓→A iš eilės: grįžtama prie ↓ ir vėl sukamas ketvirtis.
+  for (const seq of [['D', 'DF', 'F', 'DF', 'D', 'DF', 'F'], ['D', 'DF', 'F', 'D', 'DF'], ['D', 'DF', 'F', 'D', 'F']]) {
+    assert.equal(go(seq, 'A').matched, 'seiken_kagi_tsuki', seq.join(' '));
+  }
+  // Tikras ketvirtis (↓ ↘ →, taip pat sustojus ↘) ir toliau atpažįstamas; ↓A po ↓→ – Shita tsuki.
+  assert.equal(go(['D', 'DF', 'F'], 'K', unlocked).matched, 'chudan_mawashi_geri');
+  assert.equal(go(['D', 'DF'], 'K', unlocked).matched, 'chudan_mawashi_geri');
+  assert.equal(go(['D', 'DF', 'F', 'DF', 'D'], 'A').matched, 'seiken_shita_tsuki');
+  // Įstrižainė iš neutralios padėties: pirmenybė lygiui (↓).
+  assert.equal(go(['DF'], 'K').matched, 'gedan_mawashi_geri');
+  // Atleista kryptis dar galioja 200 ms, bet perėjus į kitą kryptį – nebe.
+  assert.equal(go(['F', 'N'], 'A').matched, 'seiken_oi_tsuki');
+  assert.equal(go(['F', 'U'], 'K').matched, 'jodan_mae_geri');
+});

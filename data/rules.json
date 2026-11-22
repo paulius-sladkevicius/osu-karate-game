@@ -28,7 +28,7 @@
   "combat": {
     "ranges": { "close": 105, "mid": 150, "midfar": 172, "far": 195 },
     "minSeparation": 86,
-    "inputBufferMs": 120,
+    "inputBufferMs": 200,
     "damageScale": 0.45,
     "zoneAfterGetUp": 62,
     "headAfterGetUp": 60,
@@ -41,7 +41,7 @@
     "backdashIframesMs": 150,
     "dashStamina": 6,
     "chainWindow": 0.3,
-    "chainGraceMs": 160,
+    "chainGraceMs": 240,
     "chainBonus": 0.1,
     "chainBonusMax": 0.4,
     "holdBonus": { "damage": 1.3, "stamina": 1.5, "slow": 1.25 },

@@ -5,9 +5,10 @@
 const BUTTONS = new Set(['A', 'K', 'G', 'KIAI']);
 const ANGLE = { F: 0, UF: 45, U: 90, UB: 135, B: 180, DB: 225, D: 270, DF: 315 };
 
-// Ar istorijos kryptis `dir` tenkina šablono elementą `tok`.
-function has(dir, tok) {
-  return tok.length === 2 ? dir === tok : dir.includes(tok);
+// Ar istorijos įrašas tenkina šablono elementą `tok`. Kardinalioms kryptims naudojama „efektyvi“ kryptis (eff):
+// įstrižainė, į kurią ateita iš kardinalios krypties, reiškia naujai pridėtą kryptį (→ tada ↘ = ketinimas ↓).
+function has(h, tok) {
+  return tok.length === 2 ? h.dir === tok : h.eff.includes(tok);
 }
 
 function weight(input) {
@@ -58,14 +59,18 @@ function matchSeq(tokens, hist, presses, now, cfg, limit) {
       limit = cfg.bufferMs;
       continue;
     }
-    while (idx >= 0 && !has(hist[idx].dir, tok)) idx--;
+    // Paskutinė kryptis turi būti laikoma arba ką tik atleista (į neutralią padėtį); perėjus į kitą kryptį ji nebegalioja.
+    while (idx >= 0 && !has(hist[idx], tok)) {
+      if (k === n - 1 && hist[idx].dir !== 'N') return false;
+      idx--;
+    }
     if (idx < 0) return false;
     const end = idx + 1 < hist.length ? hist[idx + 1].t : now;
     if (nextStart - end > limit) return false;
     const prev = k > 0 ? tokens[k - 1] : null;
     // Pratęsiame elementą atgal per gretimus įrašus, bet nepasisaviname įrašo, kurio reikia ankstesniam elementui.
-    while (idx - 1 >= 0 && has(hist[idx - 1].dir, tok) &&
-      !(prev && prev !== tok && prev !== 'CIRCLE' && has(hist[idx - 1].dir, prev))) idx--;
+    while (idx - 1 >= 0 && has(hist[idx - 1], tok) &&
+      !(prev && prev !== tok && prev !== 'CIRCLE' && has(hist[idx - 1], prev))) idx--;
     nextStart = hist[idx].t;
     idx--;
     limit = cfg.bufferMs;
@@ -91,7 +96,7 @@ export class ComboRecognizer {
   }
 
   reset() {
-    this.hist = [{ dir: 'N', t: -1e12 }];
+    this.hist = [{ dir: 'N', eff: 'N', t: -1e12 }];
     this.presses = [];
   }
 
@@ -100,8 +105,11 @@ export class ComboRecognizer {
   }
 
   pushDir(dir, t) {
-    if (this.dir === dir) return;
-    this.hist.push({ dir, t });
+    const prev = this.dir;
+    if (prev === dir) return;
+    // ↘ po → reiškia „pridėta ↓“, ↘ po ↓ – „pridėta →“; įstrižainė iš neutralios padėties lieka dviprasmė.
+    const eff = dir.length === 2 && prev.length === 1 && prev !== 'N' && dir.includes(prev) ? dir.replace(prev, '') : dir;
+    this.hist.push({ dir, eff, t });
     if (this.hist.length > 20) this.hist.shift();
   }
 
