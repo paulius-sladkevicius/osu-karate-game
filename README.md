@@ -74,6 +74,8 @@ Prieš pirmą viešą išleidimą licencijos parametrus verta peržiūrėti su t
 - Skyriaus technikos kumite kovose prieinamos tik išmokus jas dojo pamokose; greitoje kovoje – visos pasirinkto diržo.
 - Antras kyu (juostelė ant diržo) suteikiamas už laimėtą skyriaus turnyrą; turnyras progresui neprivalomas.
 - KIAI režimas pagal technikų lentelę atrakinamas tik juodu diržu – MVP jį galima išbandyti derinimo ekrane.
+- Kihon egzamine pagal nutylėjimą po japonišku pavadinimu rodoma, ką suvesti (savininko sprendimas – atsiminti sunkoka);
+  griežtą scenarijaus variantą „be užuominų“ įjungia nustatymas „Kihon egzamine rodyti, ką suvesti“ (išjungti).
 - Teisėjo balsas – Web Speech API (ja-JP), garsai sintezuojami; subtitrai rodomi visada.
 
 ## Darbų sąrašas 4 etapui (pilna versija)

@@ -10,7 +10,7 @@ export function defaultSave() {
     settings: {
       lang: null, sound: true, music: true, voice: true, vibrate: true,
       btnScale: 1, btnOpacity: 0.6, leftHanded: false, assist: true,
-      difficulty: 'normal', termsTranslated: true,
+      difficulty: 'normal', termsTranslated: true, kihonHints: true,
     },
     beltIndex: 0,          // dabartinis diržas (0 = baltas)
     stripes: {},           // { orange: true } – antras kyu (juostelė) už laimėtą skyriaus turnyrą

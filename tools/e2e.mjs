@@ -124,7 +124,7 @@ const HELPERS = () => {
     async kihon() {
       const sc = G().scene;
       const dir = sc.director;
-      let seenHints = sc.hud.hints.length > 0 || sc.showTrail;
+      let seenHints = sc.hud.hints.length > 0 || sc.showTrail || dir.hints;
       const names = [];
       while (G().scene === sc) {
         if (dir.state === 'call') {
@@ -134,10 +134,10 @@ const HELPERS = () => {
           await T.perform(tech.input, 70);
           for (let n = 0; n < 200 && dir.state === 'call'; n++) await sleep(10);
         }
-        seenHints = seenHints || sc.hud.hints.length > 0 || sc.showTrail;
+        seenHints = seenHints || sc.hud.hints.length > 0 || sc.showTrail || dir.hints;
         await sleep(20);
       }
-      return { correct: dir.correct, total: dir.list.length, seenHints, names };
+      return { correct: dir.correct, total: dir.list.length, seenHints, names, hints: dir.hints };
     },
     async kata() {
       const sc = G().scene;
@@ -436,8 +436,19 @@ try {
       }
       g.save.write();
     });
+    ok(await page.evaluate(() => __game.settings.kihonHints === true), 'nustatymas „Kihon užuominos“ pagal nutylėjimą įjungtas');
+    // Su užuominomis: po pavadinimu rodoma įvestis; išėjus iš egzamino – išjungiama ir tikrinamas griežtas variantas.
     await tap(page, '[data-act=journey]');
     await tap(page, '[data-act="sel:1"]');
+    await tap(page, '[data-act=exam]');
+    await tap(page, '[data-act=go]');
+    await scene(page);
+    await page.waitForFunction(() => __game.scene.director.state === 'call');
+    ok(await page.evaluate(() => __game.scene.director.hints === true), 'kihon su užuominomis: rodoma, ką suvesti');
+    await page.screenshot({ path: join(ROOT, 'dist/e2e-kihon-hints.png') }).catch(() => {});
+    await page.evaluate(() => __game.scene.finish({ aborted: true }));
+    await page.waitForSelector('[data-act=exam]');
+    await page.evaluate(() => { __game.settings.kihonHints = false; __game.save.write(); });
     await tap(page, '[data-act=exam]');
     await tap(page, '[data-act=go]');
     await scene(page);
@@ -458,6 +469,7 @@ try {
     ok(await page.evaluate(() => __game.save.data.beltIndex === 1), 'išlaikius egzaminą – oranžinis diržas');
     await tap(page, '[data-act=go]');
   } else {
+    await page.evaluate(() => { __game.settings.kihonHints = false; __game.save.write(); });
     await tap(page, '[data-act=journey]');
     for (const chapter of [0, 1, 2]) {
       await tap(page, `[data-act="sel:${chapter}"]`);

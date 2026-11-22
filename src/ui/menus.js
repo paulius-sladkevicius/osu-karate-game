@@ -43,7 +43,7 @@ async function settingsScreen(game) {
         ${chk('sound')}${chk('music')}${chk('voice')}${chk('vibrate')}
       </div><div>
         ${rng('btnScale', 0.8, 1.5, 0.05)}${rng('btnOpacity', 0.3, 1, 0.05)}
-        ${chk('leftHanded')}${chk('assist')}${chk('termsTranslated')}
+        ${chk('leftHanded')}${chk('assist')}${chk('kihonHints')}${chk('termsTranslated')}
         <div class="setting"><span>${t('set.reset')}</span><button class="btn small" data-act="reset">${t('set.resetBtn')}</button></div>
       </div></div>
       <p class="muted">${t('set.install')}</p></div>`;

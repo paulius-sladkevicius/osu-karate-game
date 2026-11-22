@@ -56,7 +56,7 @@ test('vertimai: LT ir EN turi tuos pačius raktus, visi kode naudojami raktai eg
     'diff.easy', 'diff.normal', 'diff.hard', 'story.orange', 'story.blue', 'kata.perfect', 'kata.good', 'kata.miss']) {
     assert.ok(db.strings.lt[p] && db.strings.en[p], p);
   }
-  for (const s of ['lang', 'difficulty', 'sound', 'music', 'voice', 'vibrate', 'btnScale', 'btnOpacity', 'leftHanded', 'assist', 'termsTranslated']) {
+  for (const s of ['lang', 'difficulty', 'sound', 'music', 'voice', 'vibrate', 'btnScale', 'btnOpacity', 'leftHanded', 'assist', 'termsTranslated', 'kihonHints']) {
     assert.ok(db.strings.lt[`set.${s}`], `set.${s}`);
   }
 });

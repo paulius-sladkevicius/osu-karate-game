@@ -28,11 +28,13 @@ export class KihonDirector {
     this.t = 0;
     this.correct = 0;
     this.last = null;
+    // Nustatymas „Kihon užuominos“: po pavadinimu rodoma, ką suvesti (išjungus – tik japoniškas pavadinimas).
+    this.hints = !!game.settings.kihonHints;
   }
 
   attach(scene) {
     this.scene = scene;
-    scene.hud.call('Kihon', t('exam.kihonHelp'), 2200);
+    scene.hud.call('Kihon', t(this.hints ? 'exam.kihonHelpHints' : 'exam.kihonHelp'), 2200);
   }
 
   next() {
@@ -72,27 +74,47 @@ export class KihonDirector {
     const tech = this.list[this.i];
     if (!tech) return;
     ctx.save();
+    const h = this.hints;
     ctx.fillStyle = 'rgba(14,16,24,0.85)';
-    ctx.beginPath(); ctx.roundRect(290, 20, 700, 150, 16); ctx.fill();
-    ctx.textAlign = 'center';
+    ctx.beginPath(); ctx.roundRect(290, 20, 700, h ? 196 : 150, 16); ctx.fill();
+    // Skaitliukas kairėje – centre viršuje yra pauzės mygtukas.
+    ctx.textAlign = 'left';
     ctx.fillStyle = '#b8b4aa';
     ctx.font = `bold 18px ${FONT}`;
-    ctx.fillText(`Kihon ${this.i + 1}/${this.list.length} · ✓ ${this.correct}`, 640, 48);
+    ctx.fillText(`Kihon ${this.i + 1}/${this.list.length} · ✓ ${this.correct}`, 312, 48);
+    ctx.textAlign = 'center';
     let size = 52;
     ctx.font = `bold ${size}px ${FONT}`;
     const name = `${tech.name}!`;
     while (ctx.measureText(name).width > 660 && size > 26) { size -= 3; ctx.font = `bold ${size}px ${FONT}`; }
     ctx.fillStyle = this.state === 'feedback' ? (this.last ? '#8ff08a' : '#ff8a7a') : '#ffd54a';
-    ctx.fillText(name, 640, 108);
+    ctx.fillText(name, 640, 104);
+    if (h) {
+      // Užuomina: įvesties seka (kryptys + mygtukas).
+      const g = inputGlyphs(tech.input);
+      ctx.font = `bold 30px ${FONT}`;
+      const ws = g.map((x) => Math.max(44, ctx.measureText(x).width + 20));
+      let x = 640 - (ws.reduce((a, b) => a + b, 0) + (g.length - 1) * 8) / 2;
+      g.forEach((gl, i) => {
+        const btn = i === g.length - 1;
+        ctx.fillStyle = btn ? '#ffd54a' : 'rgba(255,255,255,0.16)';
+        ctx.beginPath(); ctx.roundRect(x, 118, ws[i], 42, 8); ctx.fill();
+        ctx.fillStyle = btn ? '#14161f' : '#fff';
+        ctx.fillText(gl, x + ws[i] / 2, 150);
+        x += ws[i] + 8;
+      });
+    }
+    const y = h ? 176 : 132;
     if (this.state === 'call') {
       const k = 1 - this.t / this.R.kihonTimeMs;
       ctx.fillStyle = 'rgba(255,255,255,0.18)';
-      ctx.fillRect(340, 132, 600, 12);
+      ctx.fillRect(340, y, 600, 12);
       ctx.fillStyle = k < 0.3 ? '#ff8a7a' : '#ffd54a';
-      ctx.fillRect(340, 132, 600 * Math.max(0, k), 12);
+      ctx.fillRect(340, y, 600 * Math.max(0, k), 12);
     } else {
-      ctx.font = `bold 30px ${FONT}`;
-      ctx.fillText(this.last ? '✓ OSU!' : `✗ ${t('exam.miss')}`, 640, 152);
+      ctx.font = `bold ${h ? 26 : 30}px ${FONT}`;
+      ctx.fillStyle = this.last ? '#8ff08a' : '#ff8a7a';
+      ctx.fillText(this.last ? '✓ OSU!' : `✗ ${t('exam.miss')}`, 640, y + 20);
     }
     ctx.restore();
   }
@@ -223,7 +245,7 @@ export async function runExam(game, beltIdx) {
     <h2>Shinsa · ${beltChip(game, beltIdx)} ${esc(loc(belt, 'name'))}</h2>
     <p>${t('exam.intro', { pass: pct(R.passScore) })}</p>
     <div class="list">
-      <div class="item"><div class="keys">1</div><div class="grow"><div class="name">Kihon</div><div class="muted">${t('exam.kihonDesc', { n: ex.kihonCount })}</div></div></div>
+      <div class="item"><div class="keys">1</div><div class="grow"><div class="name">Kihon</div><div class="muted">${t('exam.kihonDesc', { n: ex.kihonCount })} ${t(game.settings.kihonHints ? 'exam.kihonHintsOn' : 'exam.kihonHintsOff')}</div></div></div>
       <div class="item"><div class="keys">2</div><div class="grow"><div class="name">Kata · ${esc(kata.name)}</div><div class="muted">${t('exam.kataDesc')}</div></div></div>
       <div class="item"><div class="keys">3</div><div class="grow"><div class="name">Kumite × ${ex.kumite}</div><div class="muted">${t('exam.kumiteDesc')}</div></div></div>
     </div>
