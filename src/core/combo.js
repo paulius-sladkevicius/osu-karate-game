@@ -81,7 +81,7 @@ function matchSeq(tokens, hist, presses, now, cfg, limit) {
 export class ComboRecognizer {
   // techniques: visos technikos (ir neatrakintos) su `input` masyvu; cfg: { bufferMs, buttonMs }.
   constructor(techniques, cfg = {}) {
-    this.cfg = { bufferMs: 350, buttonMs: 200, ...cfg };
+    this.cfg = { bufferMs: 350, buttonMs: 200, settleMs: 150, ...cfg };
     this.cands = {};
     techniques.forEach((t, order) => {
       if (!t.input || t.auto || t.hold) return;
@@ -96,7 +96,7 @@ export class ComboRecognizer {
   }
 
   reset() {
-    this.hist = [{ dir: 'N', eff: 'N', t: -1e12 }];
+    this.hist = [{ dir: 'N', eff: 'N', pref: null, t: -1e12 }];
     this.presses = [];
   }
 
@@ -105,21 +105,54 @@ export class ComboRecognizer {
   }
 
   pushDir(dir, t) {
-    const prev = this.dir;
+    const last = this.hist[this.hist.length - 1];
+    const prev = last.dir;
     if (prev === dir) return;
-    // ↘ po → reiškia „pridėta ↓“, ↘ po ↓ – „pridėta →“; įstrižainė iš neutralios padėties lieka dviprasmė.
-    const eff = dir.length === 2 && prev.length === 1 && prev !== 'N' && dir.includes(prev) ? dir.replace(prev, '') : dir;
-    this.hist.push({ dir, eff, t });
+    // Įstrižainės, į kurią ateita iš kardinalios krypties, reikšmė (eff) ir pirmenybė (pref):
+    //  • kryptis prieš tai laikyta ilgai (pvz., → per visą smūgį), tada ↘ = sąmoningas judesys link ↓;
+    //  • greitas judesys ↓ ↘ = ketvirčio pradžia, reiškia →;
+    //  • ką tik pasiekus → ir šiek tiek nuslydus atgal į ↘ (ar peršovus į ↗) – tai tik netikslumas ties sektoriaus riba:
+    //    įstrižainė lieka dviprasmė, bet pirmenybė teikiama ką tik pasiektai krypčiai.
+    let eff = dir;
+    let pref = dir.length === 2 ? dir[0] : null;   // iš neutralios padėties – pirmenybė lygiui (↑ / ↓)
+    if (dir.length === 2 && prev.length === 1 && prev !== 'N' && dir.includes(prev)) {
+      const before = this.hist.length > 1 ? this.hist[this.hist.length - 2].dir : 'N';
+      const swept = before.length === 2 && before.includes(prev);
+      if (t - last.t < this.cfg.settleMs && swept) pref = prev;
+      else { eff = dir.replace(prev, ''); pref = null; }
+    }
+    this.hist.push({ dir, eff, pref, t });
     if (this.hist.length > 20) this.hist.shift();
   }
 
   // Grąžina { tech, matched, locked }: tech – ką vykdyti; matched – atpažintos sekos id;
   // locked – seka atpažinta, bet technika neatrakinta (tada vykdoma paprasčiausia to mygtuko technika).
+  // Ilgiausia atitinkanti seka; tarp vienodo ilgio – ta, kurios paskutinė kryptis sutampa su įstrižainės pirmenybe.
+  pick(list, t) {
+    let found = null;
+    let w = -1;
+    const pref = this.hist[this.hist.length - 1].pref;
+    for (const c of list) {
+      if (found && c.w < w) break;
+      if (!matchSeq(c.dirs, this.hist, this.presses, t, this.cfg, this.cfg.buttonMs)) continue;
+      if (!found) { found = c.tech; w = c.w; if (!pref || c.dirs[c.dirs.length - 1] === pref) break; }
+      else if (c.dirs[c.dirs.length - 1] === pref) { found = c.tech; break; }
+    }
+    return found;
+  }
+
   press(btn, t, unlocked) {
     const list = this.cands[btn] || [];
-    let found = null;
-    for (const c of list) {
-      if (matchSeq(c.dirs, this.hist, this.presses, t, this.cfg, this.cfg.buttonMs)) { found = c.tech; break; }
+    let found = this.pick(list, t);
+    const last = this.hist[this.hist.length - 1];
+    if (found && unlocked && !unlocked.has(found.id) && last.pref && last.eff !== last.pref) {
+      // Dviprasmė įstrižainė (pvz., ↓→ peršovus į ↗) atitiko neatrakintą techniką: bandome aiškinti ją kaip
+      // ką tik pasiektą kryptį – jei taip gaunama atrakinta technika, žaidėjas ketino būtent ją.
+      const eff = last.eff;
+      last.eff = last.pref;
+      const alt = this.pick(list, t);
+      last.eff = eff;
+      if (alt && unlocked.has(alt.id)) found = alt;
     }
     this.presses.push({ btn, t });
     if (this.presses.length > 8) this.presses.shift();
@@ -131,11 +164,20 @@ export class ComboRecognizer {
 }
 
 // Analoginio vektoriaus (ekrano koordinatės, y žemyn) vertimas į 8 kryptis. → visada reiškia „link varžovo“.
-export function dirFromVector(dx, dy, deadzone = 0.2) {
-  if (Math.hypot(dx, dy) < deadzone) return 'N';
+// cur – dabartinė kryptis: ji išlaikoma, kol pirštas neperžengia sektoriaus ribos su atsarga (histerezė),
+// kad ties riba tarp dviejų krypčių (pvz., ↘ ir →) kryptis nevirpėtų.
+const SECTORS = ['B', 'DB', 'D', 'DF', 'F', 'UF', 'U', 'UB', 'B'];
+const CENTER = { F: 0, UF: 45, U: 90, UB: 135, B: 180, DB: -135, D: -90, DF: -45 };
+export function dirFromVector(dx, dy, deadzone = 0.2, cur = null, hysteresis = 8) {
+  const m = Math.hypot(dx, dy);
+  const held = cur && cur !== 'N';
+  if (m < (held ? deadzone * 0.75 : deadzone)) return 'N';
   const a = (Math.atan2(-dy, dx) * 180) / Math.PI;
-  const s = Math.round(a / 45);
-  return ['B', 'DB', 'D', 'DF', 'F', 'UF', 'U', 'UB', 'B'][s + 4];
+  if (held) {
+    const d = Math.abs(((a - CENTER[cur] + 540) % 360) - 180);
+    if (d <= 22.5 + hysteresis) return cur;
+  }
+  return SECTORS[Math.round(a / 45) + 4];
 }
 
 const GLYPH = { F: '→', B: '←', U: '↑', D: '↓', DF: '↘', UF: '↗', DB: '↙', UB: '↖', CIRCLE: '○' };

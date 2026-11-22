@@ -29,7 +29,13 @@ export class PlayerController {
       if (ev.k === 'dir') {
         const prev = this.recog.dir;
         this.recog.pushDir(ev.dir, ev.t);
-        if (ev.dir !== 'N') this.pushTrail(inputGlyphs([ev.dir])[0], ev.t);
+        // Pėdsake rodoma atpažinta kryptis (pvz., ↓ ↘ rodoma kaip ↓ →); netikslumas ties sektoriaus riba nerodomas.
+        const h = this.recog.hist[this.recog.hist.length - 1];
+        if (ev.dir !== 'N' && h.dir === ev.dir && !(h.eff.length === 2 && h.pref && prev !== 'N')) {
+          const g = inputGlyphs([h.eff])[0];
+          const lastG = this.trail[this.trail.length - 1];
+          if (!lastG || lastG.g !== g || ev.t - lastG.t > 400) this.pushTrail(g, ev.t);
+        }
         // Dvigubas bakstelėjimas →→ / ←← = įsiveržimas / atsitraukimas.
         if (prev === 'F' || prev === 'B') { this.tap.end = ev.t; this.tap.dur = ev.t - this.tap.start; this.tap.dir = prev; }
         if (ev.dir === 'F' || ev.dir === 'B') {

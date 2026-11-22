@@ -24,7 +24,7 @@
     "hantei": { "wazaAri": 100, "damage": 1, "effective": 3, "techniques": 0.5, "initiative": 0.4, "chui": 12 }
   },
   "arena": { "xMin": 230, "xMax": 1050, "startAka": 540, "startShiro": 740, "groundY": 540 },
-  "input": { "bufferMs": 350, "buttonMs": 200, "holdMs": 300, "deadzone": 0.2, "dashTapMs": 250 },
+  "input": { "bufferMs": 350, "buttonMs": 200, "settleMs": 150, "holdMs": 300, "deadzone": 0.2, "dashTapMs": 250 },
   "combat": {
     "ranges": { "close": 105, "mid": 150, "midfar": 172, "far": 195 },
     "minSeparation": 86,

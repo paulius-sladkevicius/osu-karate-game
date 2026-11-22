@@ -140,31 +140,74 @@ test('dirFromVector: 8 kryptys ir mirtina zona', () => {
   assert.equal(dirFromVector(-0.7, -0.7), 'UB');
 });
 
+// Suvaidina kryptis su trukmėmis [kryptis, ms] ir paspaudžia mygtuką.
+function play(seq, btn, set) {
+  const rec = new ComboRecognizer(db.techniques, cfg);
+  let t = 1000;
+  for (const [d, ms] of seq) { rec.pushDir(d, t); t += ms; }
+  return rec.press(btn, t, set);
+}
+
 test('grąžinant džoistiką nuo → prie ↓ judesys nelaikomas nauju ketvirčiu (Kagi – kagi – gedan)', () => {
   const orange = techsUpTo(db, 'orange');
-  const go = (seq, btn, set = orange) => {
-    const rec = new ComboRecognizer(db.techniques, cfg);
-    let t = 1000;
-    for (const d of seq) { rec.pushDir(d, t); t += 60; }
-    return rec.press(btn, t, set);
-  };
-  // Po ↓→A: džoistikas grįžta prie ↓ (tvarkingai, sustojus įstrižai arba peršokant) ir spaudžiamas K = Gedan mawashi geri.
-  for (const seq of [['D', 'DF', 'F', 'DF', 'D'], ['D', 'DF', 'F', 'DF'], ['D', 'DF', 'F', 'D'], ['D', 'F', 'D'], ['D', 'DF', 'F', 'N', 'D']]) {
-    const r = go(seq, 'K');
-    assert.equal(r.matched, 'gedan_mawashi_geri', seq.join(' '));
+  const kagi = [['D', 120], ['DF', 50], ['F', 380]];          // ↓→A: → laikoma, kol trunka smūgis
+  // Po ↓→A džoistikas grįžta prie ↓ (tvarkingai, sustojus ties ↘ arba peršokant) ir spaudžiamas K = Gedan mawashi geri.
+  for (const tail of [[['DF', 50], ['D', 60]], [['DF', 70]], [['D', 60]], [['N', 60], ['D', 60]]]) {
+    const r = play([...kagi, ...tail], 'K', orange);
+    assert.equal(r.matched, 'gedan_mawashi_geri', JSON.stringify(tail));
     assert.equal(r.locked, false);
   }
-  // Antras ↓→A iš eilės: grįžtama prie ↓ ir vėl sukamas ketvirtis.
-  for (const seq of [['D', 'DF', 'F', 'DF', 'D', 'DF', 'F'], ['D', 'DF', 'F', 'D', 'DF'], ['D', 'DF', 'F', 'D', 'F']]) {
-    assert.equal(go(seq, 'A').matched, 'seiken_kagi_tsuki', seq.join(' '));
+  // Antras ↓→A iš eilės: grįžtama prie ↓ ir vėl sukamas ketvirtis (taip pat sustojus ties ↘).
+  for (const tail of [[['DF', 50], ['D', 60], ['DF', 50], ['F', 60]], [['D', 60], ['DF', 60]], [['D', 60], ['F', 60]], [['DF', 50], ['D', 60], ['DF', 50], ['F', 30], ['DF', 40]]]) {
+    assert.equal(play([...kagi, ...tail], 'A', orange).matched, 'seiken_kagi_tsuki', JSON.stringify(tail));
   }
-  // Tikras ketvirtis (↓ ↘ →, taip pat sustojus ↘) ir toliau atpažįstamas; ↓A po ↓→ – Shita tsuki.
-  assert.equal(go(['D', 'DF', 'F'], 'K', unlocked).matched, 'chudan_mawashi_geri');
-  assert.equal(go(['D', 'DF'], 'K', unlocked).matched, 'chudan_mawashi_geri');
-  assert.equal(go(['D', 'DF', 'F', 'DF', 'D'], 'A').matched, 'seiken_shita_tsuki');
-  // Įstrižainė iš neutralios padėties: pirmenybė lygiui (↓).
-  assert.equal(go(['DF'], 'K').matched, 'gedan_mawashi_geri');
+  assert.equal(play([...kagi, ['DF', 50], ['D', 60]], 'A', orange).matched, 'seiken_shita_tsuki', '↓A po ↓→A');
   // Atleista kryptis dar galioja 200 ms, bet perėjus į kitą kryptį – nebe.
-  assert.equal(go(['F', 'N'], 'A').matched, 'seiken_oi_tsuki');
-  assert.equal(go(['F', 'U'], 'K').matched, 'jodan_mae_geri');
+  assert.equal(play([['F', 60], ['N', 60]], 'A', orange).matched, 'seiken_oi_tsuki');
+  assert.equal(play([['F', 60], ['U', 60]], 'K', new Set(db.techniques.map((x) => x.id))).matched, 'jodan_mae_geri');
+});
+
+test('ketvirtis ↓→: nykščiui sustojus ties riba tarp ↘ ir → (ar ją peršovus) technika vis tiek atpažįstama', () => {
+  const orange = techsUpTo(db, 'orange');
+  const cases = {
+    'tvarkingai ↓ ↘ →': [['D', 120], ['DF', 50], ['F', 60]],
+    'sustota ties ↘': [['D', 120], ['DF', 80]],
+    'pasiekta → ir nuslysta atgal į ↘': [['D', 120], ['DF', 50], ['F', 30], ['DF', 40]],
+    'virpėjimas ties riba': [['D', 120], ['DF', 50], ['F', 25], ['DF', 25], ['F', 25], ['DF', 30]],
+    'peršauta į ↗': [['D', 120], ['DF', 50], ['F', 30], ['UF', 40]],
+    'per centrą ↓ · →': [['D', 120], ['N', 90], ['F', 60]],
+    'lėtas ↓ (laikomas) ir ↘ →': [['D', 900], ['DF', 60], ['F', 60]],
+    'pradėta nuo ↙': [['DB', 60], ['D', 80], ['DF', 50], ['F', 50]],
+  };
+  for (const [name, seq] of Object.entries(cases)) {
+    assert.equal(play(seq, 'A', orange).matched, 'seiken_kagi_tsuki', `↓→A: ${name}`);
+    assert.equal(play(seq, 'K', unlocked).matched, 'chudan_mawashi_geri', `↓→K: ${name}`);
+  }
+  // Kitos technikos nenukenčia: ↓A, →A, ↓↑A, ↓K ir įstrižainė iš neutralios padėties.
+  assert.equal(play([['D', 200]], 'A', unlocked).matched, 'seiken_shita_tsuki');
+  assert.equal(play([['F', 200]], 'A', unlocked).matched, 'seiken_oi_tsuki');
+  assert.equal(play([['D', 100], ['N', 60], ['U', 60]], 'A', unlocked).matched, 'seiken_ago_uchi');
+  assert.equal(play([['DF', 200]], 'K', orange).matched, 'gedan_mawashi_geri');
+  assert.equal(play([['F', 300], ['DF', 80]], 'K', orange).matched, 'gedan_mawashi_geri', '→ laikyta, tada ↘ = ↓');
+  // Pusapskritimis ↓→↑ ir toliau atpažįstamas, net sustojus ties ↗.
+  const all = new Set(db.techniques.map((x) => x.id));
+  assert.equal(play([['D', 100], ['DF', 40], ['F', 40], ['UF', 40], ['U', 50]], 'K', all).matched, 'jodan_mawashi_geri');
+  assert.equal(play([['D', 100], ['DF', 40], ['F', 40], ['UF', 60]], 'K', all).matched, 'jodan_mawashi_geri');
+});
+
+test('džoistiko histerezė: ties sektoriaus riba kryptis nevirpa', () => {
+  const v = (deg) => [Math.cos((deg * Math.PI) / 180), Math.sin((deg * Math.PI) / 180)];   // deg žemiau horizontalės
+  assert.equal(dirFromVector(...v(24), 0.2), 'DF', 'be histerezės 24° jau ↘');
+  assert.equal(dirFromVector(...v(24), 0.2, 'F'), 'F', 'laikant → riba pastumiama');
+  assert.equal(dirFromVector(...v(29), 0.2, 'F'), 'F');
+  assert.equal(dirFromVector(...v(33), 0.2, 'F'), 'DF');
+  assert.equal(dirFromVector(...v(20), 0.2, 'DF'), 'DF', 'laikant ↘ – taip pat');
+  assert.equal(dirFromVector(...v(12), 0.2, 'DF'), 'F');
+  assert.equal(dirFromVector(0.17, 0, 0.2, 'F'), 'F', 'mirtinos zonos histerezė');
+  assert.equal(dirFromVector(0.17, 0, 0.2, 'N'), 'N');
+  assert.equal(dirFromVector(0.1, 0, 0.2, 'F'), 'N');
+  let flips = 0;
+  let cur = 'F';
+  for (let i = 0; i < 40; i++) { const d = dirFromVector(...v(22.5 + (i % 2 ? 3 : -3)), 0.2, cur); if (d !== cur) flips++; cur = d; }
+  assert.equal(flips, 0, 'virpant ±3° apie ribą kryptis nesikeičia');
 });

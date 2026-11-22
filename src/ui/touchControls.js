@@ -88,7 +88,7 @@ export class TouchControls {
     const m = Math.hypot(dx, dy);
     if (m > 1) { dx /= m; dy /= m; }
     this.knob.style.transform = `translate(${dx * STICK_R}px, ${dy * STICK_R}px)`;
-    this.input.setDir(dirFromVector(dx, dy, 0.2));   // mirtina zona – 20 % spindulio
+    this.input.setDir(dirFromVector(dx, dy, 0.2, this.input.dir));   // mirtina zona – 20 % spindulio; histerezė ties sektorių ribomis
   }
 
   // Mygtukai ≥ 64×64 CSS px, tarpai ≥ 12 px; dydis ir permatomumas – iš nustatymų; kairiarankiams zonos sukeičiamos.
