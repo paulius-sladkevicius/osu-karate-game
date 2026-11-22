@@ -10,7 +10,7 @@ function __req(id) {
   __mods[id](exp, __req);
   return exp;
 }
-globalThis.__OSU_DATA__ = {"techniques":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"input: krypciu kodai F B U D DF UF DB UB CIRCLE + paskutinis mygtukas A K G KIAI. frames ms. range: close|mid|midfar|far. level: jodan|chudan|gedan.","techniques":[{"id":"seiken_gyaku_tsuki","name":"Seiken gyaku tsuki","nameLt":"Tiesus kumštis priešinga ranka","nameEn":"Reverse straight punch","descLt":"Tiesus kumštis į liemenį priešinga ranka.","descEn":"Straight punch to the body with the rear hand.","belt":"white","type":"strike","input":["A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":120,"active":60,"recovery":180},"damage":{"zone":"body","amount":6},"balanceDamage":4,"staminaCost":4,"anim":"gyaku_tsuki"},{"id":"seiken_oi_tsuki","name":"Seiken oi tsuki","nameLt":"Tiesus kumštis su žingsniu","nameEn":"Lunge punch","descLt":"Tiesus kumštis į liemenį žengiant pirmyn.","descEn":"Straight punch to the body while stepping forward.","belt":"white","type":"strike","input":["F","A"],"level":"chudan","legalInKumite":true,"range":"close","advance":60,"frames":{"startup":160,"active":60,"recovery":220},"damage":{"zone":"body","amount":7},"balanceDamage":5,"staminaCost":5,"anim":"oi_tsuki"},{"id":"seiken_jodan_tsuki","name":"Seiken jodan tsuki","nameLt":"Kumštis į galvą","nameEn":"Punch to the head","descLt":"Kumštis į galvą. Tik kihon ir kata – kumite metu draudžiama!","descEn":"Punch to the head. Kihon and kata only – forbidden in kumite!","belt":"white","type":"strike","input":["U","A"],"level":"jodan","legalInKumite":false,"foulChui":1,"range":"close","frames":{"startup":130,"active":60,"recovery":200},"damage":{"zone":"head","amount":8},"balanceDamage":5,"staminaCost":4,"anim":"jodan_tsuki"},{"id":"mae_geri_chudan","name":"Mae geri chudan","nameLt":"Tiesus spyris į pilvą","nameEn":"Front kick to the body","descLt":"Tiesus spyris padu į pilvą.","descEn":"Front kick with the ball of the foot to the stomach.","belt":"white","type":"strike","input":["K"],"level":"chudan","legalInKumite":true,"range":"mid","frames":{"startup":180,"active":80,"recovery":250},"damage":{"zone":"body","amount":9},"balanceDamage":10,"staminaCost":7,"anim":"mae_geri"},{"id":"chudan_uchi_uke","name":"Chudan uchi uke","nameLt":"Vidurinė gynyba","nameEn":"Middle block","descLt":"Vidurinė gynyba – stabdo smūgius į liemenį.","descEn":"Middle block – stops attacks to the body.","belt":"white","type":"guard","input":["G"],"level":"chudan","legalInKumite":true,"staminaCost":3,"anim":"guard_chudan"},{"id":"jodan_uke","name":"Jodan uke","nameLt":"Aukšta gynyba","nameEn":"High block","descLt":"Aukšta gynyba – stabdo spyrius į galvą.","descEn":"High block – stops kicks to the head.","belt":"white","type":"guard","input":["U","G"],"level":"jodan","legalInKumite":true,"staminaCost":3,"anim":"guard_jodan"},{"id":"gedan_barai","name":"Gedan barai","nameLt":"Žema gynyba","nameEn":"Low block","descLt":"Žema gynyba – stabdo žemus spyrius.","descEn":"Low sweeping block – stops low kicks.","belt":"white","type":"guard","input":["D","G"],"level":"gedan","legalInKumite":true,"staminaCost":3,"anim":"guard_gedan"},{"id":"seiken_shita_tsuki","name":"Seiken shita tsuki","nameLt":"Smūgis iš apačios","nameEn":"Uppercut to the body","descLt":"Smūgis iš apačios į pilvą ir šonkaulius.","descEn":"Rising punch to the stomach and ribs.","belt":"orange","type":"strike","input":["D","A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":150,"active":60,"recovery":220},"damage":{"zone":"body","amount":8},"balanceDamage":4,"staminaCost":5,"anim":"shita_tsuki"},{"id":"seiken_kagi_tsuki","name":"Seiken kagi tsuki","nameLt":"Kabliukas į šoną","nameEn":"Hook punch","descLt":"Kabliukas į šoną (šonkaulius).","descEn":"Hook punch to the side of the body.","belt":"orange","type":"strike","input":["D","F","A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":170,"active":60,"recovery":240},"damage":{"zone":"body","amount":9},"balanceDamage":6,"staminaCost":6,"anim":"kagi_tsuki"},{"id":"gedan_mawashi_geri","name":"Gedan mawashi geri","nameLt":"Žemas šoninis spyris","nameEn":"Low roundhouse kick","descLt":"Žemas spyris blauzda į šlaunies šoną („low kick“).","descEn":"Low kick with the shin to the side of the thigh.","belt":"orange","type":"strike","input":["D","K"],"level":"gedan","legalInKumite":true,"range":"mid","lowKick":true,"frames":{"startup":200,"active":80,"recovery":300},"damage":{"zone":"legs","amount":12},"balanceDamage":12,"staminaCost":8,"anim":"gedan_mawashi"},{"id":"hiza_geri","name":"Hiza geri","nameLt":"Kelio smūgis","nameEn":"Knee strike","descLt":"Kelio smūgis į liemenį iš arti.","descEn":"Knee strike to the body at close range.","belt":"orange","type":"strike","input":["F","K"],"level":"chudan","legalInKumite":true,"range":"close","advance":20,"frames":{"startup":170,"active":70,"recovery":260},"damage":{"zone":"body","amount":11},"balanceDamage":8,"staminaCost":8,"anim":"hiza_geri"},{"id":"sune_uke","name":"Sune uke","nameLt":"Blokas blauzda","nameEn":"Shin block","descLt":"Žemo spyrio blokavimas pakelta blauzda. Laikyk ↓G, kai skrenda žemas spyris.","descEn":"Low kick check with a raised shin. Hold ↓G when a low kick is coming.","belt":"orange","type":"guard","input":["D","G"],"level":"gedan","legalInKumite":true,"auto":true,"condition":"vsLowKick","staminaCost":3,"anim":"sune_uke","lesson":{"partner":"gedan_mawashi_geri"}},{"id":"chudan_mawashi_geri","name":"Chudan mawashi geri","nameLt":"Šoninis spyris į liemenį","nameEn":"Middle roundhouse kick","descLt":"Šoninis (lankinis) spyris į liemenį.","descEn":"Roundhouse kick to the body.","belt":"blue","type":"strike","input":["D","F","K"],"level":"chudan","legalInKumite":true,"range":"mid","frames":{"startup":260,"active":90,"recovery":360},"damage":{"zone":"body","amount":14},"balanceDamage":10,"staminaCost":10,"anim":"chudan_mawashi"},{"id":"yoko_geri_chudan","name":"Yoko geri chudan","nameLt":"Spyris šonu","nameEn":"Side kick","descLt":"Spyris šonu, kulnu į liemenį – atstumia varžovą.","descEn":"Side kick with the heel to the body – pushes the opponent back.","belt":"blue","type":"strike","input":["B","F","K"],"level":"chudan","legalInKumite":true,"range":"midfar","knockback":90,"frames":{"startup":240,"active":90,"recovery":340},"damage":{"zone":"body","amount":11},"balanceDamage":16,"staminaCost":10,"anim":"yoko_geri"},{"id":"hiji_chudan_uchi","name":"Hiji chudan uchi","nameLt":"Alkūnė į liemenį","nameEn":"Elbow strike to the body","descLt":"Alkūnės smūgis į liemenį iš arti (tik į liemenį!).","descEn":"Elbow strike to the body at close range (body only!).","belt":"blue","type":"strike","input":["F","F","A"],"level":"chudan","legalInKumite":true,"range":"close","advance":25,"frames":{"startup":150,"active":60,"recovery":230},"damage":{"zone":"body","amount":12},"balanceDamage":7,"staminaCost":7,"anim":"hiji_uchi"},{"id":"seiken_ago_uchi","name":"Seiken ago uchi","nameLt":"Kumštis į smakrą","nameEn":"Punch to the chin","descLt":"Kumštis iš apačios į smakrą. Tik kihon – kumite metu draudžiama!","descEn":"Rising punch to the chin. Kihon only – forbidden in kumite!","belt":"blue","type":"strike","input":["D","U","A"],"level":"jodan","legalInKumite":false,"foulChui":1,"range":"close","frames":{"startup":160,"active":60,"recovery":240},"damage":{"zone":"head","amount":10},"balanceDamage":6,"staminaCost":5,"anim":"ago_uchi"},{"id":"morote_uke","name":"Morote uke","nameLt":"Dviejų rankų gynyba","nameEn":"Two-handed block","descLt":"Dviejų rankų gynyba – stipresnė, bet lėtesnė. Laikyk G.","descEn":"Two-handed block – stronger but slower. Hold G.","belt":"blue","type":"guard","input":["G"],"level":"chudan","legalInKumite":true,"hold":true,"staminaCost":3,"anim":"morote_uke"},{"id":"jodan_mae_geri","name":"Jodan mae geri","nameLt":"Tiesus spyris į galvą","nameEn":"Front kick to the head","descLt":"Tiesus spyris į galvą.","descEn":"Front kick to the head.","belt":"yellow","type":"strike","input":["U","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":230,"active":80,"recovery":330},"damage":{"zone":"head","amount":22},"balanceDamage":12,"staminaCost":11,"anim":"jodan_mae_geri"},{"id":"jodan_mawashi_geri","name":"Jodan mawashi geri","nameLt":"Aukštas šoninis spyris","nameEn":"High roundhouse kick","descLt":"Aukštas šoninis spyris į galvą.","descEn":"High roundhouse kick to the head.","belt":"yellow","type":"strike","input":["D","F","U","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":320,"active":100,"recovery":450},"damage":{"zone":"head","amount":30},"balanceDamage":15,"staminaCost":14,"anim":"jodan_mawashi"},{"id":"ushiro_geri","name":"Ushiro geri","nameLt":"Atgalinis spyris","nameEn":"Back kick","descLt":"Atgalinis spyris apsisukant.","descEn":"Spinning back kick.","belt":"yellow","type":"strike","input":["F","D","B","K"],"level":"chudan","legalInKumite":true,"range":"midfar","knockback":80,"frames":{"startup":340,"active":90,"recovery":460},"damage":{"zone":"body","amount":20},"balanceDamage":18,"staminaCost":14,"anim":"yoko_geri"},{"id":"kansetsu_geri","name":"Kansetsu geri","nameLt":"Spyris į kelį","nameEn":"Joint kick","descLt":"Tiesus spyris į kelį. Tik kihon – kumite metu draudžiama!","descEn":"Straight kick to the knee. Kihon only – forbidden in kumite!","belt":"yellow","type":"strike","input":["B","D","K"],"level":"gedan","legalInKumite":false,"foulChui":2,"range":"mid","frames":{"startup":200,"active":80,"recovery":300},"damage":{"zone":"legs","amount":14},"balanceDamage":12,"staminaCost":8,"anim":"gedan_mawashi"},{"id":"mawashi_uke","name":"Mawashi uke","nameLt":"Apskritiminė gynyba","nameEn":"Circular block","descLt":"Apskritiminė gynyba; sėkminga atveria 400 ms kontratakos langą.","descEn":"Circular block; success opens a 400 ms counter window.","belt":"yellow","type":"guard","input":["F","G"],"level":"chudan","legalInKumite":true,"staminaCost":4,"anim":"morote_uke"},{"id":"kakato_otoshi","name":"Kakato otoshi","nameLt":"„Kirvio“ spyris","nameEn":"Axe kick","descLt":"„Kirvio“ spyris kulnu iš viršaus (oroshi kakato geri).","descEn":"Axe kick with the heel from above (oroshi kakato geri).","belt":"green","type":"strike","input":["U","D","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":380,"active":100,"recovery":500},"damage":{"zone":"head","amount":32},"balanceDamage":16,"staminaCost":16,"anim":"jodan_mae_geri"},{"id":"ushiro_mawashi_geri","name":"Ushiro mawashi geri","nameLt":"Sukamasis spyris kulnu","nameEn":"Spinning hook kick","descLt":"Sukamasis spyris kulnu į galvą.","descEn":"Spinning heel kick to the head.","belt":"green","type":"strike","input":["CIRCLE","K"],"level":"jodan","legalInKumite":true,"range":"midfar","frames":{"startup":450,"active":100,"recovery":600},"damage":{"zone":"head","amount":40},"balanceDamage":20,"staminaCost":20,"anim":"jodan_mawashi"},{"id":"uchi_mawashi_geri","name":"Uchi mawashi geri","nameLt":"Spyris iš vidaus į išorę","nameEn":"Inside crescent kick","descLt":"Aukštas spyris iš vidaus į išorę.","descEn":"High crescent kick from the inside out.","belt":"green","type":"strike","input":["U","B","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":300,"active":90,"recovery":420},"damage":{"zone":"head","amount":24},"balanceDamage":12,"staminaCost":13,"anim":"jodan_mawashi"},{"id":"ashi_barai","name":"Ashi barai","nameLt":"Pakirtimas","nameEn":"Foot sweep","descLt":"Kojos pakirtimas; iškart po jo galima smogti gedan tsuki (↓A).","descEn":"Foot sweep; follow immediately with gedan tsuki (↓A).","belt":"green","type":"strike","input":["D","B","K"],"level":"gedan","legalInKumite":true,"range":"mid","frames":{"startup":220,"active":80,"recovery":320},"damage":{"zone":"legs","amount":5},"balanceDamage":30,"staminaCost":9,"anim":"gedan_mawashi"},{"id":"gedan_tsuki_followup","name":"Gedan tsuki","nameLt":"Smūgis po pakirtimo","nameEn":"Follow-up punch after a sweep","descLt":"Kontroliuojamas smūgis į parkritusį iškart po pakirtimo.","descEn":"Controlled punch to the downed opponent right after a sweep.","belt":"green","type":"strike","input":["D","A"],"level":"gedan","legalInKumite":true,"auto":true,"condition":"afterSweep","range":"close","frames":{"startup":150,"active":60,"recovery":260},"damage":{"zone":"body","amount":6},"balanceDamage":0,"staminaCost":5,"anim":"shita_tsuki"},{"id":"tobi_mae_geri","name":"Tobi mae geri","nameLt":"Šuolinis tiesus spyris","nameEn":"Jumping front kick","descLt":"Šuolinis tiesus spyris.","descEn":"Jumping front kick.","belt":"brown","type":"strike","input":["U","U","K"],"level":"jodan","legalInKumite":true,"range":"midfar","advance":40,"frames":{"startup":300,"active":100,"recovery":480},"damage":{"zone":"head","amount":26},"balanceDamage":16,"staminaCost":15,"anim":"jodan_mae_geri"},{"id":"tobi_hiza_geri","name":"Tobi hiza geri","nameLt":"Šuolinis kelio smūgis","nameEn":"Jumping knee strike","descLt":"Šuolinis kelio smūgis.","descEn":"Jumping knee strike.","belt":"brown","type":"strike","input":["U","U","F","K"],"level":"jodan","legalInKumite":true,"range":"mid","advance":60,"frames":{"startup":280,"active":90,"recovery":460},"damage":{"zone":"head","amount":28},"balanceDamage":18,"staminaCost":15,"anim":"hiza_geri"},{"id":"tobi_nidan_geri","name":"Tobi nidan geri","nameLt":"Dvigubas šuolinis spyris","nameEn":"Jumping double kick","descLt":"Dvigubas šuolinis spyris.","descEn":"Jumping double front kick.","belt":"brown","type":"strike","input":["U","U","K","K"],"level":"jodan","legalInKumite":true,"range":"midfar","advance":50,"frames":{"startup":220,"active":120,"recovery":520},"damage":{"zone":"head","amount":30},"balanceDamage":18,"staminaCost":18,"anim":"jodan_mae_geri"},{"id":"tobi_ushiro_mawashi_geri","name":"Tobi ushiro mawashi geri","nameLt":"Šuolinis sukamasis spyris","nameEn":"Jumping spinning hook kick","descLt":"Šuolinis sukamasis spyris kulnu.","descEn":"Jumping spinning heel kick.","belt":"brown","type":"strike","input":["U","U","CIRCLE","K"],"level":"jodan","legalInKumite":true,"range":"midfar","frames":{"startup":480,"active":110,"recovery":650},"damage":{"zone":"head","amount":46},"balanceDamage":24,"staminaCost":24,"anim":"jodan_mawashi"},{"id":"kiai_mode","name":"Kiai","nameLt":"KIAI režimas","nameEn":"KIAI mode","descLt":"5 s: +25 % žala, ištvermė nesmunka. Reikia pilnos ki juostos.","descEn":"5 s: +25 % damage, no stamina drain. Needs a full ki bar.","belt":"black","type":"mode","input":["KIAI"],"legalInKumite":true}]},"combos":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"sequence: techniku id grandine (renzoku). '@block' = sekminga gynyba. bonus raktai: damageMult, legDamageMult, balanceBonus, unblockable (MVP); wazaAriIfLegDamageOver, autoWazaAri, guaranteedWazaAri (4 etapas).","combos":[{"id":"sanbon_tsuki","name":"Sanbon tsuki","nameLt":"Trys smūgiai iš eilės","nameEn":"Triple punch","belt":"white","sequence":["seiken_gyaku_tsuki","seiken_gyaku_tsuki","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.15,"balanceBonus":10}},{"id":"mae_gyaku","name":"Mae geri – gyaku tsuki","nameLt":"Spyris ir kumštis","nameEn":"Front kick – reverse punch","belt":"white","sequence":["mae_geri_chudan","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.15}},{"id":"shita_gedan","name":"Shita tsuki – gedan mawashi","nameLt":"Smūgis iš apačios ir žemas spyris","nameEn":"Uppercut – low kick","belt":"orange","sequence":["seiken_shita_tsuki","gedan_mawashi_geri"],"bonus":{"damageMult":1.2,"legDamageMult":1.5}},{"id":"kagi_kagi_gedan","name":"Kagi tsuki – kagi tsuki – gedan","nameLt":"Du kabliukai ir žemas spyris","nameEn":"Double hook – low kick","belt":"orange","sequence":["seiken_kagi_tsuki","seiken_kagi_tsuki","gedan_mawashi_geri"],"bonus":{"damageMult":1.2}},{"id":"gyaku_shita_chudan","name":"Gyaku tsuki – shita tsuki – chudan mawashi","nameLt":"Du kumščiai ir šoninis spyris","nameEn":"Two punches – middle roundhouse","belt":"blue","sequence":["seiken_gyaku_tsuki","seiken_shita_tsuki","chudan_mawashi_geri"],"bonus":{"damageMult":1.25}},{"id":"uke_hiza","name":"Uke – hiza geri","nameLt":"Gynyba ir kelio kontrataka","nameEn":"Block – knee counter","belt":"blue","sequence":["@block","hiza_geri"],"bonus":{"unblockable":true},"lesson":{"partner":"seiken_gyaku_tsuki"}},{"id":"gedan_jodan","name":"Gedan – jodan mawashi","nameLt":"Žemas ir aukštas spyris ta pačia koja","nameEn":"Low – high kick, same leg","belt":"yellow","sequence":["gedan_mawashi_geri","jodan_mawashi_geri"],"bonus":{"wazaAriIfLegDamageOver":50}},{"id":"mae_ushiro","name":"Mae geri – ushiro geri","nameLt":"Tiesus ir atgalinis spyris","nameEn":"Front kick – back kick","belt":"yellow","sequence":["mae_geri_chudan","ushiro_geri"],"bonus":{"damageMult":1.25}},{"id":"sanbon_kakato","name":"Sanbon tsuki – kakato otoshi","nameLt":"Trys smūgiai ir kirvio spyris","nameEn":"Triple punch – axe kick","belt":"green","sequence":["seiken_gyaku_tsuki","seiken_gyaku_tsuki","seiken_gyaku_tsuki","kakato_otoshi"],"bonus":{"unblockable":true}},{"id":"gedan_ushiro_mawashi","name":"Gedan – ushiro mawashi","nameLt":"Žemas ir sukamasis spyris","nameEn":"Low kick – spinning hook kick","belt":"green","sequence":["gedan_mawashi_geri","ushiro_mawashi_geri"],"bonus":{"damageMult":1.3}},{"id":"ashi_gedan_tsuki","name":"Ashi barai – gedan tsuki","nameLt":"Pakirtimas ir smūgis","nameEn":"Sweep – follow-up punch","belt":"brown","sequence":["ashi_barai","gedan_tsuki_followup"],"bonus":{"autoWazaAri":true}},{"id":"nidan_gyaku","name":"Tobi nidan – gyaku tsuki","nameLt":"Dvigubas šuolinis spyris ir kumštis","nameEn":"Jumping double kick – reverse punch","belt":"brown","sequence":["tobi_nidan_geri","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.35}},{"id":"osu_no_seishin","name":"Osu no seishin","nameLt":"Signatūrinė kombinacija","nameEn":"Signature combination","belt":"black","sequence":["seiken_gyaku_tsuki","seiken_shita_tsuki","gedan_mawashi_geri","chudan_mawashi_geri","jodan_mawashi_geri"],"bonus":{"guaranteedWazaAri":true}}]},"belts":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"available=false skyriai laukia 4 etapo. exam.kumite = kovu skaicius is eiles. tournament.format: series (kovos is eiles) | bracket (eliminacija).","belts":[{"id":"white","nameLt":"Baltas","nameEn":"White","kyu":["mukyu"],"color":"#f4f1ea","available":true,"unlocksLt":"Bazė: stovos, tiesus smūgis, gynyba","unlocksEn":"Basics: stances, straight punch, blocks","matchTimeSec":60,"bg":"dojo","exam":null,"tournament":{"id":"dojo_sparring","nameLt":"Dojo sparingas su 3 mokiniais","nameEn":"Dojo sparring with 3 students","format":"series","size":4,"bg":"dojo"}},{"id":"orange","nameLt":"Oranžinis","nameEn":"Orange","kyu":[10,9],"color":"#f08a24","available":true,"unlocksLt":"Pirmieji smūgiai į liemenį, žemas spyris","unlocksEn":"First body punches, low kick","bg":"dojo","exam":{"kihonCount":12,"kata":"taikyoku_sono_ichi","kumite":1},"tournament":{"id":"city_cup","nameLt":"Miesto turnyras","nameEn":"City tournament","format":"bracket","size":4,"bg":"hall"}},{"id":"blue","nameLt":"Mėlynas","nameEn":"Blue","kyu":[8,7],"color":"#2f6fd6","available":true,"unlocksLt":"Vidurinis šoninis spyris, alkūnė","unlocksEn":"Middle roundhouse kick, elbow","bg":"dojo","exam":{"kihonCount":14,"kata":"taikyoku_sono_san","kumite":2},"tournament":{"id":"regional_cup","nameLt":"Regiono turnyras","nameEn":"Regional tournament","format":"bracket","size":8,"bg":"hall"}},{"id":"yellow","nameLt":"Geltonas","nameEn":"Yellow","kyu":[6,5],"color":"#f2cf2e","available":false,"unlocksLt":"Aukštas spyris, atgalinis spyris","unlocksEn":"High kick, back kick","bg":"dojo","exam":{"kihonCount":16,"kata":"taikyoku_sono_san","kumite":3},"tournament":{"id":"national_youth","nameLt":"Nacionalinis jaunimo turnyras","nameEn":"National youth tournament","format":"bracket","size":8,"bg":"hall"}},{"id":"green","nameLt":"Žalias","nameEn":"Green","kyu":[4,3],"color":"#2e9e4a","available":false,"unlocksLt":"Kirvio spyris, sukamasis spyris","unlocksEn":"Axe kick, spinning kick","bg":"dojo","exam":{"kihonCount":18,"kata":"taikyoku_sono_san","kumite":5},"tournament":{"id":"national_cup","nameLt":"Nacionalinis čempionatas","nameEn":"National championship","format":"bracket","size":16,"bg":"arena"}},{"id":"brown","nameLt":"Rudas","nameEn":"Brown","kyu":[2,1],"color":"#7a4a22","available":false,"unlocksLt":"Šuoliniai spyriai, ilgos kombinacijos","unlocksEn":"Jumping kicks, long combinations","bg":"dojo","exam":{"kihonCount":20,"kata":"taikyoku_sono_san","kumite":7},"tournament":{"id":"europe_cup","nameLt":"Europos turnyras","nameEn":"European tournament","format":"bracket","size":16,"bg":"arena"}},{"id":"black","nameLt":"Juodas","nameEn":"Black","kyu":["shodan"],"color":"#1b1b1f","available":false,"unlocksLt":"Visos technikos + signatūrinė kombinacija","unlocksEn":"All techniques + signature combination","bg":"dojo","exam":{"kihonCount":20,"kata":"taikyoku_sono_san","kumite":10},"tournament":{"id":"world_open","nameLt":"Atvirasis pasaulio turnyras","nameEn":"Open world tournament","format":"bracket","size":32,"bg":"arena"}}]},"opponents":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"Visi vardai isgalvoti. archetypes: AI elgsenos parametrai; weights: megstamu techniku svoriai (nenurodyta = 1). beltDefaults: reakcijos laikas ms ir prazangu tikimybe. difficulty daugina reakcija ir zala.","archetypes":{"tank":{"nameLt":"Tankas","nameEn":"Tank","descLt":"Spaudžia arti, daug smūgių į liemenį.","descEn":"Presses in close with lots of body punches.","prefDist":96,"aggression":0.78,"retreatChance":0.04,"guardIdle":0.08,"comboChance":0.4,"cooldownMs":[320,800],"block":{"jodan":0.3,"chudan":0.5,"gedan":0.3},"weights":{"seiken_gyaku_tsuki":3,"seiken_oi_tsuki":2,"seiken_shita_tsuki":3,"seiken_kagi_tsuki":3,"hiza_geri":2.5,"hiji_chudan_uchi":2.5,"mae_geri_chudan":0.6,"gedan_mawashi_geri":0.8}},"kicker":{"nameLt":"Spyrikas","nameEn":"Kicker","descLt":"Laiko atstumą ir spardo.","descEn":"Keeps distance and kicks.","prefDist":142,"aggression":0.58,"retreatChance":0.28,"guardIdle":0.12,"comboChance":0.2,"cooldownMs":[450,1000],"block":{"jodan":0.4,"chudan":0.45,"gedan":0.45},"weights":{"mae_geri_chudan":3,"gedan_mawashi_geri":3,"chudan_mawashi_geri":3.5,"yoko_geri_chudan":3,"seiken_gyaku_tsuki":0.6,"hiza_geri":0.8}},"counter":{"nameLt":"Kontratakuotojas","nameEn":"Counter-fighter","descLt":"Daug blokuoja ir atsako po gynybos.","descEn":"Blocks a lot and answers after defending.","prefDist":118,"aggression":0.34,"retreatChance":0.14,"guardIdle":0.4,"comboChance":0.25,"cooldownMs":[500,1100],"block":{"jodan":0.6,"chudan":0.78,"gedan":0.62},"weights":{"hiza_geri":2.5,"seiken_gyaku_tsuki":2,"seiken_shita_tsuki":2,"gedan_mawashi_geri":1.5,"chudan_mawashi_geri":1.5}}},"beltDefaults":{"white":{"reactionMs":600,"foulChance":0.012,"skill":0.6},"orange":{"reactionMs":520,"foulChance":0.008,"skill":0.75},"blue":{"reactionMs":440,"foulChance":0.005,"skill":0.9},"yellow":{"reactionMs":370,"foulChance":0.02,"skill":1},"green":{"reactionMs":300,"foulChance":0.015,"skill":1.1},"brown":{"reactionMs":240,"foulChance":0.01,"skill":1.2},"black":{"reactionMs":180,"foulChance":0.005,"skill":1.3}},"difficulty":{"easy":{"reaction":1.35,"damage":0.8,"aggression":0.8},"normal":{"reaction":1,"damage":1,"aggression":1},"hard":{"reaction":0.75,"damage":1.15,"aggression":1.15}},"roster":[{"id":"w_jonas","name":"Jonas","belt":"white","archetype":"tank"},{"id":"w_ugne","name":"Ugnė","belt":"white","archetype":"kicker"},{"id":"w_matas","name":"Matas","belt":"white","archetype":"counter"},{"id":"o_rokas","name":"Rokas Vėtra","belt":"orange","archetype":"tank"},{"id":"o_emilija","name":"Emilija Šilas","belt":"orange","archetype":"kicker"},{"id":"o_dovas","name":"Dovas Girėnas","belt":"orange","archetype":"counter"},{"id":"o_kenji","name":"Kenji Morita","belt":"orange","archetype":"tank"},{"id":"b_ainis","name":"Ainis Uosis","belt":"blue","archetype":"counter"},{"id":"b_lukne","name":"Luknė Beržė","belt":"blue","archetype":"kicker"},{"id":"b_tadas","name":"Tadas Kalnius","belt":"blue","archetype":"tank"},{"id":"b_hana","name":"Hana Sato","belt":"blue","archetype":"kicker"},{"id":"b_oskar","name":"Oskar Lind","belt":"blue","archetype":"tank"},{"id":"b_mila","name":"Mila Novak","belt":"blue","archetype":"counter"},{"id":"b_vytis","name":"Vytis Ąžuolas","belt":"blue","archetype":"tank"}]},"kata":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"Ritmo mini zaidimas. steps: technikos id; '*' priekyje = pries judesi apsisukama. Formos supaprastintos zaidimui (20 skaiciavimu).","kata":[{"id":"taikyoku_sono_ichi","name":"Taikyoku sono ichi","belt":"white","beatMs":1250,"steps":["*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","seiken_oi_tsuki","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","seiken_oi_tsuki","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki"]},{"id":"taikyoku_sono_ni","name":"Taikyoku sono ni","belt":"white","beatMs":1200,"steps":["*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki"]},{"id":"taikyoku_sono_san","name":"Taikyoku sono san","belt":"orange","beatMs":1150,"steps":["*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki"]}]},"rules":{"_license":"SPDX-License-Identifier: BUSL-1.1","match":{"mainTimeSec":90,"enchoTimeSec":90,"maxEncho":2,"knockdownCountSec":3,"chuiLimit":4,"passivitySec":10,"votesNeeded":3,"judgeNoise":0.05,"hikiwakeMargin":0.08,"fumeiChance":0.05,"flagDelayMs":[100,250],"holdFoulSec":1.5,"holdFoulDist":118,"jogaiChuiFrom":2,"bowWindowMs":2800,"chuiDecisiveDiff":2,"clearLeadMargin":0.3,"balanceBreakVoteChance":0.6,"haltWindowMs":1100,"yameGraceMs":400,"hantei":{"wazaAri":100,"damage":1,"effective":3,"techniques":0.5,"initiative":0.4,"chui":12}},"arena":{"xMin":230,"xMax":1050,"startAka":540,"startShiro":740,"groundY":540},"input":{"bufferMs":350,"buttonMs":200,"holdMs":300,"deadzone":0.2,"dashTapMs":250},"combat":{"ranges":{"close":105,"mid":150,"midfar":172,"far":195},"minSeparation":86,"damageScale":0.45,"zoneAfterGetUp":62,"headAfterGetUp":60,"walkSpeed":150,"backSpeed":125,"dashDist":150,"dashMs":170,"backdashDist":140,"backdashMs":200,"backdashIframesMs":150,"dashStamina":6,"chainWindow":0.3,"chainGraceMs":160,"chainBonus":0.1,"chainBonusMax":0.4,"holdBonus":{"damage":1.3,"stamina":1.5,"slow":1.25},"block":{"factor":0.25,"moroteFactor":0.1,"suneFactor":0.1,"tiredFactor":0.4,"staminaCost":3,"perfectMs":120,"perfectKi":10,"openMs":300,"counterMs":400},"moroteHoldMs":300,"headKnockdown":70,"staggerMs":900,"hitStunMs":220,"blockStunMs":110,"hitStopMs":[60,100],"staminaRegen":28,"staminaRegenDelayMs":700,"balanceRegen":45,"balanceRegenDelayMs":1200,"tiredBelow":20,"tiredSlow":1.3,"legSlow":0.7,"legBalanceMax":75,"bodyRegenFactor":0.6,"guardStaminaDrain":4,"kiPerDamage":0.6,"kiBlock":3,"kiInitiative":1.5,"kiaiMs":5000,"kiaiDamage":1.25,"getUp":{"baseMs":1200,"perDamageMs":2400,"randMs":400,"headExtraMs":500,"mashStep":0.03,"mashMax":0.3,"riseMs":500}},"recovery":{"exam":0.3,"tournament":0.6},"lesson":{"reps":5,"comboReps":3},"exam":{"kihonCount":12,"kihonTimeMs":2000,"passScore":0.7,"kataPerfectMs":130,"kataGoodMs":320},"calls":{"aka_shiro":"Aka, Shiro","shomen_ni_rei":"Shomen ni rei","shushin_ni_rei":"Shushin ni rei","otagai_ni_rei":"Otagai ni rei","kamaete":"Kamaete","hajime":"Hajime!","yame":"Yame","zokko":"Zokko","jikan":"Jikan","fukushin_shugo":"Fukushin shūgō","shomen_muite":"Shomen muite","hantei_o_torimasu":"Hantei o torimasu","hantei":"Hantei!","hikiwake":"Hikiwake","encho":"Enchō","waza_ari":"Waza-ari","ippon":"Ippon","awasete_ippon":"Waza-ari awasete ippon","chui_1":"Chui ichi","chui_2":"Chui ni","chui_3":"Chui san","shikkaku":"Shikkaku","jogai":"Jogai","mitomezu":"Mitomezu","oshi":"Oshi","aka":"Aka","shiro":"Shiro","aka_no_kachi":"Aka no kachi","shiro_no_kachi":"Shiro no kachi","osu":"Osu!"}},"anim":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"2D skeleto pozos (laipsniai). Kampas matuojamas nuo 'zemyn', teigiamas = pirmyn. fs/fe priekine ranka (petys/alkune), bs/be galine; fh/fk priekine koja (klubas/kelis), bh/bk galine; torso = liemens palinkimas pirmyn; rot = viso kuno pasukimas; hipH = klubo aukstis (jei nenurodyta - skaiciuojamas pagal pedas); dx = poslinkis pirmyn. Nenurodytos reiksmes paimamos is 'kamae'. anims.keys: [faze, poza], faze 0-1 startup, 1-2 active, 2-3 recovery.","poses":{"kamae":{"torso":8,"head":0,"fs":35,"fe":100,"bs":10,"be":115,"fh":30,"fk":38,"bh":-22,"bk":4,"dx":0,"rot":0},"stand":{"torso":0,"fs":4,"fe":8,"bs":-4,"be":8,"fh":5,"fk":2,"bh":-5,"bk":2},"bow":{"torso":42,"head":12,"fs":6,"fe":4,"bs":0,"be":4,"fh":5,"fk":2,"bh":-5,"bk":2},"crouch":{"torso":14,"fh":48,"fk":75,"bh":-10,"bk":50},"walk_a":{"fh":38,"fk":34,"bh":-12,"bk":14},"walk_b":{"fh":20,"fk":36,"bh":-30,"bk":2},"dash":{"torso":20,"fh":46,"fk":40,"bh":-36,"bk":8,"fs":45,"fe":95},"backdash":{"torso":-8,"fh":18,"fk":8,"bh":-30,"bk":38},"guard_chudan":{"torso":4,"fs":58,"fe":72,"bs":25,"be":110},"guard_jodan":{"torso":2,"fs":118,"fe":62,"bs":20,"be":115},"guard_gedan":{"torso":12,"fs":30,"fe":8,"bs":5,"be":120},"sune_uke":{"torso":4,"fs":40,"fe":100,"fh":72,"fk":96,"bh":-4,"bk":4},"morote_uke":{"torso":6,"fs":62,"fe":84,"bs":56,"be":88},"hit_body":{"torso":28,"head":16,"fs":22,"fe":80,"bs":10,"be":90,"dx":-6},"hit_head":{"torso":-18,"head":-26,"fs":10,"fe":70,"bs":-10,"be":70,"dx":-8},"hit_legs":{"torso":16,"fh":42,"fk":70,"bh":-18,"bk":20,"dx":-4},"stagger":{"torso":-10,"head":-12,"fs":-10,"fe":30,"bs":-22,"be":30,"fh":16,"fk":30,"bh":-30,"bk":30},"fall":{"rot":-45,"torso":-6,"head":-15,"fs":30,"fe":30,"bs":-30,"be":30,"fh":40,"fk":50,"bh":10,"bk":40,"hipH":55},"down":{"rot":-88,"torso":0,"head":0,"fs":12,"fe":20,"bs":-20,"be":20,"fh":8,"fk":10,"bh":22,"bk":34,"hipH":16},"kneel":{"torso":24,"fs":20,"fe":40,"bs":0,"be":60,"fh":72,"fk":100,"bh":-8,"bk":92},"gyaku_chamber":{"torso":4,"bs":-28,"be":112,"fs":42,"fe":90},"gyaku_strike":{"torso":15,"bs":88,"be":4,"fs":-6,"fe":120,"fh":34,"fk":40,"bh":-28,"bk":0,"dx":10},"oi_chamber":{"torso":6,"fs":-22,"fe":112,"bs":30,"be":100,"fh":10,"fk":28,"bh":-20,"bk":20},"oi_strike":{"torso":13,"fs":88,"fe":4,"bs":-10,"be":116,"fh":40,"fk":46,"bh":-30,"bk":2,"dx":14},"jodan_strike":{"torso":10,"bs":114,"be":4,"fs":0,"fe":120,"dx":8},"shita_chamber":{"torso":17,"bs":-16,"be":96,"fh":38,"fk":60,"bh":-28,"bk":20},"shita_strike":{"torso":12,"bs":48,"be":86,"fs":0,"fe":118,"fh":34,"fk":48,"dx":10},"kagi_chamber":{"torso":6,"bs":-30,"be":100},"kagi_strike":{"torso":17,"bs":76,"be":80,"fs":0,"fe":118,"dx":8},"ago_strike":{"torso":6,"bs":70,"be":102,"fs":0,"fe":118,"dx":8},"hiji_chamber":{"torso":8,"fs":10,"fe":150},"hiji_strike":{"torso":19,"fs":82,"fe":150,"bs":-10,"be":110,"fh":40,"fk":46,"dx":16},"mae_chamber":{"torso":-4,"bh":85,"bk":100,"fh":6,"fk":8},"mae_strike":{"torso":-10,"bh":88,"bk":6,"fh":4,"fk":6,"dx":8},"gedan_chamber":{"torso":-4,"bh":40,"bk":70,"fh":4,"fk":8},"gedan_strike":{"torso":-8,"bh":54,"bk":8,"fh":0,"fk":6,"dx":6},"hiza_chamber":{"torso":6,"bh":30,"bk":60,"fh":8,"fk":10},"hiza_strike":{"torso":14,"bh":100,"bk":130,"fh":6,"fk":8,"fs":62,"fe":60,"bs":58,"be":60,"dx":14},"mawashi_chamber":{"torso":-8,"bh":60,"bk":110,"fh":2,"fk":6},"mawashi_strike":{"torso":-16,"bh":92,"bk":4,"fh":-4,"fk":4,"dx":6},"yoko_chamber":{"torso":-12,"bh":80,"bk":120,"fh":0,"fk":6},"yoko_strike":{"torso":-30,"bh":95,"bk":0,"fh":-6,"fk":4,"fs":30,"fe":60,"dx":10},"jodan_mae_strike":{"torso":-14,"bh":124,"bk":4,"fh":2,"fk":4,"dx":8},"jodan_mawashi_strike":{"torso":-24,"bh":128,"bk":2,"fh":-4,"fk":4,"dx":6}},"anims":{"gyaku_tsuki":{"keys":[[0,"kamae"],[0.7,"gyaku_chamber"],[1,"gyaku_strike"],[2,"gyaku_strike"],[3,"kamae"]]},"oi_tsuki":{"keys":[[0,"kamae"],[0.6,"oi_chamber"],[1,"oi_strike"],[2,"oi_strike"],[3,"kamae"]]},"jodan_tsuki":{"keys":[[0,"kamae"],[0.7,"gyaku_chamber"],[1,"jodan_strike"],[2,"jodan_strike"],[3,"kamae"]]},"shita_tsuki":{"keys":[[0,"kamae"],[0.7,"shita_chamber"],[1,"shita_strike"],[2,"shita_strike"],[3,"kamae"]]},"kagi_tsuki":{"keys":[[0,"kamae"],[0.7,"kagi_chamber"],[1,"kagi_strike"],[2,"kagi_strike"],[3,"kamae"]]},"ago_uchi":{"keys":[[0,"kamae"],[0.7,"shita_chamber"],[1,"ago_strike"],[2,"ago_strike"],[3,"kamae"]]},"hiji_uchi":{"keys":[[0,"kamae"],[0.6,"hiji_chamber"],[1,"hiji_strike"],[2,"hiji_strike"],[3,"kamae"]]},"mae_geri":{"keys":[[0,"kamae"],[0.7,"mae_chamber"],[1,"mae_strike"],[2,"mae_strike"],[2.5,"mae_chamber"],[3,"kamae"]]},"gedan_mawashi":{"keys":[[0,"kamae"],[0.7,"gedan_chamber"],[1,"gedan_strike"],[2,"gedan_strike"],[2.5,"gedan_chamber"],[3,"kamae"]]},"hiza_geri":{"keys":[[0,"kamae"],[0.6,"hiza_chamber"],[1,"hiza_strike"],[2,"hiza_strike"],[3,"kamae"]]},"chudan_mawashi":{"keys":[[0,"kamae"],[0.7,"mawashi_chamber"],[1,"mawashi_strike"],[2,"mawashi_strike"],[2.5,"mawashi_chamber"],[3,"kamae"]]},"yoko_geri":{"keys":[[0,"kamae"],[0.7,"yoko_chamber"],[1,"yoko_strike"],[2,"yoko_strike"],[2.5,"yoko_chamber"],[3,"kamae"]]},"jodan_mae_geri":{"keys":[[0,"kamae"],[0.7,"mae_chamber"],[1,"jodan_mae_strike"],[2,"jodan_mae_strike"],[2.5,"mae_chamber"],[3,"kamae"]]},"jodan_mawashi":{"keys":[[0,"kamae"],[0.7,"mawashi_chamber"],[1,"jodan_mawashi_strike"],[2,"jodan_mawashi_strike"],[2.5,"mawashi_chamber"],[3,"kamae"]]},"guard_chudan":{"keys":[[0,"guard_chudan"]]},"guard_jodan":{"keys":[[0,"guard_jodan"]]},"guard_gedan":{"keys":[[0,"guard_gedan"]]},"sune_uke":{"keys":[[0,"sune_uke"]]},"morote_uke":{"keys":[[0,"morote_uke"]]}}},"strings.lt":{"_license":"SPDX-License-Identifier: BUSL-1.1","hud.you":"TU","hud.player":"Žaidėjas","hud.locked":"neatrakinta","hud.perfect":"Tobulas blokas!","ui.rotate":"Pasukite įrenginį horizontaliai","ui.paused":"Pauzė","ui.resume":"Tęsti","ui.quit":"Išeiti","result.ippon":"Ippon","result.awasete":"Awasete ippon","result.hantei":"Hantei","result.shikkaku":"Shikkaku","call.aka_shiro":"Dalyviai įžengia ant tatamio","call.shomen_ni_rei":"Nusilenkti teisėjų stalui","call.shushin_ni_rei":"Nusilenkti vyr. teisėjui","call.otagai_ni_rei":"Nusilenkti vienas kitam","call.kamaete":"Kovos stovos","call.hajime":"Pradėti!","call.yame":"Stop","call.zokko":"Tęsti","call.jikan":"Laikas sustabdytas","call.fukushin_shugo":"Pasitarimas su kampiniais","call.shomen_muite":"Atsisukti į priekį","call.hantei_o_torimasu":"Priimamas sprendimas","call.hantei":"Sprendimas!","call.hikiwake":"Lygiosios","call.encho":"Pratęsimas","call.waza_ari":"Pusė taško","call.ippon":"Pilnas taškas","call.awasete_ippon":"Du waza-ari = ippon","call.chui_1":"Pirmas įspėjimas","call.chui_2":"Antras įspėjimas","call.chui_3":"Trečias įspėjimas","call.shikkaku":"Diskvalifikacija","call.jogai":"Už ribos","call.mitomezu":"Nepripažįstama","call.oshi":"Įspėjamasis gestas","call.aka_no_kachi":"Laimi raudonas","call.shiro_no_kachi":"Laimi baltas","foul.illegal":"Draudžiama technika","foul.holding":"Laikymas / stūmimas","foul.passivity":"Pasyvumas","foul.jogai":"Bėgimas už ribos","foul.disrespect":"Nepagarba (nenusilenkta)","foul.afterYame":"Puolimas po „Yame“","foul.downed":"Puolimas į gulintį"},"strings.en":{"_license":"SPDX-License-Identifier: BUSL-1.1","hud.you":"TU","hud.player":"Žaidėjas","hud.locked":"neatrakinta","hud.perfect":"Tobulas blokas!","ui.rotate":"Pasukite įrenginį horizontaliai","ui.paused":"Pauzė","ui.resume":"Tęsti","ui.quit":"Išeiti","result.ippon":"Ippon","result.awasete":"Awasete ippon","result.hantei":"Hantei","result.shikkaku":"Shikkaku"}};
+globalThis.__OSU_DATA__ = {"techniques":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"input: krypciu kodai F B U D DF UF DB UB CIRCLE + paskutinis mygtukas A K G KIAI. frames ms. range: close|mid|midfar|far. level: jodan|chudan|gedan.","techniques":[{"id":"seiken_gyaku_tsuki","name":"Seiken gyaku tsuki","nameLt":"Tiesus kumštis priešinga ranka","nameEn":"Reverse straight punch","descLt":"Tiesus kumštis į liemenį priešinga ranka.","descEn":"Straight punch to the body with the rear hand.","belt":"white","type":"strike","input":["A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":120,"active":60,"recovery":180},"damage":{"zone":"body","amount":6},"balanceDamage":4,"staminaCost":4,"anim":"gyaku_tsuki"},{"id":"seiken_oi_tsuki","name":"Seiken oi tsuki","nameLt":"Tiesus kumštis su žingsniu","nameEn":"Lunge punch","descLt":"Tiesus kumštis į liemenį žengiant pirmyn.","descEn":"Straight punch to the body while stepping forward.","belt":"white","type":"strike","input":["F","A"],"level":"chudan","legalInKumite":true,"range":"close","advance":60,"frames":{"startup":160,"active":60,"recovery":220},"damage":{"zone":"body","amount":7},"balanceDamage":5,"staminaCost":5,"anim":"oi_tsuki"},{"id":"seiken_jodan_tsuki","name":"Seiken jodan tsuki","nameLt":"Kumštis į galvą","nameEn":"Punch to the head","descLt":"Kumštis į galvą. Tik kihon ir kata – kumite metu draudžiama!","descEn":"Punch to the head. Kihon and kata only – forbidden in kumite!","belt":"white","type":"strike","input":["U","A"],"level":"jodan","legalInKumite":false,"foulChui":1,"range":"close","frames":{"startup":130,"active":60,"recovery":200},"damage":{"zone":"head","amount":8},"balanceDamage":5,"staminaCost":4,"anim":"jodan_tsuki"},{"id":"mae_geri_chudan","name":"Mae geri chudan","nameLt":"Tiesus spyris į pilvą","nameEn":"Front kick to the body","descLt":"Tiesus spyris padu į pilvą.","descEn":"Front kick with the ball of the foot to the stomach.","belt":"white","type":"strike","input":["K"],"level":"chudan","legalInKumite":true,"range":"mid","frames":{"startup":180,"active":80,"recovery":250},"damage":{"zone":"body","amount":9},"balanceDamage":10,"staminaCost":7,"anim":"mae_geri"},{"id":"chudan_uchi_uke","name":"Chudan uchi uke","nameLt":"Vidurinė gynyba","nameEn":"Middle block","descLt":"Vidurinė gynyba – stabdo smūgius į liemenį.","descEn":"Middle block – stops attacks to the body.","belt":"white","type":"guard","input":["G"],"level":"chudan","legalInKumite":true,"staminaCost":3,"anim":"guard_chudan"},{"id":"jodan_uke","name":"Jodan uke","nameLt":"Aukšta gynyba","nameEn":"High block","descLt":"Aukšta gynyba – stabdo spyrius į galvą.","descEn":"High block – stops kicks to the head.","belt":"white","type":"guard","input":["U","G"],"level":"jodan","legalInKumite":true,"staminaCost":3,"anim":"guard_jodan"},{"id":"gedan_barai","name":"Gedan barai","nameLt":"Žema gynyba","nameEn":"Low block","descLt":"Žema gynyba – stabdo žemus spyrius.","descEn":"Low sweeping block – stops low kicks.","belt":"white","type":"guard","input":["D","G"],"level":"gedan","legalInKumite":true,"staminaCost":3,"anim":"guard_gedan"},{"id":"seiken_shita_tsuki","name":"Seiken shita tsuki","nameLt":"Smūgis iš apačios","nameEn":"Uppercut to the body","descLt":"Smūgis iš apačios į pilvą ir šonkaulius.","descEn":"Rising punch to the stomach and ribs.","belt":"orange","type":"strike","input":["D","A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":150,"active":60,"recovery":220},"damage":{"zone":"body","amount":8},"balanceDamage":4,"staminaCost":5,"anim":"shita_tsuki"},{"id":"seiken_kagi_tsuki","name":"Seiken kagi tsuki","nameLt":"Kabliukas į šoną","nameEn":"Hook punch","descLt":"Kabliukas į šoną (šonkaulius).","descEn":"Hook punch to the side of the body.","belt":"orange","type":"strike","input":["D","F","A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":170,"active":60,"recovery":240},"damage":{"zone":"body","amount":9},"balanceDamage":6,"staminaCost":6,"anim":"kagi_tsuki"},{"id":"gedan_mawashi_geri","name":"Gedan mawashi geri","nameLt":"Žemas šoninis spyris","nameEn":"Low roundhouse kick","descLt":"Žemas spyris blauzda į šlaunies šoną („low kick“).","descEn":"Low kick with the shin to the side of the thigh.","belt":"orange","type":"strike","input":["D","K"],"level":"gedan","legalInKumite":true,"range":"mid","lowKick":true,"frames":{"startup":200,"active":80,"recovery":300},"damage":{"zone":"legs","amount":12},"balanceDamage":12,"staminaCost":8,"anim":"gedan_mawashi"},{"id":"hiza_geri","name":"Hiza geri","nameLt":"Kelio smūgis","nameEn":"Knee strike","descLt":"Kelio smūgis į liemenį iš arti.","descEn":"Knee strike to the body at close range.","belt":"orange","type":"strike","input":["F","K"],"level":"chudan","legalInKumite":true,"range":"close","advance":20,"frames":{"startup":170,"active":70,"recovery":260},"damage":{"zone":"body","amount":11},"balanceDamage":8,"staminaCost":8,"anim":"hiza_geri"},{"id":"sune_uke","name":"Sune uke","nameLt":"Blokas blauzda","nameEn":"Shin block","descLt":"Žemo spyrio blokavimas pakelta blauzda. Laikyk ↓G, kai skrenda žemas spyris.","descEn":"Low kick check with a raised shin. Hold ↓G when a low kick is coming.","belt":"orange","type":"guard","input":["D","G"],"level":"gedan","legalInKumite":true,"auto":true,"condition":"vsLowKick","staminaCost":3,"anim":"sune_uke","lesson":{"partner":"gedan_mawashi_geri"}},{"id":"chudan_mawashi_geri","name":"Chudan mawashi geri","nameLt":"Šoninis spyris į liemenį","nameEn":"Middle roundhouse kick","descLt":"Šoninis (lankinis) spyris į liemenį.","descEn":"Roundhouse kick to the body.","belt":"blue","type":"strike","input":["D","F","K"],"level":"chudan","legalInKumite":true,"range":"mid","frames":{"startup":260,"active":90,"recovery":360},"damage":{"zone":"body","amount":14},"balanceDamage":10,"staminaCost":10,"anim":"chudan_mawashi"},{"id":"yoko_geri_chudan","name":"Yoko geri chudan","nameLt":"Spyris šonu","nameEn":"Side kick","descLt":"Spyris šonu, kulnu į liemenį – atstumia varžovą.","descEn":"Side kick with the heel to the body – pushes the opponent back.","belt":"blue","type":"strike","input":["B","F","K"],"level":"chudan","legalInKumite":true,"range":"midfar","knockback":90,"frames":{"startup":240,"active":90,"recovery":340},"damage":{"zone":"body","amount":11},"balanceDamage":16,"staminaCost":10,"anim":"yoko_geri"},{"id":"hiji_chudan_uchi","name":"Hiji chudan uchi","nameLt":"Alkūnė į liemenį","nameEn":"Elbow strike to the body","descLt":"Alkūnės smūgis į liemenį iš arti (tik į liemenį!).","descEn":"Elbow strike to the body at close range (body only!).","belt":"blue","type":"strike","input":["F","F","A"],"level":"chudan","legalInKumite":true,"range":"close","advance":25,"frames":{"startup":150,"active":60,"recovery":230},"damage":{"zone":"body","amount":12},"balanceDamage":7,"staminaCost":7,"anim":"hiji_uchi"},{"id":"seiken_ago_uchi","name":"Seiken ago uchi","nameLt":"Kumštis į smakrą","nameEn":"Punch to the chin","descLt":"Kumštis iš apačios į smakrą. Tik kihon – kumite metu draudžiama!","descEn":"Rising punch to the chin. Kihon only – forbidden in kumite!","belt":"blue","type":"strike","input":["D","U","A"],"level":"jodan","legalInKumite":false,"foulChui":1,"range":"close","frames":{"startup":160,"active":60,"recovery":240},"damage":{"zone":"head","amount":10},"balanceDamage":6,"staminaCost":5,"anim":"ago_uchi"},{"id":"morote_uke","name":"Morote uke","nameLt":"Dviejų rankų gynyba","nameEn":"Two-handed block","descLt":"Dviejų rankų gynyba – stipresnė, bet lėtesnė. Laikyk G.","descEn":"Two-handed block – stronger but slower. Hold G.","belt":"blue","type":"guard","input":["G"],"level":"chudan","legalInKumite":true,"hold":true,"staminaCost":3,"anim":"morote_uke"},{"id":"jodan_mae_geri","name":"Jodan mae geri","nameLt":"Tiesus spyris į galvą","nameEn":"Front kick to the head","descLt":"Tiesus spyris į galvą.","descEn":"Front kick to the head.","belt":"yellow","type":"strike","input":["U","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":230,"active":80,"recovery":330},"damage":{"zone":"head","amount":22},"balanceDamage":12,"staminaCost":11,"anim":"jodan_mae_geri"},{"id":"jodan_mawashi_geri","name":"Jodan mawashi geri","nameLt":"Aukštas šoninis spyris","nameEn":"High roundhouse kick","descLt":"Aukštas šoninis spyris į galvą.","descEn":"High roundhouse kick to the head.","belt":"yellow","type":"strike","input":["D","F","U","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":320,"active":100,"recovery":450},"damage":{"zone":"head","amount":30},"balanceDamage":15,"staminaCost":14,"anim":"jodan_mawashi"},{"id":"ushiro_geri","name":"Ushiro geri","nameLt":"Atgalinis spyris","nameEn":"Back kick","descLt":"Atgalinis spyris apsisukant.","descEn":"Spinning back kick.","belt":"yellow","type":"strike","input":["F","D","B","K"],"level":"chudan","legalInKumite":true,"range":"midfar","knockback":80,"frames":{"startup":340,"active":90,"recovery":460},"damage":{"zone":"body","amount":20},"balanceDamage":18,"staminaCost":14,"anim":"yoko_geri"},{"id":"kansetsu_geri","name":"Kansetsu geri","nameLt":"Spyris į kelį","nameEn":"Joint kick","descLt":"Tiesus spyris į kelį. Tik kihon – kumite metu draudžiama!","descEn":"Straight kick to the knee. Kihon only – forbidden in kumite!","belt":"yellow","type":"strike","input":["B","D","K"],"level":"gedan","legalInKumite":false,"foulChui":2,"range":"mid","frames":{"startup":200,"active":80,"recovery":300},"damage":{"zone":"legs","amount":14},"balanceDamage":12,"staminaCost":8,"anim":"gedan_mawashi"},{"id":"mawashi_uke","name":"Mawashi uke","nameLt":"Apskritiminė gynyba","nameEn":"Circular block","descLt":"Apskritiminė gynyba; sėkminga atveria 400 ms kontratakos langą.","descEn":"Circular block; success opens a 400 ms counter window.","belt":"yellow","type":"guard","input":["F","G"],"level":"chudan","legalInKumite":true,"staminaCost":4,"anim":"morote_uke"},{"id":"kakato_otoshi","name":"Kakato otoshi","nameLt":"„Kirvio“ spyris","nameEn":"Axe kick","descLt":"„Kirvio“ spyris kulnu iš viršaus (oroshi kakato geri).","descEn":"Axe kick with the heel from above (oroshi kakato geri).","belt":"green","type":"strike","input":["U","D","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":380,"active":100,"recovery":500},"damage":{"zone":"head","amount":32},"balanceDamage":16,"staminaCost":16,"anim":"jodan_mae_geri"},{"id":"ushiro_mawashi_geri","name":"Ushiro mawashi geri","nameLt":"Sukamasis spyris kulnu","nameEn":"Spinning hook kick","descLt":"Sukamasis spyris kulnu į galvą.","descEn":"Spinning heel kick to the head.","belt":"green","type":"strike","input":["CIRCLE","K"],"level":"jodan","legalInKumite":true,"range":"midfar","frames":{"startup":450,"active":100,"recovery":600},"damage":{"zone":"head","amount":40},"balanceDamage":20,"staminaCost":20,"anim":"jodan_mawashi"},{"id":"uchi_mawashi_geri","name":"Uchi mawashi geri","nameLt":"Spyris iš vidaus į išorę","nameEn":"Inside crescent kick","descLt":"Aukštas spyris iš vidaus į išorę.","descEn":"High crescent kick from the inside out.","belt":"green","type":"strike","input":["U","B","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":300,"active":90,"recovery":420},"damage":{"zone":"head","amount":24},"balanceDamage":12,"staminaCost":13,"anim":"jodan_mawashi"},{"id":"ashi_barai","name":"Ashi barai","nameLt":"Pakirtimas","nameEn":"Foot sweep","descLt":"Kojos pakirtimas; iškart po jo galima smogti gedan tsuki (↓A).","descEn":"Foot sweep; follow immediately with gedan tsuki (↓A).","belt":"green","type":"strike","input":["D","B","K"],"level":"gedan","legalInKumite":true,"range":"mid","frames":{"startup":220,"active":80,"recovery":320},"damage":{"zone":"legs","amount":5},"balanceDamage":30,"staminaCost":9,"anim":"gedan_mawashi"},{"id":"gedan_tsuki_followup","name":"Gedan tsuki","nameLt":"Smūgis po pakirtimo","nameEn":"Follow-up punch after a sweep","descLt":"Kontroliuojamas smūgis į parkritusį iškart po pakirtimo.","descEn":"Controlled punch to the downed opponent right after a sweep.","belt":"green","type":"strike","input":["D","A"],"level":"gedan","legalInKumite":true,"auto":true,"condition":"afterSweep","range":"close","frames":{"startup":150,"active":60,"recovery":260},"damage":{"zone":"body","amount":6},"balanceDamage":0,"staminaCost":5,"anim":"shita_tsuki"},{"id":"tobi_mae_geri","name":"Tobi mae geri","nameLt":"Šuolinis tiesus spyris","nameEn":"Jumping front kick","descLt":"Šuolinis tiesus spyris.","descEn":"Jumping front kick.","belt":"brown","type":"strike","input":["U","U","K"],"level":"jodan","legalInKumite":true,"range":"midfar","advance":40,"frames":{"startup":300,"active":100,"recovery":480},"damage":{"zone":"head","amount":26},"balanceDamage":16,"staminaCost":15,"anim":"jodan_mae_geri"},{"id":"tobi_hiza_geri","name":"Tobi hiza geri","nameLt":"Šuolinis kelio smūgis","nameEn":"Jumping knee strike","descLt":"Šuolinis kelio smūgis.","descEn":"Jumping knee strike.","belt":"brown","type":"strike","input":["U","U","F","K"],"level":"jodan","legalInKumite":true,"range":"mid","advance":60,"frames":{"startup":280,"active":90,"recovery":460},"damage":{"zone":"head","amount":28},"balanceDamage":18,"staminaCost":15,"anim":"hiza_geri"},{"id":"tobi_nidan_geri","name":"Tobi nidan geri","nameLt":"Dvigubas šuolinis spyris","nameEn":"Jumping double kick","descLt":"Dvigubas šuolinis spyris.","descEn":"Jumping double front kick.","belt":"brown","type":"strike","input":["U","U","K","K"],"level":"jodan","legalInKumite":true,"range":"midfar","advance":50,"frames":{"startup":220,"active":120,"recovery":520},"damage":{"zone":"head","amount":30},"balanceDamage":18,"staminaCost":18,"anim":"jodan_mae_geri"},{"id":"tobi_ushiro_mawashi_geri","name":"Tobi ushiro mawashi geri","nameLt":"Šuolinis sukamasis spyris","nameEn":"Jumping spinning hook kick","descLt":"Šuolinis sukamasis spyris kulnu.","descEn":"Jumping spinning heel kick.","belt":"brown","type":"strike","input":["U","U","CIRCLE","K"],"level":"jodan","legalInKumite":true,"range":"midfar","frames":{"startup":480,"active":110,"recovery":650},"damage":{"zone":"head","amount":46},"balanceDamage":24,"staminaCost":24,"anim":"jodan_mawashi"},{"id":"kiai_mode","name":"Kiai","nameLt":"KIAI režimas","nameEn":"KIAI mode","descLt":"5 s: +25 % žala, ištvermė nesmunka. Reikia pilnos ki juostos.","descEn":"5 s: +25 % damage, no stamina drain. Needs a full ki bar.","belt":"black","type":"mode","input":["KIAI"],"legalInKumite":true}]},"combos":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"sequence: techniku id grandine (renzoku). '@block' = sekminga gynyba. bonus raktai: damageMult, legDamageMult, balanceBonus, unblockable (MVP); wazaAriIfLegDamageOver, autoWazaAri, guaranteedWazaAri (4 etapas).","combos":[{"id":"sanbon_tsuki","name":"Sanbon tsuki","nameLt":"Trys smūgiai iš eilės","nameEn":"Triple punch","belt":"white","sequence":["seiken_gyaku_tsuki","seiken_gyaku_tsuki","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.15,"balanceBonus":10}},{"id":"mae_gyaku","name":"Mae geri – gyaku tsuki","nameLt":"Spyris ir kumštis","nameEn":"Front kick – reverse punch","belt":"white","sequence":["mae_geri_chudan","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.15}},{"id":"shita_gedan","name":"Shita tsuki – gedan mawashi","nameLt":"Smūgis iš apačios ir žemas spyris","nameEn":"Uppercut – low kick","belt":"orange","sequence":["seiken_shita_tsuki","gedan_mawashi_geri"],"bonus":{"damageMult":1.2,"legDamageMult":1.5}},{"id":"kagi_kagi_gedan","name":"Kagi tsuki – kagi tsuki – gedan","nameLt":"Du kabliukai ir žemas spyris","nameEn":"Double hook – low kick","belt":"orange","sequence":["seiken_kagi_tsuki","seiken_kagi_tsuki","gedan_mawashi_geri"],"bonus":{"damageMult":1.2}},{"id":"gyaku_shita_chudan","name":"Gyaku tsuki – shita tsuki – chudan mawashi","nameLt":"Du kumščiai ir šoninis spyris","nameEn":"Two punches – middle roundhouse","belt":"blue","sequence":["seiken_gyaku_tsuki","seiken_shita_tsuki","chudan_mawashi_geri"],"bonus":{"damageMult":1.25}},{"id":"uke_hiza","name":"Uke – hiza geri","nameLt":"Gynyba ir kelio kontrataka","nameEn":"Block – knee counter","belt":"blue","sequence":["@block","hiza_geri"],"bonus":{"unblockable":true},"lesson":{"partner":"seiken_gyaku_tsuki"}},{"id":"gedan_jodan","name":"Gedan – jodan mawashi","nameLt":"Žemas ir aukštas spyris ta pačia koja","nameEn":"Low – high kick, same leg","belt":"yellow","sequence":["gedan_mawashi_geri","jodan_mawashi_geri"],"bonus":{"wazaAriIfLegDamageOver":50}},{"id":"mae_ushiro","name":"Mae geri – ushiro geri","nameLt":"Tiesus ir atgalinis spyris","nameEn":"Front kick – back kick","belt":"yellow","sequence":["mae_geri_chudan","ushiro_geri"],"bonus":{"damageMult":1.25}},{"id":"sanbon_kakato","name":"Sanbon tsuki – kakato otoshi","nameLt":"Trys smūgiai ir kirvio spyris","nameEn":"Triple punch – axe kick","belt":"green","sequence":["seiken_gyaku_tsuki","seiken_gyaku_tsuki","seiken_gyaku_tsuki","kakato_otoshi"],"bonus":{"unblockable":true}},{"id":"gedan_ushiro_mawashi","name":"Gedan – ushiro mawashi","nameLt":"Žemas ir sukamasis spyris","nameEn":"Low kick – spinning hook kick","belt":"green","sequence":["gedan_mawashi_geri","ushiro_mawashi_geri"],"bonus":{"damageMult":1.3}},{"id":"ashi_gedan_tsuki","name":"Ashi barai – gedan tsuki","nameLt":"Pakirtimas ir smūgis","nameEn":"Sweep – follow-up punch","belt":"brown","sequence":["ashi_barai","gedan_tsuki_followup"],"bonus":{"autoWazaAri":true}},{"id":"nidan_gyaku","name":"Tobi nidan – gyaku tsuki","nameLt":"Dvigubas šuolinis spyris ir kumštis","nameEn":"Jumping double kick – reverse punch","belt":"brown","sequence":["tobi_nidan_geri","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.35}},{"id":"osu_no_seishin","name":"Osu no seishin","nameLt":"Signatūrinė kombinacija","nameEn":"Signature combination","belt":"black","sequence":["seiken_gyaku_tsuki","seiken_shita_tsuki","gedan_mawashi_geri","chudan_mawashi_geri","jodan_mawashi_geri"],"bonus":{"guaranteedWazaAri":true}}]},"belts":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"available=false skyriai laukia 4 etapo. exam.kumite = kovu skaicius is eiles. tournament.format: series (kovos is eiles) | bracket (eliminacija).","belts":[{"id":"white","nameLt":"Baltas","nameEn":"White","kyu":["mukyu"],"color":"#f4f1ea","available":true,"unlocksLt":"Bazė: stovos, tiesus smūgis, gynyba","unlocksEn":"Basics: stances, straight punch, blocks","matchTimeSec":60,"bg":"dojo","exam":null,"tournament":{"id":"dojo_sparring","nameLt":"Dojo sparingas su 3 mokiniais","nameEn":"Dojo sparring with 3 students","format":"series","size":4,"bg":"dojo"}},{"id":"orange","nameLt":"Oranžinis","nameEn":"Orange","kyu":[10,9],"color":"#f08a24","available":true,"unlocksLt":"Pirmieji smūgiai į liemenį, žemas spyris","unlocksEn":"First body punches, low kick","bg":"dojo","exam":{"kihonCount":12,"kata":"taikyoku_sono_ichi","kumite":1},"tournament":{"id":"city_cup","nameLt":"Miesto turnyras","nameEn":"City tournament","format":"bracket","size":4,"bg":"hall"}},{"id":"blue","nameLt":"Mėlynas","nameEn":"Blue","kyu":[8,7],"color":"#2f6fd6","available":true,"unlocksLt":"Vidurinis šoninis spyris, alkūnė","unlocksEn":"Middle roundhouse kick, elbow","bg":"dojo","exam":{"kihonCount":14,"kata":"taikyoku_sono_san","kumite":2},"tournament":{"id":"regional_cup","nameLt":"Regiono turnyras","nameEn":"Regional tournament","format":"bracket","size":8,"bg":"hall"}},{"id":"yellow","nameLt":"Geltonas","nameEn":"Yellow","kyu":[6,5],"color":"#f2cf2e","available":false,"unlocksLt":"Aukštas spyris, atgalinis spyris","unlocksEn":"High kick, back kick","bg":"dojo","exam":{"kihonCount":16,"kata":"taikyoku_sono_san","kumite":3},"tournament":{"id":"national_youth","nameLt":"Nacionalinis jaunimo turnyras","nameEn":"National youth tournament","format":"bracket","size":8,"bg":"hall"}},{"id":"green","nameLt":"Žalias","nameEn":"Green","kyu":[4,3],"color":"#2e9e4a","available":false,"unlocksLt":"Kirvio spyris, sukamasis spyris","unlocksEn":"Axe kick, spinning kick","bg":"dojo","exam":{"kihonCount":18,"kata":"taikyoku_sono_san","kumite":5},"tournament":{"id":"national_cup","nameLt":"Nacionalinis čempionatas","nameEn":"National championship","format":"bracket","size":16,"bg":"arena"}},{"id":"brown","nameLt":"Rudas","nameEn":"Brown","kyu":[2,1],"color":"#7a4a22","available":false,"unlocksLt":"Šuoliniai spyriai, ilgos kombinacijos","unlocksEn":"Jumping kicks, long combinations","bg":"dojo","exam":{"kihonCount":20,"kata":"taikyoku_sono_san","kumite":7},"tournament":{"id":"europe_cup","nameLt":"Europos turnyras","nameEn":"European tournament","format":"bracket","size":16,"bg":"arena"}},{"id":"black","nameLt":"Juodas","nameEn":"Black","kyu":["shodan"],"color":"#1b1b1f","available":false,"unlocksLt":"Visos technikos + signatūrinė kombinacija","unlocksEn":"All techniques + signature combination","bg":"dojo","exam":{"kihonCount":20,"kata":"taikyoku_sono_san","kumite":10},"tournament":{"id":"world_open","nameLt":"Atvirasis pasaulio turnyras","nameEn":"Open world tournament","format":"bracket","size":32,"bg":"arena"}}]},"opponents":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"Visi vardai isgalvoti. archetypes: AI elgsenos parametrai; weights: megstamu techniku svoriai (nenurodyta = 1). beltDefaults: reakcijos laikas ms ir prazangu tikimybe. difficulty daugina reakcija ir zala.","archetypes":{"tank":{"nameLt":"Tankas","nameEn":"Tank","descLt":"Spaudžia arti, daug smūgių į liemenį.","descEn":"Presses in close with lots of body punches.","prefDist":96,"aggression":0.78,"retreatChance":0.04,"guardIdle":0.08,"comboChance":0.4,"cooldownMs":[320,800],"block":{"jodan":0.3,"chudan":0.5,"gedan":0.3},"weights":{"seiken_gyaku_tsuki":3,"seiken_oi_tsuki":2,"seiken_shita_tsuki":3,"seiken_kagi_tsuki":3,"hiza_geri":2.5,"hiji_chudan_uchi":2.5,"mae_geri_chudan":0.6,"gedan_mawashi_geri":0.8}},"kicker":{"nameLt":"Spyrikas","nameEn":"Kicker","descLt":"Laiko atstumą ir spardo.","descEn":"Keeps distance and kicks.","prefDist":142,"aggression":0.58,"retreatChance":0.28,"guardIdle":0.12,"comboChance":0.2,"cooldownMs":[450,1000],"block":{"jodan":0.4,"chudan":0.45,"gedan":0.45},"weights":{"mae_geri_chudan":3,"gedan_mawashi_geri":3,"chudan_mawashi_geri":3.5,"yoko_geri_chudan":3,"seiken_gyaku_tsuki":0.6,"hiza_geri":0.8}},"counter":{"nameLt":"Kontratakuotojas","nameEn":"Counter-fighter","descLt":"Daug blokuoja ir atsako po gynybos.","descEn":"Blocks a lot and answers after defending.","prefDist":118,"aggression":0.34,"retreatChance":0.14,"guardIdle":0.4,"comboChance":0.25,"cooldownMs":[500,1100],"block":{"jodan":0.6,"chudan":0.78,"gedan":0.62},"weights":{"hiza_geri":2.5,"seiken_gyaku_tsuki":2,"seiken_shita_tsuki":2,"gedan_mawashi_geri":1.5,"chudan_mawashi_geri":1.5}}},"beltDefaults":{"white":{"reactionMs":600,"foulChance":0.012,"skill":0.6},"orange":{"reactionMs":520,"foulChance":0.008,"skill":0.75},"blue":{"reactionMs":440,"foulChance":0.005,"skill":0.9},"yellow":{"reactionMs":370,"foulChance":0.02,"skill":1},"green":{"reactionMs":300,"foulChance":0.015,"skill":1.1},"brown":{"reactionMs":240,"foulChance":0.01,"skill":1.2},"black":{"reactionMs":180,"foulChance":0.005,"skill":1.3}},"difficulty":{"easy":{"reaction":1.35,"damage":0.8,"aggression":0.8},"normal":{"reaction":1,"damage":1,"aggression":1},"hard":{"reaction":0.75,"damage":1.15,"aggression":1.15}},"roster":[{"id":"w_jonas","name":"Jonas","belt":"white","archetype":"tank"},{"id":"w_ugne","name":"Ugnė","belt":"white","archetype":"kicker"},{"id":"w_matas","name":"Matas","belt":"white","archetype":"counter"},{"id":"o_rokas","name":"Rokas Vėtra","belt":"orange","archetype":"tank"},{"id":"o_emilija","name":"Emilija Šilas","belt":"orange","archetype":"kicker"},{"id":"o_dovas","name":"Dovas Girėnas","belt":"orange","archetype":"counter"},{"id":"o_kenji","name":"Kenji Morita","belt":"orange","archetype":"tank"},{"id":"b_ainis","name":"Ainis Uosis","belt":"blue","archetype":"counter"},{"id":"b_lukne","name":"Luknė Beržė","belt":"blue","archetype":"kicker"},{"id":"b_tadas","name":"Tadas Kalnius","belt":"blue","archetype":"tank"},{"id":"b_hana","name":"Hana Sato","belt":"blue","archetype":"kicker"},{"id":"b_oskar","name":"Oskar Lind","belt":"blue","archetype":"tank"},{"id":"b_mila","name":"Mila Novak","belt":"blue","archetype":"counter"},{"id":"b_vytis","name":"Vytis Ąžuolas","belt":"blue","archetype":"tank"}]},"kata":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"Ritmo mini zaidimas. steps: technikos id; '*' priekyje = pries judesi apsisukama. Formos supaprastintos zaidimui (20 skaiciavimu).","kata":[{"id":"taikyoku_sono_ichi","name":"Taikyoku sono ichi","belt":"white","beatMs":1250,"steps":["*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","seiken_oi_tsuki","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","seiken_oi_tsuki","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki"]},{"id":"taikyoku_sono_ni","name":"Taikyoku sono ni","belt":"white","beatMs":1200,"steps":["*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki"]},{"id":"taikyoku_sono_san","name":"Taikyoku sono san","belt":"orange","beatMs":1150,"steps":["*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki"]}]},"rules":{"_license":"SPDX-License-Identifier: BUSL-1.1","match":{"mainTimeSec":90,"enchoTimeSec":90,"maxEncho":2,"knockdownCountSec":3,"chuiLimit":4,"passivitySec":10,"votesNeeded":3,"judgeNoise":0.05,"hikiwakeMargin":0.08,"fumeiChance":0.05,"flagDelayMs":[100,250],"holdFoulSec":1.5,"holdFoulDist":118,"jogaiChuiFrom":2,"bowWindowMs":2800,"chuiDecisiveDiff":2,"clearLeadMargin":0.3,"balanceBreakVoteChance":0.6,"haltWindowMs":1100,"yameGraceMs":400,"hantei":{"wazaAri":100,"damage":1,"effective":3,"techniques":0.5,"initiative":0.4,"chui":12}},"arena":{"xMin":230,"xMax":1050,"startAka":540,"startShiro":740,"groundY":540},"input":{"bufferMs":350,"buttonMs":200,"holdMs":300,"deadzone":0.2,"dashTapMs":250},"combat":{"ranges":{"close":105,"mid":150,"midfar":172,"far":195},"minSeparation":86,"damageScale":0.45,"zoneAfterGetUp":62,"headAfterGetUp":60,"walkSpeed":150,"backSpeed":125,"dashDist":150,"dashMs":170,"backdashDist":140,"backdashMs":200,"backdashIframesMs":150,"dashStamina":6,"chainWindow":0.3,"chainGraceMs":160,"chainBonus":0.1,"chainBonusMax":0.4,"holdBonus":{"damage":1.3,"stamina":1.5,"slow":1.25},"block":{"factor":0.25,"moroteFactor":0.1,"suneFactor":0.1,"tiredFactor":0.4,"staminaCost":3,"perfectMs":120,"perfectKi":10,"openMs":300,"counterMs":400},"moroteHoldMs":300,"headKnockdown":70,"staggerMs":900,"hitStunMs":220,"blockStunMs":110,"hitStopMs":[60,100],"staminaRegen":28,"staminaRegenDelayMs":700,"balanceRegen":45,"balanceRegenDelayMs":1200,"tiredBelow":20,"tiredSlow":1.3,"legSlow":0.7,"legBalanceMax":75,"bodyRegenFactor":0.6,"guardStaminaDrain":4,"kiPerDamage":0.6,"kiBlock":3,"kiInitiative":1.5,"kiaiMs":5000,"kiaiDamage":1.25,"getUp":{"baseMs":1200,"perDamageMs":2400,"randMs":400,"headExtraMs":500,"mashStep":0.03,"mashMax":0.3,"riseMs":500}},"recovery":{"exam":0.3,"tournament":0.6},"lesson":{"reps":5,"comboReps":3},"exam":{"kihonCount":12,"kihonTimeMs":2000,"passScore":0.7,"kataPerfectMs":130,"kataGoodMs":320},"calls":{"aka_shiro":"Aka, Shiro","shomen_ni_rei":"Shomen ni rei","shushin_ni_rei":"Shushin ni rei","otagai_ni_rei":"Otagai ni rei","kamaete":"Kamaete","hajime":"Hajime!","yame":"Yame","zokko":"Zokko","jikan":"Jikan","fukushin_shugo":"Fukushin shūgō","shomen_muite":"Shomen muite","hantei_o_torimasu":"Hantei o torimasu","hantei":"Hantei!","hikiwake":"Hikiwake","encho":"Enchō","waza_ari":"Waza-ari","ippon":"Ippon","awasete_ippon":"Waza-ari awasete ippon","chui_1":"Chui ichi","chui_2":"Chui ni","chui_3":"Chui san","shikkaku":"Shikkaku","jogai":"Jogai","mitomezu":"Mitomezu","oshi":"Oshi","aka":"Aka","shiro":"Shiro","aka_no_kachi":"Aka no kachi","shiro_no_kachi":"Shiro no kachi","osu":"Osu!"}},"anim":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"2D skeleto pozos (laipsniai). Kampas matuojamas nuo 'zemyn', teigiamas = pirmyn. fs/fe priekine ranka (petys/alkune), bs/be galine; fh/fk priekine koja (klubas/kelis), bh/bk galine; torso = liemens palinkimas pirmyn; rot = viso kuno pasukimas; hipH = klubo aukstis (jei nenurodyta - skaiciuojamas pagal pedas); dx = poslinkis pirmyn. Nenurodytos reiksmes paimamos is 'kamae'. anims.keys: [faze, poza], faze 0-1 startup, 1-2 active, 2-3 recovery.","poses":{"kamae":{"torso":8,"head":0,"fs":35,"fe":100,"bs":10,"be":115,"fh":30,"fk":38,"bh":-22,"bk":4,"dx":0,"rot":0},"stand":{"torso":0,"fs":4,"fe":8,"bs":-4,"be":8,"fh":5,"fk":2,"bh":-5,"bk":2},"bow":{"torso":42,"head":12,"fs":6,"fe":4,"bs":0,"be":4,"fh":5,"fk":2,"bh":-5,"bk":2},"crouch":{"torso":14,"fh":48,"fk":75,"bh":-10,"bk":50},"walk_a":{"fh":38,"fk":34,"bh":-12,"bk":14},"walk_b":{"fh":20,"fk":36,"bh":-30,"bk":2},"dash":{"torso":20,"fh":46,"fk":40,"bh":-36,"bk":8,"fs":45,"fe":95},"backdash":{"torso":-8,"fh":18,"fk":8,"bh":-30,"bk":38},"guard_chudan":{"torso":4,"fs":58,"fe":72,"bs":25,"be":110},"guard_jodan":{"torso":2,"fs":118,"fe":62,"bs":20,"be":115},"guard_gedan":{"torso":12,"fs":30,"fe":8,"bs":5,"be":120},"sune_uke":{"torso":4,"fs":40,"fe":100,"fh":72,"fk":96,"bh":-4,"bk":4},"morote_uke":{"torso":6,"fs":62,"fe":84,"bs":56,"be":88},"hit_body":{"torso":28,"head":16,"fs":22,"fe":80,"bs":10,"be":90,"dx":-6},"hit_head":{"torso":-18,"head":-26,"fs":10,"fe":70,"bs":-10,"be":70,"dx":-8},"hit_legs":{"torso":16,"fh":42,"fk":70,"bh":-18,"bk":20,"dx":-4},"stagger":{"torso":-10,"head":-12,"fs":-10,"fe":30,"bs":-22,"be":30,"fh":16,"fk":30,"bh":-30,"bk":30},"fall":{"rot":-45,"torso":-6,"head":-15,"fs":30,"fe":30,"bs":-30,"be":30,"fh":40,"fk":50,"bh":10,"bk":40,"hipH":55},"down":{"rot":-88,"torso":0,"head":0,"fs":12,"fe":20,"bs":-20,"be":20,"fh":8,"fk":10,"bh":22,"bk":34,"hipH":16},"kneel":{"torso":24,"fs":20,"fe":40,"bs":0,"be":60,"fh":72,"fk":100,"bh":-8,"bk":92},"gyaku_chamber":{"torso":4,"bs":-28,"be":112,"fs":42,"fe":90},"gyaku_strike":{"torso":15,"bs":88,"be":4,"fs":-6,"fe":120,"fh":34,"fk":40,"bh":-28,"bk":0,"dx":10},"oi_chamber":{"torso":6,"fs":-22,"fe":112,"bs":30,"be":100,"fh":10,"fk":28,"bh":-20,"bk":20},"oi_strike":{"torso":13,"fs":88,"fe":4,"bs":-10,"be":116,"fh":40,"fk":46,"bh":-30,"bk":2,"dx":14},"jodan_strike":{"torso":10,"bs":114,"be":4,"fs":0,"fe":120,"dx":8},"shita_chamber":{"torso":17,"bs":-16,"be":96,"fh":38,"fk":60,"bh":-28,"bk":20},"shita_strike":{"torso":12,"bs":48,"be":86,"fs":0,"fe":118,"fh":34,"fk":48,"dx":10},"kagi_chamber":{"torso":6,"bs":-30,"be":100},"kagi_strike":{"torso":17,"bs":76,"be":80,"fs":0,"fe":118,"dx":8},"ago_strike":{"torso":6,"bs":70,"be":102,"fs":0,"fe":118,"dx":8},"hiji_chamber":{"torso":8,"fs":10,"fe":150},"hiji_strike":{"torso":19,"fs":82,"fe":150,"bs":-10,"be":110,"fh":40,"fk":46,"dx":16},"mae_chamber":{"torso":-4,"bh":85,"bk":100,"fh":6,"fk":8},"mae_strike":{"torso":-10,"bh":88,"bk":6,"fh":4,"fk":6,"dx":8},"gedan_chamber":{"torso":-4,"bh":40,"bk":70,"fh":4,"fk":8},"gedan_strike":{"torso":-8,"bh":54,"bk":8,"fh":0,"fk":6,"dx":6},"hiza_chamber":{"torso":6,"bh":30,"bk":60,"fh":8,"fk":10},"hiza_strike":{"torso":14,"bh":100,"bk":130,"fh":6,"fk":8,"fs":62,"fe":60,"bs":58,"be":60,"dx":14},"mawashi_chamber":{"torso":-8,"bh":60,"bk":110,"fh":2,"fk":6},"mawashi_strike":{"torso":-16,"bh":92,"bk":4,"fh":-4,"fk":4,"dx":6},"yoko_chamber":{"torso":-12,"bh":80,"bk":120,"fh":0,"fk":6},"yoko_strike":{"torso":-30,"bh":95,"bk":0,"fh":-6,"fk":4,"fs":30,"fe":60,"dx":10},"jodan_mae_strike":{"torso":-14,"bh":124,"bk":4,"fh":2,"fk":4,"dx":8},"jodan_mawashi_strike":{"torso":-24,"bh":128,"bk":2,"fh":-4,"fk":4,"dx":6}},"anims":{"gyaku_tsuki":{"keys":[[0,"kamae"],[0.7,"gyaku_chamber"],[1,"gyaku_strike"],[2,"gyaku_strike"],[3,"kamae"]]},"oi_tsuki":{"keys":[[0,"kamae"],[0.6,"oi_chamber"],[1,"oi_strike"],[2,"oi_strike"],[3,"kamae"]]},"jodan_tsuki":{"keys":[[0,"kamae"],[0.7,"gyaku_chamber"],[1,"jodan_strike"],[2,"jodan_strike"],[3,"kamae"]]},"shita_tsuki":{"keys":[[0,"kamae"],[0.7,"shita_chamber"],[1,"shita_strike"],[2,"shita_strike"],[3,"kamae"]]},"kagi_tsuki":{"keys":[[0,"kamae"],[0.7,"kagi_chamber"],[1,"kagi_strike"],[2,"kagi_strike"],[3,"kamae"]]},"ago_uchi":{"keys":[[0,"kamae"],[0.7,"shita_chamber"],[1,"ago_strike"],[2,"ago_strike"],[3,"kamae"]]},"hiji_uchi":{"keys":[[0,"kamae"],[0.6,"hiji_chamber"],[1,"hiji_strike"],[2,"hiji_strike"],[3,"kamae"]]},"mae_geri":{"keys":[[0,"kamae"],[0.7,"mae_chamber"],[1,"mae_strike"],[2,"mae_strike"],[2.5,"mae_chamber"],[3,"kamae"]]},"gedan_mawashi":{"keys":[[0,"kamae"],[0.7,"gedan_chamber"],[1,"gedan_strike"],[2,"gedan_strike"],[2.5,"gedan_chamber"],[3,"kamae"]]},"hiza_geri":{"keys":[[0,"kamae"],[0.6,"hiza_chamber"],[1,"hiza_strike"],[2,"hiza_strike"],[3,"kamae"]]},"chudan_mawashi":{"keys":[[0,"kamae"],[0.7,"mawashi_chamber"],[1,"mawashi_strike"],[2,"mawashi_strike"],[2.5,"mawashi_chamber"],[3,"kamae"]]},"yoko_geri":{"keys":[[0,"kamae"],[0.7,"yoko_chamber"],[1,"yoko_strike"],[2,"yoko_strike"],[2.5,"yoko_chamber"],[3,"kamae"]]},"jodan_mae_geri":{"keys":[[0,"kamae"],[0.7,"mae_chamber"],[1,"jodan_mae_strike"],[2,"jodan_mae_strike"],[2.5,"mae_chamber"],[3,"kamae"]]},"jodan_mawashi":{"keys":[[0,"kamae"],[0.7,"mawashi_chamber"],[1,"jodan_mawashi_strike"],[2,"jodan_mawashi_strike"],[2.5,"mawashi_chamber"],[3,"kamae"]]},"guard_chudan":{"keys":[[0,"guard_chudan"]]},"guard_jodan":{"keys":[[0,"guard_jodan"]]},"guard_gedan":{"keys":[[0,"guard_gedan"]]},"sune_uke":{"keys":[[0,"sune_uke"]]},"morote_uke":{"keys":[[0,"morote_uke"]]}}},"strings.lt":{"_license":"SPDX-License-Identifier: BUSL-1.1","app.subtitle":"Karatės kelias","app.tagline":"Pilno kontakto (knockdown) karatė kovos žaidimas","start.tap":"Bakstelėk, kad pradėtum","start.ios":"iPhone: bakstelėk „Bendrinti“ → „Pridėti prie pradinio ekrano“, kad žaidimas užimtų visą ekraną.","menu.begin":"Pradėti kelionę","menu.journey":"Tęsti kelionę","menu.quick":"Greita kova","menu.settings":"Nustatymai","ui.rotate":"Pasukite įrenginį horizontaliai","ui.paused":"Pauzė","ui.resume":"Tęsti","ui.quit":"Išeiti","ui.back":"Atgal","ui.next":"Toliau","ui.again":"Dar kartą","ui.yes":"taip","ui.no":"NE","ui.hold":"(laikyti)","hud.you":"TU","hud.player":"Žaidėjas","hud.locked":"neatrakinta","hud.mash":"Bakstelėk A / K / G – kelkis!","hud.perfect":"Tobulas blokas!","zone.legs":"kojos","zone.body":"liemuo","zone.head":"galva","result.win":"Pergalė!","result.lose":"Pralaimėjimas","result.ippon":"Ippon","result.awasete":"Awasete ippon","result.hantei":"Hantei","result.shikkaku":"Shikkaku","result.ippon.desc":"Pilnas taškas: varžovas neatsikėlė per 3 s","result.awasete.desc":"Du waza-ari sudaro ippon","result.hantei.desc":"Teisėjų sprendimas pasibaigus laikui","result.shikkaku.desc":"Diskvalifikacija: 4 įspėjimai (chui)","result.encho":"pratęsimų: {n}","result.yourDamage":"Tavo žala","result.oppDamage":"Varžovo žala","result.bowsMissed":"praleistų nusilenkimų: {n}","call.aka_shiro":"Dalyviai įžengia ant tatamio","call.shomen_ni_rei":"Nusilenkti teisėjų stalui – spausk REI","call.shushin_ni_rei":"Nusilenkti vyr. teisėjui – spausk REI","call.otagai_ni_rei":"Nusilenkti vienas kitam – spausk REI","call.kamaete":"Kovos stovos","call.hajime":"Pradėti!","call.yame":"Stop","call.zokko":"Tęsti","call.jikan":"Laikas sustabdytas","call.fukushin_shugo":"Pasitarimas su kampiniais teisėjais","call.shomen_muite":"Atsisukti į priekį","call.hantei_o_torimasu":"Priimamas sprendimas","call.hantei":"Sprendimas!","call.hikiwake":"Lygiosios","call.encho":"Pratęsimas","call.waza_ari":"Pusė taško","call.ippon":"Pilnas taškas","call.awasete_ippon":"Du waza-ari = ippon","call.chui_1":"Pirmas įspėjimas","call.chui_2":"Antras įspėjimas","call.chui_3":"Trečias įspėjimas","call.shikkaku":"Diskvalifikacija","call.jogai":"Už ribos","call.mitomezu":"Nepripažįstama","call.oshi":"Įspėjamasis gestas","call.aka":"Raudonas","call.shiro":"Baltas","call.aka_no_kachi":"Laimi raudonas","call.shiro_no_kachi":"Laimi baltas","call.osu":"Osu!","foul.illegal":"Draudžiama technika","foul.holding":"Laikymas / stūmimas","foul.passivity":"Pasyvumas","foul.jogai":"Bėgimas už ribos","foul.disrespect":"Nepagarba (nenusilenkta)","foul.afterYame":"Puolimas po „Yame“","foul.downed":"Puolimas į gulintį","dojo.lessons":"Pamokos","dojo.lessonsHelp":"Suvesk techniką {n} kartus iš eilės be klaidos – ji bus išmokta ir pateks į Waza-chō.","dojo.learn":"Mokytis","dojo.repeat":"Kartoti","dojo.practice":"Praktikuoti","dojo.free":"Laisva praktika","dojo.freeHelp":"Sparingo partneris. Rodoma padaryta žala. Išeiti – pauzės mygtuku.","dojo.partner":"Partneris","dojo.partnerPassive":"Partneris stovi","dojo.partnerBlock":"Partneris tik blokuoja","dojo.partnerAttack":"Partneris tik puola","lesson.learned":"Technika išmokta!","lesson.again":"Klaida – iš naujo","lesson.demo":"Sensei rodo","lesson.free":"Pakartota","lesson.chainTip":"Renzoku: kitą techniką suvesk ankstesnės pabaigoje (paskutiniame animacijos trečdalyje).","wazacho.sub":"technikų knygelė","wazacho.count":"Išmokta technikų: {n} iš {total}","wazacho.empty":"Dar nieko neišmokai – eik į dojo pamokas.","bonus.damage":"žala","bonus.leg":"žala kojoms","bonus.balance":"varžovo pusiausvyra","bonus.unblockable":"neblokuojama","bonus.later":"bonusas – vėlesniuose diržuose","journey.title":"Kelionės žemėlapis","journey.current":"Dabartinis diržas","journey.stage4":"Šis skyrius bus pridėtas pilnoje versijoje (4 etapas).","journey.locked":"Pirmiausia baik ankstesnio skyriaus pamokas ir išlaikyk egzaminą.","journey.exam":"Egzaminas","journey.examPassed":"Išlaikytas","journey.examReady":"Kihon + kata + kumite ({n} kov.)","journey.examNeedsLessons":"Pirmiausia išmok visas skyriaus pamokas","journey.noExam":"Baltam diržui egzamino nėra – tik treniruotė","journey.take":"Laikyti","journey.open":"Atidaryti","journey.enter":"Dalyvauti","journey.optional":"neprivaloma","journey.series":"{n} kovos iš eilės","journey.bracket":"{n} dalyviai, eliminacija","exam.intro":"Trys dalys. Reikia surinkti ≥ {pass} ir nepralaimėti kumite per ippon.","exam.kihonDesc":"{n} komandų. Sensei šaukia japonišką pavadinimą – suvesk techniką per 2 s. Be užuominų.","exam.kataDesc":"Ritmo užduotis: suvesk simbolius laiku.","exam.kumiteDesc":"Kovos iš eilės; tarp jų atsistato tik 30 % žalos. Vertinama ir pagarba (REI).","exam.kihonHelp":"Sensei šaukia – tu atlieki. Be užuominų.","exam.kataHelp":"Suvesk simbolį, kai jis pasiekia rėmelį","exam.kihonResult":"Teisingai: {n} iš {total}","exam.miss":"ne ta technika","exam.respect":"Pagarba","exam.failed":"Egzaminas neišlaikytas","exam.failedIppon":"Pralaimėta per ippon.","exam.failedScore":"Reikia surinkti ≥ {pass}.","exam.retry":"Gali kartoti po bet kurios treniruotės.","exam.passed":"Egzaminas išlaikytas!","exam.newBelt":"Sensei užriša tau naują diržą: {belt} ({kyu} kyu).","exam.unlocked":"Išmoktos šio diržo technikos","kata.perfect":"Puiku","kata.good":"Gerai","kata.miss":"Praleista","story.white":"Atėjai į miesto dojo. Sensei parodo, kur nusilenkti: „Osu!“","story.orange":"Pirmasis spalvotas diržas. Sensei linkteli: „Dabar prasideda tikras darbas. Miesto turnyras laukia.“","story.blue":"Mėlynas diržas – kaip dangus, į kurį auga medis. Sensei: „Regiono turnyre pamatysi, ko išmokai.“","tour.fight":"Kova {n} iš {total}","tour.fightBtn":"Į tatamį","tour.next":"Kitas varžovas","tour.quarter":"Ketvirtfinalis","tour.semi":"Pusfinalis","tour.final":"Finalas","tour.out":"Šį kartą iškritai.","tour.champion":"Čempionas","tour.won":"Turnyras laimėtas!","tour.stripe":"Gauni juostelę ant diržo: {kyu} kyu","arch.tank":"Tankas – spaudžia arti","arch.kicker":"Spyrikas – laiko atstumą","arch.counter":"Kontratakuotojas – blokuoja ir atsako","quick.belt":"Tavo diržas","quick.opponent":"Varžovas","diff.easy":"Lengvas","diff.normal":"Normalus","diff.hard":"Sunkus","set.lang":"Kalba","set.difficulty":"Sunkumas","set.sound":"Garsas","set.music":"Muzika","set.voice":"Teisėjo balsas (japoniškai)","set.vibrate":"Vibracija pataikius","set.btnScale":"Mygtukų dydis","set.btnOpacity":"Mygtukų ryškumas","set.leftHanded":"Kairiarankio režimas","set.assist":"Pagalbos režimas (užuominos ir įvesties pėdsakas)","set.termsTranslated":"Terminai su vertimu","set.reset":"Ištrinti progresą","set.resetBtn":"Ištrinti","set.resetAsk":"Tikrai ištrinti visą progresą?","set.install":"Kad žaidimas veiktų be interneto ir per visą ekraną, įdiek jį: naršyklės meniu → „Įdiegti programą“ arba „Pridėti prie pradinio ekrano“.","debug.table":"Technikų parametrai","debug.signals":"Vėliavėlių signalai","debug.partner":"Partneris","debug.unlockAll":"Atrakinti viską","debug.boxesInFights":"Hitbox'ai kovose","debug.tech":"Technika"},"strings.en":{"_license":"SPDX-License-Identifier: BUSL-1.1","app.subtitle":"The Way of Karate","app.tagline":"A full-contact (knockdown) karate fighting game","start.tap":"Tap to start","start.ios":"iPhone: tap Share → Add to Home Screen to play in full screen.","menu.begin":"Begin the journey","menu.journey":"Continue the journey","menu.quick":"Quick fight","menu.settings":"Settings","ui.rotate":"Rotate your device to landscape","ui.paused":"Paused","ui.resume":"Resume","ui.quit":"Quit","ui.back":"Back","ui.next":"Next","ui.again":"Again","ui.yes":"yes","ui.no":"NO","ui.hold":"(hold)","hud.you":"YOU","hud.player":"Player","hud.locked":"locked","hud.mash":"Tap A / K / G – get up!","hud.perfect":"Perfect block!","zone.legs":"legs","zone.body":"body","zone.head":"head","result.win":"Victory!","result.lose":"Defeat","result.ippon":"Ippon","result.awasete":"Awasete ippon","result.hantei":"Hantei","result.shikkaku":"Shikkaku","result.ippon.desc":"Full point: the opponent did not get up within 3 s","result.awasete.desc":"Two waza-ari make an ippon","result.hantei.desc":"Judges' decision at the end of time","result.shikkaku.desc":"Disqualification: 4 warnings (chui)","result.encho":"extensions: {n}","result.yourDamage":"Your damage","result.oppDamage":"Opponent's damage","result.bowsMissed":"bows missed: {n}","call.aka_shiro":"The fighters step onto the tatami","call.shomen_ni_rei":"Bow to the front – press REI","call.shushin_ni_rei":"Bow to the referee – press REI","call.otagai_ni_rei":"Bow to each other – press REI","call.kamaete":"Fighting stance","call.hajime":"Begin!","call.yame":"Stop","call.zokko":"Continue","call.jikan":"Time stopped","call.fukushin_shugo":"Conference with the corner judges","call.shomen_muite":"Face the front","call.hantei_o_torimasu":"Taking the decision","call.hantei":"Decision!","call.hikiwake":"Draw","call.encho":"Extension","call.waza_ari":"Half point","call.ippon":"Full point","call.awasete_ippon":"Two waza-ari = ippon","call.chui_1":"First warning","call.chui_2":"Second warning","call.chui_3":"Third warning","call.shikkaku":"Disqualification","call.jogai":"Out of bounds","call.mitomezu":"Not recognised","call.oshi":"Warning gesture","call.aka":"Red","call.shiro":"White","call.aka_no_kachi":"Red wins","call.shiro_no_kachi":"White wins","call.osu":"Osu!","foul.illegal":"Illegal technique","foul.holding":"Holding / pushing","foul.passivity":"Passivity","foul.jogai":"Running out of bounds","foul.disrespect":"Disrespect (no bow)","foul.afterYame":"Attack after “Yame”","foul.downed":"Attack on a downed opponent","dojo.lessons":"Lessons","dojo.lessonsHelp":"Perform the technique {n} times in a row without a mistake – it is learned and goes into your Waza-chō.","dojo.learn":"Learn","dojo.repeat":"Repeat","dojo.practice":"Practise","dojo.free":"Free practice","dojo.freeHelp":"A sparring partner. Damage dealt is shown. Leave with the pause button.","dojo.partner":"Partner","dojo.partnerPassive":"Partner stands still","dojo.partnerBlock":"Partner only blocks","dojo.partnerAttack":"Partner only attacks","lesson.learned":"Technique learned!","lesson.again":"Mistake – start over","lesson.demo":"Sensei shows","lesson.free":"Reps","lesson.chainTip":"Renzoku: enter the next technique at the end of the previous one (the last third of its animation).","wazacho.sub":"technique notebook","wazacho.count":"Techniques learned: {n} of {total}","wazacho.empty":"Nothing learned yet – go to the dojo lessons.","bonus.damage":"damage","bonus.leg":"leg damage","bonus.balance":"opponent's balance","bonus.unblockable":"unblockable","bonus.later":"bonus – in later belts","journey.title":"Journey map","journey.current":"Current belt","journey.stage4":"This chapter will be added in the full version (stage 4).","journey.locked":"First finish the previous chapter's lessons and pass the exam.","journey.exam":"Exam","journey.examPassed":"Passed","journey.examReady":"Kihon + kata + kumite ({n} fights)","journey.examNeedsLessons":"First learn all lessons of this chapter","journey.noExam":"No exam for the white belt – training only","journey.take":"Take","journey.open":"Open","journey.enter":"Enter","journey.optional":"optional","journey.series":"{n} fights in a row","journey.bracket":"{n} entrants, knockout","exam.intro":"Three parts. You need ≥ {pass} overall and must not lose a kumite bout by ippon.","exam.kihonDesc":"{n} commands. Sensei shouts the Japanese name – perform the technique within 2 s. No hints.","exam.kataDesc":"Rhythm task: enter the symbols on time.","exam.kumiteDesc":"Bouts in a row; only 30 % of damage recovers between them. Respect (REI) is graded too.","exam.kihonHelp":"Sensei shouts – you perform. No hints.","exam.kataHelp":"Enter the symbol when it reaches the frame","exam.kihonResult":"Correct: {n} of {total}","exam.miss":"wrong technique","exam.respect":"Respect","exam.failed":"Exam failed","exam.failedIppon":"Lost by ippon.","exam.failedScore":"You need ≥ {pass}.","exam.retry":"You can retry after any training session.","exam.passed":"Exam passed!","exam.newBelt":"Sensei ties your new belt: {belt} ({kyu} kyu).","exam.unlocked":"Techniques learned for this belt","kata.perfect":"Perfect","kata.good":"Good","kata.miss":"Missed","story.white":"You walk into the city dojo. Sensei shows you where to bow: “Osu!”","story.orange":"Your first coloured belt. Sensei nods: “Now the real work begins. The city tournament is waiting.”","story.blue":"The blue belt – like the sky a tree grows towards. Sensei: “At the regional tournament you will see what you have learned.”","tour.fight":"Fight {n} of {total}","tour.fightBtn":"To the tatami","tour.next":"Next opponent","tour.quarter":"Quarter-final","tour.semi":"Semi-final","tour.final":"Final","tour.out":"You are out this time.","tour.champion":"Champion","tour.won":"Tournament won!","tour.stripe":"You earn a stripe on your belt: {kyu} kyu","arch.tank":"Tank – presses in close","arch.kicker":"Kicker – keeps distance","arch.counter":"Counter-fighter – blocks and answers","quick.belt":"Your belt","quick.opponent":"Opponent","diff.easy":"Easy","diff.normal":"Normal","diff.hard":"Hard","set.lang":"Language","set.difficulty":"Difficulty","set.sound":"Sound","set.music":"Music","set.voice":"Referee voice (Japanese)","set.vibrate":"Vibration on hit","set.btnScale":"Button size","set.btnOpacity":"Button opacity","set.leftHanded":"Left-handed mode","set.assist":"Assist mode (hints and input trail)","set.termsTranslated":"Terms with translation","set.reset":"Erase progress","set.resetBtn":"Erase","set.resetAsk":"Really erase all progress?","set.install":"To play offline and in full screen, install the game: browser menu → Install app or Add to Home Screen.","debug.table":"Technique parameters","debug.signals":"Flag signals","debug.partner":"Partner","debug.unlockAll":"Unlock all","debug.boxesInFights":"Hitboxes in fights","debug.tech":"Technique"}};
 __def('src/main.js', function (__exp, __req) {
 // SPDX-License-Identifier: BUSL-1.1
 // Paleidimas ir scenų valdytojas.
@@ -27,6 +27,19 @@ const { mainMenu } = __req('src/ui/menus.js');
 const { FightScene } = __req('src/fight/fightScene.js');
 const { makeBackground, W, H } = __req('src/fight/render.js');
 const $ = (id) => document.getElementById(id);
+
+// Senesnėms naršyklėms (pvz., iPad su Safari < 16), kuriose nėra CanvasRenderingContext2D.roundRect.
+if (typeof CanvasRenderingContext2D !== 'undefined' && !CanvasRenderingContext2D.prototype.roundRect) {
+  CanvasRenderingContext2D.prototype.roundRect = function roundRect(x, y, w, h, r = 0) {
+    const k = Math.min(r, w / 2, h / 2);
+    this.moveTo(x + k, y);
+    this.arcTo(x + w, y, x + w, y + h, k);
+    this.arcTo(x + w, y + h, x, y + h, k);
+    this.arcTo(x, y + h, x, y, k);
+    this.arcTo(x, y, x + w, y, k);
+    this.closePath();
+  };
+}
 
 class Game {
   constructor(db) {
@@ -963,23 +976,1931 @@ __exp.Ui = Ui;
 });
 __def('src/ui/menus.js', function (__exp, __req) {
 // SPDX-License-Identifier: BUSL-1.1
-// 1 etapo (prototipo) meniu: iškart paleidžia bandomąją kovą. 3 etape pakeičiamas pilnu meniu.
+// Startas, pagrindinis meniu ir nustatymai.
 
-const { techsUpTo, combosUpTo } = __req('src/core/data.js');
-async function mainMenu(game) {
+const { t, loc, esc } = __req('src/core/i18n.js');
+const { journey } = __req('src/modes/journey.js');
+const { dojoMenu, wazaCho } = __req('src/modes/dojo.js');
+const { quickFight } = __req('src/modes/quickfight.js');
+const { debugScreen } = __req('src/modes/debug.js');
+const { currentBelt, kyuLabel, beltChip } = __req('src/modes/common.js');
+function isIos() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+
+function isStandalone() {
+  return (window.matchMedia && window.matchMedia('(display-mode: fullscreen), (display-mode: standalone)').matches) || navigator.standalone === true;
+}
+
+// Startas: „Bakstelėk, kad pradėtum“ – šis bakstelėjimas įjungia pilno ekrano režimą ir garsą.
+async function startScreen(game) {
+  const ios = isIos() && !isStandalone();
+  await game.ui.ask(`<div class="start" data-act="start"><div class="panel center">
+    <div class="title-logo">OSU!</div>
+    <div class="title-sub">${t('app.subtitle')}</div>
+    <p class="muted">${t('app.tagline')}</p>
+    <p><button class="btn primary" data-act="start">${t('start.tap')}</button></p>
+    ${ios ? `<p class="muted">${t('start.ios')}</p>` : ''}
+    <p class="muted">© 2026 Paulius Sladkevičius · BUSL-1.1</p></div></div>`);
+  game.enterFullscreen();
+}
+
+async function settingsScreen(game) {
+  const s = game.settings;
+  const chk = (key) => `<label class="setting"><span>${t(`set.${key}`)}</span><input type="checkbox" data-set="${key}" ${s[key] ? 'checked' : ''}></label>`;
+  const rng = (key, min, max, step) => `<label class="setting"><span>${t(`set.${key}`)}</span><input type="range" data-set="${key}" min="${min}" max="${max}" step="${step}" value="${s[key]}"></label>`;
+  const seg = (key, items) => `<div class="setting"><span>${t(`set.${key}`)}</span><div class="seg">${items.map(([v, label]) => `<button data-act="set:${key}:${v}" class="${s[key] === v ? 'on' : ''}">${label}</button>`).join('')}</div></div>`;
   for (;;) {
-    const res = await game.runFight({
-      mode: 'match', bg: 'dojo', hints: true, timeSec: 60,
-      player: { name: 'Žaidėjas', belt: 'orange', unlocked: techsUpTo(game.db, 'orange'), combos: combosUpTo(game.db, 'orange') },
-      opponent: { name: 'Rokas', belt: 'orange', archetype: 'tank' },
+    const html = `<div class="panel">
+      <div class="head"><h2>${t('menu.settings')}</h2><button class="btn small" data-act="back">${t('ui.back')}</button></div>
+      <div class="cols"><div>
+        ${seg('lang', [['lt', 'Lietuvių'], ['en', 'English']])}
+        ${seg('difficulty', ['easy', 'normal', 'hard'].map((d) => [d, t(`diff.${d}`)]))}
+        ${chk('sound')}${chk('music')}${chk('voice')}${chk('vibrate')}
+      </div><div>
+        ${rng('btnScale', 0.8, 1.5, 0.05)}${rng('btnOpacity', 0.3, 1, 0.05)}
+        ${chk('leftHanded')}${chk('assist')}${chk('termsTranslated')}
+        <div class="setting"><span>${t('set.reset')}</span><button class="btn small" data-act="reset">${t('set.resetBtn')}</button></div>
+      </div></div>
+      <p class="muted">${t('set.install')}</p></div>`;
+    const wait = game.ui.ask(html, 'top');
+    game.ui.root.querySelectorAll('[data-set]').forEach((el) => {
+      el.addEventListener('input', () => {
+        s[el.dataset.set] = el.type === 'checkbox' ? el.checked : Number(el.value);
+        game.applySettings();
+        if (el.dataset.set === 'music') game.audio.music(s.music ? 'taiko' : null);
+      });
     });
-    if (res && res.aborted) continue;
-    await game.ui.ask(`<div class="panel center"><h1>${res.playerWon ? 'Pergalė' : 'Pralaimėjimas'}</h1>
-      <button class="btn primary" data-act="again">Dar kartą</button></div>`);
+    const { act } = await wait;
+    if (act === 'back') return;
+    if (act === 'reset') {
+      const c = await game.ui.ask(`<div class="panel center"><h2>${t('set.resetAsk')}</h2>
+        <button class="btn primary" data-act="yes">${t('set.resetBtn')}</button><button class="btn" data-act="no">${t('ui.back')}</button></div>`);
+      if (c.act === 'yes') { game.save.reset(); game.settings = game.save.data.settings; }
+    } else if (act.startsWith('set:')) {
+      const [, key, v] = act.split(':');
+      s[key] = v;
+      game.applySettings();
+    }
+  }
+}
+
+async function mainMenu(game) {
+  if (new URLSearchParams(location.search).has('debug')) { game.audio.unlock(); await debugScreen(game); }
+  else await startScreen(game);
+  for (;;) {
+    game.audio.music('taiko');
+    const belt = currentBelt(game);
+    const s = game.save.data;
+    const fresh = s.learned.length === 0 && s.stats.fights === 0;
+    const html = `<div class="panel narrow center">
+      <div class="title-logo">OSU!</div>
+      <div class="title-sub">${t('app.subtitle')}</div>
+      <p class="muted">${t('app.tagline')}</p>
+      <p>${beltChip(game, s.beltIndex)} ${esc(loc(belt, 'name'))} · ${kyuLabel(game, s.beltIndex)}${s.trophies.length ? ` · 🏆 ${s.trophies.length}` : ''}</p>
+      <div class="menu-grid">
+        <button class="btn primary wide" data-act="journey">${fresh ? t('menu.begin') : t('menu.journey')}</button>
+        <button class="btn" data-act="dojo">Dojo</button>
+        <button class="btn" data-act="quick">${t('menu.quick')}</button>
+        <button class="btn" data-act="wazacho">Waza-chō</button>
+        <button class="btn" data-act="settings">${t('menu.settings')}</button>
+      </div>
+      <p><button class="btn small" data-act="debug">Debug</button></p></div>`;
+    const { act } = await game.ui.ask(html);
+    game.audio.music(null);
+    if (act === 'journey') await journey(game);
+    else if (act === 'dojo') await dojoMenu(game);
+    else if (act === 'quick') await quickFight(game);
+    else if (act === 'wazacho') await wazaCho(game);
+    else if (act === 'settings') await settingsScreen(game);
+    else if (act === 'debug') await debugScreen(game);
   }
 }
 
 __exp.mainMenu = mainMenu;
+});
+__def('src/modes/journey.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Kelionės žemėlapis: 7 diržų skyriai kaip laiptai; kiekviename – pamokos, egzaminas, turnyras.
+
+const { t, loc, esc } = __req('src/core/i18n.js');
+const { chapterOpen, lessonsDone, lessonProgress, kyuLabel } = __req('src/modes/common.js');
+const { lessonList } = __req('src/modes/dojo.js');
+const { runExam } = __req('src/modes/exam.js');
+const { runTournament } = __req('src/modes/tournament.js');
+async function journey(game) {
+  const db = game.db;
+  let sel = Math.min(game.save.data.beltIndex + (lessonsDone(game, db.belts[game.save.data.beltIndex].id) ? 1 : 0), 2);
+  for (;;) {
+    const s = game.save.data;
+    const cur = s.beltIndex;
+    const steps = db.belts.map((b, i) => {
+      const open = chapterOpen(game, i);
+      return `<button class="step${i === sel ? ' sel' : ''}${open ? '' : ' locked'}" style="--belt:${b.color};height:${3.2 + i * 0.55}rem" data-act="sel:${i}">
+        ${esc(loc(b, 'name'))}${i <= cur ? ' ✓' : ''}</button>`;
+    }).join('');
+    const b = db.belts[sel];
+    const open = chapterOpen(game, sel);
+    const prog = lessonProgress(game, b.id);
+    const lessons = lessonsDone(game, b.id);
+    const owned = cur >= sel;
+    const T = b.tournament;
+    let body;
+    if (!b.available) body = `<p>${t('journey.stage4')}</p><p class="muted">${esc(loc(b, 'unlocks'))}</p>`;
+    else if (!open) body = `<p>${t('journey.locked')}</p><p class="muted">${esc(loc(b, 'unlocks'))}</p>`;
+    else {
+      const examBtn = b.exam
+        ? `<div class="item${owned ? ' done' : ''}"><div class="grow"><div class="name">${t('journey.exam')} (shinsa)</div>
+            <div class="muted">${owned ? t('journey.examPassed') : lessons ? t('journey.examReady', { n: b.exam.kumite }) : t('journey.examNeedsLessons')}${s.exams[b.id] ? ` · ${Math.round(s.exams[b.id].best * 100)} %` : ''}</div></div>
+            <button class="btn small${!owned && lessons ? ' primary' : ''}" data-act="exam" ${lessons ? '' : 'disabled'}>${owned ? t('dojo.repeat') : t('journey.take')}</button></div>`
+        : `<div class="item done"><div class="grow"><div class="name">${t('journey.exam')}</div><div class="muted">${t('journey.noExam')}</div></div></div>`;
+      const tourReady = owned && lessons;
+      body = `<div class="list">
+        <div class="item${lessons ? ' done' : ''}"><div class="grow"><div class="name">${t('dojo.lessons')}</div>
+          <div class="muted">${esc(loc(b, 'unlocks'))} · ${prog.done}/${prog.total}</div></div>
+          <button class="btn small${lessons ? '' : ' primary'}" data-act="lessons">${t('journey.open')}</button></div>
+        ${examBtn}
+        <div class="item${s.trophies.includes(T.id) ? ' done' : ''}"><div class="grow"><div class="name">${esc(loc(T, 'name'))}${s.trophies.includes(T.id) ? ' 🏆' : ''}</div>
+          <div class="muted">${T.format === 'series' ? t('journey.series', { n: T.size - 1 }) : t('journey.bracket', { n: T.size })} · ${t('journey.optional')}</div></div>
+          <button class="btn small" data-act="tour" ${tourReady ? '' : 'disabled'}>${t('journey.enter')}</button></div>
+      </div>`;
+    }
+    const html = `<div class="panel">
+      <div class="head"><h2>${t('journey.title')}</h2><span class="muted">${t('journey.current')}: ${esc(loc(db.belts[cur], 'name'))} (${kyuLabel(game, cur)})</span>
+        <button class="btn small" data-act="back">${t('ui.back')}</button></div>
+      <div class="stairs">${steps}</div>
+      <h3>${sel + 1}. ${esc(loc(b, 'name'))} <span class="muted">${b.kyu.map((k) => (typeof k === 'number' ? `${k} kyu` : k)).join(', ')}</span></h3>
+      ${body}</div>`;
+    const { act } = await game.ui.ask(html, 'top');
+    if (act === 'back') return;
+    if (act.startsWith('sel:')) sel = Number(act.slice(4));
+    else if (act === 'lessons') await lessonList(game, sel);
+    else if (act === 'exam') { if (await runExam(game, sel)) sel = Math.min(sel, 2); }
+    else if (act === 'tour') await runTournament(game, sel);
+  }
+}
+
+__exp.journey = journey;
+});
+__def('src/modes/common.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Bendri režimų pagalbininkai: progresas, žaidėjo technikų rinkinys, rezultatų ekranas.
+
+const { techsUpTo, combosUpTo } = __req('src/core/data.js');
+const { inputGlyphs } = __req('src/core/combo.js');
+const { t, loc, esc } = __req('src/core/i18n.js');
+// Skyriaus (diržo) mokomoji medžiaga: technikos ir tradicinės kombinacijos.
+function chapterItems(db, beltId) {
+  return {
+    techs: db.techniques.filter((x) => x.belt === beltId && x.type !== 'mode' && x.condition !== 'afterSweep'),
+    combos: db.combos.filter((c) => c.belt === beltId),
+  };
+}
+
+function lessonsDone(game, beltId) {
+  const { techs, combos } = chapterItems(game.db, beltId);
+  const s = game.save.data;
+  return techs.every((x) => s.learned.includes(x.id)) && combos.every((c) => s.learnedCombos.includes(c.id));
+}
+
+function lessonProgress(game, beltId) {
+  const { techs, combos } = chapterItems(game.db, beltId);
+  const s = game.save.data;
+  return {
+    done: techs.filter((x) => s.learned.includes(x.id)).length + combos.filter((c) => s.learnedCombos.includes(c.id)).length,
+    total: techs.length + combos.length,
+  };
+}
+
+// Paprasčiausios kiekvieno mygtuko technikos prieinamos visada.
+function baseTechs(db) {
+  return db.techniques.filter((x) => x.belt === db.belts[0].id && x.input.length === 1 && !x.hold).map((x) => x.id);
+}
+
+// Žaidėjo technikos kelionėje: tik išmoktos pamokose (+ bazinės).
+function playerSet(game, extraTechs = [], extraCombos = []) {
+  const s = game.save.data;
+  return {
+    unlocked: new Set([...baseTechs(game.db), ...s.learned, ...extraTechs]),
+    combos: new Set([...s.learnedCombos, ...extraCombos]),
+  };
+}
+
+// Visos technikos iki diržo imtinai (greita kova, AI).
+function fullSet(db, beltId) {
+  return { unlocked: techsUpTo(db, beltId), combos: combosUpTo(db, beltId) };
+}
+
+function currentBelt(game) {
+  return game.db.belts[game.save.data.beltIndex];
+}
+
+// Skyrius atviras, jei diržas jau turimas arba tai kitas diržas ir ankstesnio skyriaus pamokos baigtos.
+function chapterOpen(game, i) {
+  const db = game.db;
+  const cur = game.save.data.beltIndex;
+  if (!db.belts[i] || !db.belts[i].available) return false;
+  return i <= cur || (i === cur + 1 && lessonsDone(game, db.belts[cur].id));
+}
+
+function kyuLabel(game, i) {
+  const b = game.db.belts[i];
+  const stripe = !!game.save.data.stripes[b.id];
+  const k = b.kyu.length > 1 ? b.kyu[stripe ? 1 : 0] : b.kyu[0];
+  return typeof k === 'number' ? `${k} kyu` : k;
+}
+
+function beltChip(game, i) {
+  const b = game.db.belts[i];
+  return `<span class="belt-chip${game.save.data.stripes[b.id] ? ' stripe' : ''}" style="background:${b.color}"></span>`;
+}
+
+function glyphs(input) {
+  return inputGlyphs(input).join(' ');
+}
+
+function comboGlyphs(db, combo) {
+  return combo.sequence.map((id) => (id === '@block' ? 'G✓' : inputGlyphs(db.tech[id].input).join(''))).join('  ');
+}
+
+function oppFromRoster(db, r) {
+  return { name: r.name, belt: r.belt, archetype: r.archetype };
+}
+
+function rosterFor(db, beltId) {
+  return db.opponents.roster.filter((r) => r.belt === beltId);
+}
+
+// Kovos rezultato ekranas. Grąžina paspausto mygtuko veiksmą.
+async function fightResultScreen(game, res, buttons) {
+  const s = game.save.data;
+  s.stats.fights++;
+  if (res.playerWon) s.stats.wins++;
+  game.save.write();
+  const v = res.votes;
+  const zone = (d) => `${t('zone.legs')} ${d.legs.toFixed(0)} · ${t('zone.body')} ${d.body.toFixed(0)} · ${t('zone.head')} ${d.head.toFixed(0)}`;
+  const html = `<div class="panel center">
+    <h1>${res.playerWon ? t('result.win') : t('result.lose')}</h1>
+    <p class="jp">${esc(game.db.rules.calls[`${res.winner}_no_kachi`])} · ${Math.max(v.aka, v.shiro)}:${Math.min(v.aka, v.shiro)} ${t(`result.${res.by}`)}</p>
+    <p class="muted">${t(`result.${res.by}.desc`)}${res.round > 0 ? ` · ${t('result.encho', { n: res.round })}` : ''}</p>
+    <p>${t('result.yourDamage')}: ${zone(res.player.dmg)}</p>
+    <p>${t('result.oppDamage')}: ${zone(res.opp.dmg)}</p>
+    <p class="muted">Waza-ari ${res.player.wazaAri}:${res.opp.wazaAri} · Chui ${res.player.chui}:${res.opp.chui}${res.bowsMissed ? ` · ${t('result.bowsMissed', { n: res.bowsMissed })}` : ''}</p>
+    <div>${buttons.map((b, i) => `<button class="btn${i === 0 ? ' primary' : ''}" data-act="${b.act}">${b.label}</button>`).join('')}</div>
+  </div>`;
+  const { act } = await game.ui.ask(html);
+  return act;
+}
+
+function techRow(db, x, opts = {}) {
+  const kum = x.type === 'mode' ? '' : `<span class="tag ${x.legalInKumite ? 'yes' : 'no'}">Kumite: ${x.legalInKumite ? t('ui.yes') : t('ui.no')}</span>`;
+  return `<div class="item ${opts.cls || ''}">
+    <div class="keys">${glyphs(x.input)}${x.hold ? ` ${t('ui.hold')}` : ''}</div>
+    <div class="grow"><div class="name">${esc(x.name)} ${kum}</div><div class="muted">${esc(loc(x, 'name'))} – ${esc(loc(x, 'desc'))}</div></div>
+    ${opts.button || ''}</div>`;
+}
+
+function comboRow(db, c, opts = {}) {
+  return `<div class="item ${opts.cls || ''}">
+    <div class="keys">${comboGlyphs(db, c)}</div>
+    <div class="grow"><div class="name">${esc(c.name)} <span class="tag yes">renzoku</span></div><div class="muted">${esc(loc(c, 'name'))} · ${bonusText(c)}</div></div>
+    ${opts.button || ''}</div>`;
+}
+
+function bonusText(c) {
+  const b = c.bonus;
+  const parts = [];
+  if (b.damageMult) parts.push(`+${Math.round((b.damageMult - 1) * 100)} % ${t('bonus.damage')}`);
+  if (b.legDamageMult) parts.push(`${t('bonus.leg')} ×${b.legDamageMult}`);
+  if (b.balanceBonus) parts.push(`${t('bonus.balance')} −${b.balanceBonus}`);
+  if (b.unblockable) parts.push(t('bonus.unblockable'));
+  return parts.join(', ') || t('bonus.later');
+}
+
+__exp.chapterItems = chapterItems;
+__exp.lessonsDone = lessonsDone;
+__exp.lessonProgress = lessonProgress;
+__exp.baseTechs = baseTechs;
+__exp.playerSet = playerSet;
+__exp.fullSet = fullSet;
+__exp.currentBelt = currentBelt;
+__exp.chapterOpen = chapterOpen;
+__exp.kyuLabel = kyuLabel;
+__exp.beltChip = beltChip;
+__exp.glyphs = glyphs;
+__exp.comboGlyphs = comboGlyphs;
+__exp.oppFromRoster = oppFromRoster;
+__exp.rosterFor = rosterFor;
+__exp.fightResultScreen = fightResultScreen;
+__exp.techRow = techRow;
+__exp.comboRow = comboRow;
+__exp.bonusText = bonusText;
+});
+__def('src/modes/dojo.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Dojo: pamokos (5 kartus iš eilės be klaidos → technika išmokta), Waza-chō (technikų knygelė), laisva praktika.
+
+const { evalAnim, getPose, drawFigure } = __req('src/fight/skeleton.js');
+const { inputGlyphs } = __req('src/core/combo.js');
+const { t, loc, esc } = __req('src/core/i18n.js');
+const { chapterItems, playerSet, fullSet, currentBelt, techRow, comboRow, beltChip } = __req('src/modes/common.js');
+const FONT = '"Trebuchet MS", "Segoe UI", system-ui, sans-serif';
+
+function wrap(ctx, text, x, y, maxW, lh) {
+  let line = '';
+  for (const w of text.split(' ')) {
+    if (ctx.measureText(`${line}${w}`).width > maxW && line) { ctx.fillText(line.trim(), x, y); y += lh; line = ''; }
+    line += `${w} `;
+  }
+  if (line.trim()) ctx.fillText(line.trim(), x, y);
+  return y + lh;
+}
+
+// Pamokos režisierius: seka žaidėjo veiksmus, skaičiuoja pakartojimus, piešia paaiškinimą ir „vaiduoklį“.
+class LessonDirector {
+  // item: { kind: 'tech' | 'combo', def }, opts: { reps, free }
+  constructor(game, item, opts = {}) {
+    this.game = game;
+    this.item = item;
+    this.free = !!opts.free;
+    this.reps = opts.reps || 5;
+    this.count = 0;
+    this.total = 0;
+    this.time = 0;
+    this.doneT = null;
+    const d = item.def;
+    this.seq = item.kind === 'combo' ? d.sequence : [d.id];
+    this.glyphs = item.kind === 'combo'
+      ? d.sequence.map((id) => (id === '@block' ? ['G✓'] : inputGlyphs(game.db.tech[id].input)))
+      : [inputGlyphs(d.input).concat(d.hold ? [t('ui.hold')] : [])];
+  }
+
+  attach(scene) {
+    this.scene = scene;
+    this.game.audio.speak(this.item.def.name);
+  }
+
+  ok() {
+    if (this.doneT != null) return;
+    this.count++;
+    this.total++;
+    this.game.audio.good();
+    this.scene.hud.popup(640, 380, this.free ? `✓ ${this.total}` : `✓ ${this.count}/${this.reps}`, { color: '#8ff08a', size: 34 });
+    if (!this.free && this.count >= this.reps) {
+      this.doneT = 0;
+      this.scene.hud.call('OSU!', t('lesson.learned'), 1800);
+      this.game.audio.osu();
+      this.game.audio.speak('Osu');
+    }
+  }
+
+  fail() {
+    if (this.doneT != null || this.free) return;
+    if (this.count > 0) this.scene.hud.popup(640, 380, t('lesson.again'), { color: '#ffb0a0', size: 26 });
+    if (this.count > 0) this.game.audio.bad();
+    this.count = 0;
+  }
+
+  onEvent(ev) {
+    const { item, scene } = this;
+    const p = scene.player;
+    const d = item.def;
+    if (item.kind === 'combo') {
+      if (ev.type === 'combo' && ev.f === p && ev.combo.id === d.id) this.ok();
+      return;
+    }
+    if (d.type === 'strike') {
+      if (ev.type === 'techStart' && ev.f === p) { if (ev.def.id === d.id) this.ok(); else this.fail(); }
+    } else if (d.auto) {
+      // Sune uke: skaičiuojamas sėkmingas žemo spyrio blokas.
+      if (ev.type === 'hit' && ev.defender === p) { if (ev.blocked && ev.sune) this.ok(); else if (!ev.blocked) this.fail(); }
+    } else if (d.hold) {
+      if (ev.type === 'guard' && ev.f === p && ev.techId === d.id) this.ok();
+    } else if (ev.type === 'guard' && ev.f === p && ev.techId !== 'morote_uke') {
+      if (ev.techId === d.id) this.ok(); else this.fail();
+    } else if (ev.type === 'techStart' && ev.f === p) this.fail();
+  }
+
+  update(dt) {
+    this.time += dt;
+    if (this.doneT != null) {
+      this.doneT += dt;
+      if (this.doneT > 1900) this.scene.finish({ learned: true });
+    }
+  }
+
+  draw(ctx) {
+    const d = this.item.def;
+    const db = this.game.db;
+    ctx.save();
+    // Paaiškinimo skydelis
+    ctx.fillStyle = 'rgba(14,16,24,0.82)';
+    ctx.beginPath(); ctx.roundRect(20, 16, 520, 216, 14); ctx.fill();
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#ffd54a';
+    let size = 32;
+    ctx.font = `bold ${size}px ${FONT}`;
+    while (ctx.measureText(d.name).width > 490 && size > 18) { size -= 2; ctx.font = `bold ${size}px ${FONT}`; }
+    ctx.fillText(d.name, 36, 56);
+    ctx.fillStyle = '#fff';
+    ctx.font = `bold 19px ${FONT}`;
+    ctx.fillText(loc(d, 'name'), 36, 84);
+    ctx.font = `16px ${FONT}`;
+    ctx.fillStyle = '#d8d4ca';
+    let y = 108;
+    if (this.item.kind === 'tech') {
+      y = wrap(ctx, loc(d, 'desc'), 36, y, 490, 20);
+      ctx.fillStyle = d.legalInKumite ? '#8ff08a' : '#ff8a7a';
+      ctx.font = `bold 15px ${FONT}`;
+      ctx.fillText(`Kumite: ${d.legalInKumite ? t('ui.yes') : t('ui.no')}`, 36, y);
+    } else y = wrap(ctx, t('lesson.chainTip'), 36, y, 490, 20);
+    // Įvesties seka su animuota žyma
+    const flat = [];
+    this.glyphs.forEach((g, i) => { g.forEach((x) => flat.push({ x, grp: i })); });
+    const active = Math.floor(this.time / 450) % (flat.length + 2);
+    let gx = 36;
+    ctx.font = `bold 30px ${FONT}`;
+    flat.forEach((g, i) => {
+      if (i > 0 && flat[i - 1].grp !== g.grp) gx += 16;
+      const w = Math.max(40, ctx.measureText(g.x).width + 18);
+      ctx.fillStyle = i === active ? '#ffd54a' : 'rgba(255,255,255,0.14)';
+      ctx.beginPath(); ctx.roundRect(gx, 180, w, 40, 8); ctx.fill();
+      ctx.fillStyle = i === active ? '#14161f' : '#fff';
+      ctx.textAlign = 'center';
+      ctx.fillText(g.x, gx + w / 2, 211);
+      gx += w + 6;
+    });
+    // Progresas
+    ctx.textAlign = 'right';
+    ctx.font = `bold 20px ${FONT}`;
+    ctx.fillStyle = '#fff';
+    if (this.free) ctx.fillText(`${t('lesson.free')}: ${this.total}`, 528, 56);
+    else for (let i = 0; i < this.reps; i++) {
+      ctx.beginPath();
+      ctx.arc(520 - i * 26, 48, 9, 0, Math.PI * 2);
+      ctx.fillStyle = i < this.reps - this.count ? 'rgba(255,255,255,0.2)' : '#8ff08a';
+      ctx.fill();
+    }
+    // „Vaiduoklis“, rodantis judesį
+    ctx.fillStyle = 'rgba(14,16,24,0.82)';
+    ctx.beginPath(); ctx.roundRect(1000, 16, 260, 216, 14); ctx.fill();
+    ctx.fillStyle = '#b8b4aa';
+    ctx.font = `14px ${FONT}`;
+    ctx.textAlign = 'center';
+    ctx.fillText(t('lesson.demo'), 1130, 36);
+    const cyc = 1900;
+    const idx = Math.floor(this.time / cyc) % this.seq.length;
+    const id = this.seq[idx];
+    const k = (this.time % cyc) / cyc;
+    let pose;
+    if (id === '@block') pose = getPose(db.anim, 'guard_chudan');
+    else {
+      const tech = db.tech[id];
+      pose = tech.type === 'strike' ? evalAnim(db.anim, tech.anim, Math.min(3, k * 4)) : (k < 0.15 || k > 0.8 ? getPose(db.anim, 'kamae') : getPose(db.anim, tech.anim));
+    }
+    drawFigure(ctx, 1110, 222, 1, pose, { scale: 0.78, alpha: 0.85, gi: '#cfe6ff', far: '#a9c4e0', belt: '#f4f1ea' });
+    ctx.restore();
+  }
+}
+
+function lessonOpts(game, item, free) {
+  const db = game.db;
+  const d = item.def;
+  const techIds = item.kind === 'combo' ? d.sequence.filter((id) => id !== '@block') : [d.id];
+  const set = playerSet(game, techIds, item.kind === 'combo' ? [d.id] : []);
+  const partnerTech = d.lesson && d.lesson.partner;
+  const needsTarget = item.kind === 'combo' || d.type === 'strike';
+  const belt = currentBelt(game).id;
+  return {
+    mode: 'practice', bg: 'dojo', showPanels: false, hints: true, showDamage: true,
+    player: { name: t('hud.player'), belt, ...set },
+    opponent: partnerTech
+      ? { name: t('dojo.partner'), belt, dummy: 'attack', techId: partnerTech, intervalMs: 1900 }
+      : needsTarget ? { name: t('dojo.partner'), belt, dummy: 'passive' } : null,
+    director: new LessonDirector(game, item, { reps: item.kind === 'combo' ? db.rules.lesson.comboReps : db.rules.lesson.reps, free }),
+  };
+}
+
+async function runLesson(game, item) {
+  const res = await game.runFight(lessonOpts(game, item, false));
+  if (res && res.learned) {
+    game.save.learn(item.def.id, item.kind === 'combo');
+    return true;
+  }
+  return false;
+}
+
+// Skyriaus pamokų sąrašas.
+async function lessonList(game, beltIdx) {
+  const db = game.db;
+  const belt = db.belts[beltIdx];
+  for (;;) {
+    const s = game.save.data;
+    const { techs, combos } = chapterItems(db, belt.id);
+    const row = (kind, d) => {
+      const done = (kind === 'combo' ? s.learnedCombos : s.learned).includes(d.id);
+      // Kombinacijos pamoka atsiveria išmokus visas jos technikas.
+      const ready = kind === 'tech' || d.sequence.every((id) => id === '@block' || s.learned.includes(id));
+      const btn = `<button class="btn small${done ? '' : ' primary'}" data-act="${kind}:${d.id}" ${ready ? '' : 'disabled'}>${done ? t('dojo.repeat') : t('dojo.learn')}</button>`;
+      return kind === 'combo' ? comboRow(db, d, { cls: done ? 'done' : '', button: btn }) : techRow(db, d, { cls: done ? 'done' : '', button: btn });
+    };
+    const html = `<div class="panel">
+      <div class="head"><h2>${t('dojo.lessons')} · ${beltChip(game, beltIdx)} ${esc(loc(belt, 'name'))}</h2><button class="btn small" data-act="back">${t('ui.back')}</button></div>
+      <p class="muted">${t('dojo.lessonsHelp', { n: db.rules.lesson.reps })}</p>
+      <div class="list">${techs.map((x) => row('tech', x)).join('')}${combos.map((c) => row('combo', c)).join('')}</div>
+    </div>`;
+    const { act } = await game.ui.ask(html, 'top');
+    if (act === 'back') return;
+    const [kind, id] = act.split(':');
+    await runLesson(game, { kind, def: kind === 'combo' ? db.combo[id] : db.tech[id] });
+  }
+}
+
+// Waza-chō: visų išmoktų technikų ir kombinacijų sąrašas su įvestimis, kumite leistinumu ir mygtuku „Praktikuoti“.
+async function wazaCho(game) {
+  const db = game.db;
+  for (;;) {
+    const s = game.save.data;
+    const techs = db.techniques.filter((x) => s.learned.includes(x.id));
+    const combos = db.combos.filter((c) => s.learnedCombos.includes(c.id));
+    const total = db.techniques.filter((x) => db.belts[db.beltIdx[x.belt]].available && x.type !== 'mode').length;
+    const btn = (kind, id) => `<button class="btn small" data-act="${kind}:${id}">${t('dojo.practice')}</button>`;
+    const html = `<div class="panel">
+      <div class="head"><h2>Waza-chō <span class="muted">${t('wazacho.sub')}</span></h2><button class="btn small" data-act="back">${t('ui.back')}</button></div>
+      <p class="muted">${t('wazacho.count', { n: techs.length, total })}</p>
+      <div class="list">${techs.map((x) => techRow(db, x, { button: btn('tech', x.id) })).join('') || `<p>${t('wazacho.empty')}</p>`}
+      ${combos.map((c) => comboRow(db, c, { button: btn('combo', c.id) })).join('')}</div>
+    </div>`;
+    const { act } = await game.ui.ask(html, 'top');
+    if (act === 'back') return;
+    const [kind, id] = act.split(':');
+    await game.runFight(lessonOpts(game, { kind, def: kind === 'combo' ? db.combo[id] : db.tech[id] }, true));
+  }
+}
+
+// Laisva praktika su sparingo partneriu: pasyvus, tik blokuoja arba tik puola. Rodo padarytą žalą.
+async function freePractice(game) {
+  const belt = currentBelt(game).id;
+  const { act } = await game.ui.ask(`<div class="panel narrow center">
+    <h2>${t('dojo.free')}</h2><p class="muted">${t('dojo.freeHelp')}</p>
+    <button class="btn block primary" data-act="passive">${t('dojo.partnerPassive')}</button>
+    <button class="btn block" data-act="block">${t('dojo.partnerBlock')}</button>
+    <button class="btn block" data-act="attack">${t('dojo.partnerAttack')}</button>
+    <button class="btn block" data-act="back">${t('ui.back')}</button></div>`);
+  if (act === 'back') return;
+  const set = game.save.data.learned.length ? playerSet(game) : fullSet(game.db, belt);
+  await game.runFight({
+    mode: 'practice', bg: 'dojo', hints: true, showDamage: true,
+    player: { name: t('hud.player'), belt, ...set },
+    opponent: { name: t('dojo.partner'), belt, dummy: act, intervalMs: 1500 },
+  });
+}
+
+async function dojoMenu(game) {
+  for (;;) {
+    const cur = game.save.data.beltIndex;
+    const { act } = await game.ui.ask(`<div class="panel narrow center">
+      <h2>Dojo</h2>
+      <button class="btn block primary" data-act="lessons">${t('dojo.lessons')}</button>
+      <button class="btn block" data-act="free">${t('dojo.free')}</button>
+      <button class="btn block" data-act="wazacho">Waza-chō</button>
+      <button class="btn block" data-act="back">${t('ui.back')}</button></div>`);
+    if (act === 'back') return;
+    if (act === 'lessons') {
+      // Mokomasi dabartinio skyriaus: turimo diržo arba kito, jei ankstesnio pamokos baigtos.
+      const s = game.save.data;
+      const { techs, combos } = chapterItems(game.db, game.db.belts[cur].id);
+      const curDone = techs.every((x) => s.learned.includes(x.id)) && combos.every((c) => s.learnedCombos.includes(c.id));
+      const next = game.db.belts[cur + 1];
+      await lessonList(game, curDone && next && next.available ? cur + 1 : cur);
+    } else if (act === 'free') await freePractice(game);
+    else if (act === 'wazacho') await wazaCho(game);
+  }
+}
+
+__exp.LessonDirector = LessonDirector;
+__exp.lessonOpts = lessonOpts;
+__exp.runLesson = runLesson;
+__exp.lessonList = lessonList;
+__exp.wazaCho = wazaCho;
+__exp.freePractice = freePractice;
+__exp.dojoMenu = dojoMenu;
+});
+__def('src/fight/skeleton.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// 2D skeletas: pozos ir raktiniai kadrai iš assets/anim/poses.json, interpoliacija ir kovotojo piešimas.
+
+const L = { thigh: 48, shin: 48, torso: 74, neck: 10, head: 18, upper: 34, fore: 32 };
+const KEYS = ['torso', 'head', 'fs', 'fe', 'bs', 'be', 'fh', 'fk', 'bh', 'bk', 'dx', 'rot'];
+const RAD = Math.PI / 180;
+const cache = new WeakMap();
+
+function getPose(anim, name) {
+  let c = cache.get(anim);
+  if (!c) { c = {}; cache.set(anim, c); }
+  if (c[name]) return c[name];
+  const base = anim.poses.kamae;
+  const src = anim.poses[name] || base;
+  const p = {};
+  for (const k of KEYS) p[k] = src[k] ?? base[k] ?? 0;
+  if (src.hipH != null) p.hipH = src.hipH;
+  c[name] = p;
+  return p;
+}
+
+function solve(P) {
+  const dir = (deg, len) => [Math.sin(deg * RAD) * len, Math.cos(deg * RAD) * len];
+  const hip = [0, 0];
+  const t = dir(P.torso, L.torso);
+  const sh = [t[0], -t[1]];
+  const hd = dir(P.torso + P.head, L.neck + L.head);
+  const head = [sh[0] + hd[0], sh[1] - hd[1]];
+  const arm = (s, e) => {
+    const u = dir(s, L.upper);
+    const f = dir(s + e, L.fore);
+    const el = [sh[0] + u[0], sh[1] + u[1]];
+    return [el, [el[0] + f[0], el[1] + f[1]]];
+  };
+  const leg = (h, k) => {
+    const th = dir(h, L.thigh);
+    const s = dir(h - k, L.shin);
+    const kn = [th[0], th[1]];
+    return [kn, [kn[0] + s[0], kn[1] + s[1]]];
+  };
+  const [fel, fha] = arm(P.fs, P.fe);
+  const [bel, bha] = arm(P.bs, P.be);
+  const [fkn, ffo] = leg(P.fh, P.fk);
+  const [bkn, bfo] = leg(P.bh, P.bk);
+  return { hip, sh, head, fel, fha, bel, bha, fkn, ffo, bkn, bfo, auto: Math.max(ffo[1], bfo[1]) + 6 };
+}
+
+function hipHeight(P) {
+  return P.hipH ?? solve(P).auto;
+}
+
+function lerpPose(a, b, k) {
+  const p = {};
+  for (const key of KEYS) p[key] = a[key] + (b[key] - a[key]) * k;
+  if (a.hipH != null || b.hipH != null) p.hipH = hipHeight(a) + (hipHeight(b) - hipHeight(a)) * k;
+  return p;
+}
+
+const ease = (k) => k * k * (3 - 2 * k);
+
+// p: 0–1 startup, 1–2 active, 2–3 recovery.
+function evalAnim(anim, name, p) {
+  const a = anim.anims[name] || anim.anims.gyaku_tsuki;
+  const keys = a.keys;
+  if (p <= keys[0][0]) return getPose(anim, keys[0][1]);
+  for (let i = 1; i < keys.length; i++) {
+    if (p <= keys[i][0]) {
+      const k = (p - keys[i - 1][0]) / (keys[i][0] - keys[i - 1][0] || 1);
+      return lerpPose(getPose(anim, keys[i - 1][1]), getPose(anim, keys[i][1]), ease(k));
+    }
+  }
+  return getPose(anim, keys[keys.length - 1][1]);
+}
+
+function techPhase(T) {
+  if (T.phase === 'startup') return Math.min(1, T.t / T.dur.s);
+  if (T.phase === 'active') return 1 + Math.min(1, T.t / T.dur.a);
+  return 2 + Math.min(1, T.t / (T.dur.r + T.extraRec));
+}
+
+// Tikslinė poza pagal kovotojo būseną.
+function fighterPose(f, anim, time) {
+  const P = (n) => getPose(anim, n);
+  switch (f.state) {
+    case 'attack': return evalAnim(anim, f.tech.def.anim, techPhase(f.tech));
+    case 'guard': {
+      if (f.suneT > 0) return P('sune_uke');
+      if (f.guard && f.guard.morote && f.guard.level === 'chudan') return P('morote_uke');
+      return P(`guard_${f.guard ? f.guard.level : 'chudan'}`);
+    }
+    case 'hit': return lerpPose(P('kamae'), P(`hit_${f.hitZone || 'body'}`), Math.sin(Math.PI * Math.min(1, f.st / (f.stun || 200))));
+    case 'stagger': {
+      const s = { ...P('stagger') };
+      s.torso += Math.sin(time / 90) * 9;
+      s.head += Math.sin(time / 70) * 6;
+      return s;
+    }
+    case 'down': {
+      const k = Math.min(1, f.down.t / 340);
+      return k < 0.5 ? lerpPose(P('hit_head'), P('fall'), k * 2) : lerpPose(P('fall'), P('down'), (k - 0.5) * 2);
+    }
+    case 'getup': {
+      const k = Math.min(1, f.st / 500);
+      return k < 0.5 ? lerpPose(P('down'), P('kneel'), ease(k * 2)) : lerpPose(P('kneel'), P('kamae'), ease((k - 0.5) * 2));
+    }
+    case 'pose': {
+      const k = Math.max(0, Math.min(1, f.st / 260, (f.pose.dur - f.st) / 260));
+      return lerpPose(P('stand'), P(f.pose.name), ease(k));
+    }
+    case 'dash': return P(f.dash && f.dash.fwd ? 'dash' : 'backdash');
+    case 'walk': return lerpPose(P('walk_a'), P('walk_b'), (Math.sin(time / 85) + 1) / 2);
+    default: {
+      if (f.formal) return P('stand');
+      if (f.crouch) return P('crouch');
+      const s = { ...P('kamae') };
+      s.torso += Math.sin(time / 520 + f.id) * 1.3;
+      return s;
+    }
+  }
+}
+
+const OUT = '#23232b';
+const SKIN = '#e9bd95';
+
+function limb(ctx, pts, w, col) {
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  for (let pass = 0; pass < 2; pass++) {
+    ctx.beginPath();
+    ctx.moveTo(pts[0][0], pts[0][1]);
+    for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+    ctx.strokeStyle = pass ? col : OUT;
+    ctx.lineWidth = pass ? w : w + 4;
+    ctx.stroke();
+  }
+}
+
+function blob(ctx, x, y, r, col) {
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.fillStyle = col;
+  ctx.fill();
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = OUT;
+  ctx.stroke();
+}
+
+// st: { belt, aka, alpha, flash, scale, gi, far, hair, kiai }
+function drawFigure(ctx, x, groundY, facing, P, st = {}) {
+  const J = solve(P);
+  const hipH = P.hipH ?? J.auto;
+  const s = st.scale || 1;
+  const gi = st.flash ? '#ffd2c8' : (st.gi || '#f6f3ec');
+  const far = st.flash ? '#f0b8ac' : (st.far || '#d9d5cb');
+  ctx.save();
+  ctx.globalAlpha *= st.alpha ?? 1;
+  ctx.translate(x, groundY);
+  ctx.scale(s * facing, s);
+  ctx.translate(P.dx || 0, -hipH);
+  if (P.rot) ctx.rotate(P.rot * RAD);
+
+  // Šešėlis piešiamas atskirai (drawShadow), čia – tik figūra.
+  const foot = (p) => limb(ctx, [p, [p[0] + 11, p[1] + 1]], 8, SKIN);
+  limb(ctx, [J.sh, J.bel, J.bha], 13, far);
+  blob(ctx, J.bha[0], J.bha[1], 7, SKIN);
+  limb(ctx, [J.hip, J.bkn, J.bfo], 17, far);
+  foot(J.bfo);
+
+  limb(ctx, [J.hip, J.sh], 31, gi);
+  // Atlapas
+  ctx.beginPath();
+  ctx.moveTo(J.sh[0] + 8, J.sh[1] + 6);
+  ctx.lineTo(J.hip[0] + (J.sh[0] - J.hip[0]) * 0.35 + 2, J.hip[1] + (J.sh[1] - J.hip[1]) * 0.35);
+  ctx.strokeStyle = 'rgba(40,40,50,0.5)';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  // Diržas
+  const ux = (J.sh[0] - J.hip[0]) / L.torso;
+  const uy = (J.sh[1] - J.hip[1]) / L.torso;
+  const bx = J.hip[0] + ux * 9;
+  const by = J.hip[1] + uy * 9;
+  limb(ctx, [[bx + uy * 15, by - ux * 15], [bx - uy * 15, by + ux * 15]], 7, st.belt || '#f4f1ea');
+  limb(ctx, [[bx - uy * 13, by + ux * 13], [bx - uy * 13 + 3, by + ux * 13 + 20]], 5, st.belt || '#f4f1ea');
+  if (st.aka) limb(ctx, [[bx + uy * 15, by - ux * 15], [bx + uy * 15 - 4, by - ux * 15 + 18]], 5, '#d5281f');
+
+  blob(ctx, J.head[0], J.head[1], L.head, SKIN);
+  ctx.beginPath();
+  ctx.arc(J.head[0], J.head[1], L.head, Math.PI * 0.95, Math.PI * 1.85);
+  ctx.lineTo(J.head[0] - 4, J.head[1] - 6);
+  ctx.fillStyle = st.hair || '#2b2118';
+  ctx.fill();
+  ctx.fillStyle = OUT;
+  ctx.fillRect(J.head[0] + 8, J.head[1] - 3, 3, 3);
+
+  limb(ctx, [J.hip, J.fkn, J.ffo], 17, gi);
+  foot(J.ffo);
+  limb(ctx, [J.sh, J.fel, J.fha], 13, gi);
+  blob(ctx, J.fha[0], J.fha[1], 7, SKIN);
+  if (st.kiai) {
+    ctx.globalAlpha *= 0.5;
+    ctx.strokeStyle = '#ffd54a';
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.ellipse(J.sh[0] * 0.5, J.sh[1] * 0.5 + 10, 62, 120, 0, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function drawShadow(ctx, x, groundY, w = 62) {
+  ctx.save();
+  ctx.fillStyle = 'rgba(0,0,0,0.22)';
+  ctx.beginPath();
+  ctx.ellipse(x, groundY + 4, w, 10, 0, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+}
+
+__exp.getPose = getPose;
+__exp.solve = solve;
+__exp.hipHeight = hipHeight;
+__exp.lerpPose = lerpPose;
+__exp.evalAnim = evalAnim;
+__exp.techPhase = techPhase;
+__exp.fighterPose = fighterPose;
+__exp.drawFigure = drawFigure;
+__exp.drawShadow = drawShadow;
+});
+__def('src/modes/exam.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Egzaminas (shinsa): kihon (sensei šaukia japonišką pavadinimą, be užuominų) + kata (ritmo mini žaidimas) + kumite.
+// Reikia surinkti ≥ passScore ir nepralaimėti kumite per ippon.
+
+const { inputGlyphs } = __req('src/core/combo.js');
+const { shuffle } = __req('src/core/rng.js');
+const { t, loc, esc } = __req('src/core/i18n.js');
+const { chapterItems, fullSet, playerSet, rosterFor, oppFromRoster, fightResultScreen, beltChip, techRow, comboRow } = __req('src/modes/common.js');
+const FONT = '"Trebuchet MS", "Segoe UI", system-ui, sans-serif';
+
+// Žaidėjo veiksmo id iš kovos įvykio (technikos pradžia arba gynyba).
+function actionId(ev, player) {
+  if (ev.type === 'techStart' && ev.f === player) return ev.def.id;
+  if (ev.type === 'guard' && ev.f === player && ev.techId && ev.techId !== 'morote_uke') return ev.techId;
+  return null;
+}
+
+class KihonDirector {
+  constructor(game, pool, count) {
+    this.game = game;
+    this.R = game.db.rules.exam;
+    const list = [];
+    while (list.length < count) list.push(...shuffle(Math.random, pool));
+    this.list = list.slice(0, count);
+    this.i = -1;
+    this.state = 'intro';
+    this.t = 0;
+    this.correct = 0;
+    this.last = null;
+  }
+
+  attach(scene) {
+    this.scene = scene;
+    scene.hud.call('Kihon', t('exam.kihonHelp'), 2200);
+  }
+
+  next() {
+    this.i++;
+    if (this.i >= this.list.length) {
+      this.scene.finish({ score: this.correct / this.list.length, correct: this.correct, total: this.list.length });
+      return;
+    }
+    this.state = 'call';
+    this.t = 0;
+    // Sensei šaukia technikos pavadinimą japoniškai.
+    this.game.audio.speak(this.list[this.i].name);
+  }
+
+  answer(ok) {
+    this.state = 'feedback';
+    this.t = 0;
+    this.last = ok;
+    if (ok) { this.correct++; this.game.audio.good(); } else this.game.audio.bad();
+  }
+
+  onEvent(ev) {
+    if (this.state !== 'call') return;
+    const id = actionId(ev, this.scene.player);
+    if (id) this.answer(id === this.list[this.i].id);
+  }
+
+  update(dt) {
+    this.t += dt;
+    if (this.state === 'intro' && this.t > 2300) this.next();
+    else if (this.state === 'call' && this.t > this.R.kihonTimeMs) this.answer(false);
+    else if (this.state === 'feedback' && this.t > 1150) this.next();
+  }
+
+  draw(ctx) {
+    if (this.state === 'intro') return;
+    const tech = this.list[this.i];
+    if (!tech) return;
+    ctx.save();
+    ctx.fillStyle = 'rgba(14,16,24,0.85)';
+    ctx.beginPath(); ctx.roundRect(290, 20, 700, 150, 16); ctx.fill();
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#b8b4aa';
+    ctx.font = `bold 18px ${FONT}`;
+    ctx.fillText(`Kihon ${this.i + 1}/${this.list.length} · ✓ ${this.correct}`, 640, 48);
+    let size = 52;
+    ctx.font = `bold ${size}px ${FONT}`;
+    const name = `${tech.name}!`;
+    while (ctx.measureText(name).width > 660 && size > 26) { size -= 3; ctx.font = `bold ${size}px ${FONT}`; }
+    ctx.fillStyle = this.state === 'feedback' ? (this.last ? '#8ff08a' : '#ff8a7a') : '#ffd54a';
+    ctx.fillText(name, 640, 108);
+    if (this.state === 'call') {
+      const k = 1 - this.t / this.R.kihonTimeMs;
+      ctx.fillStyle = 'rgba(255,255,255,0.18)';
+      ctx.fillRect(340, 132, 600, 12);
+      ctx.fillStyle = k < 0.3 ? '#ff8a7a' : '#ffd54a';
+      ctx.fillRect(340, 132, 600 * Math.max(0, k), 12);
+    } else {
+      ctx.font = `bold 30px ${FONT}`;
+      ctx.fillText(this.last ? '✓ OSU!' : `✗ ${t('exam.miss')}`, 640, 152);
+    }
+    ctx.restore();
+  }
+}
+
+class KataDirector {
+  constructor(game, kata) {
+    this.game = game;
+    this.kata = kata;
+    this.R = game.db.rules.exam;
+    this.time = 0;
+    this.lead = 2800;
+    this.steps = kata.steps.map((s, i) => {
+      const turn = s.startsWith('*');
+      const id = turn ? s.slice(1) : s;
+      return { id, turn, t: this.lead + i * kata.beatMs, state: 'pending', turned: false, glyphs: inputGlyphs(game.db.tech[id].input).join('') };
+    });
+    this.counts = { perfect: 0, good: 0, miss: 0 };
+    this.endT = null;
+  }
+
+  attach(scene) {
+    this.scene = scene;
+    scene.player.x = scene.player.px = 640;
+    scene.hud.call(this.kata.name, t('exam.kataHelp'), 2400);
+    this.game.audio.speak(this.kata.name);
+  }
+
+  rate(step, kind) {
+    step.state = kind;
+    this.counts[kind]++;
+    const col = { perfect: '#8ff0ff', good: '#8ff08a', miss: '#ff8a7a' }[kind];
+    this.scene.hud.popup(210, 196, t(`kata.${kind}`), { color: col, size: 26, ms: 700 });
+    if (kind === 'miss') this.game.audio.bad(); else this.game.audio.taiko(kind === 'perfect' ? 0.5 : 0.3);
+  }
+
+  onEvent(ev) {
+    const id = actionId(ev, this.scene.player);
+    if (!id) return;
+    const step = this.steps.find((s) => s.state === 'pending' && Math.abs(this.time - s.t) <= this.R.kataGoodMs);
+    if (!step) return;
+    const d = Math.abs(this.time - step.t);
+    if (id !== step.id) this.rate(step, 'miss');
+    else this.rate(step, d <= this.R.kataPerfectMs ? 'perfect' : 'good');
+  }
+
+  update(dt) {
+    this.time += dt;
+    const p = this.scene.player;
+    for (const s of this.steps) {
+      if (s.turn && !s.turned && this.time >= s.t - this.kata.beatMs * 0.45 && (p.state === 'idle' || p.state === 'guard' || p.state === 'walk')) {
+        s.turned = true;
+        p.facing *= -1;     // formos posūkis (įvesties kryptys lieka tos pačios)
+      }
+      if (s.state === 'pending' && this.time > s.t + this.R.kataGoodMs) this.rate(s, 'miss');
+    }
+    if (this.endT == null && this.steps.every((s) => s.state !== 'pending')) this.endT = this.time;
+    if (this.endT != null && this.time > this.endT + 1300) {
+      const n = this.steps.length;
+      this.scene.finish({ score: (this.counts.perfect + this.counts.good * 0.6) / n, ...this.counts, total: n });
+    }
+  }
+
+  draw(ctx) {
+    ctx.save();
+    ctx.fillStyle = 'rgba(14,16,24,0.85)';
+    ctx.beginPath(); ctx.roundRect(120, 20, 1040, 150, 16); ctx.fill();
+    ctx.textAlign = 'left';
+    ctx.font = `bold 18px ${FONT}`;
+    ctx.fillStyle = '#ffd54a';
+    ctx.fillText(`Kata · ${this.kata.name}`, 140, 46);
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#fff';
+    ctx.fillText(`${t('kata.perfect')} ${this.counts.perfect} · ${t('kata.good')} ${this.counts.good} · ${t('kata.miss')} ${this.counts.miss}`, 1140, 46);
+    // Takelis: simboliai slenka į taikinį kairėje
+    ctx.beginPath();
+    ctx.rect(130, 60, 1020, 100);
+    ctx.clip();
+    ctx.strokeStyle = '#ffd54a';
+    ctx.lineWidth = 4;
+    ctx.beginPath(); ctx.roundRect(170, 74, 80, 72, 12); ctx.stroke();
+    ctx.textAlign = 'center';
+    for (const s of this.steps) {
+      const x = 210 + (s.t - this.time) * 0.34;
+      if (x < 90 || x > 1200) continue;
+      if (s.state !== 'pending' && this.time - s.t > 250) continue;
+      ctx.fillStyle = s.state === 'pending' ? 'rgba(255,255,255,0.16)' : s.state === 'miss' ? 'rgba(255,90,70,0.5)' : 'rgba(120,240,130,0.5)';
+      ctx.beginPath(); ctx.roundRect(x - 36, 78, 72, 64, 10); ctx.fill();
+      ctx.fillStyle = '#fff';
+      ctx.font = `bold 30px ${FONT}`;
+      ctx.fillText(s.glyphs, x, 122);
+      if (s.turn) { ctx.font = `14px ${FONT}`; ctx.fillStyle = '#8ff0ff'; ctx.fillText('↻', x + 26, 92); }
+    }
+    ctx.restore();
+  }
+}
+
+function practiceBase(game, beltId, set) {
+  return { mode: 'practice', bg: 'dojo', showPanels: false, hints: false, player: { name: t('hud.player'), belt: beltId, ...set } };
+}
+
+async function runKihon(game, beltIdx, count) {
+  const db = game.db;
+  const pool = db.techniques.filter((x) => db.beltIdx[x.belt] <= beltIdx && (x.type === 'strike' || x.type === 'guard') && !x.auto && !x.hold);
+  const set = fullSet(db, db.belts[beltIdx].id);
+  return game.runFight({ ...practiceBase(game, db.belts[game.save.data.beltIndex].id, set), opponent: null, director: new KihonDirector(game, pool, count) });
+}
+
+async function runKata(game, kataId) {
+  const db = game.db;
+  const kata = db.kata.find((k) => k.id === kataId) || db.kata[0];
+  const set = fullSet(db, 'blue');
+  const opts = practiceBase(game, db.belts[game.save.data.beltIndex].id, set);
+  opts.player.lockFacing = true;
+  return game.runFight({ ...opts, opponent: null, director: new KataDirector(game, kata) });
+}
+
+const pct = (v) => `${Math.round(v * 100)} %`;
+
+// Visas diržo egzaminas. Grąžina true, jei išlaikytas.
+async function runExam(game, beltIdx) {
+  const db = game.db;
+  const belt = db.belts[beltIdx];
+  const ex = belt.exam;
+  const R = db.rules.exam;
+  const kata = db.kata.find((k) => k.id === ex.kata) || db.kata[0];
+  const intro = await game.ui.ask(`<div class="panel center">
+    <h2>Shinsa · ${beltChip(game, beltIdx)} ${esc(loc(belt, 'name'))}</h2>
+    <p>${t('exam.intro', { pass: pct(R.passScore) })}</p>
+    <div class="list">
+      <div class="item"><div class="keys">1</div><div class="grow"><div class="name">Kihon</div><div class="muted">${t('exam.kihonDesc', { n: ex.kihonCount })}</div></div></div>
+      <div class="item"><div class="keys">2</div><div class="grow"><div class="name">Kata · ${esc(kata.name)}</div><div class="muted">${t('exam.kataDesc')}</div></div></div>
+      <div class="item"><div class="keys">3</div><div class="grow"><div class="name">Kumite × ${ex.kumite}</div><div class="muted">${t('exam.kumiteDesc')}</div></div></div>
+    </div>
+    <button class="btn primary" data-act="go">Osu!</button><button class="btn" data-act="back">${t('ui.back')}</button></div>`);
+  if (intro.act !== 'go') return false;
+
+  const kihon = await runKihon(game, beltIdx, ex.kihonCount);
+  if (!kihon || kihon.aborted) return false;
+  await game.ui.ask(`<div class="panel center"><h2>Kihon</h2><div class="score-big">${pct(kihon.score)}</div>
+    <p>${t('exam.kihonResult', { n: kihon.correct, total: kihon.total })}</p><button class="btn primary" data-act="go">${t('ui.next')}</button></div>`);
+
+  const kataRes = await runKata(game, ex.kata);
+  if (!kataRes || kataRes.aborted) return false;
+  await game.ui.ask(`<div class="panel center"><h2>Kata · ${esc(kata.name)}</h2><div class="score-big">${pct(kataRes.score)}</div>
+    <p>${t('kata.perfect')} ${kataRes.perfect} · ${t('kata.good')} ${kataRes.good} · ${t('kata.miss')} ${kataRes.miss}</p>
+    <button class="btn primary" data-act="go">${t('ui.next')}</button></div>`);
+
+  // Kumite: N kovų iš eilės, tarp kovų atsistato tik 30 % žalos. Užuominos išjungtos, vertinama ir pagarba (REI).
+  const opps = shuffle(Math.random, rosterFor(db, belt.id));
+  const set = playerSet(game);
+  let carry = null;
+  let fightScore = 0;
+  let bows = 0;
+  let missed = 0;
+  let ipponLoss = false;
+  for (let i = 0; i < ex.kumite; i++) {
+    const res = await game.runFight({
+      mode: 'match', bg: 'dojo', hints: false, timeSec: belt.matchTimeSec,
+      player: { name: t('hud.player'), belt: db.belts[game.save.data.beltIndex].id, ...set, carry },
+      opponent: oppFromRoster(db, opps[i % opps.length]),
+    });
+    if (!res || res.aborted) return false;
+    bows += res.bowsTotal;
+    missed += res.bowsMissed;
+    if (res.playerWon) fightScore += 1;
+    else if (res.by === 'hantei') fightScore += 0.5;
+    else ipponLoss = true;
+    await fightResultScreen(game, res, [{ act: 'go', label: t('ui.next') }]);
+    if (ipponLoss) break;
+    const keep = 1 - db.rules.recovery.exam;
+    carry = { legs: res.player.dmg.legs * keep, body: res.player.dmg.body * keep, head: res.player.dmg.head * keep };
+  }
+  const respect = bows ? 1 - missed / bows : 1;
+  const kumite = (fightScore / ex.kumite) * 0.8 + respect * 0.2;
+  const total = (kihon.score + kataRes.score + kumite) / 3;
+  const passed = total >= R.passScore && !ipponLoss;
+  const s = game.save.data;
+  const prev = s.exams[belt.id] || { best: 0, passed: false };
+  s.exams[belt.id] = { best: Math.max(prev.best, total), passed: prev.passed || passed };
+  if (passed) s.beltIndex = Math.max(s.beltIndex, beltIdx);
+  game.save.write();
+
+  const scores = `<div class="row" style="justify-content:center">
+    <div><div class="muted">Kihon</div><b>${pct(kihon.score)}</b></div><div><div class="muted">Kata</div><b>${pct(kataRes.score)}</b></div>
+    <div><div class="muted">Kumite</div><b>${pct(kumite)}</b></div><div><div class="muted">${t('exam.respect')}</div><b>${pct(respect)}</b></div></div>`;
+  if (!passed) {
+    await game.ui.ask(`<div class="panel center"><h2>${t('exam.failed')}</h2><div class="score-big">${pct(total)}</div>${scores}
+      <p>${ipponLoss ? t('exam.failedIppon') : t('exam.failedScore', { pass: pct(R.passScore) })}</p><p class="muted">${t('exam.retry')}</p>
+      <button class="btn primary" data-act="go">${t('ui.next')}</button></div>`);
+    return false;
+  }
+  // Scena: sensei užriša naują diržą, „OSU!“, atrakintų technikų sąrašas.
+  game.audio.osu();
+  game.audio.speak('Osu');
+  const { techs, combos } = chapterItems(db, belt.id);
+  await game.ui.ask(`<div class="panel center">
+    <div class="title-logo">OSU!</div>
+    <h2>${t('exam.passed')}</h2>
+    <p><span class="belt-chip" style="background:${belt.color};width:9rem;height:1.3rem"></span></p>
+    <p>${t('exam.newBelt', { belt: loc(belt, 'name'), kyu: belt.kyu[0] })}</p>
+    <div class="score-big">${pct(total)}</div>${scores}
+    <p class="muted">${t(`story.${belt.id}`)}</p>
+    <h3>${t('exam.unlocked')}</h3>
+    <div class="list">${techs.map((x) => techRow(db, x)).join('')}${combos.map((c) => comboRow(db, c)).join('')}</div>
+    <button class="btn primary" data-act="go">Osu!</button></div>`, 'top');
+  return true;
+}
+
+__exp.KihonDirector = KihonDirector;
+__exp.KataDirector = KataDirector;
+__exp.runKihon = runKihon;
+__exp.runKata = runKata;
+__exp.runExam = runExam;
+});
+__def('src/core/rng.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Deterministinis atsitiktinių skaičių generatorius (testams ir turnyro simuliacijai).
+
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return function rng() {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function pick(rng, list) {
+  return list[Math.floor(rng() * list.length) % list.length];
+}
+
+function shuffle(rng, list) {
+  const a = list.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function range(rng, lo, hi) {
+  return lo + rng() * (hi - lo);
+}
+
+__exp.mulberry32 = mulberry32;
+__exp.pick = pick;
+__exp.shuffle = shuffle;
+__exp.range = range;
+});
+__def('src/modes/tournament.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Turnyras (taikai): eliminacijos lentelė arba kovų serija; kitos poros simuliuojamos; tarp kovų atsistato 60 % žalos.
+
+const { shuffle } = __req('src/core/rng.js');
+const { t, loc, esc } = __req('src/core/i18n.js');
+const { playerSet, rosterFor, oppFromRoster, fightResultScreen } = __req('src/modes/common.js');
+const ME = { me: true };
+
+function entrants(game, belt, n) {
+  const db = game.db;
+  let list = shuffle(Math.random, rosterFor(db, belt.id));
+  // Jei šio diržo varžovų trūksta, lentelė papildoma kitų diržų dalyviais (su šio diržo lygiu).
+  const others = shuffle(Math.random, db.opponents.roster.filter((r) => r.belt !== belt.id));
+  while (list.length < n && others.length) list.push({ ...others.pop(), belt: belt.id });
+  return list.slice(0, n).map((r) => ({ ...oppFromRoster(db, r), skill: 0.5 + Math.random() * 0.5 }));
+}
+
+function simulate(a, b) {
+  return Math.random() * (a.skill + 0.3) > Math.random() * (b.skill + 0.3) ? a : b;
+}
+
+function bracketHtml(rounds, names) {
+  return `<div class="bracket">${rounds.map((r, ri) => `<div class="round"><div class="muted">${names[ri] || ''}</div>${r.map((p) => `
+    <div class="pair${p.next ? ' next' : ''}">
+      <div class="${p.w === p.a ? 'win' : ''}${p.a && p.a.me ? ' me' : ''}">${p.a ? esc(p.a.name) : '—'}</div>
+      <div class="${p.w === p.b ? 'win' : ''}${p.b && p.b.me ? ' me' : ''}">${p.b ? esc(p.b.name) : '—'}</div>
+    </div>`).join('')}</div>`).join('')}</div>`;
+}
+
+async function runTournament(game, beltIdx) {
+  const db = game.db;
+  const belt = db.belts[beltIdx];
+  const T = belt.tournament;
+  const name = loc(T, 'name');
+  const me = { ...ME, name: t('hud.player') };
+  const set = playerSet(game);
+  const keep = 1 - db.rules.recovery.tournament;
+  let carry = null;
+
+  const fightVs = async (opp) => {
+    // Žaidėjas atsitiktinai gauna Aka arba Shiro pusę.
+    const res = await game.runFight({
+      mode: 'match', bg: T.bg, hints: true, timeSec: belt.matchTimeSec,
+      playerSide: Math.random() < 0.5 ? 'aka' : 'shiro',
+      player: { name: me.name, belt: db.belts[game.save.data.beltIndex].id, ...set, carry },
+      opponent: opp,
+    });
+    if (!res || res.aborted) return null;
+    carry = { legs: res.player.dmg.legs * keep, body: res.player.dmg.body * keep, head: res.player.dmg.head * keep };
+    await fightResultScreen(game, res, [{ act: 'go', label: t('ui.next') }]);
+    return res.playerWon;
+  };
+
+  let won = false;
+  if (T.format === 'series') {
+    const opps = entrants(game, belt, T.size - 1);
+    won = true;
+    for (let i = 0; i < opps.length; i++) {
+      const { act } = await game.ui.ask(`<div class="panel center"><h2>${esc(name)}</h2>
+        <p>${t('tour.fight', { n: i + 1, total: opps.length })}: <b>${esc(opps[i].name)}</b></p>
+        <p class="muted">${t(`arch.${opps[i].archetype}`)}</p>
+        <button class="btn primary" data-act="go">${t('tour.fightBtn')}</button><button class="btn" data-act="back">${t('ui.quit')}</button></div>`);
+      if (act !== 'go') return false;
+      const r = await fightVs(opps[i]);
+      if (r === null) return false;
+      if (!r) { won = false; break; }
+    }
+  } else {
+    const all = shuffle(Math.random, [me, ...entrants(game, belt, T.size - 1)]);
+    const roundNames = { 8: t('tour.quarter'), 4: t('tour.semi'), 2: t('tour.final') };
+    const rounds = [];
+    let cur = all;
+    while (cur.length >= 2) {
+      const pairs = [];
+      for (let i = 0; i < cur.length; i += 2) pairs.push({ a: cur[i], b: cur[i + 1], w: null });
+      rounds.push(pairs);
+      const mine = pairs.find((p) => p.a.me || p.b.me);
+      const names = rounds.map((r) => roundNames[r.length * 2] || '');
+      if (mine) {
+        mine.next = true;
+        const opp = mine.a.me ? mine.b : mine.a;
+        const { act } = await game.ui.ask(`<div class="panel"><div class="head"><h2>${esc(name)}</h2><span class="muted">${names[names.length - 1]}</span></div>
+          ${bracketHtml(rounds, names)}
+          <p>${t('tour.next')}: <b>${esc(opp.name)}</b> <span class="muted">${t(`arch.${opp.archetype}`)}</span></p>
+          <button class="btn primary" data-act="go">${t('tour.fightBtn')}</button><button class="btn" data-act="back">${t('ui.quit')}</button></div>`, 'top');
+        if (act !== 'go') return false;
+        const r = await fightVs(opp);
+        if (r === null) return false;
+        mine.next = false;
+        mine.w = r ? (mine.a.me ? mine.a : mine.b) : opp;
+      }
+      // Kitos poros kovos simuliuojamos.
+      for (const p of pairs) if (!p.w) p.w = simulate(p.a, p.b);
+      cur = pairs.map((p) => p.w);
+      if (mine && !mine.w.me) {
+        while (cur.length >= 2) {
+          const more = [];
+          for (let i = 0; i < cur.length; i += 2) more.push({ a: cur[i], b: cur[i + 1], w: simulate(cur[i], cur[i + 1]) });
+          rounds.push(more);
+          cur = more.map((p) => p.w);
+        }
+        const names2 = rounds.map((r) => roundNames[r.length * 2] || '');
+        await game.ui.ask(`<div class="panel"><h2>${esc(name)}</h2>${bracketHtml(rounds, names2)}
+          <p>${t('tour.out')} ${t('tour.champion')}: <b>${esc(cur[0].name)}</b></p>
+          <button class="btn primary" data-act="go">${t('ui.next')}</button></div>`, 'top');
+        return false;
+      }
+    }
+    won = cur[0].me;
+  }
+
+  if (!won) {
+    await game.ui.ask(`<div class="panel center"><h2>${esc(name)}</h2><p>${t('tour.out')}</p><button class="btn primary" data-act="go">${t('ui.next')}</button></div>`);
+    return false;
+  }
+  // Finalo scena: apdovanojimai ir taurė.
+  const s = game.save.data;
+  if (!s.trophies.includes(T.id)) s.trophies.push(T.id);
+  const stripe = belt.kyu.length > 1 && s.beltIndex >= beltIdx && !s.stripes[belt.id];
+  if (stripe) s.stripes[belt.id] = true;
+  game.save.write();
+  game.audio.osu();
+  await game.ui.ask(`<div class="panel center">
+    <svg viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+      <path d="M35 15h50v30a25 25 0 0 1-50 0z" fill="#ffd54a" stroke="#8a6a10" stroke-width="4"/>
+      <path d="M35 22H18a17 17 0 0 0 20 22M85 22h17a17 17 0 0 1-20 22" fill="none" stroke="#8a6a10" stroke-width="5"/>
+      <rect x="54" y="68" width="12" height="20" fill="#d9a520"/><rect x="38" y="88" width="44" height="12" rx="3" fill="#8a6a10"/>
+    </svg>
+    <h1>${t('tour.won')}</h1><p>${esc(name)}</p>
+    ${stripe ? `<p class="jp">${t('tour.stripe', { kyu: belt.kyu[1] })}</p>` : ''}
+    <button class="btn primary" data-act="go">Osu!</button></div>`);
+  return true;
+}
+
+__exp.runTournament = runTournament;
+});
+__def('src/modes/quickfight.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Greita kova: pasirenkamas savo diržas (tik pasiekti), varžovo archetipas ir sunkumas.
+
+const { t, loc, esc } = __req('src/core/i18n.js');
+const { fullSet, fightResultScreen } = __req('src/modes/common.js');
+async function quickFight(game) {
+  const db = game.db;
+  const sel = { belt: game.save.data.beltIndex, arch: 'tank', diff: game.settings.difficulty };
+  for (;;) {
+    const belts = db.belts.filter((b, i) => i <= game.save.data.beltIndex);
+    const seg = (key, items) => `<div class="seg">${items.map(([v, label]) => `<button data-act="${key}:${v}" class="${String(sel[key]) === String(v) ? 'on' : ''}">${label}</button>`).join('')}</div>`;
+    const arch = db.opponents.archetypes;
+    const html = `<div class="panel narrow">
+      <div class="head"><h2>${t('menu.quick')}</h2><button class="btn small" data-act="back">${t('ui.back')}</button></div>
+      <div class="setting"><span>${t('quick.belt')}</span>${seg('belt', belts.map((b, i) => [i, esc(loc(b, 'name'))]))}</div>
+      <div class="setting"><span>${t('quick.opponent')}</span>${seg('arch', Object.keys(arch).map((k) => [k, esc(loc(arch[k], 'name'))]))}</div>
+      <p class="muted">${esc(loc(arch[sel.arch], 'desc'))}</p>
+      <div class="setting"><span>${t('set.difficulty')}</span>${seg('diff', ['easy', 'normal', 'hard'].map((d) => [d, t(`diff.${d}`)]))}</div>
+      <button class="btn block primary" data-act="go">Hajime!</button></div>`;
+    const { act } = await game.ui.ask(html);
+    if (act === 'back') return;
+    if (act !== 'go') {
+      const [key, v] = act.split(':');
+      sel[key] = key === 'belt' ? Number(v) : v;
+      continue;
+    }
+    const belt = db.belts[sel.belt];
+    const names = db.opponents.roster.filter((r) => r.archetype === sel.arch);
+    const opp = names[Math.floor(Math.random() * names.length)];
+    for (;;) {
+      const res = await game.runFight({
+        mode: 'match', bg: sel.belt > 0 ? 'hall' : 'dojo', hints: true, difficulty: sel.diff, timeSec: belt.matchTimeSec,
+        player: { name: t('hud.player'), belt: belt.id, ...fullSet(db, belt.id) },
+        opponent: { name: opp.name, belt: belt.id, archetype: sel.arch },
+      });
+      if (!res || res.aborted) break;
+      const a = await fightResultScreen(game, res, [{ act: 'again', label: t('ui.again') }, { act: 'back', label: t('ui.back') }]);
+      if (a !== 'again') break;
+    }
+  }
+}
+
+__exp.quickFight = quickFight;
+});
+__def('src/modes/debug.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Derinimo ekranas: hitbox'ai ir hurtbox'ai, kovotojų būsenos skaičiai, visų technikų parametrų lentelė,
+// vėliavėlių signalų peržiūra, partnerio režimai.
+
+const { JudgePanel, SIGNALS, WHISTLE } = __req('src/fight/judges.js');
+const { AIController, DummyController, buildProfile } = __req('src/fight/ai.js');
+const { techsUpTo, combosUpTo } = __req('src/core/data.js');
+const { inputGlyphs } = __req('src/core/combo.js');
+const { t, esc } = __req('src/core/i18n.js');
+function paramsTable(db) {
+  const R = db.rules.combat.ranges;
+  const rows = db.techniques.map((x) => {
+    const f = x.frames || {};
+    return `<tr><td>${esc(x.name)}</td><td>${x.belt}</td><td>${inputGlyphs(x.input).join(' ')}${x.hold ? ' (hold)' : ''}${x.auto ? ' (auto)' : ''}</td>
+      <td>${x.level || ''}</td><td>${x.range ? `${x.range} ${R[x.range]}` : ''}</td>
+      <td>${f.startup ?? ''}</td><td>${f.active ?? ''}</td><td>${f.recovery ?? ''}</td>
+      <td>${x.damage ? `${x.damage.amount} ${x.damage.zone}` : ''}</td><td>${x.balanceDamage ?? ''}</td><td>${x.staminaCost ?? ''}</td>
+      <td>${x.legalInKumite ? '✓' : `✗ chui ${x.foulChui || 1}`}</td></tr>`;
+  }).join('');
+  const C = db.rules.combat;
+  return `<p class="muted">damageScale ${C.damageScale} · chainWindow ${C.chainWindow} · block ×${C.block.factor} · perfect ≤${C.block.perfectMs} ms · hold ≥${db.rules.input.holdMs} ms · buffer ${db.rules.input.bufferMs}/${db.rules.input.buttonMs} ms</p>
+    <table class="params"><thead><tr><th>${t('debug.tech')}</th><th>belt</th><th>input</th><th>level</th><th>range px</th><th>startup</th><th>active</th><th>recovery</th>
+    <th>dmg</th><th>bal</th><th>sta</th><th>kumite</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+async function debugScreen(game) {
+  const db = game.db;
+  const all = new Set(db.techniques.map((x) => x.id));
+  const allCombos = new Set(db.combos.map((c) => c.id));
+  const st = { table: false, signals: false, partner: 'passive', unlockAll: false, sig: 0 };
+  const panel = new JudgePanel(db.rules.match);
+  const done = game.runFight({
+    mode: 'practice', bg: 'dojo', hints: true, debug: true, showDamage: true, judgesPreview: panel,
+    player: { name: 'Debug', belt: 'blue', unlocked: techsUpTo(db, 'blue'), combos: combosUpTo(db, 'blue') },
+    opponent: { name: 'Dummy', belt: 'blue', dummy: 'passive' },
+    director: { attach() {}, update(dt) { panel.update(dt); } },
+  });
+  const scene = game.scene;
+  const draw = () => {
+    const b = (act, label, on) => `<button class="btn small${on ? ' primary' : ''}" data-act="${act}">${label}</button>`;
+    game.ui.show(`<div class="debug-bars"><div class="debug-bar">
+        ${b('table', t('debug.table'), st.table)}${b('signals', t('debug.signals'), st.signals)}
+        ${b('partner', `${t('debug.partner')}: ${st.partner}`)}${b('unlock', t('debug.unlockAll'), st.unlockAll)}
+        ${b('ki', 'Ki 100')}${b('boxes', t('debug.boxesInFights'), game.debugBoxes)}${b('exit', t('ui.quit'))}
+      </div>
+      ${st.signals ? `<div class="debug-bar">${SIGNALS.map((s) => b(`sig:${s}`, s)).join('')}${b('sigside', st.sig ? 'shiro' : 'aka')}</div>` : ''}</div>
+      ${st.table ? `<div class="debug-panel">${paramsTable(db)}</div>` : ''}`, handler, 'overlay');
+  };
+  const handler = (act) => {
+    if (act === 'exit') { scene.finish({ aborted: true }); return; }
+    if (act === 'table') st.table = !st.table;
+    else if (act === 'signals') st.signals = !st.signals;
+    else if (act === 'sigside') st.sig = 1 - st.sig;
+    else if (act.startsWith('sig:')) {
+      const s = act.slice(4);
+      const side = st.sig ? 'shiro' : 'aka';
+      panel.corners.forEach((j) => panel.set(j.i, s, side, Math.random() * 150));
+      if (WHISTLE[s]) game.audio.whistle(WHISTLE[s]);
+    } else if (act === 'partner') {
+      const modes = ['passive', 'block', 'attack', 'AI'];
+      st.partner = modes[(modes.indexOf(st.partner) + 1) % modes.length];
+      scene.ai = st.partner === 'AI'
+        ? new AIController(scene.opp, scene.player, buildProfile(db, { belt: 'blue', archetype: 'tank' }, 'normal'), db)
+        : new DummyController(scene.opp, scene.player, db, st.partner, { intervalMs: 1400 });
+    } else if (act === 'unlock') {
+      st.unlockAll = !st.unlockAll;
+      scene.player.unlocked = st.unlockAll ? all : techsUpTo(db, 'blue');
+      scene.player.combos = st.unlockAll ? allCombos : combosUpTo(db, 'blue');
+      scene.hud.buildHints(scene.player);
+    } else if (act === 'ki') scene.player.ki = 100;
+    else if (act === 'boxes') game.debugBoxes = !game.debugBoxes;
+    draw();
+  };
+  draw();
+  await done;
+  game.ui.clear();
+}
+
+__exp.debugScreen = debugScreen;
+});
+__def('src/fight/judges.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// 4 kampiniai teisėjai (fukushin): kiekvienas savarankiškai „mato“ įvykį, balsuoja ir rodo vėliavėlių signalą.
+// Kartu su vyr. teisėju – 5 balsai; sprendimui reikia ≥ votesNeeded (3).
+
+const { judgeVote, tallyVotes } = __req('src/fight/rules.js');
+// Visi vėliavėlių signalai (animacijos – render.js flagPose).
+const SIGNALS = ['none', 'ippon', 'wazaari', 'wazaari_ippon', 'chui', 'clinch', 'jogai', 'fumei', 'mitomezu', 'hantei', 'hikiwake'];
+// Švilpukas pagal signalą: long = 1 ilgas, strong = 1 stiprus, shorts = keli trumpi, short = 1 trumpas.
+const WHISTLE = {
+  ippon: 'long', wazaari: 'strong', wazaari_ippon: 'long', chui: 'shorts', clinch: 'shorts', jogai: 'shorts',
+  fumei: 'short', mitomezu: 'long', hantei: 'long', hikiwake: 'long',
+};
+
+class JudgePanel {
+  constructor(R, rng) {
+    this.R = R;
+    this.rng = rng || Math.random;
+    this.corners = [0, 1, 2, 3].map((i) => ({ i, signal: 'none', side: null, t: 0, delay: 0 }));
+  }
+
+  set(i, signal, side, delay = 0) {
+    const j = this.corners[i];
+    j.signal = signal;
+    j.side = side;
+    j.t = 0;
+    j.delay = delay;
+  }
+
+  clear() {
+    for (const j of this.corners) this.set(j.i, 'none', null);
+  }
+
+  update(dt) {
+    for (const j of this.corners) j.t += dt;
+  }
+
+  delay() {
+    const [lo, hi] = this.R.flagDelayMs;
+    return lo + this.rng() * (hi - lo);
+  }
+
+  // Visi kampiniai rodo tą patį signalą; kiekvienas su 5 % tikimybe įvykio nematė (fumei), bet ne daugiau kaip
+  // maxFumei teisėjų, kad akivaizdus įvykis (partrenkimas, draudžiama technika) visada surinktų ≥ 3 balsus.
+  signalAll(signal, side, maxFumei = 1) {
+    let fumei = 0;
+    let yes = 1; // vyr. teisėjas
+    for (const j of this.corners) {
+      if (fumei < maxFumei && this.rng() < this.R.fumeiChance) {
+        fumei++;
+        this.set(j.i, 'fumei', null, this.rng() * 120);
+      } else {
+        yes++;
+        this.set(j.i, signal, side, this.rng() * 120);
+      }
+    }
+    return { yes, no: 0, fumei };
+  }
+
+  // Balsavimas dėl ginčytino įvykio (pvz., pusiausvyros praradimas be kritimo): pritaria → signalas, nepritaria → mitomezu.
+  voteEvent(signal, side, chance) {
+    let yes = 1;
+    let no = 0;
+    let fumei = 0;
+    for (const j of this.corners) {
+      const r = this.rng();
+      if (r < this.R.fumeiChance) { fumei++; this.set(j.i, 'fumei', null, this.rng() * 150); }
+      else if (this.rng() < chance) { yes++; this.set(j.i, signal, side, this.rng() * 150); }
+      else { no++; this.set(j.i, 'mitomezu', null, this.rng() * 150); }
+    }
+    return { yes, no, fumei, passed: yes >= this.R.votesNeeded };
+  }
+
+  // Hantei: visi kampiniai vienu metu (su 100–250 ms vėlavimu kiekvienam) pakelia vėliavėles; vyr. teisėjas – 5-as balsas.
+  voteHantei(aka, shiro, forced) {
+    const votes = [];
+    for (const j of this.corners) {
+      const v = judgeVote(aka, shiro, this.R, this.rng, forced);
+      votes.push(v);
+      if (v === 'draw') this.set(j.i, 'hikiwake', null, this.delay());
+      else this.set(j.i, 'hantei', v, this.delay());
+    }
+    votes.push(judgeVote(aka, shiro, this.R, this.rng, forced));
+    return { votes, ...tallyVotes(votes, this.R.votesNeeded) };
+  }
+
+  // Pergalės ceremonija: kampiniai pakelia nugalėtojo spalvos vėliavėlę įstrižai aukštyn.
+  // perJudge (hantei balsai) – jei sprendimas ne vienbalsis, kai kurie rodo kitą spalvą arba sukryžiuotas vėliavėles.
+  ceremony(winner, perJudge) {
+    for (const j of this.corners) {
+      const v = perJudge ? perJudge[j.i] : winner;
+      if (v === 'draw') this.set(j.i, 'hikiwake', null, this.delay());
+      else this.set(j.i, 'hantei', v, this.delay());
+    }
+  }
+}
+
+__exp.SIGNALS = SIGNALS;
+__exp.WHISTLE = WHISTLE;
+__exp.JudgePanel = JudgePanel;
+});
+__def('src/fight/rules.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Taisyklių skaičiavimai: balsų sudėjimas (≥3 iš 5), hantei kriterijai, atsikėlimo laikas, įspėjimų pavadinimai.
+// Visi parametrai ateina iš data/rules.json.
+
+// Hantei kriterijai eilės tvarka (svoriai mažėja): waza-ari, žala, efektyvios technikos, technikų skaičius, iniciatyva.
+function hanteiScore(f, W) {
+  const s = W.wazaAri * f.wazaAri + W.damage * f.stats.dmg + W.effective * f.stats.effective +
+    W.techniques * f.stats.techniques + W.initiative * (f.stats.initiative / 1000) - W.chui * f.chui;
+  return Math.max(0, s);
+}
+
+// Vieno teisėjo balsas: 'aka' | 'shiro' | 'draw'. forced = paskutinis pratęsimas (lygiųjų nėra).
+function judgeVote(aka, shiro, R, rng, forced) {
+  const noise = () => 1 + (rng() * 2 - 1) * R.judgeNoise;
+  const a = hanteiScore(aka, R.hantei) * noise();
+  const b = hanteiScore(shiro, R.hantei) * noise();
+  const diff = aka.chui - shiro.chui;
+  if (Math.abs(diff) >= R.chuiDecisiveDiff) {
+    // Dviejų įspėjimų skirtumas nulemia sprendimą prieš pažeidėją, jei jis nevedė aiškiai.
+    const offenderIsAka = diff > 0;
+    const off = offenderIsAka ? a : b;
+    const other = offenderIsAka ? b : a;
+    if (off <= other * (1 + R.clearLeadMargin)) return offenderIsAka ? 'shiro' : 'aka';
+  }
+  const m = Math.max(a, b, 1);
+  if (!forced && Math.abs(a - b) <= R.hikiwakeMargin * m) return 'draw';
+  if (a === b) return rng() < 0.5 ? 'aka' : 'shiro';
+  return a > b ? 'aka' : 'shiro';
+}
+
+function tallyVotes(votes, needed) {
+  const t = { aka: 0, shiro: 0, draw: 0, winner: null };
+  for (const v of votes) t[v]++;
+  if (t.aka >= needed) t.winner = 'aka';
+  else if (t.shiro >= needed) t.winner = 'shiro';
+  return t;
+}
+
+// Kiek ms kovotojas guli po partrenkimo. > knockdownCountSec → ippon, kitaip waza-ari.
+function getUpTimeMs(f, cause, G, rng) {
+  const total = (f.dmg.legs + f.dmg.body + f.dmg.head) / 300;
+  let ms = G.baseMs + G.perDamageMs * total + (rng() * 2 - 1) * G.randMs;
+  if (cause === 'head') ms += G.headExtraMs;
+  return Math.max(600, ms);
+}
+
+function chuiCallId(total, limit) {
+  return total >= limit ? 'shikkaku' : `chui_${Math.max(1, total)}`;
+}
+
+function otherSide(side) {
+  return side === 'aka' ? 'shiro' : 'aka';
+}
+
+__exp.hanteiScore = hanteiScore;
+__exp.judgeVote = judgeVote;
+__exp.tallyVotes = tallyVotes;
+__exp.getUpTimeMs = getUpTimeMs;
+__exp.chuiCallId = chuiCallId;
+__exp.otherSide = otherSide;
+});
+__def('src/fight/ai.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Varžovų AI: būsenų mašina Artinasi → Spaudžia → Keičiasi smūgiais → Atsitraukia → Kontratakuoja.
+// Parametrai (reakcija, agresyvumas, blokavimo tikimybės, mėgstamos technikos, pražangų tikimybė) – data/opponents.json.
+
+const { HALF_W } = __req('src/fight/fighter.js');
+// Sujungia archetipą, diržo numatytuosius parametrus ir sunkumo lygį į vieną profilį.
+function buildProfile(db, opp, difficulty = 'normal') {
+  const O = db.opponents;
+  const arch = O.archetypes[opp.archetype] || O.archetypes.tank;
+  const belt = O.beltDefaults[opp.belt] || O.beltDefaults.white;
+  const diff = O.difficulty[difficulty] || O.difficulty.normal;
+  return {
+    ...arch, ...belt, ...(opp.overrides || {}),
+    reactionMs: belt.reactionMs * diff.reaction,
+    aggression: Math.min(0.95, arch.aggression * diff.aggression * (0.75 + 0.25 * belt.skill)),
+    dmgMult: diff.damage,
+    blockScale: Math.min(1.25, belt.skill),
+  };
+}
+
+class AIController {
+  constructor(fighter, opponent, profile, db, rng) {
+    this.f = fighter;
+    this.o = opponent;
+    this.p = profile;
+    this.db = db;
+    this.rng = rng || Math.random;
+    this.C = db.rules.combat;
+    this.state = 'approach';
+    this.decT = 0;
+    this.queue = [];
+    this.guardT = 0;
+    this.guardLevel = 'chudan';
+    this.guardNew = false;
+    this.react = null;
+    this.seen = null;
+    this.cool = 0;
+    this.retreatT = 0;
+    this.want = null;
+    this.haltRolled = false;
+    this.wasHit = null;
+    this.strikes = db.techniques.filter((t) => t.type === 'strike' && !t.auto && fighter.unlocked.has(t.id));
+    this.combos = db.combos.filter((c) => fighter.combos.has(c.id) && !c.sequence.includes('@block') && c.sequence.every((id) => fighter.unlocked.has(id)));
+  }
+
+  inRange(def, d) {
+    return d - HALF_W <= this.C.ranges[def.range] - 6;
+  }
+
+  pickTech(d) {
+    const rng = this.rng;
+    const p = this.p;
+    if (rng() < p.comboChance) {
+      const ok = this.combos.filter((c) => this.inRange(this.db.tech[c.sequence[0]], d));
+      if (ok.length) {
+        const c = ok[Math.floor(rng() * ok.length)];
+        this.queue = c.sequence.slice(1);
+        return this.db.tech[c.sequence[0]];
+      }
+    }
+    const list = this.strikes.filter((t) => t.legalInKumite && this.inRange(t, d) && t.staminaCost <= this.f.stamina + 2);
+    if (!list.length) return null;
+    let total = 0;
+    for (const t of list) total += p.weights[t.id] ?? 1;
+    let r = rng() * total;
+    for (const t of list) { r -= p.weights[t.id] ?? 1; if (r <= 0) return t; }
+    return list[list.length - 1];
+  }
+
+  decide(d) {
+    const { f, p, rng } = this;
+    const A = this.db.rules.arena;
+    const behind = f.facing > 0 ? f.x - A.xMin : A.xMax - f.x;
+    this.want = null;
+    // Pasyvumo vengimas: per ilgai nepuolus – būtinai artėti ir pulti.
+    if (f.passive > 5500) { this.want = this.pickTech(d); this.state = 'approach'; if (!this.want) this.want = this.strikes.find((t) => t.legalInKumite) || null; return; }
+    if (f.counterT > 0) { this.state = 'counter'; this.want = this.pickTech(d); return; }
+    if (f.stamina < 18 && behind > 90) { this.state = 'retreat'; this.retreatT = 500 + rng() * 500; return; }
+    if (d > p.prefDist + 22) { this.state = behind < 70 || rng() < p.aggression + 0.2 ? 'approach' : 'wait'; return; }
+    if (this.cool > 0) { this.state = 'exchange'; return; }
+    const r = rng();
+    if (r < p.aggression) {
+      this.state = d < 110 ? 'pressure' : 'exchange';
+      this.want = this.pickTech(d);
+      if (!this.want) this.state = 'approach';
+    } else if (r < p.aggression + p.retreatChance && behind > 110) {
+      this.state = 'retreat';
+      this.retreatT = 300 + rng() * 400;
+    } else if (rng() < p.guardIdle) {
+      this.guardT = 250 + rng() * 300;
+      this.guardLevel = rng() < 0.6 ? 'chudan' : rng() < 0.5 ? 'gedan' : 'jodan';
+      this.guardNew = true;
+    } else this.state = 'exchange';
+  }
+
+  update(dt, fight) {
+    const { f, o, p, rng } = this;
+    const it = { move: 0, guard: null, guardPressed: false, tech: null };
+    if (fight.phase !== 'live') {
+      this.queue = [];
+      this.react = null;
+      this.guardT = 0;
+      if (fight.phase === 'halt' && !this.haltRolled) {
+        // Retas netyčinis puolimas po „Yame“.
+        this.haltRolled = true;
+        this.lateHit = rng() < p.foulChance * 0.5;
+      }
+      if (this.lateHit && fight.haltLate && fight.phase === 'halt' && this.strikes.length) { this.lateHit = false; it.tech = this.strikes[0]; }
+      return it;
+    }
+    this.haltRolled = false;
+    this.cool -= dt;
+    const d = Math.abs(o.x - f.x);
+
+    // Reakcija į varžovo techniką: po reakcijos laiko – blokas atitinkamame lygyje.
+    if (o.tech && o.tech !== this.seen && o.tech.phase === 'startup') {
+      this.seen = o.tech;
+      if (d - HALF_W <= this.C.ranges[o.tech.def.range] + 40) {
+        const level = o.tech.def.level;
+        this.react = {
+          at: fight.time + p.reactionMs * (0.8 + rng() * 0.4), tech: o.tech, level,
+          will: rng() < Math.min(0.95, (p.block[level] || 0) * p.blockScale),
+        };
+      }
+    }
+    if (this.react && fight.time >= this.react.at) {
+      const r = this.react;
+      this.react = null;
+      if (r.will && o.tech === r.tech && o.tech.phase !== 'recovery' && f.state !== 'attack' && f.unlocked.has(this.db.guardByLevel[r.level]?.id)) {
+        this.guardT = 320 + rng() * 200;
+        this.guardLevel = r.level;
+        this.guardNew = true;
+      }
+    }
+    // Gavęs smūgį, su blokavimo tikimybe dengiasi tame lygyje (apsauga nuo grandinių).
+    if (f.state === 'hit') this.wasHit = f.hitZone;
+    else if (this.wasHit) {
+      const level = this.wasHit === 'legs' ? 'gedan' : this.wasHit === 'head' ? 'jodan' : 'chudan';
+      this.wasHit = null;
+      if (rng() < Math.min(0.95, (p.block[level] || 0) * p.blockScale + 0.15)) {
+        this.guardT = 380 + rng() * 260;
+        this.guardLevel = level;
+        this.guardNew = true;
+      }
+    }
+    if (this.guardT > 0 && f.state !== 'attack') {
+      this.guardT -= dt;
+      it.guard = this.guardLevel;
+      it.guardPressed = this.guardNew;
+      this.guardNew = false;
+      return it;
+    }
+
+    // Kombinacijos tęsinys grandinės lange.
+    if (f.state === 'attack') {
+      const T = f.tech;
+      if (this.queue.length && T.phase === 'recovery') {
+        const total = T.dur.s + T.dur.a + T.dur.r;
+        if ((T.dur.s + T.dur.a + T.t) / total >= 1 - this.C.chainWindow + 0.04) it.tech = this.db.tech[this.queue.shift()];
+      }
+      return it;
+    }
+    if (this.queue.length) {
+      if (f.state === 'idle' && f.chainT <= this.C.chainGraceMs) { it.tech = this.db.tech[this.queue.shift()]; return it; }
+      if (f.chainT > this.C.chainGraceMs) this.queue = [];
+    }
+    if (f.state !== 'idle' && f.state !== 'walk') return it;
+
+    this.decT -= dt;
+    if (this.decT <= 0) {
+      this.decT = 150 + rng() * 150;
+      this.decide(d);
+    }
+    switch (this.state) {
+      case 'approach': it.move = d > p.prefDist ? 1 : 0; break;
+      case 'retreat':
+        this.retreatT -= dt;
+        it.move = -1;
+        if (this.retreatT <= 0) this.state = 'exchange';
+        break;
+      case 'pressure': it.move = d > 92 ? 1 : 0; break;
+      default: break;
+    }
+    if (this.want) {
+      if (this.inRange(this.want, d)) {
+        it.tech = this.want;
+        if (rng() < p.foulChance) {
+          // Žemesnių diržų AI kartais suklysta (pvz., smogia į veidą) – žaidėjas mato, kaip reaguoja teisėjai.
+          const illegal = this.strikes.filter((t) => !t.legalInKumite && this.inRange(t, d));
+          if (illegal.length) { it.tech = illegal[Math.floor(rng() * illegal.length)]; this.queue = []; }
+        }
+        this.cool = p.cooldownMs[0] + rng() * (p.cooldownMs[1] - p.cooldownMs[0]);
+      } else it.move = 1;
+      this.want = it.tech ? null : this.want;
+    }
+    return it;
+  }
+}
+
+// Paprastas treniruočių partneris: 'passive' | 'block' | 'attack'.
+class DummyController {
+  constructor(fighter, opponent, db, mode = 'passive', opts = {}) {
+    this.f = fighter;
+    this.o = opponent;
+    this.db = db;
+    this.mode = mode;
+    this.tech = opts.techId ? db.tech[opts.techId] : db.tech.seiken_gyaku_tsuki;
+    this.interval = opts.intervalMs || 1700;
+    this.timer = 900;
+    this.guardNew = true;
+  }
+
+  update(dt) {
+    const { f, o } = this;
+    const it = { move: 0, guard: null, guardPressed: false, tech: null };
+    const d = Math.abs(o.x - f.x);
+    if (this.mode === 'block') {
+      if (o.tech && o.tech.phase !== 'recovery') {
+        it.guard = o.tech.def.level;
+        it.guardPressed = this.guardNew;
+        this.guardNew = false;
+      } else this.guardNew = true;
+    } else if (this.mode === 'attack') {
+      const reach = this.db.rules.combat.ranges[this.tech.range] + HALF_W - 14;
+      if (d > reach) it.move = 1;
+      else if (d < reach - 40) it.move = -1;
+      this.timer -= dt;
+      if (this.timer <= 0 && d <= reach && f.state === 'idle') {
+        it.tech = this.tech;
+        this.timer = this.interval;
+      }
+    }
+    return it;
+  }
+}
+
+__exp.buildProfile = buildProfile;
+__exp.AIController = AIController;
+__exp.DummyController = DummyController;
+});
+__def('src/fight/fighter.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// Kovotojo būsena ir hitbox'ai.
+
+const ZONES = ['legs', 'body', 'head'];
+const HALF_W = 22;
+// Zonų aukščiai virš grindų (px): naudojami hurtbox'ams ir derinimo ekranui.
+const ZONE_Y = { legs: [0, 96], body: [96, 176], head: [176, 216] };
+const LEVEL_ZONE = { gedan: 'legs', chudan: 'body', jodan: 'head' };
+
+function createFighter(db, cfg) {
+  return {
+    id: cfg.id,
+    side: cfg.side,
+    name: cfg.name || cfg.side,
+    belt: cfg.belt || 'white',
+    isPlayer: !!cfg.isPlayer,
+    hidden: !!cfg.hidden,
+    immortal: !!cfg.immortal,
+    lockFacing: !!cfg.lockFacing,
+    unlocked: cfg.unlocked || new Set(),
+    combos: cfg.combos || new Set(),
+    dmgMult: cfg.dmgMult ?? 1,
+    x: 0, px: 0, facing: 1,
+    state: 'idle', st: 0,
+    tech: null, guard: null, down: null, pose: null, dash: null,
+    crouch: false, moving: 0,
+    dmg: { legs: cfg.carry?.legs || 0, body: cfg.carry?.body || 0, head: cfg.carry?.head || 0 },
+    balance: 100, stamina: 100, ki: cfg.ki || 0, kiaiT: 0,
+    wazaAri: 0, chui: 0,
+    stats: { dmg: 0, effective: 0, techniques: 0, initiative: 0 },
+    sinceHit: 9999, sinceAct: 9999, passive: 0,
+    invul: 0, open: 0, counterT: 0, stun: 0, flash: 0, holdT: 0, suneT: 0,
+    chainList: [], chainCount: 0, chainSeq: 0, chainT: 9999, lastCombo: null,
+  };
+}
+
+function setState(f, s) {
+  f.state = s;
+  f.st = 0;
+}
+
+// Hurtbox'ai pasaulio koordinatėmis: y – aukštis virš grindų.
+function hurtboxes(f) {
+  if (f.state === 'down') return [{ zone: 'legs', x0: f.x - 60, x1: f.x + 60, y0: 0, y1: 30 }];
+  return ZONES.map((zone) => ({ zone, x0: f.x - HALF_W, x1: f.x + HALF_W, y0: ZONE_Y[zone][0], y1: ZONE_Y[zone][1] }));
+}
+
+// Aktyvios technikos hitbox'as (arba null).
+function attackBox(f, ranges) {
+  const T = f.tech;
+  if (!T || T.phase !== 'active') return null;
+  const reach = ranges[T.def.range];
+  const [y0, y1] = ZONE_Y[T.def.damage.zone];
+  const a = f.x + f.facing * 14;
+  const b = f.x + f.facing * reach;
+  return { x0: Math.min(a, b), x1: Math.max(a, b), y0: y0 + 10, y1: y1 - 6, reach };
+}
+
+function totalDamage(f) {
+  return f.dmg.legs + f.dmg.body + f.dmg.head;
+}
+
+__exp.ZONES = ZONES;
+__exp.HALF_W = HALF_W;
+__exp.ZONE_Y = ZONE_Y;
+__exp.LEVEL_ZONE = LEVEL_ZONE;
+__exp.createFighter = createFighter;
+__exp.setState = setState;
+__exp.hurtboxes = hurtboxes;
+__exp.attackBox = attackBox;
+__exp.totalDamage = totalDamage;
 });
 __def('src/fight/fightScene.js', function (__exp, __req) {
 // SPDX-License-Identifier: BUSL-1.1
@@ -1043,7 +2964,7 @@ class FightScene {
     this.onDone = null;
     this.showPanels = opts.showPanels ?? true;
     this.showTrail = !!opts.hints && game.settings.assist;
-    if (opts.hints && game.settings.assist) this.hud.buildHints(this.player);
+    if (opts.hints && game.settings.assist && !opts.director) this.hud.buildHints(this.player);
     this.debug = !!opts.debug;
     this.judgesPreview = opts.judgesPreview || null;
     this.director = opts.director || null;
@@ -1120,7 +3041,13 @@ class FightScene {
         if (this.opts.showDamage && ev.amount) this.hud.popup(d.x, y - 30, ev.amount.toFixed(1), { color: '#ffd54a', size: 20 });
         break;
       }
-      case 'knockdown': g.audio.thud(); this.cam.shake = 12; g.vibrate(80); break;
+      case 'knockdown':
+        g.audio.thud();
+        this.cam.shake = 12;
+        g.vibrate(80);
+        // Parkritęs žaidėjas gali atsikelti greičiau, greitai bakstelėdamas A / K / G.
+        if (ev.f === this.player) this.hud.popup(640, 470, t('hud.mash'), { color: '#ffd54a', size: 30, ms: 2600 });
+        break;
       default: break;
     }
     if (this.director && this.director.onEvent) this.director.onEvent(ev);
@@ -1262,10 +3189,10 @@ class FightScene {
       ];
       ctx.fillStyle = 'rgba(0,0,0,0.6)';
       const bx = f.id === 0 ? 30 : W - 330;
-      ctx.fillRect(bx, 126, 300, 86);
+      ctx.fillRect(bx, 226, 300, 86);
       ctx.fillStyle = '#9dffb0';
       ctx.textAlign = 'left';
-      lines.forEach((l, i) => ctx.fillText(l, bx + 8, 142 + i * 16));
+      lines.forEach((l, i) => ctx.fillText(l, bx + 8, 242 + i * 16));
     }
     ctx.fillStyle = '#fff';
     ctx.textAlign = 'center';
@@ -1477,7 +3404,7 @@ class Fight {
       let ok = true;
       for (let i = 0; i < n; i++) if (f.chainList[f.chainList.length - n + i] !== c.sequence[i]) { ok = false; break; }
       if (!ok) continue;
-      if (f.lastCombo && f.lastCombo.id === c.id && f.chainList.length - f.lastCombo.len < n) continue;
+      if (f.lastCombo && f.lastCombo.id === c.id && f.chainSeq - f.lastCombo.seq < n) continue;
       if (!best || n > best.sequence.length) best = c;
     }
     return best;
@@ -1496,6 +3423,7 @@ class Fight {
       f.chainCount = 0;
       f.lastCombo = null;
     }
+    f.chainSeq++;
     if (f.chainList.length > 8) f.chainList.shift();
     const tired = f.stamina < C.tiredBelow ? C.tiredSlow : 1;
     if (f.kiaiT <= 0) f.stamina = Math.max(0, f.stamina - def.staminaCost);
@@ -1503,7 +3431,7 @@ class Fight {
     f.passive = 0;
     f.stats.techniques++;
     const combo = this.findCombo(f);
-    if (combo) f.lastCombo = { id: combo.id, len: f.chainList.length };
+    if (combo) f.lastCombo = { id: combo.id, seq: f.chainSeq };
     f.tech = {
       def, phase: 'startup', t: 0,
       dur: { s: def.frames.startup * tired, a: def.frames.active, r: def.frames.recovery * tired },
@@ -1692,141 +3620,6 @@ class Fight {
 }
 
 __exp.Fight = Fight;
-});
-__def('src/fight/fighter.js', function (__exp, __req) {
-// SPDX-License-Identifier: BUSL-1.1
-// Kovotojo būsena ir hitbox'ai.
-
-const ZONES = ['legs', 'body', 'head'];
-const HALF_W = 22;
-// Zonų aukščiai virš grindų (px): naudojami hurtbox'ams ir derinimo ekranui.
-const ZONE_Y = { legs: [0, 96], body: [96, 176], head: [176, 216] };
-const LEVEL_ZONE = { gedan: 'legs', chudan: 'body', jodan: 'head' };
-
-function createFighter(db, cfg) {
-  return {
-    id: cfg.id,
-    side: cfg.side,
-    name: cfg.name || cfg.side,
-    belt: cfg.belt || 'white',
-    isPlayer: !!cfg.isPlayer,
-    hidden: !!cfg.hidden,
-    immortal: !!cfg.immortal,
-    lockFacing: !!cfg.lockFacing,
-    unlocked: cfg.unlocked || new Set(),
-    combos: cfg.combos || new Set(),
-    dmgMult: cfg.dmgMult ?? 1,
-    x: 0, px: 0, facing: 1,
-    state: 'idle', st: 0,
-    tech: null, guard: null, down: null, pose: null, dash: null,
-    crouch: false, moving: 0,
-    dmg: { legs: cfg.carry?.legs || 0, body: cfg.carry?.body || 0, head: cfg.carry?.head || 0 },
-    balance: 100, stamina: 100, ki: cfg.ki || 0, kiaiT: 0,
-    wazaAri: 0, chui: 0,
-    stats: { dmg: 0, effective: 0, techniques: 0, initiative: 0 },
-    sinceHit: 9999, sinceAct: 9999, passive: 0,
-    invul: 0, open: 0, counterT: 0, stun: 0, flash: 0, holdT: 0, suneT: 0,
-    chainList: [], chainCount: 0, chainT: 9999, lastCombo: null,
-  };
-}
-
-function setState(f, s) {
-  f.state = s;
-  f.st = 0;
-}
-
-// Hurtbox'ai pasaulio koordinatėmis: y – aukštis virš grindų.
-function hurtboxes(f) {
-  if (f.state === 'down') return [{ zone: 'legs', x0: f.x - 60, x1: f.x + 60, y0: 0, y1: 30 }];
-  return ZONES.map((zone) => ({ zone, x0: f.x - HALF_W, x1: f.x + HALF_W, y0: ZONE_Y[zone][0], y1: ZONE_Y[zone][1] }));
-}
-
-// Aktyvios technikos hitbox'as (arba null).
-function attackBox(f, ranges) {
-  const T = f.tech;
-  if (!T || T.phase !== 'active') return null;
-  const reach = ranges[T.def.range];
-  const [y0, y1] = ZONE_Y[T.def.damage.zone];
-  const a = f.x + f.facing * 14;
-  const b = f.x + f.facing * reach;
-  return { x0: Math.min(a, b), x1: Math.max(a, b), y0: y0 + 10, y1: y1 - 6, reach };
-}
-
-function totalDamage(f) {
-  return f.dmg.legs + f.dmg.body + f.dmg.head;
-}
-
-__exp.ZONES = ZONES;
-__exp.HALF_W = HALF_W;
-__exp.ZONE_Y = ZONE_Y;
-__exp.LEVEL_ZONE = LEVEL_ZONE;
-__exp.createFighter = createFighter;
-__exp.setState = setState;
-__exp.hurtboxes = hurtboxes;
-__exp.attackBox = attackBox;
-__exp.totalDamage = totalDamage;
-});
-__def('src/fight/rules.js', function (__exp, __req) {
-// SPDX-License-Identifier: BUSL-1.1
-// Taisyklių skaičiavimai: balsų sudėjimas (≥3 iš 5), hantei kriterijai, atsikėlimo laikas, įspėjimų pavadinimai.
-// Visi parametrai ateina iš data/rules.json.
-
-// Hantei kriterijai eilės tvarka (svoriai mažėja): waza-ari, žala, efektyvios technikos, technikų skaičius, iniciatyva.
-function hanteiScore(f, W) {
-  const s = W.wazaAri * f.wazaAri + W.damage * f.stats.dmg + W.effective * f.stats.effective +
-    W.techniques * f.stats.techniques + W.initiative * (f.stats.initiative / 1000) - W.chui * f.chui;
-  return Math.max(0, s);
-}
-
-// Vieno teisėjo balsas: 'aka' | 'shiro' | 'draw'. forced = paskutinis pratęsimas (lygiųjų nėra).
-function judgeVote(aka, shiro, R, rng, forced) {
-  const noise = () => 1 + (rng() * 2 - 1) * R.judgeNoise;
-  const a = hanteiScore(aka, R.hantei) * noise();
-  const b = hanteiScore(shiro, R.hantei) * noise();
-  const diff = aka.chui - shiro.chui;
-  if (Math.abs(diff) >= R.chuiDecisiveDiff) {
-    // Dviejų įspėjimų skirtumas nulemia sprendimą prieš pažeidėją, jei jis nevedė aiškiai.
-    const offenderIsAka = diff > 0;
-    const off = offenderIsAka ? a : b;
-    const other = offenderIsAka ? b : a;
-    if (off <= other * (1 + R.clearLeadMargin)) return offenderIsAka ? 'shiro' : 'aka';
-  }
-  const m = Math.max(a, b, 1);
-  if (!forced && Math.abs(a - b) <= R.hikiwakeMargin * m) return 'draw';
-  if (a === b) return rng() < 0.5 ? 'aka' : 'shiro';
-  return a > b ? 'aka' : 'shiro';
-}
-
-function tallyVotes(votes, needed) {
-  const t = { aka: 0, shiro: 0, draw: 0, winner: null };
-  for (const v of votes) t[v]++;
-  if (t.aka >= needed) t.winner = 'aka';
-  else if (t.shiro >= needed) t.winner = 'shiro';
-  return t;
-}
-
-// Kiek ms kovotojas guli po partrenkimo. > knockdownCountSec → ippon, kitaip waza-ari.
-function getUpTimeMs(f, cause, G, rng) {
-  const total = (f.dmg.legs + f.dmg.body + f.dmg.head) / 300;
-  let ms = G.baseMs + G.perDamageMs * total + (rng() * 2 - 1) * G.randMs;
-  if (cause === 'head') ms += G.headExtraMs;
-  return Math.max(600, ms);
-}
-
-function chuiCallId(total, limit) {
-  return total >= limit ? 'shikkaku' : `chui_${Math.max(1, total)}`;
-}
-
-function otherSide(side) {
-  return side === 'aka' ? 'shiro' : 'aka';
-}
-
-__exp.hanteiScore = hanteiScore;
-__exp.judgeVote = judgeVote;
-__exp.tallyVotes = tallyVotes;
-__exp.getUpTimeMs = getUpTimeMs;
-__exp.chuiCallId = chuiCallId;
-__exp.otherSide = otherSide;
 });
 __def('src/fight/referee.js', function (__exp, __req) {
 // SPDX-License-Identifier: BUSL-1.1
@@ -2292,107 +4085,6 @@ class Referee {
 
 __exp.Referee = Referee;
 });
-__def('src/fight/judges.js', function (__exp, __req) {
-// SPDX-License-Identifier: BUSL-1.1
-// 4 kampiniai teisėjai (fukushin): kiekvienas savarankiškai „mato“ įvykį, balsuoja ir rodo vėliavėlių signalą.
-// Kartu su vyr. teisėju – 5 balsai; sprendimui reikia ≥ votesNeeded (3).
-
-const { judgeVote, tallyVotes } = __req('src/fight/rules.js');
-// Visi vėliavėlių signalai (animacijos – render.js flagPose).
-const SIGNALS = ['none', 'ippon', 'wazaari', 'wazaari_ippon', 'chui', 'clinch', 'jogai', 'fumei', 'mitomezu', 'hantei', 'hikiwake'];
-// Švilpukas pagal signalą: long = 1 ilgas, strong = 1 stiprus, shorts = keli trumpi, short = 1 trumpas.
-const WHISTLE = {
-  ippon: 'long', wazaari: 'strong', wazaari_ippon: 'long', chui: 'shorts', clinch: 'shorts', jogai: 'shorts',
-  fumei: 'short', mitomezu: 'long', hantei: 'long', hikiwake: 'long',
-};
-
-class JudgePanel {
-  constructor(R, rng) {
-    this.R = R;
-    this.rng = rng || Math.random;
-    this.corners = [0, 1, 2, 3].map((i) => ({ i, signal: 'none', side: null, t: 0, delay: 0 }));
-  }
-
-  set(i, signal, side, delay = 0) {
-    const j = this.corners[i];
-    j.signal = signal;
-    j.side = side;
-    j.t = 0;
-    j.delay = delay;
-  }
-
-  clear() {
-    for (const j of this.corners) this.set(j.i, 'none', null);
-  }
-
-  update(dt) {
-    for (const j of this.corners) j.t += dt;
-  }
-
-  delay() {
-    const [lo, hi] = this.R.flagDelayMs;
-    return lo + this.rng() * (hi - lo);
-  }
-
-  // Visi kampiniai rodo tą patį signalą; kiekvienas su 5 % tikimybe įvykio nematė (fumei), bet ne daugiau kaip
-  // maxFumei teisėjų, kad akivaizdus įvykis (partrenkimas, draudžiama technika) visada surinktų ≥ 3 balsus.
-  signalAll(signal, side, maxFumei = 1) {
-    let fumei = 0;
-    let yes = 1; // vyr. teisėjas
-    for (const j of this.corners) {
-      if (fumei < maxFumei && this.rng() < this.R.fumeiChance) {
-        fumei++;
-        this.set(j.i, 'fumei', null, this.rng() * 120);
-      } else {
-        yes++;
-        this.set(j.i, signal, side, this.rng() * 120);
-      }
-    }
-    return { yes, no: 0, fumei };
-  }
-
-  // Balsavimas dėl ginčytino įvykio (pvz., pusiausvyros praradimas be kritimo): pritaria → signalas, nepritaria → mitomezu.
-  voteEvent(signal, side, chance) {
-    let yes = 1;
-    let no = 0;
-    let fumei = 0;
-    for (const j of this.corners) {
-      const r = this.rng();
-      if (r < this.R.fumeiChance) { fumei++; this.set(j.i, 'fumei', null, this.rng() * 150); }
-      else if (this.rng() < chance) { yes++; this.set(j.i, signal, side, this.rng() * 150); }
-      else { no++; this.set(j.i, 'mitomezu', null, this.rng() * 150); }
-    }
-    return { yes, no, fumei, passed: yes >= this.R.votesNeeded };
-  }
-
-  // Hantei: visi kampiniai vienu metu (su 100–250 ms vėlavimu kiekvienam) pakelia vėliavėles; vyr. teisėjas – 5-as balsas.
-  voteHantei(aka, shiro, forced) {
-    const votes = [];
-    for (const j of this.corners) {
-      const v = judgeVote(aka, shiro, this.R, this.rng, forced);
-      votes.push(v);
-      if (v === 'draw') this.set(j.i, 'hikiwake', null, this.delay());
-      else this.set(j.i, 'hantei', v, this.delay());
-    }
-    votes.push(judgeVote(aka, shiro, this.R, this.rng, forced));
-    return { votes, ...tallyVotes(votes, this.R.votesNeeded) };
-  }
-
-  // Pergalės ceremonija: kampiniai pakelia nugalėtojo spalvos vėliavėlę įstrižai aukštyn.
-  // perJudge (hantei balsai) – jei sprendimas ne vienbalsis, kai kurie rodo kitą spalvą arba sukryžiuotas vėliavėles.
-  ceremony(winner, perJudge) {
-    for (const j of this.corners) {
-      const v = perJudge ? perJudge[j.i] : winner;
-      if (v === 'draw') this.set(j.i, 'hikiwake', null, this.delay());
-      else this.set(j.i, 'hantei', v, this.delay());
-    }
-  }
-}
-
-__exp.SIGNALS = SIGNALS;
-__exp.WHISTLE = WHISTLE;
-__exp.JudgePanel = JudgePanel;
-});
 __def('src/fight/player.js', function (__exp, __req) {
 // SPDX-License-Identifier: BUSL-1.1
 // Žaidėjo valdiklis: įvesties įvykius paverčia kovotojo ketinimais (intent) per kombinacijų atpažinimą.
@@ -2456,476 +4148,6 @@ class PlayerController {
 }
 
 __exp.PlayerController = PlayerController;
-});
-__def('src/fight/ai.js', function (__exp, __req) {
-// SPDX-License-Identifier: BUSL-1.1
-// Varžovų AI: būsenų mašina Artinasi → Spaudžia → Keičiasi smūgiais → Atsitraukia → Kontratakuoja.
-// Parametrai (reakcija, agresyvumas, blokavimo tikimybės, mėgstamos technikos, pražangų tikimybė) – data/opponents.json.
-
-const { HALF_W } = __req('src/fight/fighter.js');
-// Sujungia archetipą, diržo numatytuosius parametrus ir sunkumo lygį į vieną profilį.
-function buildProfile(db, opp, difficulty = 'normal') {
-  const O = db.opponents;
-  const arch = O.archetypes[opp.archetype] || O.archetypes.tank;
-  const belt = O.beltDefaults[opp.belt] || O.beltDefaults.white;
-  const diff = O.difficulty[difficulty] || O.difficulty.normal;
-  return {
-    ...arch, ...belt, ...(opp.overrides || {}),
-    reactionMs: belt.reactionMs * diff.reaction,
-    aggression: Math.min(0.95, arch.aggression * diff.aggression * (0.75 + 0.25 * belt.skill)),
-    dmgMult: diff.damage,
-    blockScale: Math.min(1.25, belt.skill),
-  };
-}
-
-class AIController {
-  constructor(fighter, opponent, profile, db, rng) {
-    this.f = fighter;
-    this.o = opponent;
-    this.p = profile;
-    this.db = db;
-    this.rng = rng || Math.random;
-    this.C = db.rules.combat;
-    this.state = 'approach';
-    this.decT = 0;
-    this.queue = [];
-    this.guardT = 0;
-    this.guardLevel = 'chudan';
-    this.guardNew = false;
-    this.react = null;
-    this.seen = null;
-    this.cool = 0;
-    this.retreatT = 0;
-    this.want = null;
-    this.haltRolled = false;
-    this.wasHit = null;
-    this.strikes = db.techniques.filter((t) => t.type === 'strike' && !t.auto && fighter.unlocked.has(t.id));
-    this.combos = db.combos.filter((c) => fighter.combos.has(c.id) && !c.sequence.includes('@block') && c.sequence.every((id) => fighter.unlocked.has(id)));
-  }
-
-  inRange(def, d) {
-    return d - HALF_W <= this.C.ranges[def.range] - 6;
-  }
-
-  pickTech(d) {
-    const rng = this.rng;
-    const p = this.p;
-    if (rng() < p.comboChance) {
-      const ok = this.combos.filter((c) => this.inRange(this.db.tech[c.sequence[0]], d));
-      if (ok.length) {
-        const c = ok[Math.floor(rng() * ok.length)];
-        this.queue = c.sequence.slice(1);
-        return this.db.tech[c.sequence[0]];
-      }
-    }
-    const list = this.strikes.filter((t) => t.legalInKumite && this.inRange(t, d) && t.staminaCost <= this.f.stamina + 2);
-    if (!list.length) return null;
-    let total = 0;
-    for (const t of list) total += p.weights[t.id] ?? 1;
-    let r = rng() * total;
-    for (const t of list) { r -= p.weights[t.id] ?? 1; if (r <= 0) return t; }
-    return list[list.length - 1];
-  }
-
-  decide(d) {
-    const { f, p, rng } = this;
-    const A = this.db.rules.arena;
-    const behind = f.facing > 0 ? f.x - A.xMin : A.xMax - f.x;
-    this.want = null;
-    // Pasyvumo vengimas: per ilgai nepuolus – būtinai artėti ir pulti.
-    if (f.passive > 5500) { this.want = this.pickTech(d); this.state = 'approach'; if (!this.want) this.want = this.strikes.find((t) => t.legalInKumite) || null; return; }
-    if (f.counterT > 0) { this.state = 'counter'; this.want = this.pickTech(d); return; }
-    if (f.stamina < 18 && behind > 90) { this.state = 'retreat'; this.retreatT = 500 + rng() * 500; return; }
-    if (d > p.prefDist + 22) { this.state = behind < 70 || rng() < p.aggression + 0.2 ? 'approach' : 'wait'; return; }
-    if (this.cool > 0) { this.state = 'exchange'; return; }
-    const r = rng();
-    if (r < p.aggression) {
-      this.state = d < 110 ? 'pressure' : 'exchange';
-      this.want = this.pickTech(d);
-      if (!this.want) this.state = 'approach';
-    } else if (r < p.aggression + p.retreatChance && behind > 110) {
-      this.state = 'retreat';
-      this.retreatT = 300 + rng() * 400;
-    } else if (rng() < p.guardIdle) {
-      this.guardT = 250 + rng() * 300;
-      this.guardLevel = rng() < 0.6 ? 'chudan' : rng() < 0.5 ? 'gedan' : 'jodan';
-      this.guardNew = true;
-    } else this.state = 'exchange';
-  }
-
-  update(dt, fight) {
-    const { f, o, p, rng } = this;
-    const it = { move: 0, guard: null, guardPressed: false, tech: null };
-    if (fight.phase !== 'live') {
-      this.queue = [];
-      this.react = null;
-      this.guardT = 0;
-      if (fight.phase === 'halt' && !this.haltRolled) {
-        // Retas netyčinis puolimas po „Yame“.
-        this.haltRolled = true;
-        this.lateHit = rng() < p.foulChance * 0.5;
-      }
-      if (this.lateHit && fight.haltLate && fight.phase === 'halt' && this.strikes.length) { this.lateHit = false; it.tech = this.strikes[0]; }
-      return it;
-    }
-    this.haltRolled = false;
-    this.cool -= dt;
-    const d = Math.abs(o.x - f.x);
-
-    // Reakcija į varžovo techniką: po reakcijos laiko – blokas atitinkamame lygyje.
-    if (o.tech && o.tech !== this.seen && o.tech.phase === 'startup') {
-      this.seen = o.tech;
-      if (d - HALF_W <= this.C.ranges[o.tech.def.range] + 40) {
-        const level = o.tech.def.level;
-        this.react = {
-          at: fight.time + p.reactionMs * (0.8 + rng() * 0.4), tech: o.tech, level,
-          will: rng() < Math.min(0.95, (p.block[level] || 0) * p.blockScale),
-        };
-      }
-    }
-    if (this.react && fight.time >= this.react.at) {
-      const r = this.react;
-      this.react = null;
-      if (r.will && o.tech === r.tech && o.tech.phase !== 'recovery' && f.state !== 'attack' && f.unlocked.has(this.db.guardByLevel[r.level]?.id)) {
-        this.guardT = 320 + rng() * 200;
-        this.guardLevel = r.level;
-        this.guardNew = true;
-      }
-    }
-    // Gavęs smūgį, su blokavimo tikimybe dengiasi tame lygyje (apsauga nuo grandinių).
-    if (f.state === 'hit') this.wasHit = f.hitZone;
-    else if (this.wasHit) {
-      const level = this.wasHit === 'legs' ? 'gedan' : this.wasHit === 'head' ? 'jodan' : 'chudan';
-      this.wasHit = null;
-      if (rng() < Math.min(0.95, (p.block[level] || 0) * p.blockScale + 0.15)) {
-        this.guardT = 380 + rng() * 260;
-        this.guardLevel = level;
-        this.guardNew = true;
-      }
-    }
-    if (this.guardT > 0 && f.state !== 'attack') {
-      this.guardT -= dt;
-      it.guard = this.guardLevel;
-      it.guardPressed = this.guardNew;
-      this.guardNew = false;
-      return it;
-    }
-
-    // Kombinacijos tęsinys grandinės lange.
-    if (f.state === 'attack') {
-      const T = f.tech;
-      if (this.queue.length && T.phase === 'recovery') {
-        const total = T.dur.s + T.dur.a + T.dur.r;
-        if ((T.dur.s + T.dur.a + T.t) / total >= 1 - this.C.chainWindow + 0.04) it.tech = this.db.tech[this.queue.shift()];
-      }
-      return it;
-    }
-    if (this.queue.length) {
-      if (f.state === 'idle' && f.chainT <= this.C.chainGraceMs) { it.tech = this.db.tech[this.queue.shift()]; return it; }
-      if (f.chainT > this.C.chainGraceMs) this.queue = [];
-    }
-    if (f.state !== 'idle' && f.state !== 'walk') return it;
-
-    this.decT -= dt;
-    if (this.decT <= 0) {
-      this.decT = 150 + rng() * 150;
-      this.decide(d);
-    }
-    switch (this.state) {
-      case 'approach': it.move = d > p.prefDist ? 1 : 0; break;
-      case 'retreat':
-        this.retreatT -= dt;
-        it.move = -1;
-        if (this.retreatT <= 0) this.state = 'exchange';
-        break;
-      case 'pressure': it.move = d > 92 ? 1 : 0; break;
-      default: break;
-    }
-    if (this.want) {
-      if (this.inRange(this.want, d)) {
-        it.tech = this.want;
-        if (rng() < p.foulChance) {
-          // Žemesnių diržų AI kartais suklysta (pvz., smogia į veidą) – žaidėjas mato, kaip reaguoja teisėjai.
-          const illegal = this.strikes.filter((t) => !t.legalInKumite && this.inRange(t, d));
-          if (illegal.length) { it.tech = illegal[Math.floor(rng() * illegal.length)]; this.queue = []; }
-        }
-        this.cool = p.cooldownMs[0] + rng() * (p.cooldownMs[1] - p.cooldownMs[0]);
-      } else it.move = 1;
-      this.want = it.tech ? null : this.want;
-    }
-    return it;
-  }
-}
-
-// Paprastas treniruočių partneris: 'passive' | 'block' | 'attack'.
-class DummyController {
-  constructor(fighter, opponent, db, mode = 'passive', opts = {}) {
-    this.f = fighter;
-    this.o = opponent;
-    this.db = db;
-    this.mode = mode;
-    this.tech = opts.techId ? db.tech[opts.techId] : db.tech.seiken_gyaku_tsuki;
-    this.interval = opts.intervalMs || 1700;
-    this.timer = 900;
-    this.guardNew = true;
-  }
-
-  update(dt) {
-    const { f, o } = this;
-    const it = { move: 0, guard: null, guardPressed: false, tech: null };
-    const d = Math.abs(o.x - f.x);
-    if (this.mode === 'block') {
-      if (o.tech && o.tech.phase !== 'recovery') {
-        it.guard = o.tech.def.level;
-        it.guardPressed = this.guardNew;
-        this.guardNew = false;
-      } else this.guardNew = true;
-    } else if (this.mode === 'attack') {
-      const reach = this.db.rules.combat.ranges[this.tech.range] + HALF_W - 14;
-      if (d > reach) it.move = 1;
-      else if (d < reach - 40) it.move = -1;
-      this.timer -= dt;
-      if (this.timer <= 0 && d <= reach && f.state === 'idle') {
-        it.tech = this.tech;
-        this.timer = this.interval;
-      }
-    }
-    return it;
-  }
-}
-
-__exp.buildProfile = buildProfile;
-__exp.AIController = AIController;
-__exp.DummyController = DummyController;
-});
-__def('src/fight/skeleton.js', function (__exp, __req) {
-// SPDX-License-Identifier: BUSL-1.1
-// 2D skeletas: pozos ir raktiniai kadrai iš assets/anim/poses.json, interpoliacija ir kovotojo piešimas.
-
-const L = { thigh: 48, shin: 48, torso: 74, neck: 10, head: 18, upper: 34, fore: 32 };
-const KEYS = ['torso', 'head', 'fs', 'fe', 'bs', 'be', 'fh', 'fk', 'bh', 'bk', 'dx', 'rot'];
-const RAD = Math.PI / 180;
-const cache = new WeakMap();
-
-function getPose(anim, name) {
-  let c = cache.get(anim);
-  if (!c) { c = {}; cache.set(anim, c); }
-  if (c[name]) return c[name];
-  const base = anim.poses.kamae;
-  const src = anim.poses[name] || base;
-  const p = {};
-  for (const k of KEYS) p[k] = src[k] ?? base[k] ?? 0;
-  if (src.hipH != null) p.hipH = src.hipH;
-  c[name] = p;
-  return p;
-}
-
-function solve(P) {
-  const dir = (deg, len) => [Math.sin(deg * RAD) * len, Math.cos(deg * RAD) * len];
-  const hip = [0, 0];
-  const t = dir(P.torso, L.torso);
-  const sh = [t[0], -t[1]];
-  const hd = dir(P.torso + P.head, L.neck + L.head);
-  const head = [sh[0] + hd[0], sh[1] - hd[1]];
-  const arm = (s, e) => {
-    const u = dir(s, L.upper);
-    const f = dir(s + e, L.fore);
-    const el = [sh[0] + u[0], sh[1] + u[1]];
-    return [el, [el[0] + f[0], el[1] + f[1]]];
-  };
-  const leg = (h, k) => {
-    const th = dir(h, L.thigh);
-    const s = dir(h - k, L.shin);
-    const kn = [th[0], th[1]];
-    return [kn, [kn[0] + s[0], kn[1] + s[1]]];
-  };
-  const [fel, fha] = arm(P.fs, P.fe);
-  const [bel, bha] = arm(P.bs, P.be);
-  const [fkn, ffo] = leg(P.fh, P.fk);
-  const [bkn, bfo] = leg(P.bh, P.bk);
-  return { hip, sh, head, fel, fha, bel, bha, fkn, ffo, bkn, bfo, auto: Math.max(ffo[1], bfo[1]) + 6 };
-}
-
-function hipHeight(P) {
-  return P.hipH ?? solve(P).auto;
-}
-
-function lerpPose(a, b, k) {
-  const p = {};
-  for (const key of KEYS) p[key] = a[key] + (b[key] - a[key]) * k;
-  if (a.hipH != null || b.hipH != null) p.hipH = hipHeight(a) + (hipHeight(b) - hipHeight(a)) * k;
-  return p;
-}
-
-const ease = (k) => k * k * (3 - 2 * k);
-
-// p: 0–1 startup, 1–2 active, 2–3 recovery.
-function evalAnim(anim, name, p) {
-  const a = anim.anims[name] || anim.anims.gyaku_tsuki;
-  const keys = a.keys;
-  if (p <= keys[0][0]) return getPose(anim, keys[0][1]);
-  for (let i = 1; i < keys.length; i++) {
-    if (p <= keys[i][0]) {
-      const k = (p - keys[i - 1][0]) / (keys[i][0] - keys[i - 1][0] || 1);
-      return lerpPose(getPose(anim, keys[i - 1][1]), getPose(anim, keys[i][1]), ease(k));
-    }
-  }
-  return getPose(anim, keys[keys.length - 1][1]);
-}
-
-function techPhase(T) {
-  if (T.phase === 'startup') return Math.min(1, T.t / T.dur.s);
-  if (T.phase === 'active') return 1 + Math.min(1, T.t / T.dur.a);
-  return 2 + Math.min(1, T.t / (T.dur.r + T.extraRec));
-}
-
-// Tikslinė poza pagal kovotojo būseną.
-function fighterPose(f, anim, time) {
-  const P = (n) => getPose(anim, n);
-  switch (f.state) {
-    case 'attack': return evalAnim(anim, f.tech.def.anim, techPhase(f.tech));
-    case 'guard': {
-      if (f.suneT > 0) return P('sune_uke');
-      if (f.guard && f.guard.morote && f.guard.level === 'chudan') return P('morote_uke');
-      return P(`guard_${f.guard ? f.guard.level : 'chudan'}`);
-    }
-    case 'hit': return lerpPose(P('kamae'), P(`hit_${f.hitZone || 'body'}`), Math.sin(Math.PI * Math.min(1, f.st / (f.stun || 200))));
-    case 'stagger': {
-      const s = { ...P('stagger') };
-      s.torso += Math.sin(time / 90) * 9;
-      s.head += Math.sin(time / 70) * 6;
-      return s;
-    }
-    case 'down': {
-      const k = Math.min(1, f.down.t / 340);
-      return k < 0.5 ? lerpPose(P('hit_head'), P('fall'), k * 2) : lerpPose(P('fall'), P('down'), (k - 0.5) * 2);
-    }
-    case 'getup': {
-      const k = Math.min(1, f.st / 500);
-      return k < 0.5 ? lerpPose(P('down'), P('kneel'), ease(k * 2)) : lerpPose(P('kneel'), P('kamae'), ease((k - 0.5) * 2));
-    }
-    case 'pose': {
-      const k = Math.max(0, Math.min(1, f.st / 260, (f.pose.dur - f.st) / 260));
-      return lerpPose(P('stand'), P(f.pose.name), ease(k));
-    }
-    case 'dash': return P(f.dash && f.dash.fwd ? 'dash' : 'backdash');
-    case 'walk': return lerpPose(P('walk_a'), P('walk_b'), (Math.sin(time / 85) + 1) / 2);
-    default: {
-      if (f.formal) return P('stand');
-      if (f.crouch) return P('crouch');
-      const s = { ...P('kamae') };
-      s.torso += Math.sin(time / 520 + f.id) * 1.3;
-      return s;
-    }
-  }
-}
-
-const OUT = '#23232b';
-const SKIN = '#e9bd95';
-
-function limb(ctx, pts, w, col) {
-  ctx.lineCap = 'round';
-  ctx.lineJoin = 'round';
-  for (let pass = 0; pass < 2; pass++) {
-    ctx.beginPath();
-    ctx.moveTo(pts[0][0], pts[0][1]);
-    for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]);
-    ctx.strokeStyle = pass ? col : OUT;
-    ctx.lineWidth = pass ? w : w + 4;
-    ctx.stroke();
-  }
-}
-
-function blob(ctx, x, y, r, col) {
-  ctx.beginPath();
-  ctx.arc(x, y, r, 0, Math.PI * 2);
-  ctx.fillStyle = col;
-  ctx.fill();
-  ctx.lineWidth = 2;
-  ctx.strokeStyle = OUT;
-  ctx.stroke();
-}
-
-// st: { belt, aka, alpha, flash, scale, gi, far, hair, kiai }
-function drawFigure(ctx, x, groundY, facing, P, st = {}) {
-  const J = solve(P);
-  const hipH = P.hipH ?? J.auto;
-  const s = st.scale || 1;
-  const gi = st.flash ? '#ffd2c8' : (st.gi || '#f6f3ec');
-  const far = st.flash ? '#f0b8ac' : (st.far || '#d9d5cb');
-  ctx.save();
-  ctx.globalAlpha *= st.alpha ?? 1;
-  ctx.translate(x, groundY);
-  ctx.scale(s * facing, s);
-  ctx.translate(P.dx || 0, -hipH);
-  if (P.rot) ctx.rotate(P.rot * RAD);
-
-  // Šešėlis piešiamas atskirai (drawShadow), čia – tik figūra.
-  const foot = (p) => limb(ctx, [p, [p[0] + 11, p[1] + 1]], 8, SKIN);
-  limb(ctx, [J.sh, J.bel, J.bha], 13, far);
-  blob(ctx, J.bha[0], J.bha[1], 7, SKIN);
-  limb(ctx, [J.hip, J.bkn, J.bfo], 17, far);
-  foot(J.bfo);
-
-  limb(ctx, [J.hip, J.sh], 31, gi);
-  // Atlapas
-  ctx.beginPath();
-  ctx.moveTo(J.sh[0] + 8, J.sh[1] + 6);
-  ctx.lineTo(J.hip[0] + (J.sh[0] - J.hip[0]) * 0.35 + 2, J.hip[1] + (J.sh[1] - J.hip[1]) * 0.35);
-  ctx.strokeStyle = 'rgba(40,40,50,0.5)';
-  ctx.lineWidth = 2;
-  ctx.stroke();
-  // Diržas
-  const ux = (J.sh[0] - J.hip[0]) / L.torso;
-  const uy = (J.sh[1] - J.hip[1]) / L.torso;
-  const bx = J.hip[0] + ux * 9;
-  const by = J.hip[1] + uy * 9;
-  limb(ctx, [[bx + uy * 15, by - ux * 15], [bx - uy * 15, by + ux * 15]], 7, st.belt || '#f4f1ea');
-  limb(ctx, [[bx - uy * 13, by + ux * 13], [bx - uy * 13 + 3, by + ux * 13 + 20]], 5, st.belt || '#f4f1ea');
-  if (st.aka) limb(ctx, [[bx + uy * 15, by - ux * 15], [bx + uy * 15 - 4, by - ux * 15 + 18]], 5, '#d5281f');
-
-  blob(ctx, J.head[0], J.head[1], L.head, SKIN);
-  ctx.beginPath();
-  ctx.arc(J.head[0], J.head[1], L.head, Math.PI * 0.95, Math.PI * 1.85);
-  ctx.lineTo(J.head[0] - 4, J.head[1] - 6);
-  ctx.fillStyle = st.hair || '#2b2118';
-  ctx.fill();
-  ctx.fillStyle = OUT;
-  ctx.fillRect(J.head[0] + 8, J.head[1] - 3, 3, 3);
-
-  limb(ctx, [J.hip, J.fkn, J.ffo], 17, gi);
-  foot(J.ffo);
-  limb(ctx, [J.sh, J.fel, J.fha], 13, gi);
-  blob(ctx, J.fha[0], J.fha[1], 7, SKIN);
-  if (st.kiai) {
-    ctx.globalAlpha *= 0.5;
-    ctx.strokeStyle = '#ffd54a';
-    ctx.lineWidth = 4;
-    ctx.beginPath();
-    ctx.ellipse(J.sh[0] * 0.5, J.sh[1] * 0.5 + 10, 62, 120, 0, 0, Math.PI * 2);
-    ctx.stroke();
-  }
-  ctx.restore();
-}
-
-function drawShadow(ctx, x, groundY, w = 62) {
-  ctx.save();
-  ctx.fillStyle = 'rgba(0,0,0,0.22)';
-  ctx.beginPath();
-  ctx.ellipse(x, groundY + 4, w, 10, 0, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.restore();
-}
-
-__exp.getPose = getPose;
-__exp.solve = solve;
-__exp.hipHeight = hipHeight;
-__exp.lerpPose = lerpPose;
-__exp.evalAnim = evalAnim;
-__exp.techPhase = techPhase;
-__exp.fighterPose = fighterPose;
-__exp.drawFigure = drawFigure;
-__exp.drawShadow = drawShadow;
 });
 __def('src/fight/render.js', function (__exp, __req) {
 // SPDX-License-Identifier: BUSL-1.1

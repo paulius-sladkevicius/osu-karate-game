@@ -198,7 +198,7 @@ export class Fight {
       let ok = true;
       for (let i = 0; i < n; i++) if (f.chainList[f.chainList.length - n + i] !== c.sequence[i]) { ok = false; break; }
       if (!ok) continue;
-      if (f.lastCombo && f.lastCombo.id === c.id && f.chainList.length - f.lastCombo.len < n) continue;
+      if (f.lastCombo && f.lastCombo.id === c.id && f.chainSeq - f.lastCombo.seq < n) continue;
       if (!best || n > best.sequence.length) best = c;
     }
     return best;
@@ -217,6 +217,7 @@ export class Fight {
       f.chainCount = 0;
       f.lastCombo = null;
     }
+    f.chainSeq++;
     if (f.chainList.length > 8) f.chainList.shift();
     const tired = f.stamina < C.tiredBelow ? C.tiredSlow : 1;
     if (f.kiaiT <= 0) f.stamina = Math.max(0, f.stamina - def.staminaCost);
@@ -224,7 +225,7 @@ export class Fight {
     f.passive = 0;
     f.stats.techniques++;
     const combo = this.findCombo(f);
-    if (combo) f.lastCombo = { id: combo.id, len: f.chainList.length };
+    if (combo) f.lastCombo = { id: combo.id, seq: f.chainSeq };
     f.tech = {
       def, phase: 'startup', t: 0,
       dur: { s: def.frames.startup * tired, a: def.frames.active, r: def.frames.recovery * tired },

@@ -30,7 +30,7 @@ export function createFighter(db, cfg) {
     stats: { dmg: 0, effective: 0, techniques: 0, initiative: 0 },
     sinceHit: 9999, sinceAct: 9999, passive: 0,
     invul: 0, open: 0, counterT: 0, stun: 0, flash: 0, holdT: 0, suneT: 0,
-    chainList: [], chainCount: 0, chainT: 9999, lastCombo: null,
+    chainList: [], chainCount: 0, chainSeq: 0, chainT: 9999, lastCombo: null,
   };
 }
 

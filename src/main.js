@@ -15,6 +15,19 @@ import { makeBackground, W, H } from './fight/render.js';
 
 const $ = (id) => document.getElementById(id);
 
+// Senesnėms naršyklėms (pvz., iPad su Safari < 16), kuriose nėra CanvasRenderingContext2D.roundRect.
+if (typeof CanvasRenderingContext2D !== 'undefined' && !CanvasRenderingContext2D.prototype.roundRect) {
+  CanvasRenderingContext2D.prototype.roundRect = function roundRect(x, y, w, h, r = 0) {
+    const k = Math.min(r, w / 2, h / 2);
+    this.moveTo(x + k, y);
+    this.arcTo(x + w, y, x + w, y + h, k);
+    this.arcTo(x + w, y + h, x, y + h, k);
+    this.arcTo(x, y + h, x, y, k);
+    this.arcTo(x, y, x + w, y, k);
+    this.closePath();
+  };
+}
+
 class Game {
   constructor(db) {
     this.db = db;

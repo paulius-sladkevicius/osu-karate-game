@@ -60,7 +60,7 @@ export class FightScene {
     this.onDone = null;
     this.showPanels = opts.showPanels ?? true;
     this.showTrail = !!opts.hints && game.settings.assist;
-    if (opts.hints && game.settings.assist) this.hud.buildHints(this.player);
+    if (opts.hints && game.settings.assist && !opts.director) this.hud.buildHints(this.player);
     this.debug = !!opts.debug;
     this.judgesPreview = opts.judgesPreview || null;
     this.director = opts.director || null;
@@ -137,7 +137,13 @@ export class FightScene {
         if (this.opts.showDamage && ev.amount) this.hud.popup(d.x, y - 30, ev.amount.toFixed(1), { color: '#ffd54a', size: 20 });
         break;
       }
-      case 'knockdown': g.audio.thud(); this.cam.shake = 12; g.vibrate(80); break;
+      case 'knockdown':
+        g.audio.thud();
+        this.cam.shake = 12;
+        g.vibrate(80);
+        // Parkritęs žaidėjas gali atsikelti greičiau, greitai bakstelėdamas A / K / G.
+        if (ev.f === this.player) this.hud.popup(640, 470, t('hud.mash'), { color: '#ffd54a', size: 30, ms: 2600 });
+        break;
       default: break;
     }
     if (this.director && this.director.onEvent) this.director.onEvent(ev);
@@ -279,10 +285,10 @@ export class FightScene {
       ];
       ctx.fillStyle = 'rgba(0,0,0,0.6)';
       const bx = f.id === 0 ? 30 : W - 330;
-      ctx.fillRect(bx, 126, 300, 86);
+      ctx.fillRect(bx, 226, 300, 86);
       ctx.fillStyle = '#9dffb0';
       ctx.textAlign = 'left';
-      lines.forEach((l, i) => ctx.fillText(l, bx + 8, 142 + i * 16));
+      lines.forEach((l, i) => ctx.fillText(l, bx + 8, 242 + i * 16));
     }
     ctx.fillStyle = '#fff';
     ctx.textAlign = 'center';
