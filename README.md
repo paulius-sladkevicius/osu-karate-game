@@ -24,7 +24,8 @@ kombinacijos – krypčių seka + mygtukas (→ visada reiškia „link varžovo
 
 ```
 npm test            # node --test: kombinacijų atpažinimas, kovos taisyklės, duomenų vientisumas (be priklausomybių)
-node tools/e2e.mjs  # neprivaloma: naršyklės patikra (reikia Playwright); --full – visa kelionė iki mėlyno diržo
+node tools/e2e.mjs  # neprivaloma: naršyklės patikra (reikia Playwright): pilnas ekranas emuliuotuose Android / iPad /
+                    # iPhone ekranuose, multi-touch, PWA be interneto, egzaminas; --full – visa kelionė iki mėlyno diržo
 ```
 
 Pakeitus `src/` ar `data/`, atnaujinkite `file://` rinkinį: `npm run bundle` (testas patikrina, ar jis nepasenęs).

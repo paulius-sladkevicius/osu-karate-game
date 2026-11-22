@@ -68,7 +68,7 @@ test('žaidimo tekstuose nėra žodžio „Kyokushin“', () => {
 });
 
 test('kiekvieno šaltinio failo viršuje – SPDX-License-Identifier: BUSL-1.1', () => {
-  const files = [...SRC, ...walk('tests'), ...walk('tools'), ...walk('data'), ...walk('assets').filter((f) => /\.(json|svg)$/.test(f)),
+  const files = [...SRC, ...walk('tests').filter((f) => !f.includes('fixtures')), ...walk('tools'), ...walk('data'), ...walk('assets').filter((f) => /\.(json|svg)$/.test(f)),
     'index.html', 'styles.css', 'sw.js', 'dist/game.bundle.js'];
   for (const f of files) {
     const head = read(f).split('\n').slice(0, 3).join('\n');
@@ -79,6 +79,19 @@ test('kiekvieno šaltinio failo viršuje – SPDX-License-Identifier: BUSL-1.1',
   assert.match(lic, /Licensor:\s+Paulius Sladkevičius/);
   assert.match(lic, /Change License:\s+GNU General Public License, version 2\.0 or later/);
   assert.ok(existsSync(join(ROOT, 'THIRD_PARTY.md')));
+});
+
+test('LICENSE: BSL 1.1 sąlygų tekstas nepakeistas (sutampa su kanoniniu SPDX BUSL-1.1 tekstu), užpildyti tik parametrai', () => {
+  const lic = read('LICENSE');
+  const spdx = read('tests/fixtures/BUSL-1.1.spdx.txt');
+  const terms = (x) => x.slice(x.indexOf('Terms\n'));
+  assert.equal(terms(lic), terms(spdx), 'sąlygos nuo „Terms“ iki galo turi sutapti simbolis į simbolį');
+  assert.ok(lic.includes(spdx.slice(spdx.indexOf('License text copyright'), spdx.indexOf('Terms\n')).trim()), 'MariaDB autorių teisių ir prekių ženklo eilutės');
+  const head = lic.slice(0, lic.indexOf('Notice'));
+  for (const re of [/Licensor:\s+Paulius Sladkevičius/, /Licensed Work:\s+"OSU! Karatės kelias"/, /\(c\) 2026 Paulius Sladkevičius/,
+    /source code,\s+data, graphics, animations and sounds/, /Additional Use Grant:[\s\S]*non-commercial production use[\s\S]*dojos and schools/,
+    /Commercial hosting or\s+commercial distribution[\s\S]*separate commercial license/, /Change Date:\s+Four years/,
+    /Change License:\s+GNU General Public License, version 2\.0 or later/]) assert.match(head, re);
 });
 
 test('service worker talpina visus žaidimo failus (veikimas be interneto)', () => {

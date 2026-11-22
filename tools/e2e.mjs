@@ -191,15 +191,28 @@ const HELPERS = () => {
 };
 
 async function newPage(browser, opts = {}) {
-  const ctx = await browser.newContext({ viewport: { width: 844, height: 390 }, hasTouch: true, isMobile: true, deviceScaleFactor: 2, locale: 'lt-LT', ...opts });
+  const { realFullscreen, standalone, ...ctxOpts } = opts;
+  const ctx = await browser.newContext({ viewport: { width: 844, height: 390 }, hasTouch: true, isMobile: true, deviceScaleFactor: 2, locale: 'lt-LT', ...ctxOpts });
   const page = await ctx.newPage();
   page.errors = [];
   page.on('pageerror', (e) => page.errors.push(`${e.message}\n${e.stack}`));
   page.on('console', (m) => { if (m.type() === 'error' && !/vibrate|favicon/.test(m.text())) page.errors.push(m.text()); });
-  await page.addInitScript(() => {
-    window.__fs = 0;
-    Element.prototype.requestFullscreen = function () { window.__fs++; return Promise.resolve(); };
-  });
+  if (!opts.realFullscreen) {
+    await page.addInitScript(() => {
+      window.__fs = 0;
+      Element.prototype.requestFullscreen = function () { window.__fs++; return Promise.resolve(); };
+    });
+  } else {
+    // Tikras Fullscreen API; tik suskaičiuojame orientacijos užrakinimo bandymus.
+    await page.addInitScript((standalone) => {
+      window.__lock = [];
+      try {
+        const orig = screen.orientation.lock ? screen.orientation.lock.bind(screen.orientation) : null;
+        screen.orientation.lock = (o) => { window.__lock.push(o); return orig ? orig(o).catch(() => {}) : Promise.resolve(); };
+      } catch (e) { /* nepalaikoma */ }
+      if (standalone) Object.defineProperty(navigator, 'standalone', { get: () => true });
+    }, !!opts.standalone);
+  }
   await page.addInitScript(HELPERS);
   return { ctx, page };
 }
@@ -209,6 +222,63 @@ const noScene = (page, ms = 120000) => page.waitForFunction(() => window.__game 
 
 const browser = await chromium.launch();
 try {
+  // ---------- 0. Įrenginių emuliacija: visas ekranas horizontaliai ----------
+  console.log('\n[0] Įrenginių emuliacija (Chromium su įrenginio ekranu, lietimu ir UA): visas ekranas');
+  {
+    const { devices } = await import('playwright').catch(() => createRequire(process.env.PLAYWRIGHT_PATH || '/opt/')('playwright'));
+    const fills = () => {
+      const c = document.getElementById('game').getBoundingClientRect();
+      return { w: Math.round(c.width), h: Math.round(c.height), vw: innerWidth, vh: innerHeight, landscape: innerWidth > innerHeight,
+        fits: Math.abs(c.width - innerWidth) <= 1 || Math.abs(c.height - innerHeight) <= 1, fs: !!document.fullscreenElement, lock: window.__lock };
+    };
+    for (const name of ['Pixel 7 landscape', 'Galaxy S9+ landscape', 'iPad (gen 7) landscape', 'iPad Pro 11 landscape']) {
+      const { ctx, page } = await newPage(browser, { ...devices[name], locale: 'lt-LT', realFullscreen: true });
+      await page.goto(BASE);
+      await tap(page, '[data-act=start]');
+      await page.waitForTimeout(400);
+      const r = await page.evaluate(fills);
+      ok(r.fs && r.landscape && r.fits, `${name}: po vieno bakstelėjimo – pilno ekrano režimas, horizontaliai, canvas užpildo ekraną`, JSON.stringify(r));
+      ok(r.lock && r.lock.includes('landscape'), `${name}: užrakinama horizontali orientacija`);
+      ok(page.errors.length === 0, `${name}: be klaidų`, page.errors.join(' | '));
+      await ctx.close();
+    }
+    {
+      // iPhone naršyklėje: Fullscreen API nėra – rodoma instrukcija „Pridėti prie pradinio ekrano“.
+      const { ctx, page } = await newPage(browser, { ...devices['iPhone 14 landscape'], locale: 'lt-LT', realFullscreen: true });
+      await page.addInitScript(() => { delete Element.prototype.requestFullscreen; delete Element.prototype.webkitRequestFullscreen; });
+      await page.goto(BASE);
+      await page.waitForSelector('[data-act=start]');
+      ok(await page.evaluate(() => /Pridėti prie pradinio ekrano/.test(document.getElementById('ui').textContent)), 'iPhone (naršyklė): rodoma instrukcija „Pridėti prie pradinio ekrano“');
+      await tap(page, '[data-act=start]');
+      await page.waitForSelector('[data-act=quick]');
+      ok(page.errors.length === 0, 'iPhone (naršyklė): be Fullscreen API žaidimas vis tiek pasileidžia', page.errors.join(' | '));
+      const meta = await page.evaluate(async () => ({
+        capable: document.querySelector('meta[name=apple-mobile-web-app-capable]').content,
+        icon: !!document.querySelector('link[rel=apple-touch-icon]'),
+        man: await (await fetch(document.querySelector('link[rel=manifest]').href)).json(),
+      }));
+      ok(meta.capable === 'yes' && meta.icon && meta.man.display === 'fullscreen' && meta.man.orientation === 'landscape', 'iPhone: PWA manifestas (display: fullscreen, orientation: landscape) ir apple meta žymos');
+      await ctx.close();
+    }
+    {
+      // iPhone, paleistas iš pradinio ekrano (standalone): instrukcijos nebėra, canvas užpildo ekraną.
+      const { ctx, page } = await newPage(browser, { ...devices['iPhone 14 landscape'], locale: 'lt-LT', realFullscreen: true, standalone: true });
+      await page.goto(BASE);
+      await page.waitForSelector('[data-act=start]');
+      const hint = await page.evaluate(() => /Pridėti prie pradinio ekrano/.test(document.getElementById('ui').textContent));
+      const r = await page.evaluate(fills);
+      ok(!hint && r.fits && r.landscape, 'iPhone (iš pradinio ekrano): žaidimas užpildo ekraną horizontaliai', JSON.stringify(r));
+      await ctx.close();
+    }
+    {
+      const { ctx, page } = await newPage(browser, { ...devices['Pixel 7'], locale: 'lt-LT' });
+      await page.goto(BASE);
+      await page.waitForSelector('[data-act=start]');
+      ok(await page.evaluate(() => getComputedStyle(document.getElementById('rotate')).display === 'flex' && /Pasukite/.test(document.getElementById('rotate').textContent)), 'vertikaliai laikomas telefonas: užrašas „Pasukite įrenginį“');
+      await ctx.close();
+    }
+  }
+
   // ---------- 1. Paleidimas atidarius index.html (file://) ----------
   console.log('\n[1] index.html iš disko (file://)');
   {
@@ -325,6 +395,16 @@ try {
   await tap(page, '[data-act="sig:hikiwake"]');
   ok(await page.evaluate(() => __game.scene.judgesPreview.corners.every((j) => j.signal === 'hikiwake')), 'derinimo ekranas: vėliavėlių signalų peržiūra');
   await page.screenshot({ path: join(ROOT, 'dist/e2e-debug.png') }).catch(() => {});
+  await tap(page, '[data-act=signals]');
+  // KIAI mygtukas: aktyvus tik kai pilna ki juosta (technika atrakinama juodu diržu – čia per „Atrakinti viską“).
+  ok(await page.evaluate(() => !document.querySelector('.tc-kiai').classList.contains('ready')), 'KIAI mygtukas neaktyvus, kol ki juosta nepilna');
+  await tap(page, '[data-act=unlock]');
+  await tap(page, '[data-act=ki]');
+  await page.waitForTimeout(150);
+  ok(await page.evaluate(() => document.querySelector('.tc-kiai').classList.contains('ready')), 'KIAI mygtukas įsižiebia, kai ki juosta pilna');
+  await page.tap('.tc-kiai');
+  await page.waitForTimeout(150);
+  ok(await page.evaluate(() => __game.scene.player.kiaiT > 4000 && __game.scene.player.ki === 0), 'KIAI režimas įsijungia 5 s');
   await tap(page, '[data-act=exit]');
   await noScene(page);
 

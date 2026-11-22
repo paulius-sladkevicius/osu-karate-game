@@ -227,3 +227,26 @@ test('būsenos pasekmės: nuovargis lėtina technikas, kojų žala – žingsnia
   assert.equal(m.b.dmg.body, 40);
   assert.ok(m.a.stamina > 90, 'ištvermė atsistato');
 });
+
+test('KIAI režimas: tik su pilna ki juosta ir atrakinus; 5 s +25 % žala, ištvermė nesmunka', () => {
+  const def = db.tech.seiken_gyaku_tsuki;
+  const m = make({ immortal: true });
+  m.a.ki = 100;
+  m.step({ kiai: true });
+  assert.ok(m.a.kiaiT <= 0, 'neatrakinus (ne juodas diržas) KIAI neįsijungia');
+  m.a.unlocked = new Set(db.techniques.map((t) => t.id));
+  m.a.ki = 60;
+  m.step({ kiai: true });
+  assert.ok(m.a.kiaiT <= 0, 'nepilna ki juosta – neaktyvus');
+  m.a.ki = 100;
+  m.step({ kiai: true });
+  assert.ok(m.a.kiaiT > C.kiaiMs - 50 && m.a.ki === 0);
+  assert.ok(m.events.some((e) => e.type === 'kiai'));
+  const before = m.a.stamina;
+  m.step({ tech: def });
+  assert.equal(m.a.stamina, before, 'ištvermė nesmunka');
+  for (let i = 0; i < 30 && !hits(m).length; i++) m.step();
+  assert.ok(Math.abs(hits(m)[0].amount - def.damage.amount * C.damageScale * C.kiaiDamage) < 1e-9, '+25 % žala');
+  for (let i = 0; i < 320; i++) m.step();
+  assert.ok(m.a.kiaiT <= 0, 'baigiasi po 5 s');
+});

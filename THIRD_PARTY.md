@@ -31,3 +31,5 @@ Visa originali medžiaga (kodas, duomenys, grafika, animacijos, garsai) platinam
 
 `LICENSE` faile esantis Business Source License 1.1 tekstas: © 2017 MariaDB Corporation Ab. „Business Source License“ yra
 MariaDB Corporation Ab prekių ženklas; tekstas naudojamas pagal jame pačiame suteiktą leidimą, nepakeistas (užpildyti tik parametrai).
+`tests/fixtures/BUSL-1.1.spdx.txt` – kanoninis to paties licencijos teksto egzempliorius iš SPDX licencijų sąrašo; testas tikrina,
+kad `LICENSE` sąlygos su juo sutampa simbolis į simbolį.
