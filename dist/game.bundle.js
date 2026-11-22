@@ -10,7 +10,7 @@ function __req(id) {
   __mods[id](exp, __req);
   return exp;
 }
-globalThis.__OSU_DATA__ = {"techniques":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"input: krypciu kodai F B U D DF UF DB UB CIRCLE + paskutinis mygtukas A K G KIAI. frames ms. range: close|mid|midfar|far. level: jodan|chudan|gedan.","techniques":[{"id":"seiken_gyaku_tsuki","name":"Seiken gyaku tsuki","nameLt":"Tiesus kumštis priešinga ranka","nameEn":"Reverse straight punch","descLt":"Tiesus kumštis į liemenį priešinga ranka.","descEn":"Straight punch to the body with the rear hand.","belt":"white","type":"strike","input":["A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":120,"active":60,"recovery":180},"damage":{"zone":"body","amount":6},"balanceDamage":4,"staminaCost":4,"anim":"gyaku_tsuki"},{"id":"seiken_oi_tsuki","name":"Seiken oi tsuki","nameLt":"Tiesus kumštis su žingsniu","nameEn":"Lunge punch","descLt":"Tiesus kumštis į liemenį žengiant pirmyn.","descEn":"Straight punch to the body while stepping forward.","belt":"white","type":"strike","input":["F","A"],"level":"chudan","legalInKumite":true,"range":"close","advance":60,"frames":{"startup":160,"active":60,"recovery":220},"damage":{"zone":"body","amount":7},"balanceDamage":5,"staminaCost":5,"anim":"oi_tsuki"},{"id":"seiken_jodan_tsuki","name":"Seiken jodan tsuki","nameLt":"Kumštis į galvą","nameEn":"Punch to the head","descLt":"Kumštis į galvą. Tik kihon ir kata – kumite metu draudžiama!","descEn":"Punch to the head. Kihon and kata only – forbidden in kumite!","belt":"white","type":"strike","input":["U","A"],"level":"jodan","legalInKumite":false,"foulChui":1,"range":"close","frames":{"startup":130,"active":60,"recovery":200},"damage":{"zone":"head","amount":8},"balanceDamage":5,"staminaCost":4,"anim":"jodan_tsuki"},{"id":"mae_geri_chudan","name":"Mae geri chudan","nameLt":"Tiesus spyris į pilvą","nameEn":"Front kick to the body","descLt":"Tiesus spyris padu į pilvą.","descEn":"Front kick with the ball of the foot to the stomach.","belt":"white","type":"strike","input":["K"],"level":"chudan","legalInKumite":true,"range":"mid","frames":{"startup":180,"active":80,"recovery":250},"damage":{"zone":"body","amount":9},"balanceDamage":10,"staminaCost":7,"anim":"mae_geri"},{"id":"chudan_uchi_uke","name":"Chudan uchi uke","nameLt":"Vidurinė gynyba","nameEn":"Middle block","descLt":"Vidurinė gynyba – stabdo smūgius į liemenį.","descEn":"Middle block – stops attacks to the body.","belt":"white","type":"guard","input":["G"],"level":"chudan","legalInKumite":true,"staminaCost":3,"anim":"guard_chudan"},{"id":"jodan_uke","name":"Jodan uke","nameLt":"Aukšta gynyba","nameEn":"High block","descLt":"Aukšta gynyba – stabdo spyrius į galvą.","descEn":"High block – stops kicks to the head.","belt":"white","type":"guard","input":["U","G"],"level":"jodan","legalInKumite":true,"staminaCost":3,"anim":"guard_jodan"},{"id":"gedan_barai","name":"Gedan barai","nameLt":"Žema gynyba","nameEn":"Low block","descLt":"Žema gynyba – stabdo žemus spyrius.","descEn":"Low sweeping block – stops low kicks.","belt":"white","type":"guard","input":["D","G"],"level":"gedan","legalInKumite":true,"staminaCost":3,"anim":"guard_gedan"},{"id":"seiken_shita_tsuki","name":"Seiken shita tsuki","nameLt":"Smūgis iš apačios","nameEn":"Uppercut to the body","descLt":"Smūgis iš apačios į pilvą ir šonkaulius.","descEn":"Rising punch to the stomach and ribs.","belt":"orange","type":"strike","input":["D","A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":150,"active":60,"recovery":220},"damage":{"zone":"body","amount":8},"balanceDamage":4,"staminaCost":5,"anim":"shita_tsuki"},{"id":"seiken_kagi_tsuki","name":"Seiken kagi tsuki","nameLt":"Kabliukas į šoną","nameEn":"Hook punch","descLt":"Kabliukas į šoną (šonkaulius).","descEn":"Hook punch to the side of the body.","belt":"orange","type":"strike","input":["D","F","A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":170,"active":60,"recovery":240},"damage":{"zone":"body","amount":9},"balanceDamage":6,"staminaCost":6,"anim":"kagi_tsuki"},{"id":"gedan_mawashi_geri","name":"Gedan mawashi geri","nameLt":"Žemas šoninis spyris","nameEn":"Low roundhouse kick","descLt":"Žemas spyris blauzda į šlaunies šoną („low kick“).","descEn":"Low kick with the shin to the side of the thigh.","belt":"orange","type":"strike","input":["D","K"],"level":"gedan","legalInKumite":true,"range":"mid","lowKick":true,"frames":{"startup":200,"active":80,"recovery":300},"damage":{"zone":"legs","amount":12},"balanceDamage":12,"staminaCost":8,"anim":"gedan_mawashi"},{"id":"hiza_geri","name":"Hiza geri","nameLt":"Kelio smūgis","nameEn":"Knee strike","descLt":"Kelio smūgis į liemenį iš arti.","descEn":"Knee strike to the body at close range.","belt":"orange","type":"strike","input":["F","K"],"level":"chudan","legalInKumite":true,"range":"close","advance":20,"frames":{"startup":170,"active":70,"recovery":260},"damage":{"zone":"body","amount":11},"balanceDamage":8,"staminaCost":8,"anim":"hiza_geri"},{"id":"sune_uke","name":"Sune uke","nameLt":"Blokas blauzda","nameEn":"Shin block","descLt":"Žemo spyrio blokavimas pakelta blauzda. Laikyk ↓G, kai skrenda žemas spyris.","descEn":"Low kick check with a raised shin. Hold ↓G when a low kick is coming.","belt":"orange","type":"guard","input":["D","G"],"level":"gedan","legalInKumite":true,"auto":true,"condition":"vsLowKick","staminaCost":3,"anim":"sune_uke","lesson":{"partner":"gedan_mawashi_geri"}},{"id":"chudan_mawashi_geri","name":"Chudan mawashi geri","nameLt":"Šoninis spyris į liemenį","nameEn":"Middle roundhouse kick","descLt":"Šoninis (lankinis) spyris į liemenį.","descEn":"Roundhouse kick to the body.","belt":"blue","type":"strike","input":["D","F","K"],"level":"chudan","legalInKumite":true,"range":"mid","frames":{"startup":260,"active":90,"recovery":360},"damage":{"zone":"body","amount":14},"balanceDamage":10,"staminaCost":10,"anim":"chudan_mawashi"},{"id":"yoko_geri_chudan","name":"Yoko geri chudan","nameLt":"Spyris šonu","nameEn":"Side kick","descLt":"Spyris šonu, kulnu į liemenį – atstumia varžovą.","descEn":"Side kick with the heel to the body – pushes the opponent back.","belt":"blue","type":"strike","input":["B","F","K"],"level":"chudan","legalInKumite":true,"range":"midfar","knockback":90,"frames":{"startup":240,"active":90,"recovery":340},"damage":{"zone":"body","amount":11},"balanceDamage":16,"staminaCost":10,"anim":"yoko_geri"},{"id":"hiji_chudan_uchi","name":"Hiji chudan uchi","nameLt":"Alkūnė į liemenį","nameEn":"Elbow strike to the body","descLt":"Alkūnės smūgis į liemenį iš arti (tik į liemenį!).","descEn":"Elbow strike to the body at close range (body only!).","belt":"blue","type":"strike","input":["F","F","A"],"level":"chudan","legalInKumite":true,"range":"close","advance":25,"frames":{"startup":150,"active":60,"recovery":230},"damage":{"zone":"body","amount":12},"balanceDamage":7,"staminaCost":7,"anim":"hiji_uchi"},{"id":"seiken_ago_uchi","name":"Seiken ago uchi","nameLt":"Kumštis į smakrą","nameEn":"Punch to the chin","descLt":"Kumštis iš apačios į smakrą. Tik kihon – kumite metu draudžiama!","descEn":"Rising punch to the chin. Kihon only – forbidden in kumite!","belt":"blue","type":"strike","input":["D","U","A"],"level":"jodan","legalInKumite":false,"foulChui":1,"range":"close","frames":{"startup":160,"active":60,"recovery":240},"damage":{"zone":"head","amount":10},"balanceDamage":6,"staminaCost":5,"anim":"ago_uchi"},{"id":"morote_uke","name":"Morote uke","nameLt":"Dviejų rankų gynyba","nameEn":"Two-handed block","descLt":"Dviejų rankų gynyba – stipresnė, bet lėtesnė. Laikyk G.","descEn":"Two-handed block – stronger but slower. Hold G.","belt":"blue","type":"guard","input":["G"],"level":"chudan","legalInKumite":true,"hold":true,"staminaCost":3,"anim":"morote_uke"},{"id":"jodan_mae_geri","name":"Jodan mae geri","nameLt":"Tiesus spyris į galvą","nameEn":"Front kick to the head","descLt":"Tiesus spyris į galvą.","descEn":"Front kick to the head.","belt":"yellow","type":"strike","input":["U","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":230,"active":80,"recovery":330},"damage":{"zone":"head","amount":22},"balanceDamage":12,"staminaCost":11,"anim":"jodan_mae_geri"},{"id":"jodan_mawashi_geri","name":"Jodan mawashi geri","nameLt":"Aukštas šoninis spyris","nameEn":"High roundhouse kick","descLt":"Aukštas šoninis spyris į galvą.","descEn":"High roundhouse kick to the head.","belt":"yellow","type":"strike","input":["D","F","U","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":320,"active":100,"recovery":450},"damage":{"zone":"head","amount":30},"balanceDamage":15,"staminaCost":14,"anim":"jodan_mawashi"},{"id":"ushiro_geri","name":"Ushiro geri","nameLt":"Atgalinis spyris","nameEn":"Back kick","descLt":"Atgalinis spyris apsisukant.","descEn":"Spinning back kick.","belt":"yellow","type":"strike","input":["F","D","B","K"],"level":"chudan","legalInKumite":true,"range":"midfar","knockback":80,"frames":{"startup":340,"active":90,"recovery":460},"damage":{"zone":"body","amount":20},"balanceDamage":18,"staminaCost":14,"anim":"yoko_geri"},{"id":"kansetsu_geri","name":"Kansetsu geri","nameLt":"Spyris į kelį","nameEn":"Joint kick","descLt":"Tiesus spyris į kelį. Tik kihon – kumite metu draudžiama!","descEn":"Straight kick to the knee. Kihon only – forbidden in kumite!","belt":"yellow","type":"strike","input":["B","D","K"],"level":"gedan","legalInKumite":false,"foulChui":2,"range":"mid","frames":{"startup":200,"active":80,"recovery":300},"damage":{"zone":"legs","amount":14},"balanceDamage":12,"staminaCost":8,"anim":"gedan_mawashi"},{"id":"mawashi_uke","name":"Mawashi uke","nameLt":"Apskritiminė gynyba","nameEn":"Circular block","descLt":"Apskritiminė gynyba; sėkminga atveria 400 ms kontratakos langą.","descEn":"Circular block; success opens a 400 ms counter window.","belt":"yellow","type":"guard","input":["F","G"],"level":"chudan","legalInKumite":true,"staminaCost":4,"anim":"morote_uke"},{"id":"kakato_otoshi","name":"Kakato otoshi","nameLt":"„Kirvio“ spyris","nameEn":"Axe kick","descLt":"„Kirvio“ spyris kulnu iš viršaus (oroshi kakato geri).","descEn":"Axe kick with the heel from above (oroshi kakato geri).","belt":"green","type":"strike","input":["U","D","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":380,"active":100,"recovery":500},"damage":{"zone":"head","amount":32},"balanceDamage":16,"staminaCost":16,"anim":"jodan_mae_geri"},{"id":"ushiro_mawashi_geri","name":"Ushiro mawashi geri","nameLt":"Sukamasis spyris kulnu","nameEn":"Spinning hook kick","descLt":"Sukamasis spyris kulnu į galvą.","descEn":"Spinning heel kick to the head.","belt":"green","type":"strike","input":["CIRCLE","K"],"level":"jodan","legalInKumite":true,"range":"midfar","frames":{"startup":450,"active":100,"recovery":600},"damage":{"zone":"head","amount":40},"balanceDamage":20,"staminaCost":20,"anim":"jodan_mawashi"},{"id":"uchi_mawashi_geri","name":"Uchi mawashi geri","nameLt":"Spyris iš vidaus į išorę","nameEn":"Inside crescent kick","descLt":"Aukštas spyris iš vidaus į išorę.","descEn":"High crescent kick from the inside out.","belt":"green","type":"strike","input":["U","B","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":300,"active":90,"recovery":420},"damage":{"zone":"head","amount":24},"balanceDamage":12,"staminaCost":13,"anim":"jodan_mawashi"},{"id":"ashi_barai","name":"Ashi barai","nameLt":"Pakirtimas","nameEn":"Foot sweep","descLt":"Kojos pakirtimas; iškart po jo galima smogti gedan tsuki (↓A).","descEn":"Foot sweep; follow immediately with gedan tsuki (↓A).","belt":"green","type":"strike","input":["D","B","K"],"level":"gedan","legalInKumite":true,"range":"mid","frames":{"startup":220,"active":80,"recovery":320},"damage":{"zone":"legs","amount":5},"balanceDamage":30,"staminaCost":9,"anim":"gedan_mawashi"},{"id":"gedan_tsuki_followup","name":"Gedan tsuki","nameLt":"Smūgis po pakirtimo","nameEn":"Follow-up punch after a sweep","descLt":"Kontroliuojamas smūgis į parkritusį iškart po pakirtimo.","descEn":"Controlled punch to the downed opponent right after a sweep.","belt":"green","type":"strike","input":["D","A"],"level":"gedan","legalInKumite":true,"auto":true,"condition":"afterSweep","range":"close","frames":{"startup":150,"active":60,"recovery":260},"damage":{"zone":"body","amount":6},"balanceDamage":0,"staminaCost":5,"anim":"shita_tsuki"},{"id":"tobi_mae_geri","name":"Tobi mae geri","nameLt":"Šuolinis tiesus spyris","nameEn":"Jumping front kick","descLt":"Šuolinis tiesus spyris.","descEn":"Jumping front kick.","belt":"brown","type":"strike","input":["U","U","K"],"level":"jodan","legalInKumite":true,"range":"midfar","advance":40,"frames":{"startup":300,"active":100,"recovery":480},"damage":{"zone":"head","amount":26},"balanceDamage":16,"staminaCost":15,"anim":"jodan_mae_geri"},{"id":"tobi_hiza_geri","name":"Tobi hiza geri","nameLt":"Šuolinis kelio smūgis","nameEn":"Jumping knee strike","descLt":"Šuolinis kelio smūgis.","descEn":"Jumping knee strike.","belt":"brown","type":"strike","input":["U","U","F","K"],"level":"jodan","legalInKumite":true,"range":"mid","advance":60,"frames":{"startup":280,"active":90,"recovery":460},"damage":{"zone":"head","amount":28},"balanceDamage":18,"staminaCost":15,"anim":"hiza_geri"},{"id":"tobi_nidan_geri","name":"Tobi nidan geri","nameLt":"Dvigubas šuolinis spyris","nameEn":"Jumping double kick","descLt":"Dvigubas šuolinis spyris.","descEn":"Jumping double front kick.","belt":"brown","type":"strike","input":["U","U","K","K"],"level":"jodan","legalInKumite":true,"range":"midfar","advance":50,"frames":{"startup":220,"active":120,"recovery":520},"damage":{"zone":"head","amount":30},"balanceDamage":18,"staminaCost":18,"anim":"jodan_mae_geri"},{"id":"tobi_ushiro_mawashi_geri","name":"Tobi ushiro mawashi geri","nameLt":"Šuolinis sukamasis spyris","nameEn":"Jumping spinning hook kick","descLt":"Šuolinis sukamasis spyris kulnu.","descEn":"Jumping spinning heel kick.","belt":"brown","type":"strike","input":["U","U","CIRCLE","K"],"level":"jodan","legalInKumite":true,"range":"midfar","frames":{"startup":480,"active":110,"recovery":650},"damage":{"zone":"head","amount":46},"balanceDamage":24,"staminaCost":24,"anim":"jodan_mawashi"},{"id":"kiai_mode","name":"Kiai","nameLt":"KIAI režimas","nameEn":"KIAI mode","descLt":"5 s: +25 % žala, ištvermė nesmunka. Reikia pilnos ki juostos.","descEn":"5 s: +25 % damage, no stamina drain. Needs a full ki bar.","belt":"black","type":"mode","input":["KIAI"],"legalInKumite":true}]},"combos":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"sequence: techniku id grandine (renzoku). '@block' = sekminga gynyba. bonus raktai: damageMult, legDamageMult, balanceBonus, unblockable (MVP); wazaAriIfLegDamageOver, autoWazaAri, guaranteedWazaAri (4 etapas).","combos":[{"id":"sanbon_tsuki","name":"Sanbon tsuki","nameLt":"Trys smūgiai iš eilės","nameEn":"Triple punch","belt":"white","sequence":["seiken_gyaku_tsuki","seiken_gyaku_tsuki","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.15,"balanceBonus":10}},{"id":"mae_gyaku","name":"Mae geri – gyaku tsuki","nameLt":"Spyris ir kumštis","nameEn":"Front kick – reverse punch","belt":"white","sequence":["mae_geri_chudan","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.15}},{"id":"shita_gedan","name":"Shita tsuki – gedan mawashi","nameLt":"Smūgis iš apačios ir žemas spyris","nameEn":"Uppercut – low kick","belt":"orange","sequence":["seiken_shita_tsuki","gedan_mawashi_geri"],"bonus":{"damageMult":1.2,"legDamageMult":1.5}},{"id":"kagi_kagi_gedan","name":"Kagi tsuki – kagi tsuki – gedan","nameLt":"Du kabliukai ir žemas spyris","nameEn":"Double hook – low kick","belt":"orange","sequence":["seiken_kagi_tsuki","seiken_kagi_tsuki","gedan_mawashi_geri"],"bonus":{"damageMult":1.2}},{"id":"gyaku_shita_chudan","name":"Gyaku tsuki – shita tsuki – chudan mawashi","nameLt":"Du kumščiai ir šoninis spyris","nameEn":"Two punches – middle roundhouse","belt":"blue","sequence":["seiken_gyaku_tsuki","seiken_shita_tsuki","chudan_mawashi_geri"],"bonus":{"damageMult":1.25}},{"id":"uke_hiza","name":"Uke – hiza geri","nameLt":"Gynyba ir kelio kontrataka","nameEn":"Block – knee counter","belt":"blue","sequence":["@block","hiza_geri"],"bonus":{"unblockable":true},"lesson":{"partner":"seiken_gyaku_tsuki"}},{"id":"gedan_jodan","name":"Gedan – jodan mawashi","nameLt":"Žemas ir aukštas spyris ta pačia koja","nameEn":"Low – high kick, same leg","belt":"yellow","sequence":["gedan_mawashi_geri","jodan_mawashi_geri"],"bonus":{"wazaAriIfLegDamageOver":50}},{"id":"mae_ushiro","name":"Mae geri – ushiro geri","nameLt":"Tiesus ir atgalinis spyris","nameEn":"Front kick – back kick","belt":"yellow","sequence":["mae_geri_chudan","ushiro_geri"],"bonus":{"damageMult":1.25}},{"id":"sanbon_kakato","name":"Sanbon tsuki – kakato otoshi","nameLt":"Trys smūgiai ir kirvio spyris","nameEn":"Triple punch – axe kick","belt":"green","sequence":["seiken_gyaku_tsuki","seiken_gyaku_tsuki","seiken_gyaku_tsuki","kakato_otoshi"],"bonus":{"unblockable":true}},{"id":"gedan_ushiro_mawashi","name":"Gedan – ushiro mawashi","nameLt":"Žemas ir sukamasis spyris","nameEn":"Low kick – spinning hook kick","belt":"green","sequence":["gedan_mawashi_geri","ushiro_mawashi_geri"],"bonus":{"damageMult":1.3}},{"id":"ashi_gedan_tsuki","name":"Ashi barai – gedan tsuki","nameLt":"Pakirtimas ir smūgis","nameEn":"Sweep – follow-up punch","belt":"brown","sequence":["ashi_barai","gedan_tsuki_followup"],"bonus":{"autoWazaAri":true}},{"id":"nidan_gyaku","name":"Tobi nidan – gyaku tsuki","nameLt":"Dvigubas šuolinis spyris ir kumštis","nameEn":"Jumping double kick – reverse punch","belt":"brown","sequence":["tobi_nidan_geri","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.35}},{"id":"osu_no_seishin","name":"Osu no seishin","nameLt":"Signatūrinė kombinacija","nameEn":"Signature combination","belt":"black","sequence":["seiken_gyaku_tsuki","seiken_shita_tsuki","gedan_mawashi_geri","chudan_mawashi_geri","jodan_mawashi_geri"],"bonus":{"guaranteedWazaAri":true}}]},"belts":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"available=false skyriai laukia 4 etapo. exam.kumite = kovu skaicius is eiles. tournament.format: series (kovos is eiles) | bracket (eliminacija).","belts":[{"id":"white","nameLt":"Baltas","nameEn":"White","kyu":["mukyu"],"color":"#f4f1ea","available":true,"unlocksLt":"Bazė: stovos, tiesus smūgis, gynyba","unlocksEn":"Basics: stances, straight punch, blocks","matchTimeSec":60,"bg":"dojo","exam":null,"tournament":{"id":"dojo_sparring","nameLt":"Dojo sparingas su 3 mokiniais","nameEn":"Dojo sparring with 3 students","format":"series","size":4,"bg":"dojo"}},{"id":"orange","nameLt":"Oranžinis","nameEn":"Orange","kyu":[10,9],"color":"#f08a24","available":true,"unlocksLt":"Pirmieji smūgiai į liemenį, žemas spyris","unlocksEn":"First body punches, low kick","bg":"dojo","exam":{"kihonCount":12,"kata":"taikyoku_sono_ichi","kumite":1},"tournament":{"id":"city_cup","nameLt":"Miesto turnyras","nameEn":"City tournament","format":"bracket","size":4,"bg":"hall"}},{"id":"blue","nameLt":"Mėlynas","nameEn":"Blue","kyu":[8,7],"color":"#2f6fd6","available":true,"unlocksLt":"Vidurinis šoninis spyris, alkūnė","unlocksEn":"Middle roundhouse kick, elbow","bg":"dojo","exam":{"kihonCount":14,"kata":"taikyoku_sono_san","kumite":2},"tournament":{"id":"regional_cup","nameLt":"Regiono turnyras","nameEn":"Regional tournament","format":"bracket","size":8,"bg":"hall"}},{"id":"yellow","nameLt":"Geltonas","nameEn":"Yellow","kyu":[6,5],"color":"#f2cf2e","available":false,"unlocksLt":"Aukštas spyris, atgalinis spyris","unlocksEn":"High kick, back kick","bg":"dojo","exam":{"kihonCount":16,"kata":"taikyoku_sono_san","kumite":3},"tournament":{"id":"national_youth","nameLt":"Nacionalinis jaunimo turnyras","nameEn":"National youth tournament","format":"bracket","size":8,"bg":"hall"}},{"id":"green","nameLt":"Žalias","nameEn":"Green","kyu":[4,3],"color":"#2e9e4a","available":false,"unlocksLt":"Kirvio spyris, sukamasis spyris","unlocksEn":"Axe kick, spinning kick","bg":"dojo","exam":{"kihonCount":18,"kata":"taikyoku_sono_san","kumite":5},"tournament":{"id":"national_cup","nameLt":"Nacionalinis čempionatas","nameEn":"National championship","format":"bracket","size":16,"bg":"arena"}},{"id":"brown","nameLt":"Rudas","nameEn":"Brown","kyu":[2,1],"color":"#7a4a22","available":false,"unlocksLt":"Šuoliniai spyriai, ilgos kombinacijos","unlocksEn":"Jumping kicks, long combinations","bg":"dojo","exam":{"kihonCount":20,"kata":"taikyoku_sono_san","kumite":7},"tournament":{"id":"europe_cup","nameLt":"Europos turnyras","nameEn":"European tournament","format":"bracket","size":16,"bg":"arena"}},{"id":"black","nameLt":"Juodas","nameEn":"Black","kyu":["shodan"],"color":"#1b1b1f","available":false,"unlocksLt":"Visos technikos + signatūrinė kombinacija","unlocksEn":"All techniques + signature combination","bg":"dojo","exam":{"kihonCount":20,"kata":"taikyoku_sono_san","kumite":10},"tournament":{"id":"world_open","nameLt":"Atvirasis pasaulio turnyras","nameEn":"Open world tournament","format":"bracket","size":32,"bg":"arena"}}]},"opponents":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"Visi vardai isgalvoti. archetypes: AI elgsenos parametrai; weights: megstamu techniku svoriai (nenurodyta = 1). beltDefaults: reakcijos laikas ms ir prazangu tikimybe. difficulty daugina reakcija ir zala.","archetypes":{"tank":{"nameLt":"Tankas","nameEn":"Tank","descLt":"Spaudžia arti, daug smūgių į liemenį.","descEn":"Presses in close with lots of body punches.","prefDist":96,"aggression":0.78,"retreatChance":0.04,"guardIdle":0.08,"comboChance":0.4,"cooldownMs":[140,420],"block":{"jodan":0.3,"chudan":0.5,"gedan":0.3},"weights":{"seiken_gyaku_tsuki":3,"seiken_oi_tsuki":2,"seiken_shita_tsuki":3,"seiken_kagi_tsuki":3,"hiza_geri":2.5,"hiji_chudan_uchi":2.5,"mae_geri_chudan":0.6,"gedan_mawashi_geri":0.8}},"kicker":{"nameLt":"Spyrikas","nameEn":"Kicker","descLt":"Laiko atstumą ir spardo.","descEn":"Keeps distance and kicks.","prefDist":142,"aggression":0.58,"retreatChance":0.28,"guardIdle":0.12,"comboChance":0.2,"cooldownMs":[260,640],"block":{"jodan":0.4,"chudan":0.45,"gedan":0.45},"weights":{"mae_geri_chudan":3,"gedan_mawashi_geri":3,"chudan_mawashi_geri":3.5,"yoko_geri_chudan":3,"seiken_gyaku_tsuki":0.6,"hiza_geri":0.8}},"counter":{"nameLt":"Kontratakuotojas","nameEn":"Counter-fighter","descLt":"Daug blokuoja ir atsako po gynybos.","descEn":"Blocks a lot and answers after defending.","prefDist":118,"aggression":0.34,"retreatChance":0.14,"guardIdle":0.4,"comboChance":0.25,"cooldownMs":[320,760],"block":{"jodan":0.6,"chudan":0.78,"gedan":0.62},"weights":{"hiza_geri":2.5,"seiken_gyaku_tsuki":2,"seiken_shita_tsuki":2,"gedan_mawashi_geri":1.5,"chudan_mawashi_geri":1.5}}},"beltDefaults":{"white":{"reactionMs":600,"foulChance":0.05,"skill":0.6},"orange":{"reactionMs":520,"foulChance":0.035,"skill":0.75},"blue":{"reactionMs":440,"foulChance":0.025,"skill":0.9},"yellow":{"reactionMs":370,"foulChance":0.02,"skill":1},"green":{"reactionMs":300,"foulChance":0.015,"skill":1.1},"brown":{"reactionMs":240,"foulChance":0.01,"skill":1.2},"black":{"reactionMs":180,"foulChance":0.005,"skill":1.3}},"difficulty":{"easy":{"reaction":1.35,"damage":0.8,"aggression":0.8},"normal":{"reaction":1,"damage":1,"aggression":1},"hard":{"reaction":0.75,"damage":1.15,"aggression":1.15}},"roster":[{"id":"w_jonas","name":"Jonas","belt":"white","archetype":"tank"},{"id":"w_ugne","name":"Ugnė","belt":"white","archetype":"kicker"},{"id":"w_matas","name":"Matas","belt":"white","archetype":"counter"},{"id":"o_rokas","name":"Rokas Vėtra","belt":"orange","archetype":"tank"},{"id":"o_emilija","name":"Emilija Šilas","belt":"orange","archetype":"kicker"},{"id":"o_dovas","name":"Dovas Girėnas","belt":"orange","archetype":"counter"},{"id":"o_kenji","name":"Kenji Morita","belt":"orange","archetype":"tank"},{"id":"b_ainis","name":"Ainis Uosis","belt":"blue","archetype":"counter"},{"id":"b_lukne","name":"Luknė Beržė","belt":"blue","archetype":"kicker"},{"id":"b_tadas","name":"Tadas Kalnius","belt":"blue","archetype":"tank"},{"id":"b_hana","name":"Hana Sato","belt":"blue","archetype":"kicker"},{"id":"b_oskar","name":"Oskar Lind","belt":"blue","archetype":"tank"},{"id":"b_mila","name":"Mila Novak","belt":"blue","archetype":"counter"},{"id":"b_vytis","name":"Vytis Ąžuolas","belt":"blue","archetype":"tank"}]},"kata":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"Ritmo mini zaidimas. steps: technikos id; '*' priekyje = pries judesi apsisukama. Formos supaprastintos zaidimui (20 skaiciavimu).","kata":[{"id":"taikyoku_sono_ichi","name":"Taikyoku sono ichi","belt":"white","beatMs":1250,"steps":["*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","seiken_oi_tsuki","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","seiken_oi_tsuki","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki"]},{"id":"taikyoku_sono_ni","name":"Taikyoku sono ni","belt":"white","beatMs":1200,"steps":["*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki"]},{"id":"taikyoku_sono_san","name":"Taikyoku sono san","belt":"orange","beatMs":1150,"steps":["*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki"]}]},"rules":{"_license":"SPDX-License-Identifier: BUSL-1.1","match":{"mainTimeSec":90,"enchoTimeSec":90,"maxEncho":2,"knockdownCountSec":3,"chuiLimit":4,"passivitySec":10,"votesNeeded":3,"judgeNoise":0.05,"hikiwakeMargin":0.08,"fumeiChance":0.05,"flagDelayMs":[100,250],"holdFoulSec":1.5,"holdFoulDist":118,"jogaiChuiFrom":2,"bowWindowMs":2800,"chuiDecisiveDiff":2,"clearLeadMargin":0.3,"balanceBreakVoteChance":0.7,"haltWindowMs":700,"hantei":{"wazaAri":100,"damage":1,"effective":3,"techniques":0.5,"initiative":0.4,"chui":12}},"arena":{"xMin":230,"xMax":1050,"startAka":540,"startShiro":740,"groundY":540},"input":{"bufferMs":350,"buttonMs":200,"holdMs":300,"deadzone":0.2,"dashTapMs":250},"combat":{"ranges":{"close":105,"mid":150,"midfar":172,"far":195},"minSeparation":86,"damageScale":0.75,"zoneAfterGetUp":80,"headAfterGetUp":60,"walkSpeed":150,"backSpeed":125,"dashDist":150,"dashMs":170,"backdashDist":140,"backdashMs":200,"backdashIframesMs":150,"dashStamina":6,"chainWindow":0.3,"chainGraceMs":160,"chainBonus":0.1,"chainBonusMax":0.4,"holdBonus":{"damage":1.3,"stamina":1.5,"slow":1.25},"block":{"factor":0.25,"moroteFactor":0.1,"suneFactor":0.1,"tiredFactor":0.4,"staminaCost":3,"perfectMs":120,"perfectKi":10,"openMs":300,"counterMs":400},"moroteHoldMs":300,"headKnockdown":70,"staggerMs":900,"hitStunMs":220,"blockStunMs":110,"hitStopMs":[60,100],"staminaRegen":28,"staminaRegenDelayMs":700,"balanceRegen":45,"balanceRegenDelayMs":1200,"tiredBelow":20,"tiredSlow":1.3,"legSlow":0.7,"legBalanceMax":75,"bodyRegenFactor":0.6,"guardStaminaDrain":4,"kiPerDamage":0.6,"kiBlock":3,"kiInitiative":1.5,"kiaiMs":5000,"kiaiDamage":1.25,"getUp":{"baseMs":1200,"perDamageMs":2400,"randMs":400,"headExtraMs":500,"mashStep":0.03,"mashMax":0.3,"riseMs":500}},"recovery":{"exam":0.3,"tournament":0.6},"lesson":{"reps":5,"comboReps":3},"exam":{"kihonCount":12,"kihonTimeMs":2000,"passScore":0.7,"kataPerfectMs":130,"kataGoodMs":320},"calls":{"aka_shiro":"Aka, Shiro","shomen_ni_rei":"Shomen ni rei","shushin_ni_rei":"Shushin ni rei","otagai_ni_rei":"Otagai ni rei","kamaete":"Kamaete","hajime":"Hajime!","yame":"Yame","zokko":"Zokko","jikan":"Jikan","fukushin_shugo":"Fukushin shūgō","shomen_muite":"Shomen muite","hantei_o_torimasu":"Hantei o torimasu","hantei":"Hantei!","hikiwake":"Hikiwake","encho":"Enchō","waza_ari":"Waza-ari","ippon":"Ippon","awasete_ippon":"Waza-ari awasete ippon","chui_1":"Chui ichi","chui_2":"Chui ni","chui_3":"Chui san","shikkaku":"Shikkaku","jogai":"Jogai","mitomezu":"Mitomezu","keikoku":"Keikoku","aka":"Aka","shiro":"Shiro","aka_no_kachi":"Aka no kachi","shiro_no_kachi":"Shiro no kachi","osu":"Osu!"}},"anim":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"2D skeleto pozos (laipsniai). Kampas matuojamas nuo 'zemyn', teigiamas = pirmyn. fs/fe priekine ranka (petys/alkune), bs/be galine; fh/fk priekine koja (klubas/kelis), bh/bk galine; torso = liemens palinkimas pirmyn; rot = viso kuno pasukimas; hipH = klubo aukstis (jei nenurodyta - skaiciuojamas pagal pedas); dx = poslinkis pirmyn. Nenurodytos reiksmes paimamos is 'kamae'. anims.keys: [faze, poza], faze 0-1 startup, 1-2 active, 2-3 recovery.","poses":{"kamae":{"torso":8,"head":0,"fs":35,"fe":100,"bs":10,"be":115,"fh":30,"fk":38,"bh":-22,"bk":4,"dx":0,"rot":0},"stand":{"torso":0,"fs":4,"fe":8,"bs":-4,"be":8,"fh":5,"fk":2,"bh":-5,"bk":2},"bow":{"torso":42,"head":12,"fs":6,"fe":4,"bs":0,"be":4,"fh":5,"fk":2,"bh":-5,"bk":2},"crouch":{"torso":14,"fh":48,"fk":75,"bh":-10,"bk":50},"walk_a":{"fh":38,"fk":34,"bh":-12,"bk":14},"walk_b":{"fh":20,"fk":36,"bh":-30,"bk":2},"dash":{"torso":20,"fh":46,"fk":40,"bh":-36,"bk":8,"fs":45,"fe":95},"backdash":{"torso":-8,"fh":18,"fk":8,"bh":-30,"bk":38},"guard_chudan":{"torso":4,"fs":58,"fe":72,"bs":25,"be":110},"guard_jodan":{"torso":2,"fs":118,"fe":62,"bs":20,"be":115},"guard_gedan":{"torso":12,"fs":30,"fe":8,"bs":5,"be":120},"sune_uke":{"torso":4,"fs":40,"fe":100,"fh":72,"fk":96,"bh":-4,"bk":4},"morote_uke":{"torso":6,"fs":62,"fe":84,"bs":56,"be":88},"hit_body":{"torso":28,"head":16,"fs":22,"fe":80,"bs":10,"be":90,"dx":-6},"hit_head":{"torso":-18,"head":-26,"fs":10,"fe":70,"bs":-10,"be":70,"dx":-8},"hit_legs":{"torso":16,"fh":42,"fk":70,"bh":-18,"bk":20,"dx":-4},"stagger":{"torso":-10,"head":-12,"fs":-10,"fe":30,"bs":-22,"be":30,"fh":16,"fk":30,"bh":-30,"bk":30},"fall":{"rot":-45,"torso":-6,"head":-15,"fs":30,"fe":30,"bs":-30,"be":30,"fh":40,"fk":50,"bh":10,"bk":40,"hipH":55},"down":{"rot":-88,"torso":0,"head":0,"fs":12,"fe":20,"bs":-20,"be":20,"fh":8,"fk":10,"bh":22,"bk":34,"hipH":16},"kneel":{"torso":24,"fs":20,"fe":40,"bs":0,"be":60,"fh":72,"fk":100,"bh":-8,"bk":92},"gyaku_chamber":{"torso":4,"bs":-28,"be":112,"fs":42,"fe":90},"gyaku_strike":{"torso":15,"bs":88,"be":4,"fs":-6,"fe":120,"fh":34,"fk":40,"bh":-28,"bk":0,"dx":10},"oi_chamber":{"torso":6,"fs":-22,"fe":112,"bs":30,"be":100,"fh":10,"fk":28,"bh":-20,"bk":20},"oi_strike":{"torso":13,"fs":88,"fe":4,"bs":-10,"be":116,"fh":40,"fk":46,"bh":-30,"bk":2,"dx":14},"jodan_strike":{"torso":10,"bs":114,"be":4,"fs":0,"fe":120,"dx":8},"shita_chamber":{"torso":17,"bs":-16,"be":96,"fh":38,"fk":60,"bh":-28,"bk":20},"shita_strike":{"torso":12,"bs":48,"be":86,"fs":0,"fe":118,"fh":34,"fk":48,"dx":10},"kagi_chamber":{"torso":6,"bs":-30,"be":100},"kagi_strike":{"torso":17,"bs":76,"be":80,"fs":0,"fe":118,"dx":8},"ago_strike":{"torso":6,"bs":70,"be":102,"fs":0,"fe":118,"dx":8},"hiji_chamber":{"torso":8,"fs":10,"fe":150},"hiji_strike":{"torso":19,"fs":82,"fe":150,"bs":-10,"be":110,"fh":40,"fk":46,"dx":16},"mae_chamber":{"torso":-4,"bh":85,"bk":100,"fh":6,"fk":8},"mae_strike":{"torso":-10,"bh":88,"bk":6,"fh":4,"fk":6,"dx":8},"gedan_chamber":{"torso":-4,"bh":40,"bk":70,"fh":4,"fk":8},"gedan_strike":{"torso":-8,"bh":54,"bk":8,"fh":0,"fk":6,"dx":6},"hiza_chamber":{"torso":6,"bh":30,"bk":60,"fh":8,"fk":10},"hiza_strike":{"torso":14,"bh":100,"bk":130,"fh":6,"fk":8,"fs":62,"fe":60,"bs":58,"be":60,"dx":14},"mawashi_chamber":{"torso":-8,"bh":60,"bk":110,"fh":2,"fk":6},"mawashi_strike":{"torso":-16,"bh":92,"bk":4,"fh":-4,"fk":4,"dx":6},"yoko_chamber":{"torso":-12,"bh":80,"bk":120,"fh":0,"fk":6},"yoko_strike":{"torso":-30,"bh":95,"bk":0,"fh":-6,"fk":4,"fs":30,"fe":60,"dx":10},"jodan_mae_strike":{"torso":-14,"bh":124,"bk":4,"fh":2,"fk":4,"dx":8},"jodan_mawashi_strike":{"torso":-24,"bh":128,"bk":2,"fh":-4,"fk":4,"dx":6}},"anims":{"gyaku_tsuki":{"keys":[[0,"kamae"],[0.7,"gyaku_chamber"],[1,"gyaku_strike"],[2,"gyaku_strike"],[3,"kamae"]]},"oi_tsuki":{"keys":[[0,"kamae"],[0.6,"oi_chamber"],[1,"oi_strike"],[2,"oi_strike"],[3,"kamae"]]},"jodan_tsuki":{"keys":[[0,"kamae"],[0.7,"gyaku_chamber"],[1,"jodan_strike"],[2,"jodan_strike"],[3,"kamae"]]},"shita_tsuki":{"keys":[[0,"kamae"],[0.7,"shita_chamber"],[1,"shita_strike"],[2,"shita_strike"],[3,"kamae"]]},"kagi_tsuki":{"keys":[[0,"kamae"],[0.7,"kagi_chamber"],[1,"kagi_strike"],[2,"kagi_strike"],[3,"kamae"]]},"ago_uchi":{"keys":[[0,"kamae"],[0.7,"shita_chamber"],[1,"ago_strike"],[2,"ago_strike"],[3,"kamae"]]},"hiji_uchi":{"keys":[[0,"kamae"],[0.6,"hiji_chamber"],[1,"hiji_strike"],[2,"hiji_strike"],[3,"kamae"]]},"mae_geri":{"keys":[[0,"kamae"],[0.7,"mae_chamber"],[1,"mae_strike"],[2,"mae_strike"],[2.5,"mae_chamber"],[3,"kamae"]]},"gedan_mawashi":{"keys":[[0,"kamae"],[0.7,"gedan_chamber"],[1,"gedan_strike"],[2,"gedan_strike"],[2.5,"gedan_chamber"],[3,"kamae"]]},"hiza_geri":{"keys":[[0,"kamae"],[0.6,"hiza_chamber"],[1,"hiza_strike"],[2,"hiza_strike"],[3,"kamae"]]},"chudan_mawashi":{"keys":[[0,"kamae"],[0.7,"mawashi_chamber"],[1,"mawashi_strike"],[2,"mawashi_strike"],[2.5,"mawashi_chamber"],[3,"kamae"]]},"yoko_geri":{"keys":[[0,"kamae"],[0.7,"yoko_chamber"],[1,"yoko_strike"],[2,"yoko_strike"],[2.5,"yoko_chamber"],[3,"kamae"]]},"jodan_mae_geri":{"keys":[[0,"kamae"],[0.7,"mae_chamber"],[1,"jodan_mae_strike"],[2,"jodan_mae_strike"],[2.5,"mae_chamber"],[3,"kamae"]]},"jodan_mawashi":{"keys":[[0,"kamae"],[0.7,"mawashi_chamber"],[1,"jodan_mawashi_strike"],[2,"jodan_mawashi_strike"],[2.5,"mawashi_chamber"],[3,"kamae"]]},"guard_chudan":{"keys":[[0,"guard_chudan"]]},"guard_jodan":{"keys":[[0,"guard_jodan"]]},"guard_gedan":{"keys":[[0,"guard_gedan"]]},"sune_uke":{"keys":[[0,"sune_uke"]]},"morote_uke":{"keys":[[0,"morote_uke"]]}}},"strings.lt":{"_license":"SPDX-License-Identifier: BUSL-1.1","hud.you":"TU","hud.player":"Žaidėjas","hud.locked":"neatrakinta","hud.perfect":"Tobulas blokas!","ui.rotate":"Pasukite įrenginį horizontaliai","ui.paused":"Pauzė","ui.resume":"Tęsti","ui.quit":"Išeiti","result.ippon":"Ippon","result.awasete":"Awasete ippon","result.hantei":"Hantei","result.shikkaku":"Shikkaku"},"strings.en":{"_license":"SPDX-License-Identifier: BUSL-1.1","hud.you":"TU","hud.player":"Žaidėjas","hud.locked":"neatrakinta","hud.perfect":"Tobulas blokas!","ui.rotate":"Pasukite įrenginį horizontaliai","ui.paused":"Pauzė","ui.resume":"Tęsti","ui.quit":"Išeiti","result.ippon":"Ippon","result.awasete":"Awasete ippon","result.hantei":"Hantei","result.shikkaku":"Shikkaku"}};
+globalThis.__OSU_DATA__ = {"techniques":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"input: krypciu kodai F B U D DF UF DB UB CIRCLE + paskutinis mygtukas A K G KIAI. frames ms. range: close|mid|midfar|far. level: jodan|chudan|gedan.","techniques":[{"id":"seiken_gyaku_tsuki","name":"Seiken gyaku tsuki","nameLt":"Tiesus kumštis priešinga ranka","nameEn":"Reverse straight punch","descLt":"Tiesus kumštis į liemenį priešinga ranka.","descEn":"Straight punch to the body with the rear hand.","belt":"white","type":"strike","input":["A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":120,"active":60,"recovery":180},"damage":{"zone":"body","amount":6},"balanceDamage":4,"staminaCost":4,"anim":"gyaku_tsuki"},{"id":"seiken_oi_tsuki","name":"Seiken oi tsuki","nameLt":"Tiesus kumštis su žingsniu","nameEn":"Lunge punch","descLt":"Tiesus kumštis į liemenį žengiant pirmyn.","descEn":"Straight punch to the body while stepping forward.","belt":"white","type":"strike","input":["F","A"],"level":"chudan","legalInKumite":true,"range":"close","advance":60,"frames":{"startup":160,"active":60,"recovery":220},"damage":{"zone":"body","amount":7},"balanceDamage":5,"staminaCost":5,"anim":"oi_tsuki"},{"id":"seiken_jodan_tsuki","name":"Seiken jodan tsuki","nameLt":"Kumštis į galvą","nameEn":"Punch to the head","descLt":"Kumštis į galvą. Tik kihon ir kata – kumite metu draudžiama!","descEn":"Punch to the head. Kihon and kata only – forbidden in kumite!","belt":"white","type":"strike","input":["U","A"],"level":"jodan","legalInKumite":false,"foulChui":1,"range":"close","frames":{"startup":130,"active":60,"recovery":200},"damage":{"zone":"head","amount":8},"balanceDamage":5,"staminaCost":4,"anim":"jodan_tsuki"},{"id":"mae_geri_chudan","name":"Mae geri chudan","nameLt":"Tiesus spyris į pilvą","nameEn":"Front kick to the body","descLt":"Tiesus spyris padu į pilvą.","descEn":"Front kick with the ball of the foot to the stomach.","belt":"white","type":"strike","input":["K"],"level":"chudan","legalInKumite":true,"range":"mid","frames":{"startup":180,"active":80,"recovery":250},"damage":{"zone":"body","amount":9},"balanceDamage":10,"staminaCost":7,"anim":"mae_geri"},{"id":"chudan_uchi_uke","name":"Chudan uchi uke","nameLt":"Vidurinė gynyba","nameEn":"Middle block","descLt":"Vidurinė gynyba – stabdo smūgius į liemenį.","descEn":"Middle block – stops attacks to the body.","belt":"white","type":"guard","input":["G"],"level":"chudan","legalInKumite":true,"staminaCost":3,"anim":"guard_chudan"},{"id":"jodan_uke","name":"Jodan uke","nameLt":"Aukšta gynyba","nameEn":"High block","descLt":"Aukšta gynyba – stabdo spyrius į galvą.","descEn":"High block – stops kicks to the head.","belt":"white","type":"guard","input":["U","G"],"level":"jodan","legalInKumite":true,"staminaCost":3,"anim":"guard_jodan"},{"id":"gedan_barai","name":"Gedan barai","nameLt":"Žema gynyba","nameEn":"Low block","descLt":"Žema gynyba – stabdo žemus spyrius.","descEn":"Low sweeping block – stops low kicks.","belt":"white","type":"guard","input":["D","G"],"level":"gedan","legalInKumite":true,"staminaCost":3,"anim":"guard_gedan"},{"id":"seiken_shita_tsuki","name":"Seiken shita tsuki","nameLt":"Smūgis iš apačios","nameEn":"Uppercut to the body","descLt":"Smūgis iš apačios į pilvą ir šonkaulius.","descEn":"Rising punch to the stomach and ribs.","belt":"orange","type":"strike","input":["D","A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":150,"active":60,"recovery":220},"damage":{"zone":"body","amount":8},"balanceDamage":4,"staminaCost":5,"anim":"shita_tsuki"},{"id":"seiken_kagi_tsuki","name":"Seiken kagi tsuki","nameLt":"Kabliukas į šoną","nameEn":"Hook punch","descLt":"Kabliukas į šoną (šonkaulius).","descEn":"Hook punch to the side of the body.","belt":"orange","type":"strike","input":["D","F","A"],"level":"chudan","legalInKumite":true,"range":"close","frames":{"startup":170,"active":60,"recovery":240},"damage":{"zone":"body","amount":9},"balanceDamage":6,"staminaCost":6,"anim":"kagi_tsuki"},{"id":"gedan_mawashi_geri","name":"Gedan mawashi geri","nameLt":"Žemas šoninis spyris","nameEn":"Low roundhouse kick","descLt":"Žemas spyris blauzda į šlaunies šoną („low kick“).","descEn":"Low kick with the shin to the side of the thigh.","belt":"orange","type":"strike","input":["D","K"],"level":"gedan","legalInKumite":true,"range":"mid","lowKick":true,"frames":{"startup":200,"active":80,"recovery":300},"damage":{"zone":"legs","amount":12},"balanceDamage":12,"staminaCost":8,"anim":"gedan_mawashi"},{"id":"hiza_geri","name":"Hiza geri","nameLt":"Kelio smūgis","nameEn":"Knee strike","descLt":"Kelio smūgis į liemenį iš arti.","descEn":"Knee strike to the body at close range.","belt":"orange","type":"strike","input":["F","K"],"level":"chudan","legalInKumite":true,"range":"close","advance":20,"frames":{"startup":170,"active":70,"recovery":260},"damage":{"zone":"body","amount":11},"balanceDamage":8,"staminaCost":8,"anim":"hiza_geri"},{"id":"sune_uke","name":"Sune uke","nameLt":"Blokas blauzda","nameEn":"Shin block","descLt":"Žemo spyrio blokavimas pakelta blauzda. Laikyk ↓G, kai skrenda žemas spyris.","descEn":"Low kick check with a raised shin. Hold ↓G when a low kick is coming.","belt":"orange","type":"guard","input":["D","G"],"level":"gedan","legalInKumite":true,"auto":true,"condition":"vsLowKick","staminaCost":3,"anim":"sune_uke","lesson":{"partner":"gedan_mawashi_geri"}},{"id":"chudan_mawashi_geri","name":"Chudan mawashi geri","nameLt":"Šoninis spyris į liemenį","nameEn":"Middle roundhouse kick","descLt":"Šoninis (lankinis) spyris į liemenį.","descEn":"Roundhouse kick to the body.","belt":"blue","type":"strike","input":["D","F","K"],"level":"chudan","legalInKumite":true,"range":"mid","frames":{"startup":260,"active":90,"recovery":360},"damage":{"zone":"body","amount":14},"balanceDamage":10,"staminaCost":10,"anim":"chudan_mawashi"},{"id":"yoko_geri_chudan","name":"Yoko geri chudan","nameLt":"Spyris šonu","nameEn":"Side kick","descLt":"Spyris šonu, kulnu į liemenį – atstumia varžovą.","descEn":"Side kick with the heel to the body – pushes the opponent back.","belt":"blue","type":"strike","input":["B","F","K"],"level":"chudan","legalInKumite":true,"range":"midfar","knockback":90,"frames":{"startup":240,"active":90,"recovery":340},"damage":{"zone":"body","amount":11},"balanceDamage":16,"staminaCost":10,"anim":"yoko_geri"},{"id":"hiji_chudan_uchi","name":"Hiji chudan uchi","nameLt":"Alkūnė į liemenį","nameEn":"Elbow strike to the body","descLt":"Alkūnės smūgis į liemenį iš arti (tik į liemenį!).","descEn":"Elbow strike to the body at close range (body only!).","belt":"blue","type":"strike","input":["F","F","A"],"level":"chudan","legalInKumite":true,"range":"close","advance":25,"frames":{"startup":150,"active":60,"recovery":230},"damage":{"zone":"body","amount":12},"balanceDamage":7,"staminaCost":7,"anim":"hiji_uchi"},{"id":"seiken_ago_uchi","name":"Seiken ago uchi","nameLt":"Kumštis į smakrą","nameEn":"Punch to the chin","descLt":"Kumštis iš apačios į smakrą. Tik kihon – kumite metu draudžiama!","descEn":"Rising punch to the chin. Kihon only – forbidden in kumite!","belt":"blue","type":"strike","input":["D","U","A"],"level":"jodan","legalInKumite":false,"foulChui":1,"range":"close","frames":{"startup":160,"active":60,"recovery":240},"damage":{"zone":"head","amount":10},"balanceDamage":6,"staminaCost":5,"anim":"ago_uchi"},{"id":"morote_uke","name":"Morote uke","nameLt":"Dviejų rankų gynyba","nameEn":"Two-handed block","descLt":"Dviejų rankų gynyba – stipresnė, bet lėtesnė. Laikyk G.","descEn":"Two-handed block – stronger but slower. Hold G.","belt":"blue","type":"guard","input":["G"],"level":"chudan","legalInKumite":true,"hold":true,"staminaCost":3,"anim":"morote_uke"},{"id":"jodan_mae_geri","name":"Jodan mae geri","nameLt":"Tiesus spyris į galvą","nameEn":"Front kick to the head","descLt":"Tiesus spyris į galvą.","descEn":"Front kick to the head.","belt":"yellow","type":"strike","input":["U","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":230,"active":80,"recovery":330},"damage":{"zone":"head","amount":22},"balanceDamage":12,"staminaCost":11,"anim":"jodan_mae_geri"},{"id":"jodan_mawashi_geri","name":"Jodan mawashi geri","nameLt":"Aukštas šoninis spyris","nameEn":"High roundhouse kick","descLt":"Aukštas šoninis spyris į galvą.","descEn":"High roundhouse kick to the head.","belt":"yellow","type":"strike","input":["D","F","U","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":320,"active":100,"recovery":450},"damage":{"zone":"head","amount":30},"balanceDamage":15,"staminaCost":14,"anim":"jodan_mawashi"},{"id":"ushiro_geri","name":"Ushiro geri","nameLt":"Atgalinis spyris","nameEn":"Back kick","descLt":"Atgalinis spyris apsisukant.","descEn":"Spinning back kick.","belt":"yellow","type":"strike","input":["F","D","B","K"],"level":"chudan","legalInKumite":true,"range":"midfar","knockback":80,"frames":{"startup":340,"active":90,"recovery":460},"damage":{"zone":"body","amount":20},"balanceDamage":18,"staminaCost":14,"anim":"yoko_geri"},{"id":"kansetsu_geri","name":"Kansetsu geri","nameLt":"Spyris į kelį","nameEn":"Joint kick","descLt":"Tiesus spyris į kelį. Tik kihon – kumite metu draudžiama!","descEn":"Straight kick to the knee. Kihon only – forbidden in kumite!","belt":"yellow","type":"strike","input":["B","D","K"],"level":"gedan","legalInKumite":false,"foulChui":2,"range":"mid","frames":{"startup":200,"active":80,"recovery":300},"damage":{"zone":"legs","amount":14},"balanceDamage":12,"staminaCost":8,"anim":"gedan_mawashi"},{"id":"mawashi_uke","name":"Mawashi uke","nameLt":"Apskritiminė gynyba","nameEn":"Circular block","descLt":"Apskritiminė gynyba; sėkminga atveria 400 ms kontratakos langą.","descEn":"Circular block; success opens a 400 ms counter window.","belt":"yellow","type":"guard","input":["F","G"],"level":"chudan","legalInKumite":true,"staminaCost":4,"anim":"morote_uke"},{"id":"kakato_otoshi","name":"Kakato otoshi","nameLt":"„Kirvio“ spyris","nameEn":"Axe kick","descLt":"„Kirvio“ spyris kulnu iš viršaus (oroshi kakato geri).","descEn":"Axe kick with the heel from above (oroshi kakato geri).","belt":"green","type":"strike","input":["U","D","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":380,"active":100,"recovery":500},"damage":{"zone":"head","amount":32},"balanceDamage":16,"staminaCost":16,"anim":"jodan_mae_geri"},{"id":"ushiro_mawashi_geri","name":"Ushiro mawashi geri","nameLt":"Sukamasis spyris kulnu","nameEn":"Spinning hook kick","descLt":"Sukamasis spyris kulnu į galvą.","descEn":"Spinning heel kick to the head.","belt":"green","type":"strike","input":["CIRCLE","K"],"level":"jodan","legalInKumite":true,"range":"midfar","frames":{"startup":450,"active":100,"recovery":600},"damage":{"zone":"head","amount":40},"balanceDamage":20,"staminaCost":20,"anim":"jodan_mawashi"},{"id":"uchi_mawashi_geri","name":"Uchi mawashi geri","nameLt":"Spyris iš vidaus į išorę","nameEn":"Inside crescent kick","descLt":"Aukštas spyris iš vidaus į išorę.","descEn":"High crescent kick from the inside out.","belt":"green","type":"strike","input":["U","B","K"],"level":"jodan","legalInKumite":true,"range":"mid","frames":{"startup":300,"active":90,"recovery":420},"damage":{"zone":"head","amount":24},"balanceDamage":12,"staminaCost":13,"anim":"jodan_mawashi"},{"id":"ashi_barai","name":"Ashi barai","nameLt":"Pakirtimas","nameEn":"Foot sweep","descLt":"Kojos pakirtimas; iškart po jo galima smogti gedan tsuki (↓A).","descEn":"Foot sweep; follow immediately with gedan tsuki (↓A).","belt":"green","type":"strike","input":["D","B","K"],"level":"gedan","legalInKumite":true,"range":"mid","frames":{"startup":220,"active":80,"recovery":320},"damage":{"zone":"legs","amount":5},"balanceDamage":30,"staminaCost":9,"anim":"gedan_mawashi"},{"id":"gedan_tsuki_followup","name":"Gedan tsuki","nameLt":"Smūgis po pakirtimo","nameEn":"Follow-up punch after a sweep","descLt":"Kontroliuojamas smūgis į parkritusį iškart po pakirtimo.","descEn":"Controlled punch to the downed opponent right after a sweep.","belt":"green","type":"strike","input":["D","A"],"level":"gedan","legalInKumite":true,"auto":true,"condition":"afterSweep","range":"close","frames":{"startup":150,"active":60,"recovery":260},"damage":{"zone":"body","amount":6},"balanceDamage":0,"staminaCost":5,"anim":"shita_tsuki"},{"id":"tobi_mae_geri","name":"Tobi mae geri","nameLt":"Šuolinis tiesus spyris","nameEn":"Jumping front kick","descLt":"Šuolinis tiesus spyris.","descEn":"Jumping front kick.","belt":"brown","type":"strike","input":["U","U","K"],"level":"jodan","legalInKumite":true,"range":"midfar","advance":40,"frames":{"startup":300,"active":100,"recovery":480},"damage":{"zone":"head","amount":26},"balanceDamage":16,"staminaCost":15,"anim":"jodan_mae_geri"},{"id":"tobi_hiza_geri","name":"Tobi hiza geri","nameLt":"Šuolinis kelio smūgis","nameEn":"Jumping knee strike","descLt":"Šuolinis kelio smūgis.","descEn":"Jumping knee strike.","belt":"brown","type":"strike","input":["U","U","F","K"],"level":"jodan","legalInKumite":true,"range":"mid","advance":60,"frames":{"startup":280,"active":90,"recovery":460},"damage":{"zone":"head","amount":28},"balanceDamage":18,"staminaCost":15,"anim":"hiza_geri"},{"id":"tobi_nidan_geri","name":"Tobi nidan geri","nameLt":"Dvigubas šuolinis spyris","nameEn":"Jumping double kick","descLt":"Dvigubas šuolinis spyris.","descEn":"Jumping double front kick.","belt":"brown","type":"strike","input":["U","U","K","K"],"level":"jodan","legalInKumite":true,"range":"midfar","advance":50,"frames":{"startup":220,"active":120,"recovery":520},"damage":{"zone":"head","amount":30},"balanceDamage":18,"staminaCost":18,"anim":"jodan_mae_geri"},{"id":"tobi_ushiro_mawashi_geri","name":"Tobi ushiro mawashi geri","nameLt":"Šuolinis sukamasis spyris","nameEn":"Jumping spinning hook kick","descLt":"Šuolinis sukamasis spyris kulnu.","descEn":"Jumping spinning heel kick.","belt":"brown","type":"strike","input":["U","U","CIRCLE","K"],"level":"jodan","legalInKumite":true,"range":"midfar","frames":{"startup":480,"active":110,"recovery":650},"damage":{"zone":"head","amount":46},"balanceDamage":24,"staminaCost":24,"anim":"jodan_mawashi"},{"id":"kiai_mode","name":"Kiai","nameLt":"KIAI režimas","nameEn":"KIAI mode","descLt":"5 s: +25 % žala, ištvermė nesmunka. Reikia pilnos ki juostos.","descEn":"5 s: +25 % damage, no stamina drain. Needs a full ki bar.","belt":"black","type":"mode","input":["KIAI"],"legalInKumite":true}]},"combos":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"sequence: techniku id grandine (renzoku). '@block' = sekminga gynyba. bonus raktai: damageMult, legDamageMult, balanceBonus, unblockable (MVP); wazaAriIfLegDamageOver, autoWazaAri, guaranteedWazaAri (4 etapas).","combos":[{"id":"sanbon_tsuki","name":"Sanbon tsuki","nameLt":"Trys smūgiai iš eilės","nameEn":"Triple punch","belt":"white","sequence":["seiken_gyaku_tsuki","seiken_gyaku_tsuki","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.15,"balanceBonus":10}},{"id":"mae_gyaku","name":"Mae geri – gyaku tsuki","nameLt":"Spyris ir kumštis","nameEn":"Front kick – reverse punch","belt":"white","sequence":["mae_geri_chudan","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.15}},{"id":"shita_gedan","name":"Shita tsuki – gedan mawashi","nameLt":"Smūgis iš apačios ir žemas spyris","nameEn":"Uppercut – low kick","belt":"orange","sequence":["seiken_shita_tsuki","gedan_mawashi_geri"],"bonus":{"damageMult":1.2,"legDamageMult":1.5}},{"id":"kagi_kagi_gedan","name":"Kagi tsuki – kagi tsuki – gedan","nameLt":"Du kabliukai ir žemas spyris","nameEn":"Double hook – low kick","belt":"orange","sequence":["seiken_kagi_tsuki","seiken_kagi_tsuki","gedan_mawashi_geri"],"bonus":{"damageMult":1.2}},{"id":"gyaku_shita_chudan","name":"Gyaku tsuki – shita tsuki – chudan mawashi","nameLt":"Du kumščiai ir šoninis spyris","nameEn":"Two punches – middle roundhouse","belt":"blue","sequence":["seiken_gyaku_tsuki","seiken_shita_tsuki","chudan_mawashi_geri"],"bonus":{"damageMult":1.25}},{"id":"uke_hiza","name":"Uke – hiza geri","nameLt":"Gynyba ir kelio kontrataka","nameEn":"Block – knee counter","belt":"blue","sequence":["@block","hiza_geri"],"bonus":{"unblockable":true},"lesson":{"partner":"seiken_gyaku_tsuki"}},{"id":"gedan_jodan","name":"Gedan – jodan mawashi","nameLt":"Žemas ir aukštas spyris ta pačia koja","nameEn":"Low – high kick, same leg","belt":"yellow","sequence":["gedan_mawashi_geri","jodan_mawashi_geri"],"bonus":{"wazaAriIfLegDamageOver":50}},{"id":"mae_ushiro","name":"Mae geri – ushiro geri","nameLt":"Tiesus ir atgalinis spyris","nameEn":"Front kick – back kick","belt":"yellow","sequence":["mae_geri_chudan","ushiro_geri"],"bonus":{"damageMult":1.25}},{"id":"sanbon_kakato","name":"Sanbon tsuki – kakato otoshi","nameLt":"Trys smūgiai ir kirvio spyris","nameEn":"Triple punch – axe kick","belt":"green","sequence":["seiken_gyaku_tsuki","seiken_gyaku_tsuki","seiken_gyaku_tsuki","kakato_otoshi"],"bonus":{"unblockable":true}},{"id":"gedan_ushiro_mawashi","name":"Gedan – ushiro mawashi","nameLt":"Žemas ir sukamasis spyris","nameEn":"Low kick – spinning hook kick","belt":"green","sequence":["gedan_mawashi_geri","ushiro_mawashi_geri"],"bonus":{"damageMult":1.3}},{"id":"ashi_gedan_tsuki","name":"Ashi barai – gedan tsuki","nameLt":"Pakirtimas ir smūgis","nameEn":"Sweep – follow-up punch","belt":"brown","sequence":["ashi_barai","gedan_tsuki_followup"],"bonus":{"autoWazaAri":true}},{"id":"nidan_gyaku","name":"Tobi nidan – gyaku tsuki","nameLt":"Dvigubas šuolinis spyris ir kumštis","nameEn":"Jumping double kick – reverse punch","belt":"brown","sequence":["tobi_nidan_geri","seiken_gyaku_tsuki"],"bonus":{"damageMult":1.35}},{"id":"osu_no_seishin","name":"Osu no seishin","nameLt":"Signatūrinė kombinacija","nameEn":"Signature combination","belt":"black","sequence":["seiken_gyaku_tsuki","seiken_shita_tsuki","gedan_mawashi_geri","chudan_mawashi_geri","jodan_mawashi_geri"],"bonus":{"guaranteedWazaAri":true}}]},"belts":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"available=false skyriai laukia 4 etapo. exam.kumite = kovu skaicius is eiles. tournament.format: series (kovos is eiles) | bracket (eliminacija).","belts":[{"id":"white","nameLt":"Baltas","nameEn":"White","kyu":["mukyu"],"color":"#f4f1ea","available":true,"unlocksLt":"Bazė: stovos, tiesus smūgis, gynyba","unlocksEn":"Basics: stances, straight punch, blocks","matchTimeSec":60,"bg":"dojo","exam":null,"tournament":{"id":"dojo_sparring","nameLt":"Dojo sparingas su 3 mokiniais","nameEn":"Dojo sparring with 3 students","format":"series","size":4,"bg":"dojo"}},{"id":"orange","nameLt":"Oranžinis","nameEn":"Orange","kyu":[10,9],"color":"#f08a24","available":true,"unlocksLt":"Pirmieji smūgiai į liemenį, žemas spyris","unlocksEn":"First body punches, low kick","bg":"dojo","exam":{"kihonCount":12,"kata":"taikyoku_sono_ichi","kumite":1},"tournament":{"id":"city_cup","nameLt":"Miesto turnyras","nameEn":"City tournament","format":"bracket","size":4,"bg":"hall"}},{"id":"blue","nameLt":"Mėlynas","nameEn":"Blue","kyu":[8,7],"color":"#2f6fd6","available":true,"unlocksLt":"Vidurinis šoninis spyris, alkūnė","unlocksEn":"Middle roundhouse kick, elbow","bg":"dojo","exam":{"kihonCount":14,"kata":"taikyoku_sono_san","kumite":2},"tournament":{"id":"regional_cup","nameLt":"Regiono turnyras","nameEn":"Regional tournament","format":"bracket","size":8,"bg":"hall"}},{"id":"yellow","nameLt":"Geltonas","nameEn":"Yellow","kyu":[6,5],"color":"#f2cf2e","available":false,"unlocksLt":"Aukštas spyris, atgalinis spyris","unlocksEn":"High kick, back kick","bg":"dojo","exam":{"kihonCount":16,"kata":"taikyoku_sono_san","kumite":3},"tournament":{"id":"national_youth","nameLt":"Nacionalinis jaunimo turnyras","nameEn":"National youth tournament","format":"bracket","size":8,"bg":"hall"}},{"id":"green","nameLt":"Žalias","nameEn":"Green","kyu":[4,3],"color":"#2e9e4a","available":false,"unlocksLt":"Kirvio spyris, sukamasis spyris","unlocksEn":"Axe kick, spinning kick","bg":"dojo","exam":{"kihonCount":18,"kata":"taikyoku_sono_san","kumite":5},"tournament":{"id":"national_cup","nameLt":"Nacionalinis čempionatas","nameEn":"National championship","format":"bracket","size":16,"bg":"arena"}},{"id":"brown","nameLt":"Rudas","nameEn":"Brown","kyu":[2,1],"color":"#7a4a22","available":false,"unlocksLt":"Šuoliniai spyriai, ilgos kombinacijos","unlocksEn":"Jumping kicks, long combinations","bg":"dojo","exam":{"kihonCount":20,"kata":"taikyoku_sono_san","kumite":7},"tournament":{"id":"europe_cup","nameLt":"Europos turnyras","nameEn":"European tournament","format":"bracket","size":16,"bg":"arena"}},{"id":"black","nameLt":"Juodas","nameEn":"Black","kyu":["shodan"],"color":"#1b1b1f","available":false,"unlocksLt":"Visos technikos + signatūrinė kombinacija","unlocksEn":"All techniques + signature combination","bg":"dojo","exam":{"kihonCount":20,"kata":"taikyoku_sono_san","kumite":10},"tournament":{"id":"world_open","nameLt":"Atvirasis pasaulio turnyras","nameEn":"Open world tournament","format":"bracket","size":32,"bg":"arena"}}]},"opponents":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"Visi vardai isgalvoti. archetypes: AI elgsenos parametrai; weights: megstamu techniku svoriai (nenurodyta = 1). beltDefaults: reakcijos laikas ms ir prazangu tikimybe. difficulty daugina reakcija ir zala.","archetypes":{"tank":{"nameLt":"Tankas","nameEn":"Tank","descLt":"Spaudžia arti, daug smūgių į liemenį.","descEn":"Presses in close with lots of body punches.","prefDist":96,"aggression":0.78,"retreatChance":0.04,"guardIdle":0.08,"comboChance":0.4,"cooldownMs":[320,800],"block":{"jodan":0.3,"chudan":0.5,"gedan":0.3},"weights":{"seiken_gyaku_tsuki":3,"seiken_oi_tsuki":2,"seiken_shita_tsuki":3,"seiken_kagi_tsuki":3,"hiza_geri":2.5,"hiji_chudan_uchi":2.5,"mae_geri_chudan":0.6,"gedan_mawashi_geri":0.8}},"kicker":{"nameLt":"Spyrikas","nameEn":"Kicker","descLt":"Laiko atstumą ir spardo.","descEn":"Keeps distance and kicks.","prefDist":142,"aggression":0.58,"retreatChance":0.28,"guardIdle":0.12,"comboChance":0.2,"cooldownMs":[450,1000],"block":{"jodan":0.4,"chudan":0.45,"gedan":0.45},"weights":{"mae_geri_chudan":3,"gedan_mawashi_geri":3,"chudan_mawashi_geri":3.5,"yoko_geri_chudan":3,"seiken_gyaku_tsuki":0.6,"hiza_geri":0.8}},"counter":{"nameLt":"Kontratakuotojas","nameEn":"Counter-fighter","descLt":"Daug blokuoja ir atsako po gynybos.","descEn":"Blocks a lot and answers after defending.","prefDist":118,"aggression":0.34,"retreatChance":0.14,"guardIdle":0.4,"comboChance":0.25,"cooldownMs":[500,1100],"block":{"jodan":0.6,"chudan":0.78,"gedan":0.62},"weights":{"hiza_geri":2.5,"seiken_gyaku_tsuki":2,"seiken_shita_tsuki":2,"gedan_mawashi_geri":1.5,"chudan_mawashi_geri":1.5}}},"beltDefaults":{"white":{"reactionMs":600,"foulChance":0.012,"skill":0.6},"orange":{"reactionMs":520,"foulChance":0.008,"skill":0.75},"blue":{"reactionMs":440,"foulChance":0.005,"skill":0.9},"yellow":{"reactionMs":370,"foulChance":0.02,"skill":1},"green":{"reactionMs":300,"foulChance":0.015,"skill":1.1},"brown":{"reactionMs":240,"foulChance":0.01,"skill":1.2},"black":{"reactionMs":180,"foulChance":0.005,"skill":1.3}},"difficulty":{"easy":{"reaction":1.35,"damage":0.8,"aggression":0.8},"normal":{"reaction":1,"damage":1,"aggression":1},"hard":{"reaction":0.75,"damage":1.15,"aggression":1.15}},"roster":[{"id":"w_jonas","name":"Jonas","belt":"white","archetype":"tank"},{"id":"w_ugne","name":"Ugnė","belt":"white","archetype":"kicker"},{"id":"w_matas","name":"Matas","belt":"white","archetype":"counter"},{"id":"o_rokas","name":"Rokas Vėtra","belt":"orange","archetype":"tank"},{"id":"o_emilija","name":"Emilija Šilas","belt":"orange","archetype":"kicker"},{"id":"o_dovas","name":"Dovas Girėnas","belt":"orange","archetype":"counter"},{"id":"o_kenji","name":"Kenji Morita","belt":"orange","archetype":"tank"},{"id":"b_ainis","name":"Ainis Uosis","belt":"blue","archetype":"counter"},{"id":"b_lukne","name":"Luknė Beržė","belt":"blue","archetype":"kicker"},{"id":"b_tadas","name":"Tadas Kalnius","belt":"blue","archetype":"tank"},{"id":"b_hana","name":"Hana Sato","belt":"blue","archetype":"kicker"},{"id":"b_oskar","name":"Oskar Lind","belt":"blue","archetype":"tank"},{"id":"b_mila","name":"Mila Novak","belt":"blue","archetype":"counter"},{"id":"b_vytis","name":"Vytis Ąžuolas","belt":"blue","archetype":"tank"}]},"kata":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"Ritmo mini zaidimas. steps: technikos id; '*' priekyje = pries judesi apsisukama. Formos supaprastintos zaidimui (20 skaiciavimu).","kata":[{"id":"taikyoku_sono_ichi","name":"Taikyoku sono ichi","belt":"white","beatMs":1250,"steps":["*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","seiken_oi_tsuki","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","seiken_oi_tsuki","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki","*gedan_barai","seiken_oi_tsuki"]},{"id":"taikyoku_sono_ni","name":"Taikyoku sono ni","belt":"white","beatMs":1200,"steps":["*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki","*gedan_barai","seiken_jodan_tsuki"]},{"id":"taikyoku_sono_san","name":"Taikyoku sono san","belt":"orange","beatMs":1150,"steps":["*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*gedan_barai","seiken_jodan_tsuki","seiken_jodan_tsuki","seiken_jodan_tsuki","*chudan_uchi_uke","seiken_oi_tsuki","*chudan_uchi_uke","seiken_oi_tsuki"]}]},"rules":{"_license":"SPDX-License-Identifier: BUSL-1.1","match":{"mainTimeSec":90,"enchoTimeSec":90,"maxEncho":2,"knockdownCountSec":3,"chuiLimit":4,"passivitySec":10,"votesNeeded":3,"judgeNoise":0.05,"hikiwakeMargin":0.08,"fumeiChance":0.05,"flagDelayMs":[100,250],"holdFoulSec":1.5,"holdFoulDist":118,"jogaiChuiFrom":2,"bowWindowMs":2800,"chuiDecisiveDiff":2,"clearLeadMargin":0.3,"balanceBreakVoteChance":0.6,"haltWindowMs":1100,"yameGraceMs":400,"hantei":{"wazaAri":100,"damage":1,"effective":3,"techniques":0.5,"initiative":0.4,"chui":12}},"arena":{"xMin":230,"xMax":1050,"startAka":540,"startShiro":740,"groundY":540},"input":{"bufferMs":350,"buttonMs":200,"holdMs":300,"deadzone":0.2,"dashTapMs":250},"combat":{"ranges":{"close":105,"mid":150,"midfar":172,"far":195},"minSeparation":86,"damageScale":0.45,"zoneAfterGetUp":62,"headAfterGetUp":60,"walkSpeed":150,"backSpeed":125,"dashDist":150,"dashMs":170,"backdashDist":140,"backdashMs":200,"backdashIframesMs":150,"dashStamina":6,"chainWindow":0.3,"chainGraceMs":160,"chainBonus":0.1,"chainBonusMax":0.4,"holdBonus":{"damage":1.3,"stamina":1.5,"slow":1.25},"block":{"factor":0.25,"moroteFactor":0.1,"suneFactor":0.1,"tiredFactor":0.4,"staminaCost":3,"perfectMs":120,"perfectKi":10,"openMs":300,"counterMs":400},"moroteHoldMs":300,"headKnockdown":70,"staggerMs":900,"hitStunMs":220,"blockStunMs":110,"hitStopMs":[60,100],"staminaRegen":28,"staminaRegenDelayMs":700,"balanceRegen":45,"balanceRegenDelayMs":1200,"tiredBelow":20,"tiredSlow":1.3,"legSlow":0.7,"legBalanceMax":75,"bodyRegenFactor":0.6,"guardStaminaDrain":4,"kiPerDamage":0.6,"kiBlock":3,"kiInitiative":1.5,"kiaiMs":5000,"kiaiDamage":1.25,"getUp":{"baseMs":1200,"perDamageMs":2400,"randMs":400,"headExtraMs":500,"mashStep":0.03,"mashMax":0.3,"riseMs":500}},"recovery":{"exam":0.3,"tournament":0.6},"lesson":{"reps":5,"comboReps":3},"exam":{"kihonCount":12,"kihonTimeMs":2000,"passScore":0.7,"kataPerfectMs":130,"kataGoodMs":320},"calls":{"aka_shiro":"Aka, Shiro","shomen_ni_rei":"Shomen ni rei","shushin_ni_rei":"Shushin ni rei","otagai_ni_rei":"Otagai ni rei","kamaete":"Kamaete","hajime":"Hajime!","yame":"Yame","zokko":"Zokko","jikan":"Jikan","fukushin_shugo":"Fukushin shūgō","shomen_muite":"Shomen muite","hantei_o_torimasu":"Hantei o torimasu","hantei":"Hantei!","hikiwake":"Hikiwake","encho":"Enchō","waza_ari":"Waza-ari","ippon":"Ippon","awasete_ippon":"Waza-ari awasete ippon","chui_1":"Chui ichi","chui_2":"Chui ni","chui_3":"Chui san","shikkaku":"Shikkaku","jogai":"Jogai","mitomezu":"Mitomezu","oshi":"Oshi","aka":"Aka","shiro":"Shiro","aka_no_kachi":"Aka no kachi","shiro_no_kachi":"Shiro no kachi","osu":"Osu!"}},"anim":{"_license":"SPDX-License-Identifier: BUSL-1.1","_doc":"2D skeleto pozos (laipsniai). Kampas matuojamas nuo 'zemyn', teigiamas = pirmyn. fs/fe priekine ranka (petys/alkune), bs/be galine; fh/fk priekine koja (klubas/kelis), bh/bk galine; torso = liemens palinkimas pirmyn; rot = viso kuno pasukimas; hipH = klubo aukstis (jei nenurodyta - skaiciuojamas pagal pedas); dx = poslinkis pirmyn. Nenurodytos reiksmes paimamos is 'kamae'. anims.keys: [faze, poza], faze 0-1 startup, 1-2 active, 2-3 recovery.","poses":{"kamae":{"torso":8,"head":0,"fs":35,"fe":100,"bs":10,"be":115,"fh":30,"fk":38,"bh":-22,"bk":4,"dx":0,"rot":0},"stand":{"torso":0,"fs":4,"fe":8,"bs":-4,"be":8,"fh":5,"fk":2,"bh":-5,"bk":2},"bow":{"torso":42,"head":12,"fs":6,"fe":4,"bs":0,"be":4,"fh":5,"fk":2,"bh":-5,"bk":2},"crouch":{"torso":14,"fh":48,"fk":75,"bh":-10,"bk":50},"walk_a":{"fh":38,"fk":34,"bh":-12,"bk":14},"walk_b":{"fh":20,"fk":36,"bh":-30,"bk":2},"dash":{"torso":20,"fh":46,"fk":40,"bh":-36,"bk":8,"fs":45,"fe":95},"backdash":{"torso":-8,"fh":18,"fk":8,"bh":-30,"bk":38},"guard_chudan":{"torso":4,"fs":58,"fe":72,"bs":25,"be":110},"guard_jodan":{"torso":2,"fs":118,"fe":62,"bs":20,"be":115},"guard_gedan":{"torso":12,"fs":30,"fe":8,"bs":5,"be":120},"sune_uke":{"torso":4,"fs":40,"fe":100,"fh":72,"fk":96,"bh":-4,"bk":4},"morote_uke":{"torso":6,"fs":62,"fe":84,"bs":56,"be":88},"hit_body":{"torso":28,"head":16,"fs":22,"fe":80,"bs":10,"be":90,"dx":-6},"hit_head":{"torso":-18,"head":-26,"fs":10,"fe":70,"bs":-10,"be":70,"dx":-8},"hit_legs":{"torso":16,"fh":42,"fk":70,"bh":-18,"bk":20,"dx":-4},"stagger":{"torso":-10,"head":-12,"fs":-10,"fe":30,"bs":-22,"be":30,"fh":16,"fk":30,"bh":-30,"bk":30},"fall":{"rot":-45,"torso":-6,"head":-15,"fs":30,"fe":30,"bs":-30,"be":30,"fh":40,"fk":50,"bh":10,"bk":40,"hipH":55},"down":{"rot":-88,"torso":0,"head":0,"fs":12,"fe":20,"bs":-20,"be":20,"fh":8,"fk":10,"bh":22,"bk":34,"hipH":16},"kneel":{"torso":24,"fs":20,"fe":40,"bs":0,"be":60,"fh":72,"fk":100,"bh":-8,"bk":92},"gyaku_chamber":{"torso":4,"bs":-28,"be":112,"fs":42,"fe":90},"gyaku_strike":{"torso":15,"bs":88,"be":4,"fs":-6,"fe":120,"fh":34,"fk":40,"bh":-28,"bk":0,"dx":10},"oi_chamber":{"torso":6,"fs":-22,"fe":112,"bs":30,"be":100,"fh":10,"fk":28,"bh":-20,"bk":20},"oi_strike":{"torso":13,"fs":88,"fe":4,"bs":-10,"be":116,"fh":40,"fk":46,"bh":-30,"bk":2,"dx":14},"jodan_strike":{"torso":10,"bs":114,"be":4,"fs":0,"fe":120,"dx":8},"shita_chamber":{"torso":17,"bs":-16,"be":96,"fh":38,"fk":60,"bh":-28,"bk":20},"shita_strike":{"torso":12,"bs":48,"be":86,"fs":0,"fe":118,"fh":34,"fk":48,"dx":10},"kagi_chamber":{"torso":6,"bs":-30,"be":100},"kagi_strike":{"torso":17,"bs":76,"be":80,"fs":0,"fe":118,"dx":8},"ago_strike":{"torso":6,"bs":70,"be":102,"fs":0,"fe":118,"dx":8},"hiji_chamber":{"torso":8,"fs":10,"fe":150},"hiji_strike":{"torso":19,"fs":82,"fe":150,"bs":-10,"be":110,"fh":40,"fk":46,"dx":16},"mae_chamber":{"torso":-4,"bh":85,"bk":100,"fh":6,"fk":8},"mae_strike":{"torso":-10,"bh":88,"bk":6,"fh":4,"fk":6,"dx":8},"gedan_chamber":{"torso":-4,"bh":40,"bk":70,"fh":4,"fk":8},"gedan_strike":{"torso":-8,"bh":54,"bk":8,"fh":0,"fk":6,"dx":6},"hiza_chamber":{"torso":6,"bh":30,"bk":60,"fh":8,"fk":10},"hiza_strike":{"torso":14,"bh":100,"bk":130,"fh":6,"fk":8,"fs":62,"fe":60,"bs":58,"be":60,"dx":14},"mawashi_chamber":{"torso":-8,"bh":60,"bk":110,"fh":2,"fk":6},"mawashi_strike":{"torso":-16,"bh":92,"bk":4,"fh":-4,"fk":4,"dx":6},"yoko_chamber":{"torso":-12,"bh":80,"bk":120,"fh":0,"fk":6},"yoko_strike":{"torso":-30,"bh":95,"bk":0,"fh":-6,"fk":4,"fs":30,"fe":60,"dx":10},"jodan_mae_strike":{"torso":-14,"bh":124,"bk":4,"fh":2,"fk":4,"dx":8},"jodan_mawashi_strike":{"torso":-24,"bh":128,"bk":2,"fh":-4,"fk":4,"dx":6}},"anims":{"gyaku_tsuki":{"keys":[[0,"kamae"],[0.7,"gyaku_chamber"],[1,"gyaku_strike"],[2,"gyaku_strike"],[3,"kamae"]]},"oi_tsuki":{"keys":[[0,"kamae"],[0.6,"oi_chamber"],[1,"oi_strike"],[2,"oi_strike"],[3,"kamae"]]},"jodan_tsuki":{"keys":[[0,"kamae"],[0.7,"gyaku_chamber"],[1,"jodan_strike"],[2,"jodan_strike"],[3,"kamae"]]},"shita_tsuki":{"keys":[[0,"kamae"],[0.7,"shita_chamber"],[1,"shita_strike"],[2,"shita_strike"],[3,"kamae"]]},"kagi_tsuki":{"keys":[[0,"kamae"],[0.7,"kagi_chamber"],[1,"kagi_strike"],[2,"kagi_strike"],[3,"kamae"]]},"ago_uchi":{"keys":[[0,"kamae"],[0.7,"shita_chamber"],[1,"ago_strike"],[2,"ago_strike"],[3,"kamae"]]},"hiji_uchi":{"keys":[[0,"kamae"],[0.6,"hiji_chamber"],[1,"hiji_strike"],[2,"hiji_strike"],[3,"kamae"]]},"mae_geri":{"keys":[[0,"kamae"],[0.7,"mae_chamber"],[1,"mae_strike"],[2,"mae_strike"],[2.5,"mae_chamber"],[3,"kamae"]]},"gedan_mawashi":{"keys":[[0,"kamae"],[0.7,"gedan_chamber"],[1,"gedan_strike"],[2,"gedan_strike"],[2.5,"gedan_chamber"],[3,"kamae"]]},"hiza_geri":{"keys":[[0,"kamae"],[0.6,"hiza_chamber"],[1,"hiza_strike"],[2,"hiza_strike"],[3,"kamae"]]},"chudan_mawashi":{"keys":[[0,"kamae"],[0.7,"mawashi_chamber"],[1,"mawashi_strike"],[2,"mawashi_strike"],[2.5,"mawashi_chamber"],[3,"kamae"]]},"yoko_geri":{"keys":[[0,"kamae"],[0.7,"yoko_chamber"],[1,"yoko_strike"],[2,"yoko_strike"],[2.5,"yoko_chamber"],[3,"kamae"]]},"jodan_mae_geri":{"keys":[[0,"kamae"],[0.7,"mae_chamber"],[1,"jodan_mae_strike"],[2,"jodan_mae_strike"],[2.5,"mae_chamber"],[3,"kamae"]]},"jodan_mawashi":{"keys":[[0,"kamae"],[0.7,"mawashi_chamber"],[1,"jodan_mawashi_strike"],[2,"jodan_mawashi_strike"],[2.5,"mawashi_chamber"],[3,"kamae"]]},"guard_chudan":{"keys":[[0,"guard_chudan"]]},"guard_jodan":{"keys":[[0,"guard_jodan"]]},"guard_gedan":{"keys":[[0,"guard_gedan"]]},"sune_uke":{"keys":[[0,"sune_uke"]]},"morote_uke":{"keys":[[0,"morote_uke"]]}}},"strings.lt":{"_license":"SPDX-License-Identifier: BUSL-1.1","hud.you":"TU","hud.player":"Žaidėjas","hud.locked":"neatrakinta","hud.perfect":"Tobulas blokas!","ui.rotate":"Pasukite įrenginį horizontaliai","ui.paused":"Pauzė","ui.resume":"Tęsti","ui.quit":"Išeiti","result.ippon":"Ippon","result.awasete":"Awasete ippon","result.hantei":"Hantei","result.shikkaku":"Shikkaku","call.aka_shiro":"Dalyviai įžengia ant tatamio","call.shomen_ni_rei":"Nusilenkti teisėjų stalui","call.shushin_ni_rei":"Nusilenkti vyr. teisėjui","call.otagai_ni_rei":"Nusilenkti vienas kitam","call.kamaete":"Kovos stovos","call.hajime":"Pradėti!","call.yame":"Stop","call.zokko":"Tęsti","call.jikan":"Laikas sustabdytas","call.fukushin_shugo":"Pasitarimas su kampiniais","call.shomen_muite":"Atsisukti į priekį","call.hantei_o_torimasu":"Priimamas sprendimas","call.hantei":"Sprendimas!","call.hikiwake":"Lygiosios","call.encho":"Pratęsimas","call.waza_ari":"Pusė taško","call.ippon":"Pilnas taškas","call.awasete_ippon":"Du waza-ari = ippon","call.chui_1":"Pirmas įspėjimas","call.chui_2":"Antras įspėjimas","call.chui_3":"Trečias įspėjimas","call.shikkaku":"Diskvalifikacija","call.jogai":"Už ribos","call.mitomezu":"Nepripažįstama","call.oshi":"Įspėjamasis gestas","call.aka_no_kachi":"Laimi raudonas","call.shiro_no_kachi":"Laimi baltas","foul.illegal":"Draudžiama technika","foul.holding":"Laikymas / stūmimas","foul.passivity":"Pasyvumas","foul.jogai":"Bėgimas už ribos","foul.disrespect":"Nepagarba (nenusilenkta)","foul.afterYame":"Puolimas po „Yame“","foul.downed":"Puolimas į gulintį"},"strings.en":{"_license":"SPDX-License-Identifier: BUSL-1.1","hud.you":"TU","hud.player":"Žaidėjas","hud.locked":"neatrakinta","hud.perfect":"Tobulas blokas!","ui.rotate":"Pasukite įrenginį horizontaliai","ui.paused":"Pauzė","ui.resume":"Tęsti","ui.quit":"Išeiti","result.ippon":"Ippon","result.awasete":"Awasete ippon","result.hantei":"Hantei","result.shikkaku":"Shikkaku"}};
 __def('src/main.js', function (__exp, __req) {
 // SPDX-License-Identifier: BUSL-1.1
 // Paleidimas ir scenų valdytojas.
@@ -249,6 +249,7 @@ function startLoop(update, render) {
   let last = performance.now();
   let acc = 0;
   function frame(now) {
+    requestAnimationFrame(frame);   // pirmiausia – kad klaida viename kadre nesustabdytų ciklo
     acc += Math.min(100, now - last);
     last = now;
     let n = 0;
@@ -259,7 +260,6 @@ function startLoop(update, render) {
     }
     if (n === 6) acc = 0;
     render(acc / STEP);
-    requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
 }
@@ -604,6 +604,7 @@ class AudioSys {
   bad() { if (this.on) this.tone(200, 0.22, { type: 'square', to: 120, vol: 0.1 }); }
 
   taiko(vol = 0.5, delay = 0) {
+    if (!this.on) return;
     this.tone(82, 0.5, { to: 48, vol, delay });
     this.noise(0.05, { vol: vol * 0.3, type: 'lowpass', freq: 400, delay });
   }
@@ -1298,6 +1299,7 @@ class Fight {
     this.phase = this.mode === 'match' ? 'locked' : 'live';
     this.time = 0;
     this.hitStop = 0;
+    this.haltLate = false;
     this.events = [];
     this.resetPositions(true);
   }
@@ -1508,7 +1510,7 @@ class Fight {
       mult: 1 + Math.min(C.chainBonusMax, C.chainBonus * f.chainCount),
       chain: f.chainCount, combo, unblockable: !!(combo && combo.bonus.unblockable),
       held: !!it.techHeld, sincePress: 0, charged: false, hit: false, extraRec: 0,
-      inHalt: this.phase !== 'live',
+      inHalt: this.phase !== 'live', late: this.phase === 'halt' && !!this.haltLate,
     };
     f.guard = null;
     f.counterT = 0;
@@ -1574,14 +1576,14 @@ class Fight {
     const match = this.mode === 'match';
     if (o.state === 'down' || o.state === 'getup') {
       T.hit = true;
-      if (match) this.emit({ type: 'hit', attacker: f, defender: o, def, foul: 'downed', amount: 0 });
+      if (match && T.late) this.emit({ type: 'hit', attacker: f, defender: o, def, foul: 'downed', amount: 0 });
       return;
     }
     if (o.invul > 0) return;
     if (this.phase !== 'live') {
       T.hit = true;
-      // Technika pradėta po „Yame“ ir pasiekė varžovą – pražanga; pradėta anksčiau – neįskaitoma.
-      if (match && T.inHalt) this.emit({ type: 'hit', attacker: f, defender: o, def, foul: 'afterYame', amount: 0 });
+      // Technika pradėta aiškiai po „Yame“ ir pasiekė varžovą – pražanga; pradėta anksčiau ar iškart – neįskaitoma.
+      if (match && T.late) this.emit({ type: 'hit', attacker: f, defender: o, def, foul: 'afterYame', amount: 0 });
       return;
     }
     T.hit = true;
@@ -1828,86 +1830,568 @@ __exp.otherSide = otherSide;
 });
 __def('src/fight/referee.js', function (__exp, __req) {
 // SPDX-License-Identifier: BUSL-1.1
-// 1 etapo (prototipo) teisėjas: laikmatis, knockdown + 3 s skaičiavimas. 2 etape pakeičiamas pilna būsenų mašina.
+// Vyr. teisėjas (shushin) – kovos būsenų mašina:
+// ENTER → BOW → KAMAETE → HAJIME → FIGHTING → YAME → (SCORE | FOUL | JOGAI | KNOCKDOWN_COUNT) → ZOKKO | END
+// → HANTEI → (ENCHO) → CEREMONY → FINAL_BOW → DONE.
+// Visi parametrai – data/rules.json „match“. Grynas modulis (be DOM): apie įvykius praneša per onEvent.
+
+const { JudgePanel, WHISTLE } = __req('src/fight/judges.js');
+const { chuiCallId, otherSide } = __req('src/fight/rules.js');
+const { setState } = __req('src/fight/fighter.js');
+const BOWS = ['shomen_ni_rei', 'shushin_ni_rei', 'otagai_ni_rei'];
 
 class Referee {
+  // opts: { rng, onEvent, timeSec, autoBow }
   constructor(fight, db, opts = {}) {
     this.fight = fight;
+    this.db = db;
     this.R = db.rules.match;
+    this.rng = opts.rng || Math.random;
     this.emit = opts.onEvent || (() => {});
-    this.clock = (opts.timeSec || this.R.mainTimeSec) * 1000;
+    this.autoBow = !!opts.autoBow;
+    this.judges = new JudgePanel(this.R, this.rng);
+    this.mainTime = (opts.timeSec || this.R.mainTimeSec) * 1000;
+    this.enchoTime = (opts.timeSec ? Math.min(opts.timeSec, this.R.enchoTimeSec) : this.R.enchoTimeSec) * 1000;
+    this.clock = this.mainTime;
     this.round = 0;
-    this.state = 'HAJIME';
-    this.t = 0;
-    this.judges = null;
-    this.shushin = { x: 640, gesture: null, gt: 0 };
-    this.zoom = null;
-    this.respectMiss = [0, 0];
-    this.bowCalls = 0;
     this.result = null;
-    this.kd = null;
-    this.emit({ type: 'call', id: 'hajime' });
+    this.zoom = null;
+    this.shushin = { x: 640, gesture: null, gt: 0 };
+    this.jogai = [0, 0];
+    this.holdWarned = [false, false];
+    this.respectMiss = [0, 0];
+    this.respectDone = false;
+    this.bowCalls = 0;
+    this.bowed = [false, false];
+    this.pendingFoul = null;
+    this.last = null;      // paskutinio sprendimo balsai
+    this.data = null;
+    this.flags = {};
+    this.state = null;
+    this.t = 0;
+    fight.phase = 'locked';
+    for (const f of fight.fighters) f.formal = true;
+    this.go('ENTER');
   }
 
-  bow() {}
+  go(state, data) {
+    this.state = state;
+    this.data = data || {};
+    this.t = 0;
+    this.flags = {};
+    const fn = this[`enter_${state}`];
+    if (fn) fn.call(this, this.data);
+  }
+
+  call(id, extra = {}) {
+    this.emit({ type: 'call', id, ...extra });
+  }
+
+  signal(sig, side, maxFumei = 1) {
+    const r = this.judges.signalAll(sig, side, maxFumei);
+    this.emit({ type: 'whistle', kind: WHISTLE[sig] });
+    return r;
+  }
+
+  gesture(g) {
+    this.shushin.gesture = g;
+    this.shushin.gt = 0;
+  }
+
+  once(key, at) {
+    if (this.flags[key] || this.t < at) return false;
+    this.flags[key] = true;
+    return true;
+  }
+
+  fighter(side) {
+    return this.fight.fighters.find((f) => f.side === side);
+  }
+
+  // ----- Žaidėjo veiksmai -----
+
+  // REI mygtukas: nusilenkimas.
+  bow(idx) {
+    if ((this.state !== 'BOW' && this.state !== 'FINAL_BOW') || this.bowed[idx]) return;
+    this.bowed[idx] = true;
+    this.fight.pose(this.fight.fighters[idx], 'bow', 800);
+    if (this.bowed[0] && this.bowed[1]) this.data.bothAt = this.t;
+  }
+
+  autoBows() {
+    this.fight.fighters.forEach((f, i) => {
+      if (!this.bowed[i] && (this.autoBow || !f.isPlayer) && this.t >= 420 + i * 90) this.bow(i);
+    });
+  }
+
+  // ----- Kovos įvykiai -----
 
   handle(events) {
     for (const ev of events) {
-      if (ev.type === 'knockdown' && this.state === 'FIGHTING') {
-        this.kd = ev;
-        this.state = 'KNOCKDOWN_COUNT';
-        this.t = 0;
-        this.n = 0;
-        this.fight.phase = 'locked';
-        this.emit({ type: 'call', id: 'yame' });
+      if (ev.type === 'techStart') ev.f.passive = 0;
+      if (ev.type === 'hit' && (ev.foul === 'afterYame' || ev.foul === 'downed')) {
+        // Puolimas po „Yame“ arba į gulintį – chui ni; paskelbiama prieš tęsiant kovą.
+        if (!this.pendingFoul && this.state !== 'CEREMONY' && this.state !== 'DONE' && this.state !== 'FINAL_BOW') {
+          this.pendingFoul = { f: ev.attacker, kind: ev.foul, n: 2 };
+          if (this.state === 'FIGHTING') { this.pendingFoul = null; this.yame('FOUL', { f: ev.attacker, kind: ev.foul, n: 2 }); }
+        }
+        continue;
       }
+      if (this.state !== 'FIGHTING') continue;
+      if (ev.type === 'knockdown') { this.yame('KNOCKDOWN_COUNT', { down: ev.f, by: ev.by }); return; }
+      if (ev.type === 'hit' && ev.foul === 'illegal') { this.yame('FOUL', { f: ev.attacker, kind: 'illegal', n: ev.chui || 1 }); return; }
+      if (ev.type === 'balanceBreak') { this.yame('SCORE', { to: ev.by, kind: 'vote' }); return; }
+      if (ev.type === 'holding') {
+        const first = !this.holdWarned[ev.f.id];
+        this.holdWarned[ev.f.id] = true;
+        this.yame('FOUL', { f: ev.f, kind: 'holding', n: first ? 0 : 1 });
+        return;
+      }
+      if (ev.type === 'jogai') { this.yame('JOGAI', { f: ev.f, pushed: ev.pushed }); return; }
     }
   }
 
-  end(winner, by) {
-    this.result = { winner, by, votes: { aka: winner === 'aka' ? 5 : 0, shiro: winner === 'shiro' ? 5 : 0, draw: 0 }, round: 0 };
-    this.state = 'CEREMONY';
-    this.t = 0;
-    this.fight.phase = 'locked';
-    this.emit({ type: 'result', result: this.result });
+  // „Yame“: kova stabdoma; trumpą laiką po komandos pradėtas ir pataikęs puolimas laikomas pražanga.
+  yame(next, data) {
+    this.call('yame', { ms: 900 });
+    this.gesture('stop');
+    this.fight.phase = 'halt';
+    this.fight.haltLate = false;
+    this.haltT = 0;
+    this.go(next, data);
+  }
+
+  // Kova tęsiama: jei laukia pražanga – pirma ji, tada grįžimas į starto linijas ir „Zokko“.
+  resume() {
+    if (this.pendingFoul) {
+      const p = this.pendingFoul;
+      this.pendingFoul = null;
+      this.go('FOUL', p);
+      return;
+    }
+    this.go('ZOKKO');
   }
 
   update(dt) {
     this.t += dt;
-    const [aka, shiro] = this.fight.fighters;
-    this.shushin.x += ((aka.x + shiro.x) / 2 - this.shushin.x) * 0.05;
-    if (this.state === 'HAJIME' && this.t > 900) { this.state = 'FIGHTING'; this.fight.phase = 'live'; }
-    else if (this.state === 'FIGHTING') {
-      this.clock -= dt;
-      if (this.clock <= 0) {
-        const da = aka.stats.dmg + aka.wazaAri * 100;
-        const ds = shiro.stats.dmg + shiro.wazaAri * 100;
-        this.emit({ type: 'call', id: 'yame' });
-        this.end(da >= ds ? 'aka' : 'shiro', 'hantei');
-      }
-    } else if (this.state === 'KNOCKDOWN_COUNT') {
-      const f = this.kd.f;
-      const by = this.kd.by;
-      const n = Math.floor(this.t / 1000) + 1;
-      if (n !== this.n && n <= this.R.knockdownCountSec) { this.n = n; this.emit({ type: 'count', n }); }
-      if (f.state !== 'down' && f.state !== 'getup') {
-        by.wazaAri++;
-        this.emit({ type: 'call', id: by.wazaAri >= 2 ? 'awasete_ippon' : 'waza_ari', side: by.side });
-        if (by.wazaAri >= 2) this.end(by.side, 'awasete');
-        else { this.fight.resetPositions(); this.state = 'HAJIME'; this.t = 0; }
-      } else if (this.t >= this.R.knockdownCountSec * 1000 && f.state === 'down') {
-        f.down.stay = true;
-        this.emit({ type: 'call', id: 'ippon', side: by.side });
-        this.end(by.side, 'ippon');
-      }
-    } else if (this.state === 'CEREMONY' && this.t > 3200) {
-      this.state = 'DONE';
-      this.emit({ type: 'end', result: this.result });
+    this.shushin.gt += dt;
+    this.judges.update(dt);
+    if (this.fight.phase === 'halt') {
+      this.haltT += dt;
+      this.fight.haltLate = this.haltT >= this.R.yameGraceMs;
+      if (this.haltT >= this.R.haltWindowMs) this.lock();
     }
+    const [a, b] = this.fight.fighters;
+    const target = this.shushin.target ?? (a.x + b.x) / 2;
+    this.shushin.x += (target - this.shushin.x) * 0.06;
+    const fn = this[`update_${this.state}`];
+    if (fn) fn.call(this, dt, this.data);
+  }
+
+  lock() {
+    this.fight.phase = 'locked';
+    for (const f of this.fight.fighters) {
+      if (f.state === 'attack' || f.state === 'guard' || f.state === 'walk' || f.state === 'dash') { f.tech = null; f.guard = null; f.dash = null; setState(f, 'idle'); }
+    }
+  }
+
+  // ----- Pradžia -----
+
+  enter_ENTER() {
+    this.call('aka_shiro', { ms: 1100 });
+  }
+
+  update_ENTER() {
+    if (this.t >= 1200) this.go('BOW', { i: 0 });
+  }
+
+  enter_BOW(d) {
+    this.bowed = [false, false];
+    this.bowCalls++;
+    this.call(BOWS[d.i], { ms: 1500 });
+    this.emit({ type: 'rei', open: true });
+  }
+
+  update_BOW(dt, d) {
+    this.autoBows();
+    const bothDone = d.bothAt != null && this.t >= d.bothAt + 750;
+    if (!bothDone && this.t < this.R.bowWindowMs) return;
+    this.bowed.forEach((ok, i) => { if (!ok) this.respectMiss[i]++; });
+    this.emit({ type: 'rei', open: false });
+    if (d.i < BOWS.length - 1) { this.go('BOW', { i: d.i + 1 }); return; }
+    // Nepagarba: nenusilenkta per Rei – chui prieš kovos pradžią.
+    const idx = this.respectMiss.findIndex((n) => n > 0);
+    if (idx >= 0 && !this.respectDone) {
+      this.respectDone = true;
+      this.go('FOUL', { f: this.fight.fighters[idx], kind: 'disrespect', n: 1, next: 'KAMAETE' });
+    } else this.go('KAMAETE');
+  }
+
+  enter_KAMAETE() {
+    this.judges.clear();
+    this.gesture(null);
+    this.shushin.target = null;
+    this.fight.resetPositions(true);
+    for (const f of this.fight.fighters) f.formal = false;
+    this.call('kamaete', { ms: 900 });
+  }
+
+  update_KAMAETE() {
+    if (this.t >= 950) this.go('HAJIME');
+  }
+
+  enter_HAJIME() {
+    this.call('hajime', { ms: 900 });
+    this.gesture('both');
+  }
+
+  update_HAJIME() {
+    if (this.t >= 550) this.startFighting();
+  }
+
+  startFighting() {
+    this.gesture(null);
+    this.fight.phase = 'live';
+    for (const f of this.fight.fighters) { f.passive = 0; f.holdT = 0; }
+    this.go('FIGHTING');
+  }
+
+  // ----- Kova -----
+
+  update_FIGHTING(dt) {
+    this.clock -= dt;
+    for (const f of this.fight.fighters) {
+      f.passive += dt;
+      if (f.passive >= this.R.passivitySec * 1000) {
+        f.passive = 0;
+        this.yame('FOUL', { f, kind: 'passivity', n: 1 });
+        return;
+      }
+    }
+    if (this.clock <= 0) {
+      this.clock = 0;
+      this.call('yame', { ms: 900 });
+      this.gesture('stop');
+      this.lock();
+      this.go('HANTEI');
+    }
+  }
+
+  enter_ZOKKO() {
+    this.judges.clear();
+    this.gesture(null);
+    this.fight.resetPositions();
+    this.lock();
+    this.call('zokko', { ms: 800 });
+  }
+
+  update_ZOKKO() {
+    if (this.t >= 650) this.startFighting();
+  }
+
+  // ----- Knockdown ir taškai -----
+
+  enter_KNOCKDOWN_COUNT() {
+    this.n = 0;
+  }
+
+  update_KNOCKDOWN_COUNT(dt, d) {
+    const limit = this.R.knockdownCountSec;
+    const n = Math.floor(this.t / 1000) + 1;
+    if (n !== this.n && n <= limit) { this.n = n; this.emit({ type: 'count', n }); }
+    const up = d.down.state !== 'down';
+    if (up && d.down.state !== 'getup') {
+      // Atsikėlė per 3 s → waza-ari.
+      this.go('SCORE', { to: d.by, kind: 'wazaari' });
+    } else if (!up && this.t >= limit * 1000) {
+      // Neatsikėlė → ippon.
+      d.down.down.stay = true;
+      this.go('SCORE', { to: d.by, kind: 'ippon' });
+    }
+  }
+
+  enter_SCORE(d) {
+    const side = d.to.side;
+    if (d.kind === 'vote') {
+      // Pusiausvyros praradimas be kritimo: kampiniai gali skirti waza-ari (≥ 3 iš 5).
+      const v = this.judges.voteEvent('wazaari', side, this.R.balanceBreakVoteChance);
+      this.last = { [side]: v.yes, [otherSide(side)]: v.no, draw: v.fumei };
+      if (!v.passed) {
+        d.kind = 'none';
+        this.emit({ type: 'whistle', kind: WHISTLE.mitomezu });
+        this.call('mitomezu', { ms: 1000 });
+        return;
+      }
+      d.kind = 'wazaari';
+      this.emit({ type: 'whistle', kind: WHISTLE.wazaari });
+    } else {
+      const v = this.signal(d.kind, side, 1);
+      this.last = { [side]: v.yes, [otherSide(side)]: 0, draw: v.fumei };
+    }
+    if (d.kind === 'wazaari') {
+      d.to.wazaAri++;
+      this.gesture(side);
+      this.call('waza_ari', { side, ms: 1300 });
+      this.emit({ type: 'score', kind: 'wazaari', side });
+    } else if (d.kind === 'ippon') {
+      this.gesture(side);
+      this.call('ippon', { side, ms: 1500 });
+      this.emit({ type: 'score', kind: 'ippon', side });
+    }
+  }
+
+  update_SCORE(dt, d) {
+    const side = d.to.side;
+    if (d.kind === 'none') { if (this.t >= 1200) this.resume(); return; }
+    if (d.kind === 'ippon') { if (this.t >= 1700) this.end(side, 'ippon'); return; }
+    if (d.to.wazaAri >= 2) {
+      // Antras waza-ari: vėliavėlė iš horizontalios keliama įstrižai aukštyn – „Waza-ari awasete ippon“.
+      if (this.once('awasete', 1300)) {
+        for (const j of this.judges.corners) if (j.signal === 'wazaari') this.judges.set(j.i, 'wazaari_ippon', side);
+        this.emit({ type: 'whistle', kind: WHISTLE.wazaari_ippon });
+        this.call('awasete_ippon', { ms: 1700 });
+      }
+      if (this.t >= 3100) this.end(side, 'awasete');
+      return;
+    }
+    if (this.t >= 1600) this.resume();
+  }
+
+  // ----- Pražangos -----
+
+  enter_FOUL(d) {
+    const side = d.f.side;
+    if (d.kind === 'holding') this.signal('clinch', side, 2);
+    else this.signal('chui', side, 2);
+    this.gesture(side);
+    this.emit({ type: 'foul', kind: d.kind, side, n: d.n });
+  }
+
+  update_FOUL(dt, d) {
+    const limit = this.R.chuiLimit;
+    if (this.once('announce', 850)) {
+      if (d.n > 0) {
+        d.f.chui = Math.min(limit, d.f.chui + d.n);
+        this.call(chuiCallId(d.f.chui, limit), { side: d.f.side, reason: d.kind, ms: 1500 });
+      } else this.call('oshi', { side: d.f.side, reason: d.kind, ms: 1300 });
+    }
+    if (this.t < 2300) return;
+    if (d.f.chui >= limit) {
+      // 4-as chui = shikkaku.
+      this.last = { [otherSide(d.f.side)]: 5, [d.f.side]: 0, draw: 0 };
+      this.end(otherSide(d.f.side), 'shikkaku');
+    } else if (d.next) this.go(d.next);
+    else this.resume();
+  }
+
+  // ----- Jogai -----
+
+  enter_JOGAI(d) {
+    this.signal('jogai', d.f.side, 2);
+    this.call('jogai', { side: d.f.side, ms: 1100 });
+    if (!d.pushed) this.jogai[d.f.id]++;
+  }
+
+  update_JOGAI(dt, d) {
+    if (this.t < 1300) return;
+    // Pasikartojantis bėgimas už ribos = chui.
+    if (!d.pushed && this.jogai[d.f.id] >= this.R.jogaiChuiFrom) this.go('FOUL', { f: d.f, kind: 'jogai', n: 1 });
+    else this.resume();
+  }
+
+  // ----- Hantei ir encho -----
+
+  enter_HANTEI() {
+    this.judges.clear();
+    this.fight.resetPositions(true);
+    for (const f of this.fight.fighters) f.formal = true;
+  }
+
+  update_HANTEI(dt, d) {
+    if (this.once('muite', 900)) { this.gesture(null); this.call('shomen_muite', { ms: 1100 }); }
+    if (this.once('torimasu', 2100)) this.call('hantei_o_torimasu', { ms: 1100 });
+    if (this.once('hantei', 3300)) {
+      this.call('hantei', { ms: 1200 });
+      this.emit({ type: 'whistle', kind: WHISTLE.hantei });
+      const [aka, shiro] = [this.fighter('aka'), this.fighter('shiro')];
+      // Paskutiniame pratęsime teisėjai privalo išrinkti nugalėtoją.
+      d.v = this.judges.voteHantei(aka, shiro, this.round >= this.R.maxEncho);
+      this.last = { aka: d.v.aka, shiro: d.v.shiro, draw: d.v.draw };
+      this.emit({ type: 'hantei', votes: d.v });
+    }
+    if (!d.v || this.t < 4900) return;
+    if (d.v.winner) this.end(d.v.winner, 'hantei', d.v.votes);
+    else if (this.once('hikiwake', 4900)) { this.gesture('both'); this.call('hikiwake', { ms: 1300 }); }
+    else if (this.t >= 6400) this.go('ENCHO');
+  }
+
+  enter_ENCHO() {
+    this.round++;
+    this.clock = this.enchoTime;
+    this.judges.clear();
+    this.gesture(null);
+    this.call('encho', { ms: 1200 });
+    this.emit({ type: 'encho', round: this.round });
+  }
+
+  update_ENCHO() {
+    if (this.t >= 1300) this.go('KAMAETE');
+  }
+
+  // ----- Pabaiga ir pergalės ceremonija -----
+
+  end(winner, by, perJudge) {
+    const v = { aka: 0, shiro: 0, draw: 0, ...(this.last || {}) };
+    if (by !== 'hantei') { v[winner] = Math.max(v[winner], this.R.votesNeeded); }
+    this.result = { winner, by, votes: v, round: this.round, perJudge: perJudge || null };
+    this.go('CEREMONY');
+  }
+
+  enter_CEREMONY() {
+    this.lock();
+    this.pendingFoul = null;
+    this.fight.resetPositions(true);
+    for (const f of this.fight.fighters) f.formal = true;
+    this.shushin.target = 640;
+    this.gesture(null);
+  }
+
+  update_CEREMONY() {
+    const r = this.result;
+    if (this.once('flags', 500)) {
+      this.judges.ceremony(r.winner, r.perJudge);
+      this.emit({ type: 'whistle', kind: WHISTLE.hantei });
+    }
+    if (this.once('kachi', 1500)) {
+      this.gesture(r.winner);
+      this.call(`${r.winner}_no_kachi`, { ms: 2400 });
+      this.emit({ type: 'result', result: r });
+      this.zoom = { k: 1.22, x: this.fighter(r.winner).x };
+    }
+    if (this.t >= 4600) this.go('FINAL_BOW');
+  }
+
+  enter_FINAL_BOW() {
+    this.zoom = null;
+    this.bowed = [false, false];
+    this.bowCalls++;
+    this.call('otagai_ni_rei', { ms: 1500 });
+    this.emit({ type: 'rei', open: true });
+  }
+
+  update_FINAL_BOW(dt, d) {
+    this.autoBows();
+    const bothDone = d.bothAt != null && this.t >= d.bothAt + 900;
+    if (!bothDone && this.t < this.R.bowWindowMs) return;
+    this.bowed.forEach((ok, i) => { if (!ok) this.respectMiss[i]++; });
+    this.emit({ type: 'rei', open: false });
+    this.state = 'DONE';
+    this.emit({ type: 'end', result: this.result });
   }
 }
 
 __exp.Referee = Referee;
+});
+__def('src/fight/judges.js', function (__exp, __req) {
+// SPDX-License-Identifier: BUSL-1.1
+// 4 kampiniai teisėjai (fukushin): kiekvienas savarankiškai „mato“ įvykį, balsuoja ir rodo vėliavėlių signalą.
+// Kartu su vyr. teisėju – 5 balsai; sprendimui reikia ≥ votesNeeded (3).
+
+const { judgeVote, tallyVotes } = __req('src/fight/rules.js');
+// Visi vėliavėlių signalai (animacijos – render.js flagPose).
+const SIGNALS = ['none', 'ippon', 'wazaari', 'wazaari_ippon', 'chui', 'clinch', 'jogai', 'fumei', 'mitomezu', 'hantei', 'hikiwake'];
+// Švilpukas pagal signalą: long = 1 ilgas, strong = 1 stiprus, shorts = keli trumpi, short = 1 trumpas.
+const WHISTLE = {
+  ippon: 'long', wazaari: 'strong', wazaari_ippon: 'long', chui: 'shorts', clinch: 'shorts', jogai: 'shorts',
+  fumei: 'short', mitomezu: 'long', hantei: 'long', hikiwake: 'long',
+};
+
+class JudgePanel {
+  constructor(R, rng) {
+    this.R = R;
+    this.rng = rng || Math.random;
+    this.corners = [0, 1, 2, 3].map((i) => ({ i, signal: 'none', side: null, t: 0, delay: 0 }));
+  }
+
+  set(i, signal, side, delay = 0) {
+    const j = this.corners[i];
+    j.signal = signal;
+    j.side = side;
+    j.t = 0;
+    j.delay = delay;
+  }
+
+  clear() {
+    for (const j of this.corners) this.set(j.i, 'none', null);
+  }
+
+  update(dt) {
+    for (const j of this.corners) j.t += dt;
+  }
+
+  delay() {
+    const [lo, hi] = this.R.flagDelayMs;
+    return lo + this.rng() * (hi - lo);
+  }
+
+  // Visi kampiniai rodo tą patį signalą; kiekvienas su 5 % tikimybe įvykio nematė (fumei), bet ne daugiau kaip
+  // maxFumei teisėjų, kad akivaizdus įvykis (partrenkimas, draudžiama technika) visada surinktų ≥ 3 balsus.
+  signalAll(signal, side, maxFumei = 1) {
+    let fumei = 0;
+    let yes = 1; // vyr. teisėjas
+    for (const j of this.corners) {
+      if (fumei < maxFumei && this.rng() < this.R.fumeiChance) {
+        fumei++;
+        this.set(j.i, 'fumei', null, this.rng() * 120);
+      } else {
+        yes++;
+        this.set(j.i, signal, side, this.rng() * 120);
+      }
+    }
+    return { yes, no: 0, fumei };
+  }
+
+  // Balsavimas dėl ginčytino įvykio (pvz., pusiausvyros praradimas be kritimo): pritaria → signalas, nepritaria → mitomezu.
+  voteEvent(signal, side, chance) {
+    let yes = 1;
+    let no = 0;
+    let fumei = 0;
+    for (const j of this.corners) {
+      const r = this.rng();
+      if (r < this.R.fumeiChance) { fumei++; this.set(j.i, 'fumei', null, this.rng() * 150); }
+      else if (this.rng() < chance) { yes++; this.set(j.i, signal, side, this.rng() * 150); }
+      else { no++; this.set(j.i, 'mitomezu', null, this.rng() * 150); }
+    }
+    return { yes, no, fumei, passed: yes >= this.R.votesNeeded };
+  }
+
+  // Hantei: visi kampiniai vienu metu (su 100–250 ms vėlavimu kiekvienam) pakelia vėliavėles; vyr. teisėjas – 5-as balsas.
+  voteHantei(aka, shiro, forced) {
+    const votes = [];
+    for (const j of this.corners) {
+      const v = judgeVote(aka, shiro, this.R, this.rng, forced);
+      votes.push(v);
+      if (v === 'draw') this.set(j.i, 'hikiwake', null, this.delay());
+      else this.set(j.i, 'hantei', v, this.delay());
+    }
+    votes.push(judgeVote(aka, shiro, this.R, this.rng, forced));
+    return { votes, ...tallyVotes(votes, this.R.votesNeeded) };
+  }
+
+  // Pergalės ceremonija: kampiniai pakelia nugalėtojo spalvos vėliavėlę įstrižai aukštyn.
+  // perJudge (hantei balsai) – jei sprendimas ne vienbalsis, kai kurie rodo kitą spalvą arba sukryžiuotas vėliavėles.
+  ceremony(winner, perJudge) {
+    for (const j of this.corners) {
+      const v = perJudge ? perJudge[j.i] : winner;
+      if (v === 'draw') this.set(j.i, 'hikiwake', null, this.delay());
+      else this.set(j.i, 'hantei', v, this.delay());
+    }
+  }
+}
+
+__exp.SIGNALS = SIGNALS;
+__exp.WHISTLE = WHISTLE;
+__exp.JudgePanel = JudgePanel;
 });
 __def('src/fight/player.js', function (__exp, __req) {
 // SPDX-License-Identifier: BUSL-1.1
@@ -2014,6 +2498,7 @@ class AIController {
     this.retreatT = 0;
     this.want = null;
     this.haltRolled = false;
+    this.wasHit = null;
     this.strikes = db.techniques.filter((t) => t.type === 'strike' && !t.auto && fighter.unlocked.has(t.id));
     this.combos = db.combos.filter((c) => fighter.combos.has(c.id) && !c.sequence.includes('@block') && c.sequence.every((id) => fighter.unlocked.has(id)));
   }
@@ -2025,11 +2510,6 @@ class AIController {
   pickTech(d) {
     const rng = this.rng;
     const p = this.p;
-    if (rng() < p.foulChance) {
-      // Žemesnių diržų AI kartais suklysta – žaidėjas mato, kaip reaguoja teisėjai.
-      const illegal = this.strikes.filter((t) => !t.legalInKumite && this.inRange(t, d));
-      if (illegal.length) return illegal[Math.floor(rng() * illegal.length)];
-    }
     if (rng() < p.comboChance) {
       const ok = this.combos.filter((c) => this.inRange(this.db.tech[c.sequence[0]], d));
       if (ok.length) {
@@ -2052,6 +2532,8 @@ class AIController {
     const A = this.db.rules.arena;
     const behind = f.facing > 0 ? f.x - A.xMin : A.xMax - f.x;
     this.want = null;
+    // Pasyvumo vengimas: per ilgai nepuolus – būtinai artėti ir pulti.
+    if (f.passive > 5500) { this.want = this.pickTech(d); this.state = 'approach'; if (!this.want) this.want = this.strikes.find((t) => t.legalInKumite) || null; return; }
     if (f.counterT > 0) { this.state = 'counter'; this.want = this.pickTech(d); return; }
     if (f.stamina < 18 && behind > 90) { this.state = 'retreat'; this.retreatT = 500 + rng() * 500; return; }
     if (d > p.prefDist + 22) { this.state = behind < 70 || rng() < p.aggression + 0.2 ? 'approach' : 'wait'; return; }
@@ -2081,8 +2563,9 @@ class AIController {
       if (fight.phase === 'halt' && !this.haltRolled) {
         // Retas netyčinis puolimas po „Yame“.
         this.haltRolled = true;
-        if (rng() < p.foulChance * 0.5 && this.strikes.length) it.tech = this.strikes[0];
+        this.lateHit = rng() < p.foulChance * 0.5;
       }
+      if (this.lateHit && fight.haltLate && fight.phase === 'halt' && this.strikes.length) { this.lateHit = false; it.tech = this.strikes[0]; }
       return it;
     }
     this.haltRolled = false;
@@ -2106,6 +2589,17 @@ class AIController {
       if (r.will && o.tech === r.tech && o.tech.phase !== 'recovery' && f.state !== 'attack' && f.unlocked.has(this.db.guardByLevel[r.level]?.id)) {
         this.guardT = 320 + rng() * 200;
         this.guardLevel = r.level;
+        this.guardNew = true;
+      }
+    }
+    // Gavęs smūgį, su blokavimo tikimybe dengiasi tame lygyje (apsauga nuo grandinių).
+    if (f.state === 'hit') this.wasHit = f.hitZone;
+    else if (this.wasHit) {
+      const level = this.wasHit === 'legs' ? 'gedan' : this.wasHit === 'head' ? 'jodan' : 'chudan';
+      this.wasHit = null;
+      if (rng() < Math.min(0.95, (p.block[level] || 0) * p.blockScale + 0.15)) {
+        this.guardT = 380 + rng() * 260;
+        this.guardLevel = level;
         this.guardNew = true;
       }
     }
@@ -2150,6 +2644,11 @@ class AIController {
     if (this.want) {
       if (this.inRange(this.want, d)) {
         it.tech = this.want;
+        if (rng() < p.foulChance) {
+          // Žemesnių diržų AI kartais suklysta (pvz., smogia į veidą) – žaidėjas mato, kaip reaguoja teisėjai.
+          const illegal = this.strikes.filter((t) => !t.legalInKumite && this.inRange(t, d));
+          if (illegal.length) { it.tech = illegal[Math.floor(rng() * illegal.length)]; this.queue = []; }
+        }
         this.cool = p.cooldownMs[0] + rng() * (p.cooldownMs[1] - p.cooldownMs[0]);
       } else it.move = 1;
       this.want = it.tech ? null : this.want;

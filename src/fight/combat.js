@@ -20,6 +20,7 @@ export class Fight {
     this.phase = this.mode === 'match' ? 'locked' : 'live';
     this.time = 0;
     this.hitStop = 0;
+    this.haltLate = false;
     this.events = [];
     this.resetPositions(true);
   }
@@ -230,7 +231,7 @@ export class Fight {
       mult: 1 + Math.min(C.chainBonusMax, C.chainBonus * f.chainCount),
       chain: f.chainCount, combo, unblockable: !!(combo && combo.bonus.unblockable),
       held: !!it.techHeld, sincePress: 0, charged: false, hit: false, extraRec: 0,
-      inHalt: this.phase !== 'live',
+      inHalt: this.phase !== 'live', late: this.phase === 'halt' && !!this.haltLate,
     };
     f.guard = null;
     f.counterT = 0;
@@ -296,14 +297,14 @@ export class Fight {
     const match = this.mode === 'match';
     if (o.state === 'down' || o.state === 'getup') {
       T.hit = true;
-      if (match) this.emit({ type: 'hit', attacker: f, defender: o, def, foul: 'downed', amount: 0 });
+      if (match && T.late) this.emit({ type: 'hit', attacker: f, defender: o, def, foul: 'downed', amount: 0 });
       return;
     }
     if (o.invul > 0) return;
     if (this.phase !== 'live') {
       T.hit = true;
-      // Technika pradėta po „Yame“ ir pasiekė varžovą – pražanga; pradėta anksčiau – neįskaitoma.
-      if (match && T.inHalt) this.emit({ type: 'hit', attacker: f, defender: o, def, foul: 'afterYame', amount: 0 });
+      // Technika pradėta aiškiai po „Yame“ ir pasiekė varžovą – pražanga; pradėta anksčiau ar iškart – neįskaitoma.
+      if (match && T.late) this.emit({ type: 'hit', attacker: f, defender: o, def, foul: 'afterYame', amount: 0 });
       return;
     }
     T.hit = true;

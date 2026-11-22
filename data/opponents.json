@@ -5,29 +5,29 @@
     "tank": {
       "nameLt": "Tankas", "nameEn": "Tank",
       "descLt": "Spaudžia arti, daug smūgių į liemenį.", "descEn": "Presses in close with lots of body punches.",
-      "prefDist": 96, "aggression": 0.78, "retreatChance": 0.04, "guardIdle": 0.08, "comboChance": 0.4, "cooldownMs": [140, 420],
+      "prefDist": 96, "aggression": 0.78, "retreatChance": 0.04, "guardIdle": 0.08, "comboChance": 0.4, "cooldownMs": [320, 800],
       "block": { "jodan": 0.3, "chudan": 0.5, "gedan": 0.3 },
       "weights": { "seiken_gyaku_tsuki": 3, "seiken_oi_tsuki": 2, "seiken_shita_tsuki": 3, "seiken_kagi_tsuki": 3, "hiza_geri": 2.5, "hiji_chudan_uchi": 2.5, "mae_geri_chudan": 0.6, "gedan_mawashi_geri": 0.8 }
     },
     "kicker": {
       "nameLt": "Spyrikas", "nameEn": "Kicker",
       "descLt": "Laiko atstumą ir spardo.", "descEn": "Keeps distance and kicks.",
-      "prefDist": 142, "aggression": 0.58, "retreatChance": 0.28, "guardIdle": 0.12, "comboChance": 0.2, "cooldownMs": [260, 640],
+      "prefDist": 142, "aggression": 0.58, "retreatChance": 0.28, "guardIdle": 0.12, "comboChance": 0.2, "cooldownMs": [450, 1000],
       "block": { "jodan": 0.4, "chudan": 0.45, "gedan": 0.45 },
       "weights": { "mae_geri_chudan": 3, "gedan_mawashi_geri": 3, "chudan_mawashi_geri": 3.5, "yoko_geri_chudan": 3, "seiken_gyaku_tsuki": 0.6, "hiza_geri": 0.8 }
     },
     "counter": {
       "nameLt": "Kontratakuotojas", "nameEn": "Counter-fighter",
       "descLt": "Daug blokuoja ir atsako po gynybos.", "descEn": "Blocks a lot and answers after defending.",
-      "prefDist": 118, "aggression": 0.34, "retreatChance": 0.14, "guardIdle": 0.4, "comboChance": 0.25, "cooldownMs": [320, 760],
+      "prefDist": 118, "aggression": 0.34, "retreatChance": 0.14, "guardIdle": 0.4, "comboChance": 0.25, "cooldownMs": [500, 1100],
       "block": { "jodan": 0.6, "chudan": 0.78, "gedan": 0.62 },
       "weights": { "hiza_geri": 2.5, "seiken_gyaku_tsuki": 2, "seiken_shita_tsuki": 2, "gedan_mawashi_geri": 1.5, "chudan_mawashi_geri": 1.5 }
     }
   },
   "beltDefaults": {
-    "white":  { "reactionMs": 600, "foulChance": 0.05, "skill": 0.6 },
-    "orange": { "reactionMs": 520, "foulChance": 0.035, "skill": 0.75 },
-    "blue":   { "reactionMs": 440, "foulChance": 0.025, "skill": 0.9 },
+    "white":  { "reactionMs": 600, "foulChance": 0.012, "skill": 0.6 },
+    "orange": { "reactionMs": 520, "foulChance": 0.008, "skill": 0.75 },
+    "blue":   { "reactionMs": 440, "foulChance": 0.005, "skill": 0.9 },
     "yellow": { "reactionMs": 370, "foulChance": 0.02, "skill": 1.0 },
     "green":  { "reactionMs": 300, "foulChance": 0.015, "skill": 1.1 },
     "brown":  { "reactionMs": 240, "foulChance": 0.01, "skill": 1.2 },

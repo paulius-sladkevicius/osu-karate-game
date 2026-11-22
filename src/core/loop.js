@@ -7,6 +7,7 @@ export function startLoop(update, render) {
   let last = performance.now();
   let acc = 0;
   function frame(now) {
+    requestAnimationFrame(frame);   // pirmiausia – kad klaida viename kadre nesustabdytų ciklo
     acc += Math.min(100, now - last);
     last = now;
     let n = 0;
@@ -17,7 +18,6 @@ export function startLoop(update, render) {
     }
     if (n === 6) acc = 0;
     render(acc / STEP);
-    requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
 }

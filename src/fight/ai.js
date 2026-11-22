@@ -39,6 +39,7 @@ export class AIController {
     this.retreatT = 0;
     this.want = null;
     this.haltRolled = false;
+    this.wasHit = null;
     this.strikes = db.techniques.filter((t) => t.type === 'strike' && !t.auto && fighter.unlocked.has(t.id));
     this.combos = db.combos.filter((c) => fighter.combos.has(c.id) && !c.sequence.includes('@block') && c.sequence.every((id) => fighter.unlocked.has(id)));
   }
@@ -50,11 +51,6 @@ export class AIController {
   pickTech(d) {
     const rng = this.rng;
     const p = this.p;
-    if (rng() < p.foulChance) {
-      // Žemesnių diržų AI kartais suklysta – žaidėjas mato, kaip reaguoja teisėjai.
-      const illegal = this.strikes.filter((t) => !t.legalInKumite && this.inRange(t, d));
-      if (illegal.length) return illegal[Math.floor(rng() * illegal.length)];
-    }
     if (rng() < p.comboChance) {
       const ok = this.combos.filter((c) => this.inRange(this.db.tech[c.sequence[0]], d));
       if (ok.length) {
@@ -77,6 +73,8 @@ export class AIController {
     const A = this.db.rules.arena;
     const behind = f.facing > 0 ? f.x - A.xMin : A.xMax - f.x;
     this.want = null;
+    // Pasyvumo vengimas: per ilgai nepuolus – būtinai artėti ir pulti.
+    if (f.passive > 5500) { this.want = this.pickTech(d); this.state = 'approach'; if (!this.want) this.want = this.strikes.find((t) => t.legalInKumite) || null; return; }
     if (f.counterT > 0) { this.state = 'counter'; this.want = this.pickTech(d); return; }
     if (f.stamina < 18 && behind > 90) { this.state = 'retreat'; this.retreatT = 500 + rng() * 500; return; }
     if (d > p.prefDist + 22) { this.state = behind < 70 || rng() < p.aggression + 0.2 ? 'approach' : 'wait'; return; }
@@ -106,8 +104,9 @@ export class AIController {
       if (fight.phase === 'halt' && !this.haltRolled) {
         // Retas netyčinis puolimas po „Yame“.
         this.haltRolled = true;
-        if (rng() < p.foulChance * 0.5 && this.strikes.length) it.tech = this.strikes[0];
+        this.lateHit = rng() < p.foulChance * 0.5;
       }
+      if (this.lateHit && fight.haltLate && fight.phase === 'halt' && this.strikes.length) { this.lateHit = false; it.tech = this.strikes[0]; }
       return it;
     }
     this.haltRolled = false;
@@ -131,6 +130,17 @@ export class AIController {
       if (r.will && o.tech === r.tech && o.tech.phase !== 'recovery' && f.state !== 'attack' && f.unlocked.has(this.db.guardByLevel[r.level]?.id)) {
         this.guardT = 320 + rng() * 200;
         this.guardLevel = r.level;
+        this.guardNew = true;
+      }
+    }
+    // Gavęs smūgį, su blokavimo tikimybe dengiasi tame lygyje (apsauga nuo grandinių).
+    if (f.state === 'hit') this.wasHit = f.hitZone;
+    else if (this.wasHit) {
+      const level = this.wasHit === 'legs' ? 'gedan' : this.wasHit === 'head' ? 'jodan' : 'chudan';
+      this.wasHit = null;
+      if (rng() < Math.min(0.95, (p.block[level] || 0) * p.blockScale + 0.15)) {
+        this.guardT = 380 + rng() * 260;
+        this.guardLevel = level;
         this.guardNew = true;
       }
     }
@@ -175,6 +185,11 @@ export class AIController {
     if (this.want) {
       if (this.inRange(this.want, d)) {
         it.tech = this.want;
+        if (rng() < p.foulChance) {
+          // Žemesnių diržų AI kartais suklysta (pvz., smogia į veidą) – žaidėjas mato, kaip reaguoja teisėjai.
+          const illegal = this.strikes.filter((t) => !t.legalInKumite && this.inRange(t, d));
+          if (illegal.length) { it.tech = illegal[Math.floor(rng() * illegal.length)]; this.queue = []; }
+        }
         this.cool = p.cooldownMs[0] + rng() * (p.cooldownMs[1] - p.cooldownMs[0]);
       } else it.move = 1;
       this.want = it.tech ? null : this.want;

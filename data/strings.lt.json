@@ -2,5 +2,14 @@
   "_license": "SPDX-License-Identifier: BUSL-1.1",
   "hud.you": "TU", "hud.player": "Žaidėjas", "hud.locked": "neatrakinta", "hud.perfect": "Tobulas blokas!",
   "ui.rotate": "Pasukite įrenginį horizontaliai", "ui.paused": "Pauzė", "ui.resume": "Tęsti", "ui.quit": "Išeiti",
-  "result.ippon": "Ippon", "result.awasete": "Awasete ippon", "result.hantei": "Hantei", "result.shikkaku": "Shikkaku"
+  "result.ippon": "Ippon", "result.awasete": "Awasete ippon", "result.hantei": "Hantei", "result.shikkaku": "Shikkaku",
+  "call.aka_shiro": "Dalyviai įžengia ant tatamio", "call.shomen_ni_rei": "Nusilenkti teisėjų stalui", "call.shushin_ni_rei": "Nusilenkti vyr. teisėjui",
+  "call.otagai_ni_rei": "Nusilenkti vienas kitam", "call.kamaete": "Kovos stovos", "call.hajime": "Pradėti!", "call.yame": "Stop",
+  "call.zokko": "Tęsti", "call.jikan": "Laikas sustabdytas", "call.fukushin_shugo": "Pasitarimas su kampiniais", "call.shomen_muite": "Atsisukti į priekį",
+  "call.hantei_o_torimasu": "Priimamas sprendimas", "call.hantei": "Sprendimas!", "call.hikiwake": "Lygiosios", "call.encho": "Pratęsimas",
+  "call.waza_ari": "Pusė taško", "call.ippon": "Pilnas taškas", "call.awasete_ippon": "Du waza-ari = ippon", "call.chui_1": "Pirmas įspėjimas",
+  "call.chui_2": "Antras įspėjimas", "call.chui_3": "Trečias įspėjimas", "call.shikkaku": "Diskvalifikacija", "call.jogai": "Už ribos",
+  "call.mitomezu": "Nepripažįstama", "call.oshi": "Įspėjamasis gestas", "call.aka_no_kachi": "Laimi raudonas", "call.shiro_no_kachi": "Laimi baltas",
+  "foul.illegal": "Draudžiama technika", "foul.holding": "Laikymas / stūmimas", "foul.passivity": "Pasyvumas", "foul.jogai": "Bėgimas už ribos",
+  "foul.disrespect": "Nepagarba (nenusilenkta)", "foul.afterYame": "Puolimas po „Yame“", "foul.downed": "Puolimas į gulintį"
 }

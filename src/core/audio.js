@@ -115,6 +115,7 @@ export class AudioSys {
   bad() { if (this.on) this.tone(200, 0.22, { type: 'square', to: 120, vol: 0.1 }); }
 
   taiko(vol = 0.5, delay = 0) {
+    if (!this.on) return;
     this.tone(82, 0.5, { to: 48, vol, delay });
     this.noise(0.05, { vol: vol * 0.3, type: 'lowpass', freq: 400, delay });
   }
