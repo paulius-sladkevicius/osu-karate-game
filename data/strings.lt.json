@@ -15,6 +15,8 @@
   "ui.paused": "Pauzė",
   "ui.resume": "Tęsti",
   "ui.quit": "Išeiti",
+  "ui.fsEnter": "Visas ekranas",
+  "ui.fsExit": "Išeiti iš viso ekrano",
   "ui.back": "Atgal",
   "ui.next": "Toliau",
   "ui.again": "Dar kartą",
@@ -195,6 +197,7 @@
   "set.reset": "Ištrinti progresą",
   "set.resetBtn": "Ištrinti",
   "set.resetAsk": "Tikrai ištrinti visą progresą?",
+  "set.fullscreen": "Viso ekrano režimas",
   "set.install": "Kad žaidimas veiktų be interneto ir per visą ekraną, įdiek jį: naršyklės meniu → „Įdiegti programą“ arba „Pridėti prie pradinio ekrano“.",
 
   "debug.table": "Technikų parametrai",

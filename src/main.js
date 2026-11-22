@@ -51,6 +51,13 @@ class Game {
     this.resize();
     window.addEventListener('resize', () => this.resize());
     window.addEventListener('orientationchange', () => setTimeout(() => this.resize(), 250));
+    const onFs = () => {
+      document.querySelectorAll('[data-fs-label]').forEach((el) => { el.textContent = this.fullscreenLabel(); });
+      setTimeout(() => this.resize(), 60);
+    };
+    document.addEventListener('fullscreenchange', onFs);
+    document.addEventListener('webkitfullscreenchange', onFs);
+    window.addEventListener('keydown', (e) => { if (e.code === 'KeyF' && !e.repeat && !e.ctrlKey && !e.metaKey) this.toggleFullscreen(); });
     document.addEventListener('visibilitychange', () => { if (document.hidden && this.scene) this.pause(); });
     $('rotate').textContent = t('ui.rotate');
   }
@@ -83,6 +90,41 @@ class Game {
       const p = req.call(el, { navigationUI: 'hide' });
       if (p && p.then) p.then(() => screen.orientation?.lock?.('landscape')?.catch?.(() => {})).catch(() => {});
     } catch (e) { /* iPhone Safari: naudojamas PWA režimas */ }
+  }
+
+  fullscreenSupported() {
+    const el = document.documentElement;
+    return !!(el.requestFullscreen || el.webkitRequestFullscreen);
+  }
+
+  isFullscreen() {
+    return !!(document.fullscreenElement || document.webkitFullscreenElement);
+  }
+
+  exitFullscreen() {
+    const exit = document.exitFullscreen || document.webkitExitFullscreen;
+    if (!exit || !this.isFullscreen()) return;
+    try {
+      screen.orientation?.unlock?.();
+      const p = exit.call(document);
+      if (p && p.catch) p.catch(() => {});
+    } catch (e) { /* nepalaikoma */ }
+  }
+
+  // Pilno ekrano režimo įjungimas / išjungimas (mygtukas meniu, nustatymuose ir pauzėje; klaviatūroje – F).
+  toggleFullscreen() {
+    if (this.isFullscreen()) this.exitFullscreen();
+    else this.enterFullscreen();
+  }
+
+  fullscreenLabel() {
+    return t(this.isFullscreen() ? 'ui.fsExit' : 'ui.fsEnter');
+  }
+
+  // Mygtukas su užrašu, kuris pats atsinaujina pasikeitus režimui. attr – pvz., data-act="fs".
+  fullscreenButton(attr, cls = 'btn small') {
+    if (!this.fullscreenSupported()) return '';
+    return `<button class="${cls}" ${attr} data-fs-label>${this.fullscreenLabel()}</button>`;
   }
 
   vibrate(ms) {
@@ -120,10 +162,12 @@ class Game {
     el.style.display = 'flex';
     el.innerHTML = `<div class="panel center"><h2>${t('ui.paused')}</h2>
       <button class="btn primary" data-p="resume">${t('ui.resume')}</button>
-      <button class="btn" data-p="quit">${t('ui.quit')}</button></div>`;
+      <button class="btn" data-p="quit">${t('ui.quit')}</button>
+      <p>${this.fullscreenButton('data-p="fs"')}</p></div>`;
     el.onclick = (e) => {
       const b = e.target.closest('[data-p]');
       if (!b) return;
+      if (b.dataset.p === 'fs') { this.toggleFullscreen(); return; }
       el.style.display = 'none';
       this.paused = false;
       this.input.clear();

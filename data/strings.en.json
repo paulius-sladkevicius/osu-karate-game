@@ -15,6 +15,8 @@
   "ui.paused": "Paused",
   "ui.resume": "Resume",
   "ui.quit": "Quit",
+  "ui.fsEnter": "Full screen",
+  "ui.fsExit": "Exit full screen",
   "ui.back": "Back",
   "ui.next": "Next",
   "ui.again": "Again",
@@ -195,6 +197,7 @@
   "set.reset": "Erase progress",
   "set.resetBtn": "Erase",
   "set.resetAsk": "Really erase all progress?",
+  "set.fullscreen": "Full-screen mode",
   "set.install": "To play offline and in full screen, install the game: browser menu → Install app or Add to Home Screen.",
 
   "debug.table": "Technique parameters",

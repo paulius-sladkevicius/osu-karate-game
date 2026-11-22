@@ -46,6 +46,7 @@ async function settingsScreen(game) {
         ${chk('leftHanded')}${chk('assist')}${chk('kihonHints')}${chk('termsTranslated')}
         <div class="setting"><span>${t('set.reset')}</span><button class="btn small" data-act="reset">${t('set.resetBtn')}</button></div>
       </div></div>
+      ${game.fullscreenSupported() ? `<div class="setting"><span>${t('set.fullscreen')}</span>${game.fullscreenButton('data-act="fs"')}</div>` : ''}
       <p class="muted">${t('set.install')}</p></div>`;
     const wait = game.ui.ask(html, 'top');
     game.ui.root.querySelectorAll('[data-set]').forEach((el) => {
@@ -57,6 +58,7 @@ async function settingsScreen(game) {
     });
     const { act } = await wait;
     if (act === 'back') return;
+    if (act === 'fs') { game.toggleFullscreen(); continue; }
     if (act === 'reset') {
       const c = await game.ui.ask(`<div class="panel center"><h2>${t('set.resetAsk')}</h2>
         <button class="btn primary" data-act="yes">${t('set.resetBtn')}</button><button class="btn" data-act="no">${t('ui.back')}</button></div>`);
@@ -89,7 +91,7 @@ export async function mainMenu(game) {
         <button class="btn" data-act="wazacho">Waza-chō</button>
         <button class="btn" data-act="settings">${t('menu.settings')}</button>
       </div>
-      <p><button class="btn small" data-act="debug">Debug</button></p></div>`;
+      <p>${game.fullscreenButton('data-act="fs"')}<button class="btn small" data-act="debug">Debug</button></p></div>`;
     const { act } = await game.ui.ask(html);
     game.audio.music(null);
     if (act === 'journey') await journey(game);
@@ -97,6 +99,7 @@ export async function mainMenu(game) {
     else if (act === 'quick') await quickFight(game);
     else if (act === 'wazacho') await wazaCho(game);
     else if (act === 'settings') await settingsScreen(game);
+    else if (act === 'fs') game.toggleFullscreen();
     else if (act === 'debug') await debugScreen(game);
   }
 }

@@ -239,6 +239,18 @@ try {
       const r = await page.evaluate(fills);
       ok(r.fs && r.landscape && r.fits, `${name}: po vieno bakstelėjimo – pilno ekrano režimas, horizontaliai, canvas užpildo ekraną`, JSON.stringify(r));
       ok(r.lock && r.lock.includes('landscape'), `${name}: užrakinama horizontali orientacija`);
+      // Išėjimas iš pilno ekrano ir grįžimas mygtuku pagrindiniame meniu.
+      await page.waitForSelector('[data-act=fs]');
+      const lbl = () => page.evaluate(() => document.querySelector('[data-act=fs]').textContent);
+      const l1 = await lbl();
+      await tap(page, '[data-act=fs]');
+      await page.waitForTimeout(350);
+      const out = await page.evaluate(fills);
+      const l2 = await lbl();
+      await tap(page, '[data-act=fs]');
+      await page.waitForTimeout(350);
+      const back = await page.evaluate(fills);
+      ok(!out.fs && out.fits && back.fs && back.fits && /Išeiti/.test(l1) && !/Išeiti/.test(l2), `${name}: mygtuku išeinama iš viso ekrano ir grįžtama`, `${l1} → ${l2}`);
       ok(page.errors.length === 0, `${name}: be klaidų`, page.errors.join(' | '));
       await ctx.close();
     }

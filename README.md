@@ -18,7 +18,8 @@ išsaugojimas ir PWA.
 
 Valdymas: kairėje plaukiojantis džoistikas, dešinėje **A** (ranka) / **K** (koja) / **G** (gynyba) ir **KIAI**;
 kombinacijos – krypčių seka + mygtukas (→ visada reiškia „link varžovo“). Kompiuteryje: rodyklės + `J` / `K` / `L`,
-`I` – KIAI, `Enter` – REI, `Esc` – pauzė. Derinimo ekranas: meniu mygtukas „Debug“ arba `index.html?debug`.
+`I` – KIAI, `Enter` – REI, `Esc` – pauzė, `F` – visas ekranas. Viso ekrano režimą galima įjungti ir išjungti
+mygtuku pagrindiniame meniu, nustatymuose ir pauzėje. Derinimo ekranas: meniu mygtukas „Debug“ arba `index.html?debug`.
 
 ## Testai
 
